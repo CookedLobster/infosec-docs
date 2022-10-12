@@ -53,8 +53,8 @@ const config = {
         title: 'Infosec-Docs',
         logo: {
           alt: 'Infosec Docs',
-          src: 'img/logo.svg',
-          srcDark: 'img/logo_dark.svg',
+          src: 'img/test.png',
+          srcDark: 'img/dark.png',
         },
         hideOnScroll: true,
         //style: 'primary',   // [NAVBAR] Color Defined from CSS
