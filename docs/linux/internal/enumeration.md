@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+description: Internal
+keywords: [Internal, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, wpscan, privilege escalation, xml-rpc, WordPress]
 ---
 
 # Enumeration

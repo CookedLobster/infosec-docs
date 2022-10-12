@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
-title: 'Ignite'
+description: Ignite
+keywords: [Ignite, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, fuel cms 1.4, CVE-2018-16763]
 ---
 
 # Enumeration

@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
-title: 'Wgel'
+description: Wgel
+keywords: [Wgel, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
 ---
 
 # Enumeration

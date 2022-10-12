@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+description: Lazy Admin
+keywords: [Lazy Admin, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, sql backup, john, privilege escalation]
 ---
 
 # Enumeration

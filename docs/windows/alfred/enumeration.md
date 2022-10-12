@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+description: Alfred
+keywords: [Alfred, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, Jenkins]
 ---
 
 # Enumeration

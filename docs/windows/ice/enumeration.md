@@ -1,6 +1,9 @@
 ---
 sidebar_position: 1
+description: Ice
+keywords: [Ice, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, Icecast]
 ---
+
 
 # Enumeration
 

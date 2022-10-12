@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+description: RootMe
+keywords: [RootMe, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, smbclient, privilege escalation]
 ---
 
 # Enumeration

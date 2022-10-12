@@ -1,6 +1,9 @@
 ---
 sidebar_position: 1
+description: Blaster
+keywords: [Blaster, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation, wade, CVE-2019-1388]
 ---
+
 
 # Enumeration
 

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+description: Lian_Yu
+keywords: [Lian_Yu, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, ftp, privilege escalation]
 ---
 
 # Enumeration

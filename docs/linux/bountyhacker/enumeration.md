@@ -1,7 +1,9 @@
 ---
 sidebar_position: 1
-title: 'Bounty Hacker'
+description: Bounty Hacker 
+keywords: [Bounty Hacker, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ftp]
 ---
+
 
 # Enumeration
 

@@ -1,7 +1,9 @@
 ---
 sidebar_position: 1
-title: 'Daily Bugle'
+description: Daily Bugle
+keywords: [Daily Bugle, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, joomla, joomla exploit, john, cracking]
 ---
+
 
 # Enumeration
 

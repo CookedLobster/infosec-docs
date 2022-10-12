@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+description: Kenobi
+keywords: [Kenobi, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, enum4linux, smbmap, smbclient, privilege escalation]
 ---
 
 # Enumeration

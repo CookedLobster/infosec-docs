@@ -1,7 +1,9 @@
 ---
 sidebar_position: 1
-title: 'Cyborg'
+description: Cyborg
+keywords: [Cyborg, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, borg]
 ---
+
 
 # Enumeration
 

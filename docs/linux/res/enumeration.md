@@ -1,6 +1,9 @@
 ---
 sidebar_position: 1
+description: Res
+keywords: [Res, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, redis cli, privilege escalation, php exploitation redis]
 ---
+
 
 # Enumeration
 
