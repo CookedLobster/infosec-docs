@@ -6,7 +6,7 @@
 
 
 
-## Installation - Development
+## Development
 
 - **Installation**
 
