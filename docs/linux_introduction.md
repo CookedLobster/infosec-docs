@@ -1,5 +1,5 @@
 
-# Rooms
+# Rooms 
 
 :::info [Linux Machines](https://infosec-docs.pages.dev/category/virtual-machines-linux)
 
@@ -14,7 +14,11 @@
 
 :::
 
-:::info [Overpass Series](https://infosec-docs.pages.dev/category/overpass-series)
+---
+
+<br/>
+
+:::note [Overpass Series](https://infosec-docs.pages.dev/category/overpass-series)
 
 `TryHackMe` Overpass Series. A Pentesting Series that Contains **Enumeration - Exploitation - File Analysis**.
 
