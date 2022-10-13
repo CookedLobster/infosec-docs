@@ -10,7 +10,7 @@ sidebar_position: 2
 
 We can often determine whether or not Command Injection is possible by the Behaviours of an Application.
 
-Applications that use User Input to populate System Commands with data can often be combined in unintended behaviour. The Shell Operators `[ ; - & - && ]` will combine two or more System Commands and execute them both. 
+Applications that use User Input to populate System Commands with data can often be combined in unintended behaviour. The Shell Operators <b style={{ color: 'Plum' }}>[ ; - & - && ]</b> will combine two or more System Commands and execute them both. 
 
 <br/>
 
