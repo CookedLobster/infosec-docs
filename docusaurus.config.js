@@ -74,6 +74,11 @@ const config = {
         hideOnScroll: true,   // Hide Navbar on Scroll
         items: [
           {
+            href: 'https://github.com/CookedLobster/infosec-docs',
+            label: 'GitHub',
+            position: 'right',
+          },
+          {
             type: 'docSidebar',  
             position: 'left',
             sidebarId: 'owaspDocs',             // [sidebar.js] ID
