@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Infosec-Docs',
   tagline: 'Infosec Documentations',
-  url: 'http://192.168.50.234:3000/',
+  url: 'https://infosec-docs.pages.dev/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -46,15 +46,17 @@ const config = {
       docs: {
         sidebar: {
           hideable: true,
+          autoCollapseCategories: true,
         },
       },
       blog: false,
       navbar: {
         title: 'Infosec-Docs',
         logo: {
-          alt: 'Infosec Docs',
-          src: 'img/test.png',
-          srcDark: 'img/dark.png',
+          
+          alt: 'InfosecDocs',
+          src: 'img/test.svg',
+          srcDark: 'img/test.svg',
         },
         hideOnScroll: true,
         //style: 'primary',   // [NAVBAR] Color Defined from CSS
@@ -71,13 +73,13 @@ const config = {
             type: 'docSidebar',  
             position: 'left',
             sidebarId: 'owaspDocs',     // [sidebar.js] ID
-            label: 'General',        // Navbar Title
+            label: 'General Pentesting',        // Navbar Title
           },
           {
             type: 'docSidebar', 
             position: 'left',
             sidebarId: 'linuxDocs',     // [sidebar.js] ID
-            label: 'TryHackMe VM\'s',   // Navbar Title
+            label: 'TryHackMe Rooms',   // Navbar Title
           },
         ],
       },
