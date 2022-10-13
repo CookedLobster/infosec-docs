@@ -4,17 +4,10 @@ sidebar_position: 2
 
 # WebShell's - Binaries
 
-:::caution This Section is a Work In Progress
-
-:::
-
-<br/>
-
-- **Static Binaries:** <a class="button button--outline button--warning" href="https://repology.org/">REPOLOGY.org</a>
-- **Static Binaries:** <a class="button button--outline button--warning" href="https://ubuntu.pkgs.org/">PKGS.org</a>
+- **Static Binaries:** <a class="button button--outline button--warning" href="https://repology.org/">REPOLOGY.org</a> <a class="button button--outline button--warning" href="https://ubuntu.pkgs.org/">PKGS.org</a>
 
 
-<br/>
+## PHP
 
 - **Simple `PHP` WebShell's**
 
@@ -39,7 +32,6 @@ sidebar_position: 2
 'echo $var;
 ```
 
-<br/>
 
 ## Python
 

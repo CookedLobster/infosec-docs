@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# LFI In The Wild 
+# LFI 
 
 
 ## Inclue
