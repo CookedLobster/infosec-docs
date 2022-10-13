@@ -75,8 +75,9 @@ const config = {
         items: [
           {
             href: 'https://github.com/CookedLobster/infosec-docs',
-            label: 'GitHub',
             position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
           },
           {
             type: 'docSidebar',  
