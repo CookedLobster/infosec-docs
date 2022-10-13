@@ -49,7 +49,7 @@ const config = {
 
         // Public API key: it is safe to commit it
         apiKey: '314fcff94802e7955d2064d12d5e2094',
-        indexName: 'dev_InfosecDocs',
+        indexName: 'dev_DocsPersonal',
         contextualSearch: true,
       },
       docs: {
