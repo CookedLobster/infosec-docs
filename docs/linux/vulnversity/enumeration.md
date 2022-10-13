@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 description: Vulnversity
-keywords: [Vulnversity, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
+keywords: [vulnversity, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
 ---
 
 # Enumeration

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 description: Overpass
-keywords: [Overpass, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
+keywords: [overpass, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
 ---
 
 # Enumeration

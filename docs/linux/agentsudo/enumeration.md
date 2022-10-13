@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 description: Agent SUDO
-keywords: [Agent SUDO, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation]
+keywords: [agent sudo, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, privilege escalation, CVE-2019-14287]
 ---
 
 # Enumeration

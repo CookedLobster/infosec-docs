@@ -11,12 +11,16 @@ sidebar_position: 1
 
 
 ```html
-<!DOCTYPE html><html><body>    
-	<form action="/" method="post">      
-		First name:<br>      
-	<input type="text" name="name" value="">      
-	<input type="submit" value="Submit">    
-	</form><p></p></body></html>
+<html>
+<body>
+    <form action="/" method="post">
+        First name:<br>
+        <input type="text" name="name" value="">
+        <input type="submit" value="Submit">
+    </form>
+    <p></p>
+</body>
+</html>
 	
 return render_template_string(template)
 ```
@@ -46,25 +50,26 @@ return render_template_string(template)
 ```
 
 ```html
-HTTP/1.0 200 OK
-Server: Werkzeug/1.0.1 Python/2.7.17
-
-<!DOCTYPE html><html><body>    
-<form action="/" method="post">      
-	First name:<br>      
-<input type="text" name="name" value="">      
-<input type="submit" value="Submit">    
-</form><p>   
-   Static hostname: netlink
-         Icon name: computer-vm
-           Chassis: vm
+<html>
+<body>
+    <form action="/" method="post">
+        First name:<br>
+        <input type="text" name="name" value="">
+        <input type="submit" value="Submit">
+    </form>
+    <p>
+        Static hostname: netlink
+        Icon name: computer-vm
+        Chassis: vm
         Machine ID: f589fe33e4b649fd9cbc222f5a19d5a4
-           Boot ID: a9bc374573784f718f0d39deee65f014
-    Virtualization: xen
-  Operating System: Ubuntu 18.04.4 LTS
-            Kernel: Linux 4.15.0-76-generic
-      Architecture: x86-64
-</p></body></html>
+        Boot ID: a9bc374573784f718f0d39deee65f014
+        Virtualization: xen
+        Operating System: Ubuntu 18.04.4 LTS
+        Kernel: Linux 4.15.0-76-generic
+        Architecture: x86-64
+    </p>
+</body>
+</html>
 ``` 
 
 <br/>
@@ -75,7 +80,7 @@ Server: Werkzeug/1.0.1 Python/2.7.17
 
 
 
-```bash
+```log
 [+] Testing if GET parameter 'name' is injectable
 [+] Smarty plugin is testing rendering with tag '{*}'
 [+] Smarty plugin is testing blind injection

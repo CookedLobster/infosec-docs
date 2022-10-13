@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 description: Simple CTF
-keywords: [Simple CTF, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation, cms made simple, CVE-2019-9053]
+keywords: [simple ctf, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation, cms made simple, CVE-2019-9053, EDB-ID 46635]
 ---
 
 # Enumeration

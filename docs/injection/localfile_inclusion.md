@@ -16,7 +16,7 @@ The PHP code uses a `GET` request via the URL parameter `file` to include the fi
 ?>
 ```
 
-We can access and Display any readable file on the server from the code above if there isn't any Input Validation. This works because there isn't a directory specified in the `include` function and no Input Validation.
+We can access and Display any readable file on the server from the code above if there isn't any Input Validation. This works because there isn't a directory specified in the `include` function and **No Input Validation.**
 
 ```js
 +----------------------------------------------------+

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 description: StartUp
-keywords: [StartUp, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, ftp, privilege escalation, pcap]
+keywords: [startup tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, ftp, privilege escalation, suspicious pcap tryhackme]
 ---
 
 

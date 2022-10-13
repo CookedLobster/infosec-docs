@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-description: Picke Rick
-keywords: [Picke Rick, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
+description: Pickle Rick
+keywords: [pickle rick, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
 ---
 
 

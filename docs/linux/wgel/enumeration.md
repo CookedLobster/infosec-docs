@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 description: Wgel
-keywords: [Wgel, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
+keywords: [wgel, wgel tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
 ---
 
 # Enumeration

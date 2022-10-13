@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 description: Relevant
-keywords: [Relevant, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, smbmap, smbclient]
+keywords: [relevant, relevant tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, smbmap, smbclient]
 ---
 
 # Enumeration

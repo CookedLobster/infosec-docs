@@ -15,13 +15,13 @@ sidebar_position: 4
 	- This API Endpoint replicates a common feature found on many Signup Forms, which checks whether a username has already been registered to prompt the User to choose a different Username. Because the taken value is set to True, we can assume the Username Admin is already Registered.
 
 ```js
-+-----------------------------------------------------+      +-----------+
-| URL: | https://website.com/checkuser?username=admin | - ►  | RESPONSE: | - ► {"taken":true}
-+-----------------------------------------------------+      +-----------+
++-----------------------------------------------------+    +-----------+
+| URL: | https://website.com/checkuser?username=admin | ➜  | RESPONSE: | ➜ {"taken":true}
++-----------------------------------------------------+    +-----------+
 
-+-----------------------------------------------------+      +-----------+
-| URL: | https://website.com/checkuser?username=user  | - ►  | RESPONSE: | - ► {"taken":false}
-+-----------------------------------------------------+      +-----------+
++-----------------------------------------------------+    +-----------+
+| URL: | https://website.com/checkuser?username=user  | ➜  | RESPONSE: | ➜ {"taken":false}
++-----------------------------------------------------+    +-----------+
 ``` 
 
 - **Website Processing Query:**
@@ -48,7 +48,7 @@ user' UNION SELECT 1,2,3;--
 	- **Database Name:** `sqli_three`
   
 ```sql
-user' UNION SELECT 1,2,3 where database() like 's%';-- -->> sqli_three
+user' UNION SELECT 1,2,3 where database() like 's%';-- ➜ sqli_three
 ```
 
 <br/>

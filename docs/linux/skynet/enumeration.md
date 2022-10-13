@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 description: Skynet
-keywords: [Skynet, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, enum4linux, smbclient, privilege escalation]
+keywords: [skynet, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, enum4linux, smbclient, privilege escalation, squirrelmail exploit]
 ---
 
 

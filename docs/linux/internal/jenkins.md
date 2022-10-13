@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 description: Internal
-keywords: [Internal, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, wpscan, privilege escalation, jenkins]
+keywords: [internal, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, wpscan, privilege escalation, jenkins]
 ---
 
 # Jenkins Exploitation

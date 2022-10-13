@@ -47,7 +47,7 @@ sidebar_position: 1
 - **Partial URL such as the Hostname:**
 	- `=api`
 
-```sql
+```js
 +--------------------------------------------+
 | URL: | https://website.com/form?server=api |
 +--------------------------------------------+
@@ -58,7 +58,7 @@ sidebar_position: 1
 - **Path of the URL:**
 	- `=/forms/contact`
 
-```sql
+```js
 +----------------------------------------------------+
 | URL: | https://website.com/form?dst=/forms/contact |
 +----------------------------------------------------+

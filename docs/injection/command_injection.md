@@ -15,10 +15,10 @@ Applications that use User Input to populate System Commands with data can often
 <br/>
 
 - **Detecting Blind Command Injection:**
-    - `Time Delay:`  **Example:** `[ ping - sleep ]` Commands are significant Payloads to test with. Using `ping` the Application will hang for **"X"**.
-    - `Force Output:` This can be done by using Redirection Operators such as `[ > ]` . **Example:** We can tell the Web Application to Execute Commands such as `whoami` and redirect that to a file. We can then use a command such as `cat` to read this newly created file’s contents.
+    - `Time Delay:`  **Example:** <b style={{ color: 'Plum' }}>[ping - sleep]</b> Commands are significant Payloads to test with. Using <b style={{ color: 'Plum' }}>ping</b> the Application will hang for <span style={{fontWeight: 'Bold'}}>X (Seconds)</span>.
+    - `Force Output:` This can be done by using Redirection Operators such as <b style={{ color: 'Plum' }}>[ > ]</b>. <span style={{fontWeight: 'Bold'}}>Example:</span> We can tell the Web Application to Execute Commands such as <b style={{ color: 'Plum' }}>whoami</b> and redirect that to a file. We can then use a command such as <b style={{ color: 'Plum' }}>cat</b> to read this newly created file’s contents.
 
 <br/>
 
 - **Detecting Verbose Command Injection:**
-    - The Output of Commands such as `[ ping - whoami ]` is directly displayed on the Web Application.
+    - The Output of Commands such as <b style={{ color: 'Plum' }}>[ping - whoami]</b> is directly displayed on the Web Application.

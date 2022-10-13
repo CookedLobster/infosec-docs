@@ -27,15 +27,15 @@ Websites may attempt to blacklist dangerous file types, but fail to account for 
     - Verifies that the contents of a file are acceptable to Upload.
     - `MIME Validation:` **(Multipurpose Internet Mail Extension)** types are used as an identifier for Files. MIME type for a file upload is attached in the Header of the Request `<type>/<subtype>`, and looks like this:
 
-```log
+```bash
 # Original Request
 Content-Disposition: form-data; name="fileToUpload"; filename="php-reverse-shell.png"
-// highlight-next-line
 Content-Type: image/png
+```
 
+```bash
 # Modified Request
 Content-Disposition: form-data; name="fileToUpload"; filename="php-reverse-shell.php"
-// highlight-next-line
 Content-Type: text/x-php
 ```
 

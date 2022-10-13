@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 description: Bounty Hacker 
-keywords: [Bounty Hacker, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ftp]
+keywords: [bounty hacker, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ftp, privilege escalation]
 ---
 
 

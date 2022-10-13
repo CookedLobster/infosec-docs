@@ -32,7 +32,7 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdXRoIjoxNjQ0MjU5NTYzNDM4LCJhZ2VudCI6Ik1
 ```js
 {
   "typ": "JWT",
-  "alg": "HS256"  <<  none
+  "alg": "HS256"  🠔  none
 }
 ```
 
@@ -46,7 +46,7 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdXRoIjoxNjQ0MjU5NTYzNDM4LCJhZ2VudCI6Ik1
 {
   "auth": 1644259563438,
   "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36",
-  "role": "user",  <<  admin
+  "role": "user",  🠔  admin
   "iat": 1644259563
 }
 ```

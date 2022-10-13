@@ -3,7 +3,7 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
 
-  // Linux VM
+  /** ------------- TryHackMe Linux Rooms ------------- **/
   linuxDocs: [
     {
       type: 'category',
@@ -170,7 +170,7 @@ const sidebars = {
   
     },
 
-    // Windows VM
+    /** ------------- TryHackMe Windows Rooms ------------- **/
     {
       type: 'category',
       label: 'Virtual Machines [Windows]',
@@ -237,6 +237,8 @@ const sidebars = {
       ],
   
     },
+
+    /** ------------- TryHackMe Overpass Series  ------------- **/
     {
       type: 'category',
       label: 'Overpass Series',
@@ -280,7 +282,7 @@ const sidebars = {
   ],
 
 
-
+  /** ------------- Web Vulnerabilities (OWASP etc.) ------------- **/
   owaspDocs: [
     'introduction',
     {
@@ -417,6 +419,8 @@ const sidebars = {
       ],
   
     },
+
+    /** ------------- Linux (Priv Escalation - Stabilisation - etc.) ------------- **/
     {
       type: 'category',
       label: 'Linux',
@@ -448,6 +452,8 @@ const sidebars = {
       ],
   
     },
+
+    /** ------------- Windows (Priv Escalation - Stabilisation - etc.) ------------- **/
     {
       type: 'category',
       label: 'Windows',
@@ -504,6 +510,8 @@ const sidebars = {
       ],
   
     },
+
+    /** ------------- Recon ------------- **/
     {
       type: 'category',
       label: 'Recon',
@@ -535,6 +543,8 @@ const sidebars = {
       ],
   
     },
+
+    /** ------------- Tools (General Linux-Windows) ------------- **/
     {
       type: 'category',
       label: 'Tools',

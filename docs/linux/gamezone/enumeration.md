@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 description: Game Zone
-keywords: [Game Zone, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation]
+keywords: [game zone, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation]
 ---
 
 # Enumeration

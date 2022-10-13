@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 description: Daily Bugle
-keywords: [Daily Bugle, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, joomla, joomla exploit, john, cracking]
+keywords: [daily bugle, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, joomla, joomla exploit, john, CVE-2017-8917, privilege escalation]
 ---
 
 

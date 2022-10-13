@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 description: TomGhost
-keywords: [TomGhost, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, GhostCat]
+keywords: [tomghost, tomghost tryhacme, tom ghost exploit, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, ghostcat]
 ---
 
 

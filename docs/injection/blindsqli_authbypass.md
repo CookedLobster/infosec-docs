@@ -46,8 +46,8 @@ select * from users where username='' and password='' OR 1=1;
 
 ```sql
 +----------+
-| USERNAME | - ► user' OR 1=1;--
+| USERNAME | ➜ user' OR 1=1;--
 +----------+
-| PASSWORD | - ► ***********
+| PASSWORD | ➜ ***********
 +----------+
 ```

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 description: Cyborg
-keywords: [Cyborg, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, borg]
+keywords: [cyborg, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, borg, privilege escalation]
 ---
 
 

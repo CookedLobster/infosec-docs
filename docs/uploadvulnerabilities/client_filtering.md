@@ -17,4 +17,4 @@ sidebar_position: 4
 
 	- `[3]` Intercept and modify the File Upload. Where the previous method works before the webpage is loaded, this method allows the web page to load as normal, but intercepts the file upload after it's already passed (and been accepted by the filter).
 	- `[4]` Sending the file directly to the Upload Point.
-		- Using Tools such as <b style={{ color: 'Aquamarine' }}>[CURL - HTTPie]</b>
+		- Using Tools such as <b style={{ color: 'Plum' }}>[CURL - HTTPie]</b>

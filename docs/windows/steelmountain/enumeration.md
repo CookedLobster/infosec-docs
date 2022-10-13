@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 description: Steel Mountain
-keywords: [Steel Mountain, TryHackMe, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, rejetto exploit]
+keywords: [steel mountain, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, rejetto exploit]
 ---
 
 # Enumeration
