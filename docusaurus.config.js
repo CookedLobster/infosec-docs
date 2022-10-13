@@ -43,6 +43,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        // The application ID provided by Algolia
+        appId: '4TU62FN1Z3',
+
+        // Public API key: it is safe to commit it
+        apiKey: '314fcff94802e7955d2064d12d5e2094',
+        indexName: 'dev_InfosecDocs',
+        contextualSearch: true,
+      },
       docs: {
         sidebar: {
           hideable: true,
