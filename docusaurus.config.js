@@ -10,7 +10,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',       // Favicon Support
+  favicon: 'img/hd_favicon.png',       // Favicon Support
 
 
   // Github Pages
@@ -76,8 +76,8 @@ const config = {
           {
             href: 'https://github.com/CookedLobster/infosec-docs',
             position: 'right',
-            className: 'header-github-link',
-            'aria-label': 'GitHub repository',
+            className: 'header-github-link',    // Use Icon as GitHub
+            'aria-label': 'GitHub Repository',
           },
           {
             type: 'docSidebar',  

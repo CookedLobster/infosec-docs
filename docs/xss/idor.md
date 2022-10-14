@@ -7,7 +7,7 @@ sidebar_position: 2
 
 :::info Scenario
 
-Custom Support Website
+Customer Support Website.
 
 :::
 

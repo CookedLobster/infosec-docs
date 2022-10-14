@@ -2,8 +2,7 @@
 sidebar_position: 2
 ---
 
-# XSS In The Wild
-
+# XSS
 
 :::info Scenarios Around The Internet
 
