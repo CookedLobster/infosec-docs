@@ -53,7 +53,7 @@ const config = {
         appId: '4TU62FN1Z3',
 
         // Public API key [Safe to be Commited to GitHub]
-        apiKey: '314fcff94802e7955d2064d12d5e2094',
+        apiKey: '7bb751ebb1bf0b407dc8e169c2422850',
         indexName: 'dev_DocsPersonal',
         contextualSearch: true,
       },
