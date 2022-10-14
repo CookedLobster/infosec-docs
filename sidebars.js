@@ -5,7 +5,7 @@ const sidebars = {
 
   /** ------------- TryHackMe Linux Rooms ------------- **/
   linuxDocs: [
-    'linux-introduction',
+    'tryhackme-introduction',
     {
       type: 'category',
       label: 'Virtual Machines [Linux]',

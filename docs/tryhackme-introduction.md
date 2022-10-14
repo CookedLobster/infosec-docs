@@ -1,6 +1,6 @@
 ---
-title: Rooms
-description: TryHackMe Rooms
+title: TryHackMe Rooms
+description: Challanges on TryHackMe Website
 keywords: [tryhackme, exploitation guides, exploiting, enumeration, hackthebox, pentesting, docs, vulnerabilities, privilege escalation, infosec, infosec docs, pentesting docs, pentesting guide, hacking, priv esc, payloads, windows privilege escalation, reverse shell, web shell, terminal stabilisation, shell stabilisation, interactive tty, stabilize reverse shell, tryhackme overpass]
 ---
 
