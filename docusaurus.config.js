@@ -56,6 +56,7 @@ const config = {
         apiKey: '7bb751ebb1bf0b407dc8e169c2422850',
         indexName: 'dev_DocsPersonal',
         contextualSearch: true,
+        placeholder: 'Search ...',
       },
       docs: {
         sidebar: {
@@ -74,12 +75,14 @@ const config = {
         },
         hideOnScroll: true,   // Hide Navbar on Scroll
         items: [
+          /*
           {
             href: 'https://github.com/CookedLobster/infosec-docs',
             position: 'right',
             className: 'header-github-link',    // Use Icon as GitHub
             'aria-label': 'GitHub Repository',
           },
+          */
           {
             type: 'docSidebar',  
             position: 'left',
