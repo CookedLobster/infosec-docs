@@ -5,7 +5,7 @@ const sidebars = {
 
   /** ------------- TryHackMe Linux Rooms ------------- **/
   linuxDocs: [
-    'linux_introduction',
+    'linux-introduction',
     {
       type: 'category',
       label: 'Virtual Machines [Linux]',
@@ -23,147 +23,147 @@ const sidebars = {
           type: 'category',
           label: 'Agent SUDO',
           items: [
-            'linux/agentsudo/enumeration', 'linux/agentsudo/exploitation',// [1] Sidebar Element Before [2] Sidebar Dropdown
+            'linux/agentsudo/agent-enumeration', 'linux/agentsudo/agent-exploitation',// [1] Sidebar Element Before [2] Sidebar Dropdown
           ],
         },
         {
           type: 'category',
           label: 'Basic Pentesting',
           items: [
-            'linux/basicpentesting/enumeration', 'linux/basicpentesting/exploitation',
+            'linux/basicpentesting/basic-enumeration', 'linux/basicpentesting/basic-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Bounty Hacker',
           items: [
-            'linux/bountyhacker/enumeration', 'linux/bountyhacker/exploitation',
+            'linux/bountyhacker/bountyhacker-enumeration', 'linux/bountyhacker/bountyhacker-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Cyborg',
           items: [
-            'linux/cyborg/enumeration', 'linux/cyborg/exploitation',
+            'linux/cyborg/cyborg-enumeration', 'linux/cyborg/cyborg-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Daily Bugle',
           items: [
-            'linux/dailybugle/enumeration', 'linux/dailybugle/exploitation',
+            'linux/dailybugle/dailybugle-enumeration', 'linux/dailybugle/dailybugle-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Game Zone',
           items: [
-            'linux/gamezone/enumeration', 'linux/gamezone/exploitation_one', 'linux/gamezone/exploitation_two',
+            'linux/gamezone/gz-enumeration', 'linux/gamezone/gz-exploitation-one', 'linux/gamezone/gz-exploitation-two',
           ],
         },
         {
           type: 'category',
           label: 'Ignite',
           items: [
-            'linux/ignite/enumeration', 'linux/ignite/exploitation',
+            'linux/ignite/ignite-enumeration', 'linux/ignite/ignite-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Internal',
           items: [
-            'linux/internal/enumeration', 'linux/internal/exploitation', 'linux/internal/jenkins',
+            'linux/internal/internal-enumeration', 'linux/internal/internal-exploitation', 'linux/internal/internal-jenkins',
           ],
         },
         {
           type: 'category',
           label: 'Kenobi',
           items: [
-            'linux/kenobi/enumeration', 'linux/kenobi/exploitation',
+            'linux/kenobi/kenobi-enumeration', 'linux/kenobi/kenobi-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Lazy Admin',
           items: [
-            'linux/lazyadmin/enumeration', 'linux/lazyadmin/exploitation',
+            'linux/lazyadmin/lazyadmin-enumeration', 'linux/lazyadmin/lazyadmin-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Lian Yu',
           items: [
-            'linux/lianyu/enumeration', 'linux/lianyu/exploitation',
+            'linux/lianyu/lianyu-enumeration', 'linux/lianyu/lianyu-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Pickle Rick',
           items: [
-            'linux/picklerick/enumeration', 'linux/picklerick/exploitation',
+            'linux/picklerick/picklerick-enumeration', 'linux/picklerick/picklerick-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Res',
           items: [
-            'linux/res/enumeration', 'linux/res/exploitation',
+            'linux/res/res-enumeration', 'linux/res/res-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'RootMe',
           items: [
-            'linux/rootme/enumeration', 'linux/rootme/exploitation',
+            'linux/rootme/rootme-enumeration', 'linux/rootme/rootme-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Simple CTF',
           items: [
-            'linux/simplectf/enumeration', 'linux/simplectf/exploitation',
+            'linux/simplectf/simplectf-enumeration', 'linux/simplectf/simplectf-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Skynet',
           items: [
-            'linux/skynet/enumeration', 'linux/skynet/exploitation',
+            'linux/skynet/skynet-enumeration', 'linux/skynet/skynet-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Source VM',
           items: [
-            'linux/sourcevm/enumeration', 'linux/sourcevm/exploitation',
+            'linux/sourcevm/sourcevm-enumeration', 'linux/sourcevm/sourcevm-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Startup',
           items: [
-            'linux/startup/enumeration', 'linux/startup/forensics', 'linux/startup/exploitation',
+            'linux/startup/startup-enumeration', 'linux/startup/startup-forensics', 'linux/startup/startup-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'TomGhost',
           items: [
-            'linux/tomghost/enumeration', 'linux/tomghost/exploitation',
+            'linux/tomghost/tomghost-enumeration', 'linux/tomghost/tomghost-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Vulnversity',
           items: [
-            'linux/vulnversity/enumeration', 'linux/vulnversity/exploitation',
+            'linux/vulnversity/vulnversity-enumeration', 'linux/vulnversity/vulnversity-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Wgel',
           items: [
-            'linux/wgel/enumeration', 'linux/wgel/exploitation',
+            'linux/wgel/wgel-enumeration', 'linux/wgel/wgel-exploitation',
           ],
         },
         
@@ -189,49 +189,49 @@ const sidebars = {
           type: 'category',
           label: 'Alfred',
           items: [
-            'windows/alfred/enumeration', 'windows/alfred/exploitation',
+            'windows/alfred/alfred-enumeration', 'windows/alfred/alfred-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Blaster',
           items: [
-            'windows/blaster/enumeration', 'windows/blaster/exploitation',
+            'windows/blaster/blaster-enumeration', 'windows/blaster/blaster-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Blue',
           items: [
-            'windows/blue/enumeration', 'windows/blue/exploitation',
+            'windows/blue/blue-enumeration', 'windows/blue/blue-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'HackPark',
           items: [
-            'windows/hackpark/enumeration', 'windows/hackpark/blogengine', 'windows/hackpark/exploitation',
+            'windows/hackpark/hackpark-enumeration', 'windows/hackpark/hackpark-blogengine', 'windows/hackpark/hackpark-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Ice',
           items: [
-            'windows/ice/enumeration', 'windows/ice/exploitation',
+            'windows/ice/ice-enumeration', 'windows/ice/ice-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Relevant',
           items: [
-            'windows/relevant/enumeration', 'windows/relevant/exploitation',
+            'windows/relevant/relevant-enumeration', 'windows/relevant/relevant-exploitation',
           ],
         },
         {
           type: 'category',
           label: 'Steel Mountain',
           items: [
-            'windows/steelmountain/enumeration', 'windows/steelmountain/exploitation', 'windows/steelmountain/manual',
+            'windows/steelmountain/steelmountain-enumeration', 'windows/steelmountain/steelmountain-exploitation', 'windows/steelmountain/steelmountain-manual',
           ],
         },
         
@@ -257,7 +257,7 @@ const sidebars = {
           type: 'category',
           label: 'Overpass',
           items: [
-            'linux/overpass/enumeration', 'linux/overpass/exploitation', 
+            'linux/overpass/overpass-enumeration', 'linux/overpass/overpass-exploitation', 
           ],
         },
         {
@@ -265,7 +265,7 @@ const sidebars = {
             type: 'category',
             label: 'Overpass - Hacked',
             items: [
-              'linux/overpass_hacked/enumeration', 'linux/overpass_hacked/forensics', 'linux/overpass_hacked/exploitation', 
+              'linux/overpass-hacked/ohacked-enumeration', 'linux/overpass-hacked/ohacked-forensics', 'linux/overpass-hacked/ohacked-exploitation', 
             ],
         },
         {
@@ -273,7 +273,7 @@ const sidebars = {
             type: 'category',
             label: 'Overpass - Hosting',
             items: [
-              'linux/overpass_hosting/enumeration', 'linux/overpass_hosting/tunneling', 'linux/overpass_hosting/exploitation', 
+              'linux/overpass-hosting/ohosting-enumeration', 'linux/overpass-hosting/ohosting-tunneling', 'linux/overpass-hosting/ohosting-exploitation', 
             ],
         },
         
@@ -307,21 +307,21 @@ const sidebars = {
               type: 'category',
               label: 'Command Injection',
               items: [
-                'injection/overview', 'injection/command_injection',
+                'injection/ci-overview', 'injection/command-injection',
               ],
             },
             {
               type: 'category',
               label: 'LFI',
               items: [
-                'injection/lfi_overview', 'injection/localfile_inclusion', 'injection/remotefile_inclusion',
+                'injection/lfi-overview', 'injection/localfile-inclusion', 'injection/remotefile-inclusion',
               ],
             },
             {
               type: 'category',
               label: 'SQLi',
               items: [
-                'injection/sqli_overview', 'injection/errorbased_sqli', 'injection/blindsqli_authbypass', 'injection/blindsqli_timebased',
+                'injection/sqli-overview', 'injection/errorbased-sqli', 'injection/blindsqli-authbypass', 'injection/blindsqli-timebased',
               ],
             },
             {
@@ -342,21 +342,21 @@ const sidebars = {
                 type: 'category',
                 label: 'General',
                 items: [
-                  'brokenauth/general', 'brokenauth/re_registration',
+                  'brokenauth/broken-authgeneral', 'brokenauth/registration',
                 ],
               },
               {
                 type: 'category',
                 label: 'Authentication Bypass',
                 items: [
-                  'brokenauth/user__enumeration', 'brokenauth/logic_flaw', 'brokenauth/brute_force',
+                  'brokenauth/user-enumeration', 'brokenauth/logic-flaw', 'brokenauth/bruteforce',
                 ],
               },
               {
                 type: 'category',
                 label: 'JWT',
                 items: [
-                  'brokenauth/overview', 'brokenauth/jwt_exploitation', 'brokenauth/jwt_none',
+                  'brokenauth/jwt-overview', 'brokenauth/jwt-exploitation', 'brokenauth/jwt-none',
                 ],
               },
             ],
@@ -370,14 +370,14 @@ const sidebars = {
                 type: 'category',
                 label: 'General',
                 items: [
-                  'xmlexternalentity/xxe', 'xmlexternalentity/xxe_exploitation',
+                  'xmlexternalentity/xxe', 'xmlexternalentity/xxe-exploitation',
                 ],
               },
               {
                 type: 'category',
                 label: 'SSRF',
                 items: [
-                  'xmlexternalentity/overview', 'xmlexternalentity/ssrf',
+                  'xmlexternalentity/ssrf-overview', 'xmlexternalentity/ssrf',
                 ],
               },
             ],
@@ -391,14 +391,14 @@ const sidebars = {
                 type: 'category',
                 label: 'General',
                 items: [
-                  'xss/general', 'xss/xss_scenario', 'xss/blind_xss',
+                  'xss/xss-general', 'xss/xss-scenario', 'xss/blind-xss',
                 ],
               },
               {
                 type: 'category',
                 label: 'IDOR',
                 items: [
-                  'xss/overview', 'xss/idor',
+                  'xss/idor-overview', 'xss/idor',
                 ],
               },
             ],
@@ -412,7 +412,7 @@ const sidebars = {
                 type: 'category',
                 label: 'General',
                 items: [
-                  'uploadvulnerabilities/serverside_filtering', 'uploadvulnerabilities/rce_filtering', 'uploadvulnerabilities/overwriting', 'uploadvulnerabilities/client_filtering',
+                  'uploadvulnerabilities/serverside-filtering', 'uploadvulnerabilities/rce-filtering', 'uploadvulnerabilities/overwriting', 'uploadvulnerabilities/client-filtering',
                 ],
               },
             ],
@@ -439,7 +439,7 @@ const sidebars = {
           type: 'category',
           label: 'General',
           items: [
-            'other/permissions', 'other/passwd_shadow', 'other/commands',  // [1] Sidebar Element Before [2] Sidebar Dropdown
+            'other/permissions', 'other/passwd-shadow', 'other/commands',  // [1] Sidebar Element Before [2] Sidebar Dropdown
           ],
         },
         {
@@ -447,7 +447,7 @@ const sidebars = {
             type: 'category',
             label: 'Terminal - Payloads',
             items: [ 
-              'other/stabilisation', 'other/web_shell',
+              'other/stabilisation', 'other/web-shell',
             ],
         },
       ],
@@ -472,7 +472,7 @@ const sidebars = {
           type: 'category',
           label: 'General',
           items: [
-            'other_win/permissions', 'other_win/commands', 'other_win/tools', 'other_win/harvesting', // [1] Sidebar Element Before [2] Sidebar Dropdown
+            'other-win/permissions', 'other-win/commands', 'other-win/tools', 'other-win/harvesting', // [1] Sidebar Element Before [2] Sidebar Dropdown
           ],
         },
         {
@@ -485,7 +485,7 @@ const sidebars = {
                   type: 'category',
                   label: 'Privileges',
                   items: [ 
-                    'priv_escalation/sebackup_serestore', 'priv_escalation/setakeownership', 'priv_escalation/se_token',
+                    'priv-escalation/sebackup-serestore', 'priv-escalation/setakeownership', 'priv-escalation/se-token',
                   ],
               },
               {
@@ -493,7 +493,7 @@ const sidebars = {
                   type: 'category',
                   label: 'Services',
                   items: [ 
-                    'priv_escalation/insecure_permissions', 'priv_escalation/scheduled_tasks', 'priv_escalation/unquoted_service', 'priv_escalation/insecure_service', 'priv_escalation/alwaysinstallelevated',
+                    'priv-escalation/insecure-permissions', 'priv-escalation/scheduled-tasks', 'priv-escalation/unquoted-service', 'priv-escalation/insecure-service', 'priv-escalation/alwaysinstallelevated',
                   ],
               },
             ],
@@ -504,7 +504,7 @@ const sidebars = {
             type: 'category',
             label: 'Terminal - Payloads',
             items: [ 
-              'other_win/shell_win',
+              'other-win/shell-win',
             ],
             
         },
@@ -563,7 +563,7 @@ const sidebars = {
           type: 'category',
           label: 'NMAP',
           items: [
-            'tools/discovery', 'tools/basic', 'tools/advanced_one', 'tools/advanced_two', 'tools/nse',
+            'tools/discovery', 'tools/basic', 'tools/advanced-one', 'tools/advanced-two', 'tools/nse',
           ],
         },
       ],

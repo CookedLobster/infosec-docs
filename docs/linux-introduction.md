@@ -5,8 +5,6 @@ keywords: [tryhackme, exploitation guides, exploiting, enumeration, hackthebox, 
 ---
 
 
-# Rooms 
-
 :::info [Linux Machines](https://infosec-docs.pages.dev/category/virtual-machines-linux)
 
 `TryHackMe` Linux Machines.

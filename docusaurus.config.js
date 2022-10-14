@@ -10,7 +10,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/hd_favicon.png',       // Favicon Support
+  favicon: 'img/hd-favicon.png',       // Favicon Support
 
 
   // Github Pages
