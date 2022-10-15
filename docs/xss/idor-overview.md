@@ -11,7 +11,7 @@ This type of Vulnerability can happens when a Web Server receives User-Supplied 
 <br/>
 
 
-:::info Scenario Vulnerable URL
+:::info Vulnerable URL Example
 
 :::
 

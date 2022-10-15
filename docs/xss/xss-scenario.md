@@ -4,11 +4,6 @@ sidebar_position: 2
 
 # XSS
 
-:::info Scenarios Around The Internet
-
-:::
-
-## XSS - 1
 
 Form asking you to enter your Name, and once you've entered your Name, it will be Presented on a Line Below.
 
@@ -37,7 +32,8 @@ Form asking you to enter your Name, and once you've entered your Name, it will b
 
 <br/>
 
-## XSS - 2
+---
+
 
 Form asking you to enter your Name. The Name is being reflected in `Input Tag`
 
@@ -67,7 +63,7 @@ Form asking you to enter your Name. The Name is being reflected in `Input Tag`
 
 <br/>
 
-## XSS - 3
+---
 
 Form asking you to enter your Name. The Name gets Reflected inside an HTML Tag, this time the `Textarea Tag`
 
@@ -97,7 +93,7 @@ Form asking you to enter your Name. The Name gets Reflected inside an HTML Tag, 
 
 <br/>
 
-## XSS - 4
+---
 
 Entering your Name into the Form, you'll see it Reflected on the Page. The Name gets Reflected into `JavaScript Code`
 
@@ -132,7 +128,7 @@ Entering your Name into the Form, you'll see it Reflected on the Page. The Name 
 
 <br/>
 
-## XSS - 5
+---
 
 Form asking you to enter your Name, and once you've entered your Name, it will be Presented on a Line Below. **The Standard XSS PAYLOAD is not going Work, because there is some kind of Filtering.**
 
@@ -160,7 +156,7 @@ Form asking you to enter your Name, and once you've entered your Name, it will b
 
 <br/>
 
-## XSS - 6
+---
 
 Form asking you to enter your Name. The Name is being reflected in an `IMG Tag`
 
@@ -196,10 +192,10 @@ Form asking you to enter your Name. The Name is being reflected in an `IMG Tag`
 ## Polyglots
 
 
-An **XSS Polyglot** is a String of Text which can escape attributes, tags and Bypass Filters all in one.
+An **XSS Polyglot** is a String of Text which can escape attributes, tags and **Bypass Filters All-In-One.**
 
 
-- **This PAYLOAD can be used on all of the Pages Above.**
+- **This `PAYLOAD` can be used on all of the Examples Above**
 
 ```js
 jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */onerror=alert('XSS') )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert('XSS')//>\x3e

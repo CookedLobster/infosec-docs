@@ -7,7 +7,7 @@ sidebar_position: 1
 ## User Permissions
 
 ```bash
--rw-r--r-- 12 delaila  scanner 12.0K Apr  28 10:10 file_name
+-rw-r--r-- 12   mark   scanner 12.0K Apr  28 10:10 file_name
 |[-][-][-]-   [------] [------]
 | |  |  | |      |         |
 | |  |  | |      |         +---------> 7. Group

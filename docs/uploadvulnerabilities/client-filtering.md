@@ -1,20 +1,23 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 # Client-Side Filtering
 
-:::caution This Section is a Work In Progress
+## JavaScript Off
 
-:::
+Turn off <b style={{ color: 'Grey' }}>JavaScript</b> in the Browser. This will work provided the site doesn't require <b style={{ color: 'Grey' }}>JavaScript</b> in order to provide basic functionality. <span style={{fontWeight: 'Bold'}}>If turning off <b style={{ color: 'Grey' }}>JavaScript</b> completely will prevent the site from working at all then this method is not suitable.</span> 
 
 <br/>
 
-- **Common Server Checks**
-	- `[1]` Turn off Javascript in the Browser. This will work provided the site doesn't require Javascript in order to provide basic functionality. If turning off Javascript completely will prevent the site from working at all then one of the other methods would be more desirable.
-	- `[2]` Intercept and Modify the Incoming Page. 
-		- **Burpsuite** <b style={{ color: 'Aquamarine' }}>[Proxy - Options - Intercept Client Request - Edit (File Extensions) - Remove ^js$]</b> <b style={{ color: 'LightGreen' }}>[Do Intercept - Response To This Request]</b>
+## Intercept && Modify
 
-	- `[3]` Intercept and modify the File Upload. Where the previous method works before the webpage is loaded, this method allows the web page to load as normal, but intercepts the file upload after it's already passed (and been accepted by the filter).
-	- `[4]` Sending the file directly to the Upload Point.
-		- Using Tools such as <b style={{ color: 'Plum' }}>[CURL - HTTPie]</b>
+Intercept and Modify the Incoming Page. **Burpsuite** <b style={{ color: 'Aquamarine' }}>[Proxy - Options - Intercept Client Request - Edit (File Extensions) - Remove ^js$]</b> <b style={{ color: 'LightGreen' }}>[Do Intercept - Response To This Request]</b>
+
+<br/>
+
+## Intercept File Upload
+
+This method works before the Web Page is loaded, this method allows the Web Page to load as normal, but intercepts the file upload after it's already passed (and been accepted by the filter).
+
+

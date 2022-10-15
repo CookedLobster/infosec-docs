@@ -5,9 +5,9 @@ sidebar_position: 3
 # JWT (NONE)
 
 
-:::info Assuming That The Application Is Vulnerable
+:::info Vulnerable Application Scenario
 
-We start with a Login Application. After the Login we get a `JWT Token`
+We start with a Login Application. After the Login we get a `JWT Token`.
 
 :::
 

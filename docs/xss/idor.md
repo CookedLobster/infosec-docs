@@ -5,16 +5,6 @@ sidebar_position: 2
 # Insecure Direct Object Reference
 
 
-:::info Scenario
-
-Customer Support Website.
-
-:::
-
-
-<br/>
-
-
 - **`Your Account`** Section gives us the ability to change our Information such as **Username - Email - Password.** **[We notice the Username & Email fields Pre-Filled in with our Information]**
 
 	- Refereshing the Page and going to the `Network Tab` in the `Browser Tools` we see a Call to an Endpoint.

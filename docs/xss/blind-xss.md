@@ -6,7 +6,13 @@ sidebar_position: 3
 
 :::info Scenario
 
-Website with the Support Tickets Tab
+Website with Support Tickets Tab
+
+:::
+
+<br/>
+
+- **Tickets Tab**
 
 ```sql
 +---------------------+
@@ -22,7 +28,6 @@ Website with the Support Tickets Tab
 +------------------------------------------+
 ```
 
-:::
 
 <br/>
 
