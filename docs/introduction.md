@@ -15,9 +15,6 @@ Contains General **`Linux`** Information
 :::
 
 
-
-
-
 :::info [Windows](https://infosec-docs.pages.dev/category/windows)
 
 Contains General **`Windows`** Information  

@@ -20,7 +20,7 @@ accesschk <file, directory, registry key, process, service, object>
 <br/>
 
 
-- The Group <b style={{ color: 'PowderBlue' }}>BUILTIN\\Users:(SERVICE_ALL_ACCESS)</b> can Reconfigure any Service.
+- The Group <b style={{ color: 'PowderBlue' }}>BUILTIN\\Users: (SERVICE_ALL_ACCESS)</b> can Reconfigure any Service.
 
 ```log
 C:\tools\AccessChk> accesschk64.exe /accepteula

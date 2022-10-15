@@ -4,6 +4,7 @@ sidebar_position: 1
 
 # Permissions
 
+
 ## User Permissions
 
 ```bash

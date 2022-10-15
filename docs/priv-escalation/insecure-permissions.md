@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Insecure Permissions [Service]
 
-- <b style={{ color: 'DeepSkyBlue' }}>WindowsScheduler</b> Service has <span style={{fontWeight: 'Bold'}}>Weak Permissions</span> that allows the Modification - Replacing it is possible to gain the Privileges of the Service.
+- <b style={{ color: 'DeepSkyBlue' }}>WindowsScheduler</b> Service has <span style={{fontWeight: 'Bold'}}>Weak Permissions</span> that allows the Modification - Replacement. It is possible to gain the Privileges of the Service.
 
 - **The Service runs as User:** `svcusr1`
 
@@ -30,6 +30,7 @@ SERVICE_NAME: windowsscheduler
 
 ```log
 C:\Users\thm-unpriv>icacls C:\PROGRA~2\SYSTEM~1\WService.exe
+// highlight-next-line
 C:\PROGRA~2\SYSTEM~1\WService.exe Everyone:(I)(M)
                                   NT AUTHORITY\SYSTEM:(I)(F)
                                   BUILTIN\Administrators:(I)(F)
@@ -38,6 +39,7 @@ C:\PROGRA~2\SYSTEM~1\WService.exe Everyone:(I)(M)
                                   APPLICATION PACKAGE AUTHORITY\ALL RESTRICTED APPLICATION PACKAGES:(I)(RX)
 ```
 
+<br/>
 <br/>
 
 - Generating the **PAYLOAD** and **HOSTING** using Simple Python Server.

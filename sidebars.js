@@ -566,6 +566,7 @@ const sidebars = {
       ],
   
     },
+    'credits',
   ],
 };
 module.exports = sidebars;

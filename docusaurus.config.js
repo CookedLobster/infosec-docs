@@ -10,7 +10,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/hd-favicon.png',       // Favicon Support
+  favicon: 'img/favicon.png',       // Favicon Support
 
 
   // Github Pages
@@ -70,8 +70,8 @@ const config = {
         logo: {
           
           alt: 'InfosecDocs',
-          src: 'img/test.svg',
-          srcDark: 'img/test.svg',
+          src: 'img/LightMode.svg',
+          srcDark: 'img/DarkMode.svg',
         },
         hideOnScroll: true,   // Hide Navbar on Scroll
         items: [
