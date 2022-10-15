@@ -4,8 +4,13 @@ description: TomGhost
 keywords: [tomghost, tomghost tryhacme, tom ghost exploit, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, ghostcat]
 ---
 
-
 # Enumeration
+
+:::note Box Description
+
+Identify recent vulnerabilities to try exploit the system or read files that you should not have access to.
+
+:::
 
 ## NMAP
 

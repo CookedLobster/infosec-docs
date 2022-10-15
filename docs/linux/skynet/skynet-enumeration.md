@@ -4,8 +4,13 @@ description: Skynet
 keywords: [skynet, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, enum4linux, smbclient, privilege escalation, squirrelmail exploit]
 ---
 
-
 # Enumeration
+
+:::note Box Description
+
+A vulnerable Terminator themed Linux machine.
+
+:::
 
 ## NMAP
 
@@ -116,10 +121,6 @@ squirrelmail            [Status: 301, Size: 321, Words: 20, Lines: 10, Duration:
 [+] Found 3 SID(s)
 [*] Trying SID S-1-22-1
 [+] Found user 'Unix User\milesdyson' (RID 1001)
-[*] Trying SID S-1-5-21-2393614426-3774336851-1116533619
-[+] Found user 'SKYNET\nobody' (RID 501)
-[+] Found domain group 'SKYNET\None' (RID 513)
-[+] Found user 'SKYNET\milesdyson' (RID 1000)
 ```
 
 
@@ -133,12 +134,14 @@ squirrelmail            [Status: 301, Size: 321, Words: 20, Lines: 10, Duration:
 smb: \> ls
   .                                   D        0  Thu Nov 26 17:04:00 2020
   ..                                  D        0  Tue Sep 17 09:20:17 2019
+  // highlight-next-line
   attention.txt                       N      163  Wed Sep 18 05:04:59 2019
   logs                                D        0  Wed Sep 18 06:42:16 2019
 
 		9204224 blocks of size 1024. 5829012 blocks available
 smb: \> get attention.txt -
-A recent system malfunction has caused various passwords to be changed. All skynet employees are required to change their password after seeing this.
+A recent system malfunction has caused various passwords to be changed. 
+All skynet employees are required to change their password after seeing this.
 -Miles Dyson
 
 smb: \> cd logs\
@@ -152,6 +155,7 @@ smb: \logs\> get log1.txt
 ```
 
 - **File:** `log1.txt`
+- This file contains `SquirrelMail` Passwords Combinations.
 
 ```
 cyborg007haloterminator

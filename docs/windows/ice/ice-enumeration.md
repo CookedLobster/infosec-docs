@@ -4,8 +4,14 @@ description: Ice
 keywords: [ice, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, icecast exploit, CVE-2004-1561]
 ---
 
-
 # Enumeration
+
+:::note Box Description
+
+Deploy & hack into a Windows machine, exploiting a very poorly secured Media Server.
+
+:::
+
 
 ## NMAP
 

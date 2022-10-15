@@ -6,6 +6,13 @@ keywords: [wgel, wgel tryhackme, tryhackme, ctf, pentesting, guide, docs, tutori
 
 # Enumeration
 
+:::note Box Description
+
+Can you exfiltrate the Root flag?
+
+:::
+
+
 ## NMAP
 
 - <b style={{ color: 'Coral' }}>[SSH: 22]</b> <b style={{ color: 'LightSkyBlue' }}>[HTTP: 80]</b>
@@ -93,7 +100,7 @@ ________________________________________________
 
 <br/>
 
-- **Website Template Page:** <b style={{ color: 'SandyBrown' }}>[IP:80/sitemap]</b>
+- **Template Page:** <b style={{ color: 'SandyBrown' }}>[IP:80/sitemap]</b>
 
 ![WG](/img/vmlinux/w-template.png)
 
@@ -102,7 +109,7 @@ ________________________________________________
 
 - **Private SSH Key Location:** <b style={{ color: 'SandyBrown' }}>[IP:80/sitemap/.ssh/id_rsa]</b>
 
-```
+```js
 -----BEGIN RSA PRIVATE KEY-----
 MIIEowIBAAKCAQEA2mujeBv3MEQFCel8yvjgDz066+8Gz0W72HJ5tvG8bj7Lz380
 m+JYAquy30lSp5jH/bhcvYLsK+T9zEdzHmjKDtZN2cYgwHw0dDadSXWFf9W2gc3x

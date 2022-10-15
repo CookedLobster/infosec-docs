@@ -4,8 +4,14 @@ description: Bounty Hacker
 keywords: [bounty hacker, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ftp, privilege escalation]
 ---
 
-
 # Enumeration
+
+:::note Box Description
+
+You talked a big game about being the most elite hacker in the solar system. Prove it and claim your right to the status of Elite Bounty Hacker!
+
+:::
+
 
 ## NMAP
 
@@ -55,8 +61,10 @@ Connected to 10.10.21.169.
 ftp> ls -a
 drwxr-xr-x    2 ftp      ftp          4096 Jun 07  2020 .
 drwxr-xr-x    2 ftp      ftp          4096 Jun 07  2020 ..
+// highlight-start
 -rw-rw-r--    1 ftp      ftp           418 Jun 07  2020 locks.txt
 -rw-rw-r--    1 ftp      ftp            68 Jun 07  2020 task.txt
+// highlight-end
 ftp> mget locks.txt task.txt
 ```
 

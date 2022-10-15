@@ -6,6 +6,14 @@ keywords: [blue, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration,
 
 # Enumeration
 
+:::note Box Description
+
+Deploy & hack into a Windows machine, leveraging common misconfigurations issues.
+
+:::
+
+
+
 ## NMAP
 
 - <b style={{ color: 'BurlyWood' }}>[RPC: 135]</b> <b style={{ color: 'BlanchedAlmond' }}>[SMB: 139-445]</b> <b style={{ color: 'BlanchedAlmond' }}>[RDP: 3389]</b>

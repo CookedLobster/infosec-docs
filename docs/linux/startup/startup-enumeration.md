@@ -6,6 +6,13 @@ keywords: [startup tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial,
 
 # Enumeration
 
+:::note Box Description
+
+Abuse Traditional vulnerabilities via Untraditional means.
+
+:::
+
+
 ## NMAP
 
 - <b style={{ color: 'DarkKhaki' }}>[FTP: 21]</b> <b style={{ color: 'Coral' }}>[SSH: 22]</b> <b style={{ color: 'LightSkyBlue' }}>[HTTP: 80]</b>
@@ -76,7 +83,7 @@ files                   [Status: 301, Size: 310, Words: 20, Lines: 10, Duration:
 ## FTP
 
 - **We can Login as `Anonymous`**
-- We have the Permissions to **Upload** Files inside the `FTP` Server.
+- There is nothing of Important in the Share.
 
 ```log
 ftp> ls -al
@@ -100,6 +107,7 @@ Now I dont know who it is, but Maya is looking pretty sus.
 <br/>
 <br/>
 
+- We have the Permissions to **Upload** Files inside the `FTP` Server.
 - **Uploading Reverse Shell:** `php-reverse-shell.php`
 - **Reverse Shell Location:** <b style={{ color: 'SandyBrown' }}>[IP:80/files/ftp/php-reverse-shell.php]</b>
 
@@ -117,10 +125,6 @@ drwxrwxrwx    2 65534    65534        4096 Nov 12  2020 .
 drwxr-xr-x    3 65534    65534        4096 Nov 12  2020 ..
 ftp> put php-reverse-shell.phtml 
 226 Transfer complete.
-ftp> ls -al
-drwxrwxrwx    2 65534    65534        4096 Oct 07 08:36 .
-drwxr-xr-x    3 65534    65534        4096 Nov 12  2020 ..
--rwxrwxr-x    1 112      118          5493 Oct 07 08:36 php-reverse-shell.phtml
 ```
 
 
@@ -150,7 +154,7 @@ drwxr-xr-x    3 65534    65534        4096 Nov 12  2020 ..
 ```
 
 - <b style={{ color: 'SandyBrown' }}>[IP:80/files/ftp]</b>
-- Uploaded the **Reverse Shell** Using `FTP`
+- Location of the Uploaded **Reverse Shell** through `FTP`
 
 ```
    [ICO]             Name            Last modified   Size Description

@@ -4,8 +4,13 @@ description: Pickle Rick
 keywords: [pickle rick, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
 ---
 
-
 # Enumeration
+
+:::note Box Description
+
+A Rick and Morty CTF. Help turn Rick back into a human!
+
+:::
 
 ## NMAP
 
@@ -94,10 +99,12 @@ ________________________________________________
 ##
 
 - **`robots.txt` Location:** <b style={{ color: 'SandyBrown' }}>[IP:80/robots.txt]</b>
-- <b style={{ color: 'Coral' }}>Wubbalubbadubdub</b>
+- There is a Password in `robots.txt:` <b style={{ color: 'Coral' }}>Wubbalubbadubdub</b>
 
 ```
 Wubbalubbadubdub
 ```
+
+- This Password can be used to Login at: <b style={{ color: 'SandyBrown' }}>[IP:80/login.php]</b>
 
 ---

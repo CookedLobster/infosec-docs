@@ -6,6 +6,13 @@ keywords: [relevant, relevant tryhackme, tryhackme, ctf, pentesting, guide, docs
 
 # Enumeration
 
+:::note Box Description
+
+Penetration Testing Challenge.
+
+:::
+
+
 ## NMAP
 
 - <b style={{ color: 'PowderBlue' }}>[IIS Windows Server: 80]</b> <b style={{ color: 'BurlyWood' }}>[RPC: 135]</b> <b style={{ color: 'BlanchedAlmond' }}>[SMB: 139-445]</b> <b style={{ color: 'BlanchedAlmond' }}>[RDP: 3389]</b> <b style={{ color: 'PowderBlue' }}>[IIS Windows Server: 49663]</b>
@@ -92,6 +99,7 @@ Host script results:
 smb: \> ls
   .                                   D        0  Mon Oct 10 06:55:55 2022
   ..                                  D        0  Mon Oct 10 06:55:55 2022
+  // highlight-next-line
   passwords.txt                       A       98  Sat Jul 25 17:15:33 2020
 smb: \> get passwords.txt 
 ```
@@ -99,6 +107,7 @@ smb: \> get passwords.txt
 <br/>
 <br/>
 
+- **File:** `passwords.txt`
 - The Text is `BASE64` Encoded
 
 ```
@@ -128,6 +137,7 @@ QmlsbCAtIEp1dzRubmFNNG40MjA2OTY5NjkhJCQk
 <br/>
 
 - Browsing to <b style={{ color: 'Plum' }}>[IP:49663/nt4wrksv/passwords.txt]</b> we Access the same File that can be Accessed with `SMB.` **(This can be Used to Execute our `Reverse Shell` since we have Read - Write Permissions on the `SMB` Share)**
+- **[NOTE]** `nt4wrksv` Is the `SMB` Share Name found with `smbmap`
 
 ```log
 attacker@machine:~$ curl "10.10.180.65:49663/nt4wrksv/passwords.txt"

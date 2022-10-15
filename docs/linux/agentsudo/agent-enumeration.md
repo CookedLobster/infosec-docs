@@ -6,6 +6,14 @@ keywords: [agent sudo, tryhackme, ctf, pentesting, guide, docs, tutorial, enumer
 
 # Enumeration
 
+:::note Box Description
+
+You found a secret Server located under the deep sea. Your task is to hack inside the server and reveal the truth.
+
+:::
+
+
+
 ## NMAP 
 
 - <b style={{ color: 'DarkKhaki' }}>[FTP: 21]</b> <b style={{ color: 'Coral' }}>[SSH: 22]</b> <b style={{ color: 'LightSkyBlue' }}>[HTTP (Apache Web Server): 80]</b>
@@ -34,9 +42,9 @@ PORT   STATE SERVICE VERSION
 - **Page: <b style={{ color: 'SandyBrown' }}>[IP:80]</b>**
 - The Letter Suggests that we use our own **Codename** as `User-Agent`. Since the Letter says at the end from **Agent:** `R` we can try to **FUZZ** `User-Agent` using **Alphabet Letters.**
 
-```md
+```log
 Dear agents,    
-Use your own **codename** as user-agent to access the site.  
+Use your own "codename" as user-agent to access the site.  
   
 From,  
 Agent R

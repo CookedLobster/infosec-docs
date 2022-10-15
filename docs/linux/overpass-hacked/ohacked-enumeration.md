@@ -5,6 +5,13 @@ keywords: [overpass hacked, tryhackme, ctf, pentesting, guide, docs, tutorial, e
 ---
 # Enumeration
 
+:::note Box Description
+
+Overpass has been hacked! Can you analyse the attacker's actions and hack back in?
+
+:::
+
+
 ## NMAP
 
 - <b style={{ color: 'Coral' }}>[SSH: 22]</b> <b style={{ color: 'LightSkyBlue' }}>[HTTP: 80]</b> <b style={{ color: 'Plum' }}>[SSH (SSH Backdoor): 2222]</b>

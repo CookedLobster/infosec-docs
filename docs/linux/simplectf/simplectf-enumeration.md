@@ -6,6 +6,13 @@ keywords: [simple ctf, tryhackme, ctf, pentesting, guide, docs, tutorial, enumer
 
 # Enumeration
 
+:::note Box Description
+
+Beginner level CTF.
+
+:::
+
+
 ## NMAP
 
 - <b style={{ color: 'DarkKhaki' }}>[FTP: 21]</b> <b style={{ color: 'LightSkyBlue' }}>[HTTP: 80]</b> <b style={{ color: 'Coral' }}>[SSH: 2222]</b>

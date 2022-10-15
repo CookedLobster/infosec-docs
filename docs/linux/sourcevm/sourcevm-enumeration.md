@@ -6,6 +6,13 @@ keywords: [source tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, 
 
 # Enumeration
 
+:::note Box Description
+
+Exploit a recent vulnerability and hack `Webmin`, a Web-Based System Configuration Tool.
+
+:::
+
+
 ## NMAP
 
 - <b style={{ color: 'Coral' }}>[SSH: 22]</b> <b style={{ color: 'LightSkyBlue' }}>[HTTP (Webmin): 10000]</b>

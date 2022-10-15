@@ -299,29 +299,31 @@ const sidebars = {
       },
       items: [
         {
-        // [1] Sidebar Starts
+        // [1] Sidebar Start
+          
           type: 'category',
           label: 'Injection',
           items: [
-            {
+            'injection/command-injection',
+            /*{
               type: 'category',
               label: 'Command Injection',
               items: [
                 'injection/ci-overview', 'injection/command-injection',
               ],
-            },
+            },*/
             {
               type: 'category',
               label: 'LFI',
               items: [
-                'injection/lfi-overview', 'injection/localfile-inclusion', 'injection/remotefile-inclusion',
+                'injection/localfile-inclusion', 'injection/remotefile-inclusion',
               ],
             },
             {
               type: 'category',
               label: 'SQLi',
               items: [
-                'injection/sqli-overview', 'injection/errorbased-sqli', 'injection/blindsqli-authbypass', 'injection/blindsqli-timebased',
+                'injection/errorbased-sqli', 'injection/blindsqli-authbypass', 'injection/blindsqli-timebased',
               ],
             },
             {
@@ -338,20 +340,21 @@ const sidebars = {
             type: 'category',
             label: 'Broken Authentication',
             items: [
-              {
+              'brokenauth/registration',
+              /*{
                 type: 'category',
                 label: 'General',
                 items: [
                   'brokenauth/broken-authgeneral', 'brokenauth/registration',
                 ],
-              },
-              {
+              },*/
+              /*{
                 type: 'category',
                 label: 'Authentication Bypass',
                 items: [
                   'brokenauth/user-enumeration', 'brokenauth/logic-flaw', 'brokenauth/bruteforce',
                 ],
-              },
+              },*/
               {
                 type: 'category',
                 label: 'JWT',
@@ -412,7 +415,7 @@ const sidebars = {
                 type: 'category',
                 label: 'General',
                 items: [
-                  'uploadvulnerabilities/serverside-filtering', 'uploadvulnerabilities/rce-filtering', 'uploadvulnerabilities/overwriting', 'uploadvulnerabilities/client-filtering',
+                  'uploadvulnerabilities/serverside-filtering', 'uploadvulnerabilities/rce-filtering', 'uploadvulnerabilities/client-filtering',
                 ],
               },
             ],

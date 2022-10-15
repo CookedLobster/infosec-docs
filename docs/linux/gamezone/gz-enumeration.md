@@ -6,6 +6,13 @@ keywords: [game zone, tryhackme, ctf, pentesting, guide, docs, tutorial, enumera
 
 # Enumeration
 
+:::note Box Description
+
+Learn to Hack into this Machine. Understand how to use `SQLMap`, crack some passwords, reveal services using a reverse `SSH Tunnel` and escalate your privileges to root!
+
+:::
+
+
 ## NMAP
 
 - <b style={{ color: 'Coral' }}>[SSH: 22]</b> <b style={{ color: 'LightSkyBlue' }}>[HTTP: 80]</b>

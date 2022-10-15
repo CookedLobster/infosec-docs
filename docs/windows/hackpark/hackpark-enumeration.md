@@ -3,7 +3,15 @@ sidebar_position: 1
 description: HackPark
 keywords: [hackpark, hackpark tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, burpsuite, hydra, blogengine, CVE-2019-6714]
 ---
+
 # Enumeration
+
+:::note Box Description
+
+Bruteforce a websites login with `Hydra`, identify and use a Public Exploit then escalate your privileges on this Windows machine!
+
+:::
+
 
 ## NMAP
 

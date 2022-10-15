@@ -6,6 +6,13 @@ keywords: [kenobi, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeratio
 
 # Enumeration
 
+:::note Box Description
+
+Walkthrough on exploiting a Linux machine. Enumerate `Samba` for shares, manipulate a vulnerable version of `ProFTPD` and escalate your privileges with path variable manipulation.
+
+:::
+
+
 ## NMAP
 
 - <b style={{ color: 'DarkKhaki' }}>[FTP: 21]</b> <b style={{ color: 'DarkKhaki' }}>[Variant: ProFTPD]</b> <b style={{ color: 'LightSkyBlue' }}>[HTTP: 80]</b> <b style={{ color: 'Coral' }}>[SSH: 22]</b> <b style={{ color: 'Orange' }}>[SMB: 139-445]</b> <b style={{ color: 'LightSeaGreen' }}>[NFS: 2049]</b>
@@ -15,6 +22,7 @@ Nmap scan report for 10.10.118.63
 Host is up (0.085s latency).
 
 PORT     STATE SERVICE     VERSION
+// highlight-next-line
 21/tcp   open  ftp         ProFTPD 1.3.5
 22/tcp   open  ssh         OpenSSH 7.2p2 Ubuntu 4ubuntu2.7 (Ubuntu Linux; protocol 2.0)
 | ssh-hostkey: 
@@ -89,6 +97,7 @@ Host script results:
 smb: \> ls
   .                                   D        0  Wed Sep  4 12:49:09 2019
   ..                                  D        0  Wed Sep  4 12:56:07 2019
+  // highlight-next-line
   log.txt                             N    12237  Wed Sep  4 12:49:09 2019
 
 		9204224 blocks of size 1024. 6877088 blocks available

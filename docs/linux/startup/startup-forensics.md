@@ -28,7 +28,7 @@ www-data@startup /$ ls -l incidents/
 
 <br/>
 
-- **Getting the File:** **`suspicious.pcapng`**
+- We can Transfer the file to our Machine using `Python` on the Target Machine, after that we can either use `curl - wget` to Download the file on our end. 
 
 ```bash
 www-data@startup /$ python3 -m http.server 8888
@@ -38,7 +38,9 @@ Serving HTTP on 0.0.0.0 port 8888 ...
 
 <br/>
 
-- **User - Password:** <b style={{ color: 'Chartreuse' }}>lennie</b><b style={{ color: 'Dark' }}>:</b><b style={{ color: 'Coral' }}>c4ntg3t3n0ughsp1c3</b>
+## PCAP Analysis
+
+- During the Enumeration we find **User - Password:** <b style={{ color: 'Chartreuse' }}>lennie</b><b style={{ color: 'Dark' }}>:</b><b style={{ color: 'Coral' }}>c4ntg3t3n0ughsp1c3</b>
 
 ```bash
 Linux startup 4.4.0-190-generic #220-Ubuntu SMP Fri Aug 28 23:02:15 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
@@ -82,6 +84,17 @@ lrwxrwxrwx   1 root     root        30 Sep 25 08:12 vmlinuz.old -> boot/vmlinuz-
 $ whoami
 www-data
 $ python -c "import pty;pty.spawn('/bin/bash')"
+```
+
+```log
+www-data@startup:/$ cd home
+// highlight-next-line
+www-data@startup:/home$ cd lennie
+bash: cd: lennie: Permission denied
+www-data@startup:/home$ sudo -l
+// highlight-next-line
+[sudo] password for www-data: c4ntg3t3n0ughsp1c3
+Sorry, try again
 ```
 
 ```bash

@@ -4,8 +4,14 @@ description: Daily Bugle
 keywords: [daily bugle, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, joomla, joomla exploit, john, CVE-2017-8917, privilege escalation]
 ---
 
-
 # Enumeration
+
+:::note Box Description
+
+Compromise a `Joomla CMS` account via `SQLi`, practise cracking Hashes and escalate your privileges by taking advantage of `yum`.
+
+:::
+
 
 ## NMAP
 
@@ -120,7 +126,7 @@ Password: [                    ][?]
 
 ## Exploitation - John
 
-- **Exploit Used:** <a class="button button--outline button--warning" href="https://github.com/stefanlucas/Exploit-Joomla">Exploit Github</a>
+- **Exploit Used:** <a class="button button--outline button--info" href="https://github.com/stefanlucas/Exploit-Joomla">Exploit Github</a>
 - **Username:** <b style={{ color: 'Chartreuse' }}>jonah</b>
 - **HASH:** <b style={{ color: 'Coral' }}>$2y$10$0veO/JSFh4389Lluc4Xya.dfy2MFbZhz0jVMw.V.d3p12kBtZutm</b>
 

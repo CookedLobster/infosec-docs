@@ -6,6 +6,13 @@ keywords: [vulnversity, tryhackme, ctf, pentesting, guide, docs, tutorial, enume
 
 # Enumeration
 
+:::note Box Description
+
+Learn about Active Recon, Web-App Attacks and Privilege Escalation.
+
+:::
+
+
 ## NMAP
 
 - <b style={{ color: 'DarkKhaki' }}>[FTP: 21]</b> <b style={{ color: 'Coral' }}>[SSH: 22]</b> <b style={{ color: 'Orange' }}>[SMB: 139-445]</b> <b style={{ color: 'LightSkyBlue' }}>[HTTP: 3333]</b>
@@ -108,9 +115,17 @@ uploads                 [Status: 301, Size: 330, Words: 20, Lines: 10, Duration:
 ## Content Discovery
 
 
-- **Upload Web Page:** <b style={{ color: 'SandyBrown' }}>[IP:3333/internal/uploads]</b>
+- **Landing Page:** <b style={{ color: 'SandyBrown' }}>[IP:3333]</b>
 
 ![SCF](/img/vmlinux/v-portal.png)
+
+<br/>
+
+
+- **Upload Web Page:** <b style={{ color: 'SandyBrown' }}>[IP:3333/internal]</b>
+- **The Files are Upload to:** <b style={{ color: 'SandyBrown' }}>[IP:3333/internal/uploads]</b>
+
+![SCF](/img/vmlinux/v-uploads.png)
 
 
 ---

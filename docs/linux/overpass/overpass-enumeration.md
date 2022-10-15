@@ -6,6 +6,12 @@ keywords: [overpass, tryhackme, ctf, pentesting, guide, docs, tutorial, enumerat
 
 # Enumeration
 
+:::note Box Description
+
+What happens when some broke CompSci students make a password manager?
+
+:::
+
 ## NMAP
 
 - <b style={{ color: 'Coral' }}>[SSH: 22]</b> <b style={{ color: 'LightSkyBlue' }}>[HTTP: 80]</b>

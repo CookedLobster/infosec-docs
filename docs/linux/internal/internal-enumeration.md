@@ -6,6 +6,13 @@ keywords: [internal, tryhackme, ctf, pentesting, guide, docs, tutorial, enumerat
 
 # Enumeration
 
+:::note Box Description
+
+Penetration Testing Challenge.
+
+:::
+
+
 ## NMAP
 
 - <b style={{ color: 'Coral' }}>[SSH: 22]</b> <b style={{ color: 'LightSkyBlue' }}>[HTTP: 80]</b>
@@ -72,7 +79,7 @@ ff02::2    ip6-allrouters
 # This host address
 127.0.1.1  virtual-box
 // highlight-next-line
-10.10.90.155 internal.thm
+MACHINE_IP internal.thm
 ```
 
 
@@ -106,6 +113,7 @@ Interesting Finding(s):
  | Found By: Headers (Passive Detection)
  | Confidence: 100%
 
+// highlight-next-line
 [+] XML-RPC seems to be enabled: http://internal.thm/blog/xmlrpc.php
  | Found By: Direct Access (Aggressive Detection)
  | Confidence: 100%

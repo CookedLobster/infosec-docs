@@ -6,6 +6,12 @@ keywords: [alfred, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeratio
 
 # Enumeration
 
+:::note Box Description
+
+Exploit `Jenkins` to gain an initial shell, then escalate your privileges by exploiting Windows `Authentication Tokens`.
+
+:::
+
 ## NMAP
 
 -  <b style={{ color: 'PowderBlue' }}>[IIS Windows Server: 80]</b> <b style={{ color: 'BlanchedAlmond' }}>[RDP: 3389]</b> <b style={{ color: 'FireBrick' }}>[Jenkins: 8080]</b>

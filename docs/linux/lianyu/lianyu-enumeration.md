@@ -6,6 +6,13 @@ keywords: [lian yu, lian_yu, tryhackme, ctf, pentesting, guide, docs, tutorial, 
 
 # Enumeration
 
+:::note Box Description
+
+A Beginner level Security Challenge.
+
+:::
+
+
 ## NMAP
 
 - <b style={{ color: 'DarkKhaki' }}>[FTP: 21]</b> <b style={{ color: 'Coral' }}>[SSH: 22]</b> <b style={{ color: 'LightSkyBlue' }}>[HTTP: 80]</b> <b style={{ color: 'Gainsboro' }}>[RPC: 111]</b>
@@ -113,6 +120,7 @@ vigilante
 
 ```html
 How Oliver Queen finds his way to Lian_Yu?
+// highlight-next-line
 <!-- you can avail your .ticket here but how?   -->
 ```
 
@@ -125,6 +133,7 @@ ________________________________________________
  :: Method           : GET
  :: URL              : http://10.10.231.6/island/2100/FUZZ
  :: Wordlist         : FUZZ: Dirbuster/directory-list-2.3-medium.txt
+ // highlight-next-line
  :: Extensions       : .ticket 
  :: Follow redirects : false
  :: Calibration      : false
@@ -140,9 +149,10 @@ green_arrow.ticket      [Status: 200, Size: 71, Words: 10, Lines: 7, Duration: 1
 
 - **`BASE58` Encoded Text:** <b style={{ color: 'SandyBrown' }}>[IP:80/island/2100/green_arrow.ticket]</b>
 
-```
+```log
 This is just a token to get into Queen's Gambit(Ship)
 
+// highlight-next-line
 RTy8yhBQdscX
 ```
 
@@ -168,7 +178,7 @@ RTy8yhBQdscX
 - The File **`[aa.jpg]`**  has a  **`ZIP`** File Hidden Inside.
 - The File **`[.other_user]`** contains an **SSH** Username <b style={{ color: 'Chartreuse' }}>Slade</b>
 
-```
+```log
 ftp> ls -al
 drwxr-xr-x    2 1001     1001         4096 May 05  2020 .
 drwxr-xr-x    4 0        0            4096 May 01  2020 ..
@@ -179,6 +189,7 @@ drwxr-xr-x    4 0        0            4096 May 01  2020 ..
 -rw-r--r--    1 1001     1001          675 May 01  2020 .profile
 -rw-r--r--    1 0        0          511720 May 01  2020 Leave_me_alone.png
 -rw-r--r--    1 0        0          549924 May 05  2020 Queen's_Gambit.png
+// highlight-next-line
 -rw-r--r--    1 0        0          191026 May 01  2020 aa.jpg
 ftp> mget .other_user Leave_me_alone.png Queen's_Gambit.png aa.jpg
 ```
@@ -186,6 +197,7 @@ ftp> mget .other_user Leave_me_alone.png Queen's_Gambit.png aa.jpg
 <br/>
 
 - **File:** `.other_user`
+- Found Possible Username: <b style={{ color: 'Chartreuse' }}>Slade</b>
 
 ```
 Slade Wilson was 16 years old when he enlisted in the United States Army, having lied about his age. 

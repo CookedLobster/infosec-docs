@@ -7,6 +7,13 @@ keywords: [overpass hosting, tryhackme, ctf, pentesting, guide, docs, tutorial, 
 
 # Enumeration
 
+:::note Box Description
+
+You know them, you love them, your favourite group of broke computer science students have another business venture! Show them that they probably should hire someone for security...
+
+:::
+
+
 ## NMAP
 
 - <b style={{ color: 'DarkKhaki' }}>[FTP: 21]</b> <b style={{ color: 'Coral' }}>[SSH: 22]</b> <b style={{ color: 'LightSkyBlue' }}>[HTTP: 80]</b>
@@ -105,6 +112,7 @@ After Decrypting [`CustomerDetails.xlsx.gpg`] we have a **Datasheet** of `Custom
 +----------------------------------------------------------------------------------+
 | Customer Name   | Username       | Password          | Credit Card Number  | CVC |
 |-----------------|----------------|-------------------|---------------------|-----|
+// highlight-next-line
 | Par. A. Doxx    | paradox        | ShibesAreGreat123 | 4111 1111 4555 1142 | 432 |
 | 0day Montgomery | 0day           | OllieIsTheBestDog | 5555 3412 4444 1115 | 642 |
 | Muir Land       | muirlandoracle | A11D0gsAreAw3s0me | 5103 2219 1119 9245 | 737 |
@@ -118,9 +126,8 @@ After Decrypting [`CustomerDetails.xlsx.gpg`] we have a **Datasheet** of `Custom
 - **We can Login as:** <b style={{ color: 'Chartreuse' }}>paradox</b><b style={{ color: 'Dark' }}>:</b><b style={{ color: 'Coral' }}>ShibesAreGreat123</b>
 - We have the Permissions to **Upload** Files inside the `FTP` Server.
 - **Uploading Reverse Shell:** `php-reverse-shell.phtml`
-- **Reverse Shell Location:** <b style={{ color: 'SandyBrown' }}>[IP:80/php-reverse-shell.phtml]</b>
 
-```
+```log
 ftp> ls -al
 drwxrwxrwx    3 48       48             94 Nov 17  2020 .
 drwxrwxrwx    3 48       48             94 Nov 17  2020 ..
@@ -129,6 +136,7 @@ drwxr-xr-x    2 48       48             24 Nov 08  2020 backups
 -rw-r--r--    1 0        0            1770 Nov 17  2020 index.html
 -rw-r--r--    1 0        0             576 Nov 17  2020 main.css
 -rw-r--r--    1 0        0            2511 Nov 17  2020 overpass.svg
-ftp> put php-web-shell.phtml 
-Transfer complete.
+ftp> put php-web-shell.phtml
 ```
+
+- The **Reverse Shell** is going to be Located at: <b style={{ color: 'SandyBrown' }}>[IP:80/php-reverse-shell.phtml]</b>

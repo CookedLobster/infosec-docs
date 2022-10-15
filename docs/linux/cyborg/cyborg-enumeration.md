@@ -4,8 +4,13 @@ description: Cyborg
 keywords: [cyborg, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, borg, privilege escalation]
 ---
 
-
 # Enumeration
+
+:::note Box Description
+
+A box involving Encrypted archives, Source code analysis and more.
+
+:::
 
 ## NMAP
 
@@ -87,7 +92,7 @@ Home    Albums    Admins    [Archive]
 
 - **File:** `passwd` contains a **HASH**
 
-```css
+```php
 music_archive:$apr1$BpZ.Q.1m$F0qqPwHSOG50URuOVQTTn.
 ```
 ---

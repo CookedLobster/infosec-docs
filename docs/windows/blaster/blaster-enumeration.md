@@ -4,8 +4,14 @@ description: Blaster
 keywords: [blaster, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation, hhupd, CVE-2019-1388]
 ---
 
-
 # Enumeration
+
+:::note Box Description
+
+A blast from the past!
+
+:::
+
 
 ## NMAP
 

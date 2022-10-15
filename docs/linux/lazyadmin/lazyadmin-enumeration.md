@@ -6,6 +6,13 @@ keywords: [lazy admin, tryhackme, ctf, pentesting, guide, docs, tutorial, enumer
 
 # Enumeration
 
+:::note Box Description
+
+Easy Linux machine to practice your Skills.
+
+:::
+
+
 ## NMAP
 
 - <b style={{ color: 'Coral' }}>[SSH: 22]</b> <b style={{ color: 'LightSkyBlue' }}>[HTTP: 80]</b>

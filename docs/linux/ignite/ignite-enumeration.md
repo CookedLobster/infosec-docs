@@ -6,6 +6,13 @@ keywords: [ignite, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeratio
 
 # Enumeration
 
+:::note Box Description
+
+A new start-up has a few issues with their Web Server.
+
+:::
+
+
 ## NMAP
 
 - <b style={{ color: 'LightSkyBlue' }}>[HTTP: 80]</b>
@@ -27,7 +34,7 @@ PORT   STATE SERVICE VERSION
 ---
 ## Content Discovery
 
-- **`Fuel CMS` Landing Page:** <b style={{ color: 'SandyBrown' }}>[IP:80]</b>
+- **The Landing Page shows `Fuel CMS` Versions:** <b style={{ color: 'SandyBrown' }}>[IP:80]</b>
 - **Version:** <b style={{ color: 'LightGreen' }}>1.4</b>
 
 ```log
@@ -40,7 +47,7 @@ Welcome to Fuel CMS
 <br/>
 
 - <b style={{ color: 'SandyBrown' }}>[IP:80]</b>
-- **`Fuel CMS` Credentials:** <b style={{ color: 'Chartreuse' }}>admin</b><b style={{ color: 'Dark' }}>:</b><b style={{ color: 'Coral' }}>admin</b>
+- **The Landing Page shows `Fuel CMS` Default Credentials:** <b style={{ color: 'Chartreuse' }}>admin</b><b style={{ color: 'Dark' }}>:</b><b style={{ color: 'Coral' }}>admin</b>
 
 ```log
 To access the FUEL admin, go to:

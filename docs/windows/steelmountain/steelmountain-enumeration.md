@@ -6,6 +6,13 @@ keywords: [steel mountain, tryhackme, ctf, pentesting, guide, docs, tutorial, en
 
 # Enumeration
 
+:::note Box Description
+
+Hack into a Mr. Robot themed Windows machine. Use `Metasploit` for Initial Access, utilise `Powershell` for Windows privilege escalation enumeration and learn a new technique to get Administrator access.
+
+:::
+
+
 ## NMAP
 
 - <b style={{ color: 'BurlyWood' }}>[RPC: 135]</b> <b style={{ color: 'BlanchedAlmond' }}>[SMB: 139-445]</b> <b style={{ color: 'BlanchedAlmond' }}>[RDP: 3389]</b> <b style={{ color: 'PowderBlue' }}>[Rejetto HTTP File Server: 8080]</b>

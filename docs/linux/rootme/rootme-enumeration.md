@@ -6,6 +6,13 @@ keywords: [rootme, root me, tryhackme, ctf, pentesting, guide, docs, tutorial, e
 
 # Enumeration
 
+:::note Box Description
+
+A CTF for Beginners, can you Root me?
+
+:::
+
+
 ## NMAP
 
 - <b style={{ color: 'Coral' }}>[SSH: 22]</b> <b style={{ color: 'LightSkyBlue' }}>[HTTP: 80]</b>

