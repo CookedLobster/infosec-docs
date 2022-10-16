@@ -507,7 +507,7 @@ const sidebars = {
             type: 'category',
             label: 'Terminal - Payloads',
             items: [ 
-              'other-win/shell-win',
+              'other-win/shell-win', 'other-win/file-transfer',
             ],
             
         },
@@ -555,14 +555,6 @@ const sidebars = {
       },
       items: [
         'tools/hydra',
-        {
-        // [1] Sidebar Starts
-          type: 'category',
-          label: 'NMAP',
-          items: [
-            'tools/discovery', 'tools/basic', 'tools/advanced-one', 'tools/nse',
-          ],
-        },
       ],
   
     },

@@ -4,16 +4,6 @@ sidebar_position: 3
 
 # SeImpersonate - SeAssignPrimaryToken
 
-:::info Scenario
-
-We have already compromised a Website running on `IIS` and Planted a **Web-Shell && Uploaded `RogueWinRM`**
-
-:::
-
----
-
-<br/>
-
 
 - These Privileges <b style={{ color: 'Brown' }}>[SeAssignPrimaryToken - SeImpersonate]</b> allow a Process to Impersonate other Users and act on their behalf.
 
@@ -52,7 +42,7 @@ SeImpersonatePrivilege        Impersonate a client after authentication Enabled
 
 <br/>
 
-- Using <b style={{ color: 'Coral' }}>RogueWinRM</b> Exploit.
+- Upload the <b style={{ color: 'Coral' }}>RogueWinRM</b> Executable.
 - <b style={{ color: 'Red' }}>[NOTE]</b> <span style={{fontWeight: 'Bold'}}>The Exploit may take up to 2 Minutes to Work.</span> This happens if we run the Exploit Multiple Times as it must wait for the BITS Service to Stop before Starting it again. <span style={{fontWeight: 'Bold'}}>[The BITS Service will Stop Automatically after 2 Minutes]</span> 
 
 ```log
