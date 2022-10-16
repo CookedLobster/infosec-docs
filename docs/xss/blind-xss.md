@@ -6,7 +6,7 @@ sidebar_position: 3
 
 :::info Scenario
 
-Website with Support Tickets Tab
+Website with a Vulnerable Support Tickets Tab.
 
 :::
 

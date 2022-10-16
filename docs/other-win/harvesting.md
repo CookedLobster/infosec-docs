@@ -4,16 +4,10 @@ sidebar_position: 4
 
 # Harvesting Passwords
 
-:::caution This Section is a Work In Progress
-
-:::
-
-<br/>
-
 
 ## Unattended Windows Installations
 
-When installing Windows on a large number of Hosts, Administrators may use **Windows Deployment Services (Unattended Installations).** It is possible to encounter **Credentials** in this Locations.
+When installing Windows on a large number of Hosts, Administrators may use <b style={{ color: 'MediumTurquoise' }}>Windows Deployment Services (Unattended Installations)</b>. It is possible to encounter **Credentials** in this Locations.
 
 
 - **Locations**
@@ -40,7 +34,7 @@ C:\Windows\system32\sysprep\sysprep.xml
 
 ## PSH History
 
-Whenever a `User` runs a command using **`Powershell`**, it gets stored into a File that keeps a **Memory of Past Commands.** 
+Whenever a **User** runs a command using <b style={{ color: 'MediumTurquoise' }}>Powershell</b>, it gets stored into a File that keeps a **Memory of Past Commands.** 
 
 - **CMD**
 
@@ -84,7 +78,7 @@ runas /user:<UserName> "cmd /c dir C:\"
 
 ## IIS Configuration
 
-**Internet Information Services (IIS)** is the default Web Server on Windows Installations. The configuration of websites on IIS is stored in a file called <b style={{ color: 'PowderBlue' }}>[web.config]</b> and can Store Passwords for Databases or configured Authentication Mechanisms.
+<b style={{ color: 'DeepSkyBlue' }}>Internet Information Services (IIS)</b> is the default Web Server on Windows Installations. The configuration of websites on IIS is stored in a file called <b style={{ color: 'MediumTurquoise' }}>[web.config]</b> and can Store Passwords for Databases or configured Authentication Mechanisms.
 
 ```batch
 C:\inetpub\wwwroot\web.config
@@ -101,7 +95,7 @@ type C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr
 
 ## Retrieve Credentials [PuTTY]
 
-`PuTTY` is an **SSH Client** commonly found on Windows Systems. **PuTTY** won't allow users to store their SSH Password, it will store Proxy Configurations that include **Clear-Text Authentication Credentials.**
+<b style={{ color: 'Coral' }}>PuTTY</b> is an <span style={{fontWeight: 'Bold'}}>SSH Client</span> commonly found on Windows Systems. <span style={{fontWeight: 'Bold'}}>PuTTY</span> won't allow users to store their SSH Password, it will store Proxy Configurations that include <span style={{fontWeight: 'Bold'}}>Clear-Text Authentication Credentials.</span>
 
 ```batch
 reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s

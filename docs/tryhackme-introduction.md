@@ -24,6 +24,6 @@ keywords: [tryhackme, exploitation guides, exploiting, enumeration, hackthebox, 
 
 :::note [Overpass Series](https://infosec-docs.pages.dev/category/overpass-series)
 
-`TryHackMe` Overpass Series. A Pentesting Series that Contains  <b style={{ color: 'BurlyWood' }}>Enumeration - Exploitation - File Analysis</b>.
+`TryHackMe` Overpass Series. A Pentesting Series that Contains  <b style={{ color: 'Coral' }}>Enumeration - Exploitation - File Analysis</b>.
 
 :::

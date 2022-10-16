@@ -99,7 +99,7 @@ The Application Logic would Now **Allow** this Input and let an Attacker control
 
 <br/>
 
-<div class="alert alert--primary" role="alert">OPEN REDIRECT</div>
+<div class="alert alert--info" role="alert">OPEN REDIRECT</div>
 
 <br/>
 

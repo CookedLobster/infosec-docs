@@ -14,7 +14,7 @@ keywords: [tryhackme, exploitation guides, exploiting, enumeration, hackthebox, 
 
 Contains General **`Linux`** Information
 
-- <b style={{ color: 'BurlyWood' }}>Structure - Files - Terminals - Permissions</b>
+- <b style={{ color: 'Coral' }}>Structure - Files - Terminals - Permissions</b>
 
 :::
 
@@ -23,7 +23,7 @@ Contains General **`Linux`** Information
 
 Contains General **`Windows`** Information  
 
-- <b style={{ color: 'BurlyWood' }}>Structure - Files - Terminals - Permissions</b>
+- <b style={{ color: 'Coral' }}>Structure - Files - Terminals - Permissions</b>
 
 :::
 
@@ -33,7 +33,7 @@ Contains General **`Windows`** Information
 
 General Information about common Vulnerabilities
 
-- <b style={{ color: 'PowderBlue' }}>Injection - Broken Authentication - XML External Entity - XSS - Upload Vulnerabilities</b>
+- <b style={{ color: 'MediumTurquoise' }}>Injection - Broken Authentication - XML External Entity - XSS - Upload Vulnerabilities</b>
 
 :::
 

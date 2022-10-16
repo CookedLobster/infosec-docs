@@ -29,7 +29,7 @@ return render_template_string(template)
 
 ## Manual Exploitation
 
-:::info This Section Applies to Jinja2
+:::info This Section Applies to `Jinja2`
 
 :::
 

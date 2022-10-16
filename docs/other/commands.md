@@ -4,11 +4,6 @@ sidebar_position: 3
 
 # Commands 
 
-:::caution Work In Progress
-
-:::
-
-
 ## FIND
 
 - **Search for SUID**

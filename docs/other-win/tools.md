@@ -4,13 +4,9 @@ sidebar_position: 3
 
 # Tools
 
-:::caution This Section is a Work In Progress
-
-:::
-
 ## AccessChk
 
-- **List Access of (Users - Groups) to files - Directories - Registry Keys - Global Objects - Windows Services**
+- **List Access of (Users - Groups) to Files - Directories - Registry Keys - Global Objects - Windows Services**
 
 ```batch
 accesschk.exe /accepteula
@@ -35,28 +31,14 @@ PS C:\> Invoke-PrivescCheck
 C:\> winpeas.exe > <Output>
 ```
 
-<br/>
-
 ---
 
-## WES-NG [Windows Exploit Suggester - Next Generation]
-
-- **Target**
-
-```batch
-C:\> systeminfo > <Output>
-```
-
-- **Attacker**
-
-```bash
-[user@attacker]$ wes.py --update && wes.py <Systeminfo Output>
-```
+<br/>
 
 
 ## RogueWinRM
 
-`RogueWinRM` is a **`Local Privilege`** Escalation Exploit that allows to Escalate from a **Service Account** with `SeImpersonatePrivilege` to Local System Account if WinRM Service is not Running **(Default on `Windows 10` but Not on `Windows Server 2019`).**
+`RogueWinRM` is a **Local Privilege** Escalation Exploit that allows to Escalate from a **Service Account** with <b style={{ color: 'Brown' }}>[SeImpersonatePrivilege]</b> to Local System Account if WinRM Service is not Running. **[Default on `Windows 10` but Not on `Windows Server 2019`]**
 
 
 ```batch

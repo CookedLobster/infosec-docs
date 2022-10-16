@@ -4,10 +4,6 @@ sidebar_position: 2
 
 # Commands [Common]
 
-:::caution This Section is a Work In Progress
-
-:::
-
 ## ICACLS
 
 - **List Permissions**

