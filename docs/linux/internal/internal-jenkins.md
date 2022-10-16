@@ -56,7 +56,7 @@ println "out> $sout err> $serr"
 - **File: `/opt/note.txt`** 
 - <span style={{fontWeight: 'Bold'}}>Contains Credentials of</span> <b style={{ color: 'Red' }}>ROOT:</b> <b style={{ color: 'Chartreuse' }}>root</b><b style={{ color: 'Grey' }}>:</b><b style={{ color: 'Coral' }}>tr0ub13guM!@#123</b>
 
-```bash
+```bash {9}
 jenkins@jenkins /$ id
 uid=1000(jenkins) gid=1000(jenkins) groups=1000(jenkins)
 jenkins@jenkins /$ cat /opt/note.txt

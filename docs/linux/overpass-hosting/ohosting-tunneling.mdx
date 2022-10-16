@@ -30,7 +30,7 @@ uid=1001(paradox) gid=1001(paradox) groups=1001(paradox)
 - The `NFS` Service is running Locally **[NFS is using `no_root_squash`].** We can use `SSH Tunneling` or `chisel` to access the Service on our Machine.
 - If `no_root_squash` is used, Remote <b style={{ color: 'Red' }}>ROOT</b> Users are able to change any file on the Shared File System.
 
-```log
+```bash {17-19}
 [paradox@ip-10-10-109-248 ~]$ rpcinfo -p
    program vers proto   port  service
     100000    4   tcp    111  portmapper
@@ -47,11 +47,9 @@ uid=1001(paradox) gid=1001(paradox) groups=1001(paradox)
     100005    2   tcp  20048  mountd
     100005    3   udp  20048  mountd
     100005    3   tcp  20048  mountd
-// highlight-start
     100003    3   tcp   2049  nfs
     100003    4   tcp   2049  nfs
     100227    3   tcp   2049  nfs_acl
-// highlight-end
     100021    1   udp  56458  nlockmgr
     100021    3   udp  56458  nlockmgr
     100021    4   udp  56458  nlockmgr

@@ -15,7 +15,7 @@ const sidebars = {
         description:
           "Linux Machines from TryHackMe.",
         keywords: ['guides'],
-        image: '/img/docusaurus.png',
+        image: '/img/bitmap.png',
       },
       items: [
         {
@@ -181,7 +181,7 @@ const sidebars = {
         description:
           "Windows Machines from TryHackMe.",
         keywords: ['guides'],
-        image: '/img/docusaurus.png',
+        image: '/img/bitmap.png',
       },
       items: [
         {
@@ -249,7 +249,7 @@ const sidebars = {
         description:
           "Overpass Series Machines from TryHackMe.",
         keywords: ['guides'],
-        image: '/img/docusaurus.png',
+        image: '/img/bitmap.png',
       },
       items: [
         {
@@ -295,7 +295,7 @@ const sidebars = {
         description:
           "Web Based Vulnerabilities.",
         keywords: ['guides'],
-        image: '/img/docusaurus.png',
+        image: '/img/bitmap.png',
       },
       items: [
         {
@@ -434,7 +434,7 @@ const sidebars = {
         description:
           "Generall Stuff About Linux.",
         keywords: ['guides'],
-        image: '/img/docusaurus.png',
+        image: '/img/bitmap.png',
       },
       items: [
         {
@@ -467,7 +467,7 @@ const sidebars = {
         description:
           "Generall Stuff About Windows.",
         keywords: ['guides'],
-        image: '/img/docusaurus.png',
+        image: '/img/bitmap.png',
       },
       items: [
         {
@@ -525,9 +525,10 @@ const sidebars = {
         description:
           "Passive - Active Recon",
         keywords: ['guides'],
-        image: '/img/docusaurus.png',
+        image: '/img/bitmap.png',
       },
       items: [
+        'recon/tools',
         {
         // [1] Sidebar Starts
           type: 'category',
@@ -536,7 +537,6 @@ const sidebars = {
             'recon/osint', 'recon/manual',
           ],
         },
-        'recon/tools',
       ],
   
     },
@@ -551,7 +551,7 @@ const sidebars = {
         description:
           "General Information About Tools.",
         keywords: ['guides'],
-        image: '/img/docusaurus.png',
+        image: '/img/bitmap.png',
       },
       items: [
         'tools/hydra',
@@ -568,5 +568,69 @@ const sidebars = {
     },
     'credits',
   ],
+
+
+    /** ------------- Active Directory [Breaching] ------------- **/
+  acDocs: [
+    'ac-introduction',
+    {
+      type: 'category',
+      label: 'AC Breaching',
+      link: {
+        type: 'generated-index',
+        title: 'AC Breaching',
+        description:
+          "Active Directory [Breaching]",
+        keywords: ['guides'],
+        image: '/img/bitmap.png',
+      },
+      items: [
+        {
+        // [1] Sidebar Start
+          
+          type: 'category',
+          label: 'Authentication Relays',
+          items: [
+            'ac-breaching/auth-relays', 'ac-breaching/intercepting-ntlm',
+          ],
+        },
+        'ac-breaching/config-files',
+        /*{
+          // [1] Sidebar Starts
+            type: 'category',
+            label: 'Configuration Files',
+            items: [
+              'ac-breaching/config-files',
+            ],
+        },*/
+        {
+          // [1] Sidebar Starts
+            type: 'category',
+            label: 'LDAP',
+            items: [
+              'ac-breaching/ldap', 'ac-breaching/ldap-passback',
+            ],
+        },
+        {
+          // [1] Sidebar Starts
+            type: 'category',
+            label: 'MDT',
+            items: [
+              'ac-breaching/mdt', 'ac-breaching/pxe-boot',
+            ],
+        },
+        {
+          // [1] Sidebar Starts
+            type: 'category',
+            label: 'NTLM',
+            items: [
+              'ac-breaching/ntlm-auth', 'ac-breaching/ac-bruteforce',
+            ],
+        },
+      ],
+  
+    },
+  ],
+  
 };
 module.exports = sidebars;

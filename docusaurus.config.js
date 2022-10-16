@@ -13,7 +13,7 @@ const config = {
   favicon: 'img/favicon.png',       // Favicon Support
 
 
-  // Github Pages
+  // GitHub Pages
   organizationName: 'Infosec Docs', // Organization Name
   projectName: 'infosec-Docs',      // GitHub Repository Name
   trailingSlash: false,
@@ -83,17 +83,23 @@ const config = {
             'aria-label': 'GitHub Repository',
           },
           */
-          {
+          /*{
             type: 'docSidebar',  
             position: 'left',
             sidebarId: 'owaspDocs',             // [sidebar.js] ID
-            label: 'General Pentesting',        // Navbar Title
+            label: 'Pentesting Docs',        // Navbar Title
+          },*/
+          {
+            type: 'docSidebar', 
+            position: 'left',
+            sidebarId: 'acDocs',     
+            label: 'Active Directory',   
           },
           {
             type: 'docSidebar', 
             position: 'left',
-            sidebarId: 'linuxDocs',     // [sidebar.js] ID
-            label: 'TryHackMe Rooms',   // Navbar Title
+            sidebarId: 'linuxDocs',     
+            label: 'TryHackMe Rooms',   
           },
         ],
       },
