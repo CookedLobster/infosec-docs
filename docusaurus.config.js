@@ -83,23 +83,23 @@ const config = {
             'aria-label': 'GitHub Repository',
           },
           */
-          /*{
+          {
             type: 'docSidebar',  
             position: 'left',
             sidebarId: 'owaspDocs',             // [sidebar.js] ID
-            label: 'Pentesting Docs',        // Navbar Title
-          },*/
-          {
+            label: 'Docs',        // Navbar Title
+          },
+          /*{
             type: 'docSidebar', 
             position: 'left',
             sidebarId: 'acDocs',     
             label: 'Active Directory',   
-          },
+          },*/
           {
             type: 'docSidebar', 
             position: 'left',
             sidebarId: 'linuxDocs',     
-            label: 'TryHackMe Rooms',   
+            label: 'Boxes',   
           },
         ],
       },
