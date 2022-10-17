@@ -39,9 +39,9 @@ The `Favicon` is a small **Icon** displayed in the **Browser's Address Bar** or 
 - We can get the `HASH` **Value** of the **Favicon** and compare it on the `OWASP` Database for a Match.
 
 ```js
-+------+     +----------------------------------------+     +--------+
-| curl | ->> | https://website.com/images/favicon.ico | ->> | MD5SUM |
-+------+     +----------------------------------------+     +--------+
+┌──────┐    ┌────────────────────────────────────────┐    ┌────────┐
+| curl | -► | https://website.com/images/favicon.ico | -► | MD5SUM |
+└──────┘    └────────────────────────────────────────┘    └────────┘
 ```
 
 <br/>
@@ -108,7 +108,7 @@ Page Generated in 0.04109 Seconds using the Custom Framework v1.2 ( https://webs
 The `URL` may Hint at the Technology used by the Website. **[In this Case `Apache Struts`]**
 
 ```log
-+---------------------------------+       +-----------------+
-| www.website.com/showcase.action |  ->>  | showcase.action |
-+---------------------------------+       +-----------------+
+┌─────────────────────────────────┐      ┌─────────────────┐
+| www.website.com/showcase.action |  -►  | showcase.action |
+└─────────────────────────────────┘      └─────────────────┘
 ```

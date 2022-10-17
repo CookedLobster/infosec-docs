@@ -451,7 +451,7 @@ const sidebars = {
         {
           type: "category",
           label: "General",
-          items: ["other/permissions", "other/passwd-shadow", "other/commands"],
+          items: ["other/permissions", "other/commands"],
         },
         {
           type: "category",
