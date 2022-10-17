@@ -32,9 +32,6 @@ PS C:\> Invoke-PrivescCheck
 C:\> winpeas.exe > <Output>
 ```
 
----
-
-<br/>
 
 
 ## RogueWinRM

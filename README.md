@@ -2,7 +2,6 @@
   <img width="400" height="200" src="static/img/LightMode.svg">
 </p>
 
-
 ## Development
 
 - **Installation**

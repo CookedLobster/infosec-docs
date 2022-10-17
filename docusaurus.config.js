@@ -1,40 +1,37 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');   // Code Block Theme
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');   // Code Block Theme
-
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Infosec-Docs',
-  tagline: 'Infosec Documentations',
-  url: 'https://infosec-docs.pages.dev/',   // Website URL
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.png',       // Favicon Support
-
+  title: "Infosec-Docs",
+  tagline: "Infosec Documentations",
+  url: "https://infosec-docs.pages.dev/",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.png",
 
   // GitHub Pages
-  organizationName: 'Infosec Docs', // Organization Name
-  projectName: 'infosec-Docs',      // GitHub Repository Name
+  organizationName: "Infosec Docs", // Organization Name
+  projectName: "infosec-Docs", // GitHub Repository Name
   trailingSlash: false,
 
-  // Site Locales
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: "/",
+          sidebarPath: require.resolve("./sidebars.js"),
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -43,51 +40,45 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      metadata: [{name: 'Infosec Docs', content: 'tryhackme, exploitation guides, exploiting, enumeration, hackthebox, pentesting, docs, vulnerabilities, privilege escalation, infosec, infosec docs, pentesting docs, pentesting guide, hacking, priv esc, payloads, windows privilege escalation, reverse shell, web shell, terminal stabilisation, shell stabilisation, interactive tty, stabilize reverse shell'}],
+      metadata: [
+        {
+          name: "Infosec Docs",
+          content:
+            "tryhackme, exploitation guides, exploiting, enumeration, hackthebox, pentesting, docs, vulnerabilities, privilege escalation, infosec, infosec docs, pentesting docs, pentesting guide, hacking, priv esc, payloads, windows privilege escalation, reverse shell, web shell, terminal stabilisation, shell stabilisation, interactive tty, stabilize reverse shell",
+        },
+      ],
       colorMode: {
-        respectPrefersColorScheme: true,    // Respect User System Theme [Light - Dark]
+        respectPrefersColorScheme: true,
       },
 
       algolia: {
-        // The application ID provided by Algolia
-        appId: '4TU62FN1Z3',
-
-        // Public API key [Safe to be Commited to GitHub]
-        apiKey: '7bb751ebb1bf0b407dc8e169c2422850',
-        indexName: 'dev_DocsPersonal',
+        appId: "4TU62FN1Z3",
+        apiKey: "7bb751ebb1bf0b407dc8e169c2422850",
+        indexName: "dev_DocsPersonal",
         contextualSearch: true,
-        placeholder: 'Search ...',
+        placeholder: "Search ...",
       },
       docs: {
         sidebar: {
           hideable: true,
-          autoCollapseCategories: true, 
+          autoCollapseCategories: true,
         },
       },
       blog: false,
       navbar: {
-        title: 'Infosec-Docs',
+        title: "Infosec-Docs",
         logo: {
-          
-          alt: 'InfosecDocs',
-          src: 'img/LightMode.svg',
-          srcDark: 'img/DarkMode.svg',
+          alt: "InfosecDocs",
+          src: "img/LightMode.svg",
+          srcDark: "img/DarkMode.svg",
         },
-        hideOnScroll: true,   // Hide Navbar on Scroll
+        hideOnScroll: true,
         items: [
-          /*
           {
-            href: 'https://github.com/CookedLobster/infosec-docs',
-            position: 'right',
-            className: 'header-github-link',    // Use Icon as GitHub
-            'aria-label': 'GitHub Repository',
-          },
-          */
-          {
-            type: 'docSidebar',  
-            position: 'left',
-            sidebarId: 'owaspDocs',             // [sidebar.js] ID
-            label: 'Docs',        // Navbar Title
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "owaspDocs",
+            label: "Docs",
           },
           /*{
             type: 'docSidebar', 
@@ -96,17 +87,25 @@ const config = {
             label: 'Active Directory',   
           },*/
           {
-            type: 'docSidebar', 
-            position: 'left',
-            sidebarId: 'linuxDocs',     
-            label: 'Boxes',   
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "linuxDocs",
+            label: "Boxes",
           },
         ],
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['php', 'log', 'batch', 'powershell', 'groovy', 'perl', 'vim'],    // Code Block Supported Languages
+        additionalLanguages: [
+          "php",
+          "log",
+          "batch",
+          "powershell",
+          "groovy",
+          "perl",
+          "vim",
+        ],
       },
     }),
 };

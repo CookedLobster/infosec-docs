@@ -2,12 +2,12 @@
 sidebar_position: 1
 ---
 
-# Permissions
+# Permissions 
 
-- **Microsoft:** <a class="button button--outline button--warning" href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls">ICACLS Permissions</a>
-- **Sequence:**
+- <a class="button button--outline button--warning" href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls">ICACLS Permissions</a>
 
-```js
+```batch
+:: Sequence
 [F]    -- Full Access
 [M]    -- Modify Access
 [RX]   -- Read - Execute Access
@@ -16,9 +16,8 @@ sidebar_position: 1
 [I]    -- Inherited Permissions
 ```
 
-- **Comma Separated:**
-
-```js
+```batch
+:: Comma Separated
 [D]   -- Delete
 [RC]  -- Read Control
 [WD]  -- Write Data/Add File
