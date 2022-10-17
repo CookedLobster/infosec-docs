@@ -22,7 +22,7 @@ sidebar_position: 1
 
 ## SUID && GUID
 
-```bash
+```js
     SUID		    GUID
 rws-rwx-rwx		 rwx-rws-rwx
 ```
@@ -31,7 +31,7 @@ rws-rwx-rwx		 rwx-rws-rwx
 
 ## Sticky Bit
 
-```bash
+```js
    STICKY
 rws-rws-r-T		 
 ```
@@ -41,11 +41,14 @@ rws-rws-r-T
 
 ## Numeric Method
 
-```bash
+```js
 SUID = 4
 GUID = 2
 STICKY = 1
+```
 
-# Check File Permissions "Numeric"
+- **Check File Permissions**
+
+```bash
 stat -c "%a" File_Name 
 ```

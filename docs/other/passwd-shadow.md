@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## PASSWD FORMAT
 
-```log
+```
 mark:x:1001:1001:mark,,,:/home/mark:/bin/bash
 [--] - [--] [--] [-----] [--------] [--------]
 |    |   |    |     |         |        |
@@ -23,7 +23,7 @@ mark:x:1001:1001:mark,,,:/home/mark:/bin/bash
 #
 ## SHADOW FORMAT
 
-```log
+```
 mark:$6$.n.:17736:0:99999:7:::
 [--] [----] [---] - [---] ----
 |      |      |   |   |   |||+-----------> 9. Unused

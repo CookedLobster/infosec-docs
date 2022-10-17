@@ -25,6 +25,8 @@ grep -roE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" 2>/dev/null
 
 ## Capabilities
 
+- **Search for Capabilities**
+
 ```bash
 getcap -r / 2>/dev/null
 ```

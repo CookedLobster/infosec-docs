@@ -26,9 +26,9 @@ There is an Already Registered User **Dave.**
 - `( _ ):` Blank Space before Entering the Username
 
 ```js
-+----------+
-| USERNAME | ➜ _Dave
-+----------+
-| PASSWORD | ➜ **********
-+----------+
+┌──────────┐
+| USERNAME | -► _Dave
+|──────────|
+| PASSWORD | -► **********
+└──────────┘
 ```

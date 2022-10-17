@@ -9,6 +9,7 @@ sidebar_position: 3
 - **List Access of (Users - Groups) to Files - Directories - Registry Keys - Global Objects - Windows Services**
 
 ```batch
+:: Accepts The Eula Before Executing
 accesschk.exe /accepteula
 accesschk64.exe -qlc <ServiceName>
 ```
@@ -27,7 +28,7 @@ PS C:\> Invoke-PrivescCheck
 
 - **Enumeration Script** 
 
-```powershell
+```html
 C:\> winpeas.exe > <Output>
 ```
 

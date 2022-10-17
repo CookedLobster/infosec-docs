@@ -12,7 +12,7 @@ When installing Windows on a large number of Hosts, Administrators may use <b st
 
 - **Locations**
 
-```powershell
+```
 C:\Unattend.xml
 C:\Windows\Panther\Unattend.xml
 C:\Windows\Panther\Unattend\Unattend.xml
@@ -39,14 +39,14 @@ Whenever a **User** runs a command using <b style={{ color: 'MediumTurquoise' }}
 - **CMD**
 
 ```batch
-# [CMD]
+:: [CMD]
 type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
 ```
 
 - **PSH**
 
-```powershell
-# [PSH]
+```batch
+:: [PSH]
 type $Env:userprofile\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
 ```
 
@@ -80,14 +80,14 @@ runas /user:<UserName> "cmd /c dir C:\"
 
 <b style={{ color: 'DeepSkyBlue' }}>Internet Information Services (IIS)</b> is the default Web Server on Windows Installations. The configuration of websites on IIS is stored in a file called <b style={{ color: 'MediumTurquoise' }}>[web.config]</b> and can Store Passwords for Databases or configured Authentication Mechanisms.
 
-```batch
+```
 C:\inetpub\wwwroot\web.config
 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config
 ```
 
 - **Find Database Connection Strings on the File**
 
-```
+```powershell
 type C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr connectionString
 ```
 

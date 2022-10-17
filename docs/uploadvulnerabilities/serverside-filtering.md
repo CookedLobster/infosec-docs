@@ -59,7 +59,7 @@ The magic number of a file is a string of hex digits, and is always the very fir
 └────────┴─────────────────────────┴─────────────────────────┴────────┴────────┘
 ```
 
-- Transforming `PHP` File Into `GIF`
+- Transforming `PHP` File Into `GIF` using **Magic Numbers:** `47 49 46 38 37 61`
 
 ```php
 ┌────────┬─────────────────────────┬─────────────────────────┬────────┬────────┐

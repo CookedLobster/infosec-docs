@@ -162,9 +162,9 @@ RTy8yhBQdscX
 - **`FTP` Password:** <b style={{ color: 'Chartreuse' }}>vigilante</b><b style={{ color: 'Dark' }}>:</b><b style={{ color: 'Coral' }}>!#th3h00d</b>
 
 ```css
-+--------------+    +-----------+
-| RTy8yhBQdscX | >> | !#th3h00d |
-+--------------+    +-----------+
+┌──────────────┐    ┌───────────┐
+| RTy8yhBQdscX | -► | !#th3h00d |
+└──────────────┘    └───────────┘
 ```
 
 ---

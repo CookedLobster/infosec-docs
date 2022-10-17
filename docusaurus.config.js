@@ -106,7 +106,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['php', 'log', 'lua', 'batch', 'http', 'powershell', 'groovy', 'perl'],    // Code Block Supported Languages
+        additionalLanguages: ['php', 'log', 'batch', 'powershell', 'groovy', 'perl', 'vim'],    // Code Block Supported Languages
       },
     }),
 };
