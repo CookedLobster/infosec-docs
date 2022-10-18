@@ -1,9 +1,7 @@
 ---
 sidebar_position: 4
+title: Harvesting Passwords
 ---
-
-# Harvesting Passwords
-
 
 ## Unattended Windows Installations
 

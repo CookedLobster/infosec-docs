@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
+title: Insecure Permissions
 ---
 
-# Insecure Permissions
 
 - <b style={{ color: 'MediumTurquoise' }}>WindowsScheduler</b> Service has <span style={{fontWeight: 'Bold'}}>Weak Permissions</span> that allows the Modification - Replacement. It is possible to gain the Privileges of the Service.
 

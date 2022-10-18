@@ -1,11 +1,10 @@
 ---
 sidebar_position: 1
+title: Enumeration
 description: RootMe
-sidebar_label: Enumeration
 keywords: [rootme, root me, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
 ---
 
-# [RootMe] Enumeration
 
 :::note Box Description
 

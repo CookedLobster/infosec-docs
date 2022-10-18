@@ -1,8 +1,7 @@
 ---
 sidebar_position: 2
+title: Server-Side Request Forgery 
 ---
-
-# Server-Side Request Forgery 
 
 
 We found two Endpoints during a content discovery exercise against the **Acme IT Support Website.** The first one is **`/private`**, which gives us an error message explaining that the contents **Cannot be Viewed from our IP Address.** 

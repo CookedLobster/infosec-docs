@@ -1,12 +1,9 @@
 ---
 sidebar_position: 2
+title: Forensics
 description: StartUp
-sidebar_label: Forensics
 keywords: [startup tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, ftp, privilege escalation, suspicious pcap tryhackme]
 ---
-
-
-# [StartUp] Forensics
 
 ## PCAP Analysis
 

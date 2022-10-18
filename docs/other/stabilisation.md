@@ -29,8 +29,9 @@ reset
 xterm   
 ```
 
-
 <br/>
+
+## Interface
 
 - **Set Terminal `[Size] - [User Colors]`**
 

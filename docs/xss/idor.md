@@ -1,8 +1,7 @@
 ---
 sidebar_position: 2
+title: Insecure Direct Object Reference
 ---
-
-# Insecure Direct Object Reference
 
 
 - **`Your Account`** Section gives us the ability to change our Information such as **Username - Email - Password.** **[We notice the Username & Email fields Pre-Filled in with our Information]**

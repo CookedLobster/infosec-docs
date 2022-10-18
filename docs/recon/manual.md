@@ -1,8 +1,7 @@
 ---
 sidebar_position: 2
+title: Manual Discovery
 ---
-
-# Manual Discovery
 
 ## Robotx.TXT
 

@@ -1,8 +1,7 @@
 ---
 sidebar_position: 3
+title: Blind XSS 
 ---
-
-# Blind XSS 
 
 :::info Scenario
 

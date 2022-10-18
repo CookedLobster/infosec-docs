@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
+title: Scheduled Tasks
 ---
 
-# Scheduled Tasks
 
 - Retriving the **Scheduled Tasks** on the System. If our Current User can **Modify or Overwrite** <b style={{ color: 'Brown' }}>[Task to Run]</b> Executable we can Control what gets Executed by the User.
 - <b style={{ color: 'Brown' }}>[Task to Run]</b> Indicates what gets Executed by the <span style={{fontWeight: 'Bold'}}>Scheduled Task</span> 

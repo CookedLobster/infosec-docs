@@ -1,8 +1,7 @@
 ---
 sidebar_position: 2
+title: Server-Side Filtering
 ---
-
-# Server-Side Filtering
 
 ## File Extensions
 

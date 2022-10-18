@@ -1,8 +1,8 @@
 ---
 sidebar_position: 3
+title: SeImpersonate - SeAssignPrimaryToken
 ---
 
-# SeImpersonate - SeAssignPrimaryToken
 
 
 - These Privileges <b style={{ color: 'Brown' }}>[SeAssignPrimaryToken - SeImpersonate]</b> allow a Process to Impersonate other Users and act on their behalf.

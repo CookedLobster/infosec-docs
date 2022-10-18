@@ -1,11 +1,10 @@
 ---
 sidebar_position: 1
+title: Enumeration
 description: Overpass
-sidebar_label: Enumeration
 keywords: [overpass, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
 ---
 
-# [Overpass] Enumeration
 
 :::note Box Description
 

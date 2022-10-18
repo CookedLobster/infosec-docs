@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
+title: SeBackup - SeRestore
 ---
 
-# SeBackup - SeRestore
 
 **`SeBackup`** and **`SeRestore`** Privileges allow Users to **Read - Write** to any File in the System, Ignoring any **`DACL`** in place.  The idea behind this Privilege is to Allow certain Users to perform **BackUP's** from a System **(Without Requiring full Administrative Privileges).**
 

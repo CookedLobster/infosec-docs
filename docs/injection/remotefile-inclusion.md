@@ -1,8 +1,7 @@
 ---
 sidebar_position: 3
+title: Remote File Inclusion (RFI)
 ---
-
-# Remote File Inclusion (RFI)
 
 
 `RFI` is a technique to **`Include Remote Files`** and into a Vulnerable Application. RFI occurs when the User Input is not properly Sanitized. This allows an Attacker to Inject an external URL into **`include`** function. One requirement for RFI is that the **`allow_url_fopen`** option needs to be ON.

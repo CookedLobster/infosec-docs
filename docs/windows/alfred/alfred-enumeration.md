@@ -1,11 +1,10 @@
 ---
 sidebar_position: 1
+title: Enumeration
 description: Alfred
-sidebar_label: Enumeration
 keywords: [alfred, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, jenkins default credentials]
 ---
 
-# [Alfred] Enumeration
 
 :::note Box Description
 

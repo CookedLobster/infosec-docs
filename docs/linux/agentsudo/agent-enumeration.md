@@ -1,11 +1,10 @@
 ---
 sidebar_position: 1
+title: Enumeration
 description: Agent SUDO
-sidebar_label: Enumeration
 keywords: [agent sudo, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, privilege escalation, CVE-2019-14287]
 ---
 
-# [Agent SUDO] Enumeration
 
 :::note Box Description
 

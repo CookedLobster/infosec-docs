@@ -1,11 +1,10 @@
 ---
 sidebar_position: 1
+title: Enumeration
 description: Steel Mountain
-sidebar_label: Enumeration
 keywords: [steel mountain, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, rejetto exploit]
 ---
 
-# [Steel Mountain] Enumeration
 
 :::note Box Description
 

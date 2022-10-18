@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
+title: Server Side Template Injection
 ---
 
-# Server Side Template Injection
 
 `SSTI` Occurs when a User is able to pass in a parameter that can control the **Template Engine** that is running on the Server.
 

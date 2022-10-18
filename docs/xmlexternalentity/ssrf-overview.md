@@ -1,8 +1,7 @@
 ---
 sidebar_position: 1
+title: Overview
 ---
-
-# Overview
 
 `SSRF` is a Vulnerability that allows a malicious user to cause the Web-Server to make an additional or edited HTTP Request to the resource of the attacker's choosing.
 

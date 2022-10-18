@@ -1,11 +1,10 @@
 ---
 sidebar_position: 1
+title: Enumeration
 description: Kenobi
-sidebar_label: Enumeration
 keywords: [kenobi, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, enum4linux, smbmap, smbclient, privilege escalation]
 ---
 
-# [Kenobi] Enumeration
 
 :::note Box Description
 

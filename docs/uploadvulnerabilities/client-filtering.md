@@ -1,8 +1,7 @@
 ---
 sidebar_position: 3
+title: Client-Side Filtering
 ---
-
-# Client-Side Filtering
 
 ## JavaScript Off
 

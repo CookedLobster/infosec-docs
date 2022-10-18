@@ -1,8 +1,7 @@
 ---
 sidebar_position: 2
+title: XSS
 ---
-
-# XSS
 
 
 Form asking you to enter your Name, and once you've entered your Name, it will be Presented on a Line Below.

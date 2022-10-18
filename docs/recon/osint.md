@@ -1,8 +1,7 @@
 ---
 sidebar_position: 1
+title: OSINT
 ---
-
-# OSINT
 
 :::caution Work In Progress
 

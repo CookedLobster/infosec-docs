@@ -1,11 +1,10 @@
 ---
 sidebar_position: 1
+title: Enumeration
 description: Blaster
-sidebar_label: Enumeration
 keywords: [blaster, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation, hhupd, CVE-2019-1388]
 ---
 
-# [Blaster] Enumeration
 
 :::note Box Description
 

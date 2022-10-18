@@ -1,12 +1,10 @@
 ---
 sidebar_position: 1
+title: Overview
 ---
 
-# Overview
 
-## Json Web Token
-
-`JWT's` are a common source of Vulnerabilities, both in how they are in implemented in Applications, and in the underlying libraries. As they are used for Authentication, a Vulnerability can easily result in a complete compromise of the Application.
+`JWT's` **(Json Web Token)** are a common source of Vulnerabilities, both in how they are in implemented in Applications, and in the underlying libraries. As they are used for Authentication, a Vulnerability can easily result in a complete compromise of the Application.
 
 <br/>
 

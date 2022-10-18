@@ -1,8 +1,8 @@
 ---
 sidebar_position: 3
+title: Blind SQLi Authentication Bypass
 ---
 
-# Blind SQLi Authentication Bypass
 
 In `Blind SQLi` is when we get little to no **Feedback** to confirm whether our Injected Queries were, in fact, successful or not, this is because the error messages have been disabled, but the injection still works regardless. 
 

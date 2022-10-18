@@ -1,11 +1,10 @@
 ---
 sidebar_position: 1
+title: Enumeration
 description: Overpass Hosting
-sidebar_label: Enumeration
 keywords: [overpass hosting, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, ftp, privilege escalation]
 ---
 
-# [Overpass Hosting] Enumeration
 
 :::note Box Description
 

@@ -1,8 +1,8 @@
 ---
 sidebar_position: 4
+title: Blind SQLi - (Boolean - Time Based)
 ---
 
-# Blind SQLi - (Boolean - Time Based)
 
 `Boolean Based SQLi` refers to the **Response** we receive back from our Injection attempts which could be a `[True/False - Yes/No - On/Off - 1/0]` or any Response which can only ever have two outcomes. That outcome confirms to us that our SQL Injection Payload was either Successful or Not.
 

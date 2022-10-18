@@ -1,12 +1,10 @@
 ---
 sidebar_position: 1
+title: Overview
 ---
 
-# Overview
 
-## Insecure Direct Object Reference **(IDOR)**
-
-This type of Vulnerability can happens when a Web Server receives User-Supplied input to retrieve Objects `Files - Data - Documents` too much trust has been placed on the **Input Data**, and it is not Validated on the **Server-Side** to confirm the Requested Object belongs to the User requesting it.
+`IDOR` **(Insecure Direct Object Reference)** This type of Vulnerability can happens when a Web Server receives User-Supplied input to retrieve Objects `Files - Data - Documents` too much trust has been placed on the **Input Data**, and it is not Validated on the **Server-Side** to confirm the Requested Object belongs to the User requesting it.
 
 <br/>
 

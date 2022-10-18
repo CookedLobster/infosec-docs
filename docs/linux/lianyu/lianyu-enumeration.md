@@ -1,11 +1,9 @@
 ---
 sidebar_position: 1
+title: Enumeration
 description: Lian_Yu
-sidebar_label: Enumeration
 keywords: [lian yu, lian_yu, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, ftp, privilege escalation]
 ---
-
-# [Lian Yu] Enumeration
 
 :::note Box Description
 

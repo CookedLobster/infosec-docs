@@ -1,11 +1,9 @@
 ---
 sidebar_position: 1
+title: Enumeration
 description: Skynet
-sidebar_label: Enumeration
 keywords: [skynet, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, enum4linux, smbclient, privilege escalation, squirrelmail exploit]
 ---
-
-# [Skynet] Enumeration
 
 :::note Box Description
 

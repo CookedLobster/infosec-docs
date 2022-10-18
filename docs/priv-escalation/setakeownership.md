@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
+title: SeTakeOwnership
 ---
 
-# SeTakeOwnership
 
 **`SeTakeOwnership`** Privilege allows a user to take Ownership of any **Object** on the System, **Including Files and Registry Keys.**
 

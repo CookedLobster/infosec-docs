@@ -3,7 +3,6 @@ sidebar_position: 1
 title: Command Injection
 ---
 
-# Injection
 
 We can often determine whether or not Command Injection is possible by the Behaviours of an Application. Applications that use User Input to populate System Commands with data can often be combined in unintended behaviour. 
 

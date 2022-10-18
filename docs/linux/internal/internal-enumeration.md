@@ -1,11 +1,10 @@
 ---
 sidebar_position: 1
+title: Enumeration
 description: Internal
-sidebar_label: Enumeration
 keywords: [internal, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, wpscan, xml-rpc, wordpress exploit, privilege escalation]
 ---
 
-# [Internal] Enumeration
 
 :::note Box Description
 

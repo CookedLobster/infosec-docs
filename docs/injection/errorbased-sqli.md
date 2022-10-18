@@ -1,8 +1,7 @@
 ---
 sidebar_position: 2
+title: Error-Based SQLi
 ---
-
-# Error-Based SQLi
 
 To Discover an Error-Based SQL Injection we need to break the code's SQL Query by trying certain characters until an Error Message is produced.
 

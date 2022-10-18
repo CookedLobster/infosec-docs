@@ -1,8 +1,8 @@
 ---
 sidebar_position: 5
+title: AlwaysInstallElevated
 ---
 
-# AlwaysInstallElevated
 
 **Windows Installer Files** <b style={{ color: 'Plum' }}>[.msi]</b> are used to Install Applications on the System <span style={{fontWeight: 'Bold'}}>(They Usually run with the Privilege Level of the User that Start them).</span>
 
