@@ -549,7 +549,7 @@ const sidebars = {
         keywords: ["guides"],
         image: "/img/bitmap.png",
       },
-      items: ["tools/hydra"],
+      items: ["pentesting-tools/hydra"],
     },
     "credits",
   ],
