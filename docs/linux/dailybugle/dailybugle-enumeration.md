@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: Daily Bugle
+sidebar_label: Enumeration
 keywords: [daily bugle, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, joomla, joomla exploit, john, CVE-2017-8917, privilege escalation]
 ---
 
-# Enumeration
+# [Daily Bugle] Enumeration
 
 :::note Box Description
 

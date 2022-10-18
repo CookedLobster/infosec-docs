@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: Bounty Hacker 
+sidebar_label: Enumeration
 keywords: [bounty hacker, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ftp, privilege escalation]
 ---
 
-# Enumeration
+# [Bounty Hacker] Enumeration
 
 :::note Box Description
 

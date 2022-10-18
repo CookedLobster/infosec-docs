@@ -1,8 +1,7 @@
 ---
 sidebar_position: 3
+title: JWT (NONE)
 ---
-
-# JWT (NONE)
 
 
 :::info Vulnerable Application Scenario

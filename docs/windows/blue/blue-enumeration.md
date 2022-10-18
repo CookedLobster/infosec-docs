@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: Blue
+sidebar_label: Enumeration
 keywords: [blue, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, eternalblue, eternal blue, MS17-010]
 ---
 
-# Enumeration
+# [Blue] Enumeration
 
 :::note Box Description
 

@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: Relevant
+sidebar_label: Enumeration
 keywords: [relevant, relevant tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, smbmap, smbclient]
 ---
 
-# Enumeration
+# [Relevant] Enumeration
 
 :::note Box Description
 

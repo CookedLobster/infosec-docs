@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: Wgel
+sidebar_label: Enumeration
 keywords: [wgel, wgel tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
 ---
 
-# Enumeration
+# [Wgel] Enumeration
 
 :::note Box Description
 

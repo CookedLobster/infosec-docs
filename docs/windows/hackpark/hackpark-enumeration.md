@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: HackPark
+sidebar_label: Enumeration
 keywords: [hackpark, hackpark tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, burpsuite, hydra, blogengine, CVE-2019-6714]
 ---
 
-# Enumeration
+# [HackPark] Enumeration
 
 :::note Box Description
 

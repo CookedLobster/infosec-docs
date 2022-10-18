@@ -1,8 +1,9 @@
 ---
 sidebar_position: 3
+sidebar_label: Tools
 ---
 
-# Tools
+# Windows Tools
 
 ## AccessChk
 

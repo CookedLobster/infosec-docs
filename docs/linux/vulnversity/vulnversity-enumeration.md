@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: Vulnversity
+sidebar_label: Enumeration
 keywords: [vulnversity, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
 ---
 
-# Enumeration
+# [Vulnversity] Enumeration
 
 :::note Box Description
 

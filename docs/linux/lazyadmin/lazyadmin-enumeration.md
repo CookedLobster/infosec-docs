@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: Lazy Admin
+sidebar_label: Enumeration
 keywords: [lazy admin, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, sql backup, john, privilege escalation]
 ---
 
-# Enumeration
+# [Lazy Admin] Enumeration
 
 :::note Box Description
 

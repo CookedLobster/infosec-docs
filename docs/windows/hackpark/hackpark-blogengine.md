@@ -1,10 +1,11 @@
 ---
 sidebar_position: 2
 description: HackPark
+sidebar_label: BlogEngine
 keywords: [hackpark, hackpark tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, burpsuite, hydra, blogengine, CVE-2019-6714]
 ---
 
-# BlogEngine
+# [HackPark] BlogEngine
 
 ## BURPSUITE
 

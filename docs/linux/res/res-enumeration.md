@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: Res
+sidebar_label: Enumeration
 keywords: [res, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, redis exploit, privilege escalation, php exploitation redis]
 ---
 
-# Enumeration
+# [Res] Enumeration
 
 :::note Box Description
 

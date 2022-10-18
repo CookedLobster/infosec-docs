@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: Source 
+sidebar_label: Enumeration
 keywords: [source tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation]
 ---
 
-# Enumeration
+# [Source] Enumeration
 
 :::note Box Description
 

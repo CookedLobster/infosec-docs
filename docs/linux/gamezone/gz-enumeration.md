@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: Game Zone
+sidebar_label: Enumeration
 keywords: [game zone, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation]
 ---
 
-# Enumeration
+# [Game Zone] Enumeration
 
 :::note Box Description
 

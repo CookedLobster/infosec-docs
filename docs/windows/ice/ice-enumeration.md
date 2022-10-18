@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: Ice
+sidebar_label: Enumeration
 keywords: [ice, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, icecast exploit, CVE-2004-1561]
 ---
 
-# Enumeration
+# [Ice] Enumeration
 
 :::note Box Description
 

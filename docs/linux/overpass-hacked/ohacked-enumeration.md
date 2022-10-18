@@ -1,9 +1,11 @@
 ---
 sidebar_position: 1
 description: Overpass Hacked
+sidebar_label: Enumeration
 keywords: [overpass hacked, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, cooctus clan]
 ---
-# Enumeration
+
+# [Overpass Hacked] Enumeration
 
 :::note Box Description
 

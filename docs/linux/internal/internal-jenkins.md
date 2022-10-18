@@ -1,10 +1,11 @@
 ---
 sidebar_position: 3
 description: Internal
+sidebar_label: Jenkins Exploitation
 keywords: [internal, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, wpscan, privilege escalation, jenkins]
 ---
 
-# Jenkins Exploitation
+# [Internal] Jenkins Exploitation
 
 <br/>
 

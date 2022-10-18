@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: TomGhost
+sidebar_label: Enumeration
 keywords: [tomghost, tomghost tryhacme, tom ghost exploit, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, ghostcat]
 ---
 
-# Enumeration
+# [TomGhost] Enumeration
 
 :::note Box Description
 

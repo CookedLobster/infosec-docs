@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: Cyborg
+sidebar_label: Enumeration
 keywords: [cyborg, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, borg, privilege escalation]
 ---
 
-# Enumeration
+# [Cyborg] Enumeration
 
 :::note Box Description
 

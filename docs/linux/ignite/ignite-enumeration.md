@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: Ignite
+sidebar_label: Enumeration
 keywords: [ignite, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, fuel cms 1.4, CVE-2018-16763, privilege escalation]
 ---
 
-# Enumeration
+# [Ignite] Enumeration
 
 :::note Box Description
 

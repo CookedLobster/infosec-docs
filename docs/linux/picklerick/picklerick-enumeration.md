@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: Pickle Rick
+sidebar_label: Enumeration
 keywords: [pickle rick, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
 ---
 
-# Enumeration
+# [Pickle Rick] Enumeration
 
 :::note Box Description
 

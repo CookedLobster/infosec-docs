@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
 description: StartUp
+sidebar_label: Enumeration
 keywords: [startup tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, ftp, privilege escalation]
 ---
 
-# Enumeration
+# [StartUp] Enumeration
 
 :::note Box Description
 

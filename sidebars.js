@@ -541,10 +541,10 @@ const sidebars = {
     /** ------------- Tools (General Linux-Windows) ------------- **/
     {
       type: "category",
-      label: "Tools",
+      label: "Pentesting Tools",
       link: {
         type: "generated-index",
-        title: "Tools",
+        title: "Pentesting Tools",
         description: "General Information About Tools.",
         keywords: ["guides"],
         image: "/img/bitmap.png",
