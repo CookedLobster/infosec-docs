@@ -104,7 +104,7 @@ const config = {
           "powershell",
           "groovy",
           "perl",
-          "vim",
+          "vim"
         ],
       },
     }),

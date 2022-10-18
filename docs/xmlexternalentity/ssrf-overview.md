@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Overview
+title: SSRF
 ---
 
 `SSRF` is a Vulnerability that allows a malicious user to cause the Web-Server to make an additional or edited HTTP Request to the resource of the attacker's choosing.
@@ -47,9 +47,9 @@ title: Overview
 	- `=api`
 
 ```js
-┌────────────────────────────────────────────┐
-| URL: | https://website.com/form?server=api |
-└────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────┐
+| URL: | https://website.com/form?server=api         |
+└────────────────────────────────────────────────────┘
 ```
 
 <br/>

@@ -18,6 +18,7 @@ In some situations, an attacker can escalate an XXE attack to compromise the und
 
 ## XXE PAYLOAD 
 
+- <a class="button button--outline button--info" href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection">XXE PAYLOADS GitHub</a>
 - Example of a Simple `XXE` PAYLOAD
 
 ```xml
