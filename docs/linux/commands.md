@@ -16,7 +16,7 @@ find / -type f -perm -04000 -ls 2>/dev/null
 grep -irE '(password|pwd|pass)[[:space:]]*=[[:space:]]*[[:alpha:]]+' 2>/dev/null
 ```
 
-- **`GREP` IP**
+- **`GREP` IP Addresses**
 
 ```bash
 grep -roE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" 2>/dev/null

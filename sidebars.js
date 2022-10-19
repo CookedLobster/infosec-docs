@@ -346,12 +346,7 @@ const sidebars = {
         {
           type: "category",
           label: "General",
-          items: [
-            "windows/permissions",
-            "windows/commands",
-            "windows/win-tools",
-            "windows/harvesting",
-          ],
+          items: ["windows/permissions", "windows/commands"],
         },
         {
           type: "category",
@@ -384,6 +379,8 @@ const sidebars = {
           label: "Terminal - Payloads",
           items: ["windows/shell-win", "windows/file-transfer"],
         },
+        "windows/win-tools",
+        "windows/harvesting",
       ],
     },
 
@@ -403,6 +400,7 @@ const sidebars = {
         "network-services/nfs",
         "network-services/smb",
         "network-services/smtp",
+        "network-services/mysql",
       ],
     },
 

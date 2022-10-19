@@ -11,7 +11,6 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.png",
 
-
   organizationName: "Infosec Docs",
   projectName: "infosec-Docs",
   trailingSlash: false,

