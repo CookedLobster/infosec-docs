@@ -15,7 +15,7 @@ The second is a new version of the customer account page at **`/customers/new-ac
 	-  **Avatar Page:** `https://website.com/customers/new-account-page`
 	-  Viewing the Page Source of the `Avatar Form`, we see the Avatar form field value contains the **Path to the Image.**
 
-![SSRF](/img/webstuff/s-one.png)
+![SSRF](/img/vuln-web/s-one.png)
 
 
 ```html
@@ -31,7 +31,7 @@ The second is a new version of the customer account page at **`/customers/new-ac
 	- If we choose one of the Avatars and then click the **Update Avatar Button,** we see the form change and, above it, display our **Currently Selected Avatar.** Viewing the Page Source will show our Current Avatar is displayed using the data URI Scheme, and the image content is `BASE64` Encoded.
 
 
-![SSRF](/img/webstuff/s-two.png)
+![SSRF](/img/vuln-web/s-two.png)
 
 
 ```html
@@ -49,7 +49,7 @@ The second is a new version of the customer account page at **`/customers/new-ac
 	- The web application has a Deny List in place and has Blocked Access to the `/private` Endpoint.
 
 
-![SSRF](/img/webstuff/s-three.png)
+![SSRF](/img/vuln-web/s-three.png)
 
 ```html
 <div class="col-xs-4">
@@ -65,7 +65,7 @@ The second is a new version of the customer account page at **`/customers/new-ac
 - **Directory Traversal:**
 	- **Endpoint:** `x/../private`
 
-![SSRF](/img/webstuff/s-four.png)
+![SSRF](/img/vuln-web/s-four.png)
 
 
 ```html

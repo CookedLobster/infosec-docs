@@ -10,7 +10,7 @@ title: Insecure Direct Object Reference
 	- **Endpoint PATH:** `/api/v1/customer?id={user_id}`
 
 
-![IDOR](/img/webstuff/idor.png)
+![IDOR](/img/vuln-web/idor.png)
 
 
 ```json

@@ -18,168 +18,171 @@ const sidebars = {
           type: "category",
           label: "Agent SUDO",
           items: [
-            "linux/agentsudo/agent-enumeration",
-            "linux/agentsudo/agent-exploitation",
+            "tryhackme/agentsudo/agent-enumeration",
+            "tryhackme/agentsudo/agent-exploitation",
           ],
         },
         {
           type: "category",
           label: "Basic Pentesting",
           items: [
-            "linux/basicpentesting/basic-enumeration",
-            "linux/basicpentesting/basic-exploitation",
+            "tryhackme/basicpentesting/basic-enumeration",
+            "tryhackme/basicpentesting/basic-exploitation",
           ],
         },
         {
           type: "category",
           label: "Bounty Hacker",
           items: [
-            "linux/bountyhacker/bountyhacker-enumeration",
-            "linux/bountyhacker/bountyhacker-exploitation",
+            "tryhackme/bountyhacker/bountyhacker-enumeration",
+            "tryhackme/bountyhacker/bountyhacker-exploitation",
           ],
         },
         {
           type: "category",
           label: "Cyborg",
           items: [
-            "linux/cyborg/cyborg-enumeration",
-            "linux/cyborg/cyborg-exploitation",
+            "tryhackme/cyborg/cyborg-enumeration",
+            "tryhackme/cyborg/cyborg-exploitation",
           ],
         },
         {
           type: "category",
           label: "Daily Bugle",
           items: [
-            "linux/dailybugle/dailybugle-enumeration",
-            "linux/dailybugle/dailybugle-exploitation",
+            "tryhackme/dailybugle/dailybugle-enumeration",
+            "tryhackme/dailybugle/dailybugle-exploitation",
           ],
         },
         {
           type: "category",
           label: "Game Zone",
           items: [
-            "linux/gamezone/gz-enumeration",
-            "linux/gamezone/gz-exploitation-one",
-            "linux/gamezone/gz-exploitation-two",
+            "tryhackme/gamezone/gz-enumeration",
+            "tryhackme/gamezone/gz-exploitation-one",
+            "tryhackme/gamezone/gz-exploitation-two",
           ],
         },
         {
           type: "category",
           label: "Ignite",
           items: [
-            "linux/ignite/ignite-enumeration",
-            "linux/ignite/ignite-exploitation",
+            "tryhackme/ignite/ignite-enumeration",
+            "tryhackme/ignite/ignite-exploitation",
           ],
         },
         {
           type: "category",
           label: "Internal",
           items: [
-            "linux/internal/internal-enumeration",
-            "linux/internal/internal-exploitation",
-            "linux/internal/internal-jenkins",
+            "tryhackme/internal/internal-enumeration",
+            "tryhackme/internal/internal-exploitation",
+            "tryhackme/internal/internal-jenkins",
           ],
         },
         {
           type: "category",
           label: "Kenobi",
           items: [
-            "linux/kenobi/kenobi-enumeration",
-            "linux/kenobi/kenobi-exploitation",
+            "tryhackme/kenobi/kenobi-enumeration",
+            "tryhackme/kenobi/kenobi-exploitation",
           ],
         },
         {
           type: "category",
           label: "Lazy Admin",
           items: [
-            "linux/lazyadmin/lazyadmin-enumeration",
-            "linux/lazyadmin/lazyadmin-exploitation",
+            "tryhackme/lazyadmin/lazyadmin-enumeration",
+            "tryhackme/lazyadmin/lazyadmin-exploitation",
           ],
         },
         {
           type: "category",
           label: "Lian Yu",
           items: [
-            "linux/lianyu/lianyu-enumeration",
-            "linux/lianyu/lianyu-exploitation",
+            "tryhackme/lianyu/lianyu-enumeration",
+            "tryhackme/lianyu/lianyu-exploitation",
           ],
         },
         {
           type: "category",
           label: "Pickle Rick",
           items: [
-            "linux/picklerick/picklerick-enumeration",
-            "linux/picklerick/picklerick-exploitation",
+            "tryhackme/picklerick/picklerick-enumeration",
+            "tryhackme/picklerick/picklerick-exploitation",
           ],
         },
         {
           type: "category",
           label: "Res",
-          items: ["linux/res/res-enumeration", "linux/res/res-exploitation"],
+          items: [
+            "tryhackme/res/res-enumeration",
+            "tryhackme/res/res-exploitation",
+          ],
         },
         {
           type: "category",
           label: "RootMe",
           items: [
-            "linux/rootme/rootme-enumeration",
-            "linux/rootme/rootme-exploitation",
+            "tryhackme/rootme/rootme-enumeration",
+            "tryhackme/rootme/rootme-exploitation",
           ],
         },
         {
           type: "category",
           label: "Simple CTF",
           items: [
-            "linux/simplectf/simplectf-enumeration",
-            "linux/simplectf/simplectf-exploitation",
+            "tryhackme/simplectf/simplectf-enumeration",
+            "tryhackme/simplectf/simplectf-exploitation",
           ],
         },
         {
           type: "category",
           label: "Skynet",
           items: [
-            "linux/skynet/skynet-enumeration",
-            "linux/skynet/skynet-exploitation",
+            "tryhackme/skynet/skynet-enumeration",
+            "tryhackme/skynet/skynet-exploitation",
           ],
         },
         {
           type: "category",
           label: "Source VM",
           items: [
-            "linux/sourcevm/sourcevm-enumeration",
-            "linux/sourcevm/sourcevm-exploitation",
+            "tryhackme/sourcevm/sourcevm-enumeration",
+            "tryhackme/sourcevm/sourcevm-exploitation",
           ],
         },
         {
           type: "category",
           label: "Startup",
           items: [
-            "linux/startup/startup-enumeration",
-            "linux/startup/startup-forensics",
-            "linux/startup/startup-exploitation",
+            "tryhackme/startup/startup-enumeration",
+            "tryhackme/startup/startup-forensics",
+            "tryhackme/startup/startup-exploitation",
           ],
         },
         {
           type: "category",
           label: "TomGhost",
           items: [
-            "linux/tomghost/tomghost-enumeration",
-            "linux/tomghost/tomghost-exploitation",
+            "tryhackme/tomghost/tomghost-enumeration",
+            "tryhackme/tomghost/tomghost-exploitation",
           ],
         },
         {
           type: "category",
           label: "Vulnversity",
           items: [
-            "linux/vulnversity/vulnversity-enumeration",
-            "linux/vulnversity/vulnversity-exploitation",
+            "tryhackme/vulnversity/vulnversity-enumeration",
+            "tryhackme/vulnversity/vulnversity-exploitation",
           ],
         },
         {
           type: "category",
           label: "Wgel",
           items: [
-            "linux/wgel/wgel-enumeration",
-            "linux/wgel/wgel-exploitation",
+            "tryhackme/wgel/wgel-enumeration",
+            "tryhackme/wgel/wgel-exploitation",
           ],
         },
       ],
@@ -201,58 +204,58 @@ const sidebars = {
           type: "category",
           label: "Alfred",
           items: [
-            "windows/alfred/alfred-enumeration",
-            "windows/alfred/alfred-exploitation",
+            "tryhackme/alfred/alfred-enumeration",
+            "tryhackme/alfred/alfred-exploitation",
           ],
         },
         {
           type: "category",
           label: "Blaster",
           items: [
-            "windows/blaster/blaster-enumeration",
-            "windows/blaster/blaster-exploitation",
+            "tryhackme/blaster/blaster-enumeration",
+            "tryhackme/blaster/blaster-exploitation",
           ],
         },
         {
           type: "category",
           label: "Blue",
           items: [
-            "windows/blue/blue-enumeration",
-            "windows/blue/blue-exploitation",
+            "tryhackme/blue/blue-enumeration",
+            "tryhackme/blue/blue-exploitation",
           ],
         },
         {
           type: "category",
           label: "HackPark",
           items: [
-            "windows/hackpark/hackpark-enumeration",
-            "windows/hackpark/hackpark-blogengine",
-            "windows/hackpark/hackpark-exploitation",
+            "tryhackme/hackpark/hackpark-enumeration",
+            "tryhackme/hackpark/hackpark-blogengine",
+            "tryhackme/hackpark/hackpark-exploitation",
           ],
         },
         {
           type: "category",
           label: "Ice",
           items: [
-            "windows/ice/ice-enumeration",
-            "windows/ice/ice-exploitation",
+            "tryhackme/ice/ice-enumeration",
+            "tryhackme/ice/ice-exploitation",
           ],
         },
         {
           type: "category",
           label: "Relevant",
           items: [
-            "windows/relevant/relevant-enumeration",
-            "windows/relevant/relevant-exploitation",
+            "tryhackme/relevant/relevant-enumeration",
+            "tryhackme/relevant/relevant-exploitation",
           ],
         },
         {
           type: "category",
           label: "Steel Mountain",
           items: [
-            "windows/steelmountain/steelmountain-enumeration",
-            "windows/steelmountain/steelmountain-exploitation",
-            "windows/steelmountain/steelmountain-manual",
+            "tryhackme/steelmountain/steelmountain-enumeration",
+            "tryhackme/steelmountain/steelmountain-exploitation",
+            "tryhackme/steelmountain/steelmountain-manual",
           ],
         },
       ],
@@ -274,35 +277,136 @@ const sidebars = {
           type: "category",
           label: "Overpass",
           items: [
-            "linux/overpass/overpass-enumeration",
-            "linux/overpass/overpass-exploitation",
+            "tryhackme/overpass/overpass-enumeration",
+            "tryhackme/overpass/overpass-exploitation",
           ],
         },
         {
           type: "category",
           label: "Overpass - Hacked",
           items: [
-            "linux/overpass-hacked/ohacked-enumeration",
-            "linux/overpass-hacked/ohacked-forensics",
-            "linux/overpass-hacked/ohacked-exploitation",
+            "tryhackme/overpass-hacked/ohacked-enumeration",
+            "tryhackme/overpass-hacked/ohacked-forensics",
+            "tryhackme/overpass-hacked/ohacked-exploitation",
           ],
         },
         {
           type: "category",
           label: "Overpass - Hosting",
           items: [
-            "linux/overpass-hosting/ohosting-enumeration",
-            "linux/overpass-hosting/ohosting-tunneling",
-            "linux/overpass-hosting/ohosting-exploitation",
+            "tryhackme/overpass-hosting/ohosting-enumeration",
+            "tryhackme/overpass-hosting/ohosting-tunneling",
+            "tryhackme/overpass-hosting/ohosting-exploitation",
           ],
         },
       ],
     },
   ],
 
-  /** ------------- Web Vulnerabilities (OWASP etc.) ------------- **/
   owaspDocs: [
     "introduction",
+
+    /** ------------- Linux (Priv Escalation - Stabilisation - etc.) ------------- **/
+    {
+      type: "category",
+      label: "Linux",
+      link: {
+        type: "generated-index",
+        title: "Linux General",
+        description: "Generall Stuff About Linux.",
+        keywords: ["guides"],
+        image: "/img/bitmap.png",
+      },
+      items: [
+        {
+          type: "category",
+          label: "General",
+          items: ["linux/permissions", "linux/commands"],
+        },
+        {
+          type: "category",
+          label: "Terminal - Payloads",
+          items: ["linux/stabilisation", "linux/web-shell"],
+        },
+      ],
+    },
+
+    /** ------------- Windows (Priv Escalation - Stabilisation - etc.) ------------- **/
+    {
+      type: "category",
+      label: "Windows",
+      link: {
+        type: "generated-index",
+        title: "Windows General",
+        description: "Generall Stuff About Windows.",
+        keywords: ["guides"],
+        image: "/img/bitmap.png",
+      },
+      items: [
+        {
+          type: "category",
+          label: "General",
+          items: [
+            "windows/permissions",
+            "windows/commands",
+            "windows/win-tools",
+            "windows/harvesting",
+          ],
+        },
+        {
+          type: "category",
+          label: "Privilege Escalation",
+          items: [
+            {
+              type: "category",
+              label: "Privileges",
+              items: [
+                "priv-escalation/sebackup-serestore",
+                "priv-escalation/setakeownership",
+                "priv-escalation/se-token",
+              ],
+            },
+            {
+              type: "category",
+              label: "Services",
+              items: [
+                "priv-escalation/insecure-permissions",
+                "priv-escalation/scheduled-tasks",
+                "priv-escalation/unquoted-service",
+                "priv-escalation/insecure-service",
+                "priv-escalation/alwaysinstallelevated",
+              ],
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "Terminal - Payloads",
+          items: ["windows/shell-win", "windows/file-transfer"],
+        },
+      ],
+    },
+
+    /** ------------- Network Services ------------- **/
+    {
+      type: "category",
+      label: "Network Services",
+      link: {
+        type: "generated-index",
+        title: "Network Services",
+        description: "Tools, Methodologies on most Common Network Services.",
+        keywords: ["guides"],
+        image: "/img/bitmap.png",
+      },
+      items: [
+        "network-services/ftp",
+        "network-services/nfs",
+        "network-services/smb",
+        "network-services/smtp",
+      ],
+    },
+
+    /** ------------- Web Vulnerabilities (OWASP etc.) ------------- **/
     {
       type: "category",
       label: "Web Vulnerabilities",
@@ -426,93 +530,12 @@ const sidebars = {
               type: "category",
               label: "General",
               items: [
-                "uploadvulnerabilities/rce-filtering",
-                "uploadvulnerabilities/serverside-filtering",
-                "uploadvulnerabilities/client-filtering",
+                "upload-vulnerabilities/rce-filtering",
+                "upload-vulnerabilities/serverside-filtering",
+                "upload-vulnerabilities/client-filtering",
               ],
             },
           ],
-        },
-      ],
-    },
-
-    /** ------------- Linux (Priv Escalation - Stabilisation - etc.) ------------- **/
-    {
-      type: "category",
-      label: "Linux",
-      link: {
-        type: "generated-index",
-        title: "Linux General",
-        description: "Generall Stuff About Linux.",
-        keywords: ["guides"],
-        image: "/img/bitmap.png",
-      },
-      items: [
-        {
-          type: "category",
-          label: "General",
-          items: ["other/permissions", "other/commands"],
-        },
-        {
-          type: "category",
-          label: "Terminal - Payloads",
-          items: ["other/stabilisation", "other/web-shell"],
-        },
-      ],
-    },
-
-    /** ------------- Windows (Priv Escalation - Stabilisation - etc.) ------------- **/
-    {
-      type: "category",
-      label: "Windows",
-      link: {
-        type: "generated-index",
-        title: "Windows General",
-        description: "Generall Stuff About Windows.",
-        keywords: ["guides"],
-        image: "/img/bitmap.png",
-      },
-      items: [
-        {
-          type: "category",
-          label: "General",
-          items: [
-            "other-win/permissions",
-            "other-win/commands",
-            "other-win/tools",
-            "other-win/harvesting",
-          ],
-        },
-        {
-          type: "category",
-          label: "Privilege Escalation",
-          items: [
-            {
-              type: "category",
-              label: "Privileges",
-              items: [
-                "priv-escalation/sebackup-serestore",
-                "priv-escalation/setakeownership",
-                "priv-escalation/se-token",
-              ],
-            },
-            {
-              type: "category",
-              label: "Services",
-              items: [
-                "priv-escalation/insecure-permissions",
-                "priv-escalation/scheduled-tasks",
-                "priv-escalation/unquoted-service",
-                "priv-escalation/insecure-service",
-                "priv-escalation/alwaysinstallelevated",
-              ],
-            },
-          ],
-        },
-        {
-          type: "category",
-          label: "Terminal - Payloads",
-          items: ["other-win/shell-win", "other-win/file-transfer"],
         },
       ],
     },
@@ -529,11 +552,11 @@ const sidebars = {
         image: "/img/bitmap.png",
       },
       items: [
-        "recon/tools",
+        "recon/pen-tools",
         {
           type: "category",
           label: "Content Discovery",
-          items: ["recon/osint", "recon/manual"],
+          items: ["recon/discovery", "recon/osint"],
         },
       ],
     },

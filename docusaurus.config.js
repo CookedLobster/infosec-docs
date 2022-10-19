@@ -11,9 +11,9 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.png",
 
-  // GitHub Pages
-  organizationName: "Infosec Docs", // Organization Name
-  projectName: "infosec-Docs", // GitHub Repository Name
+
+  organizationName: "Infosec Docs",
+  projectName: "infosec-Docs",
   trailingSlash: false,
 
   i18n: {
@@ -104,7 +104,7 @@ const config = {
           "powershell",
           "groovy",
           "perl",
-          "vim"
+          "vim",
         ],
       },
     }),
