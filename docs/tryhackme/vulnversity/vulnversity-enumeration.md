@@ -1,7 +1,9 @@
 ---
 sidebar_position: 1
-title: Enumeration
-description: Vulnversity
+title: Vulnversity
+hide_title: true
+sidebar_label: Enumeration
+description: Learn about Active Recon, Web-App Attacks and Privilege Escalation.
 keywords: [vulnversity, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
 ---
 

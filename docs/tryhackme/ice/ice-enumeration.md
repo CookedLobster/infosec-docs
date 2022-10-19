@@ -1,7 +1,9 @@
 ---
 sidebar_position: 1
-title: Enumeration
-description: Ice
+title: Ice
+hide_title: true
+sidebar_label: Enumeration
+description: Deploy & hack into a Windows machine, exploiting a very poorly secured Media Server.
 keywords: [ice, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, icecast exploit, CVE-2004-1561]
 ---
 

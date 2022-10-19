@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1
 title: Blaster
+hide_title: true
 sidebar_label: Enumeration
-description: Blaster TryHackMe
+description: A blast from the past!
 keywords: [blaster, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation, hhupd, CVE-2019-1388]
 ---
 

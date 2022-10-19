@@ -1,7 +1,9 @@
 ---
 sidebar_position: 2
-title: BlogEngine
-description: HackPark
+title: HackPark BlogEngine
+hide_title: true
+sidebar_label: BlogEngine
+description: Bruteforce a websites login with Hydra, identify and use a Public Exploit then escalate your privileges on this Windows machine!
 keywords: [hackpark, hackpark tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, burpsuite, hydra, blogengine, CVE-2019-6714]
 ---
 

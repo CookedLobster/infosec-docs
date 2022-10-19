@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Commands
+hide_title: true
 ---
 
 ## ICACLS

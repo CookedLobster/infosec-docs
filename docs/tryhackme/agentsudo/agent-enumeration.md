@@ -1,11 +1,11 @@
 ---
 sidebar_position: 1
 title: Agent SUDO
+hide_title: true
 sidebar_label: Enumeration
-description: Agent SUDO TryHackMe
+description: You found a secret Server located under the deep sea. Your task is to hack inside the server and reveal the truth.
 keywords: [agent sudo, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, privilege escalation, CVE-2019-14287]
 ---
-
 
 :::note Box Description
 

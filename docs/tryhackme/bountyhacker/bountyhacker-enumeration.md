@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1
 title: Bounty Hacker
+hide_title: true
 sidebar_label: Enumeration
-description: Bounty Hacker TryHackMe
+description: You talked a big game about being the most elite hacker in the solar system. Prove it and claim your right to the status of Elite Bounty Hacker!
 keywords: [bounty hacker, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ftp, privilege escalation]
 ---
 

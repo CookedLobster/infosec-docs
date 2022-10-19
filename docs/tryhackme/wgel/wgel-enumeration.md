@@ -1,7 +1,9 @@
 ---
 sidebar_position: 1
-title: Enumeration
-description: Wgel
+title: Wgel
+hide_title: true
+sidebar_label: Enumeration
+description: Can you exfiltrate the Root flag?
 keywords: [wgel, wgel tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
 ---
 

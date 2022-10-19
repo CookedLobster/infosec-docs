@@ -1,7 +1,12 @@
 ---
 sidebar_position: 1
 title: Terminal Stabilisation
+hide_title: true
+description: Linux Shell Stabilisation
+keywords: [shell stabilisation, shell stabilisation linux, netcat shell stabilisation, netcat stabilisation]
 ---
+
+## Stabilisation
 
 - **Import using one of the Methods** 
 

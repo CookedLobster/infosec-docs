@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Permissions
+hide_title: true
 ---
 
 ## User Permissions

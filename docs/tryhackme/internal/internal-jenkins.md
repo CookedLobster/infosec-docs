@@ -1,10 +1,13 @@
 ---
 sidebar_position: 3
 title: Jenkins Exploitation
-description: Internal
+hide_title: true
+sidebar_label: Jenkins Exploitation
+description: Penetration Testing Challenge.
 keywords: [internal, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, wpscan, privilege escalation, jenkins]
 ---
 
+## Jenkins Exploitation
 
 - <b style={{ color: 'FireBrick' }}>Jenkins</b> <span style={{fontWeight: 'Bold'}}>Login Portal:</span> <b style={{ color: 'SandyBrown' }}>[LOCAL:8080]</b>
 

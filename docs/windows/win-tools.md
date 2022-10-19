@@ -1,6 +1,9 @@
 ---
 sidebar_position: 3
 title: Tools
+hide_title: true
+description: Pentesting Tools Windows
+keywords: [accesschk, privesccheck, winpeass, winpeas, roguewinrm, printspoofer]
 ---
 
 ## AccessChk
@@ -23,7 +26,7 @@ PS C:\> . .\PrivescCheck.ps1
 PS C:\> Invoke-PrivescCheck
 ```
 
-## WinPEAS
+## WinPEASS
 
 - **Enumeration Script** 
 

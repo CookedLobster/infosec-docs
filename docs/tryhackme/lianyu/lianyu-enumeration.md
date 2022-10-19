@@ -1,7 +1,9 @@
 ---
 sidebar_position: 1
-title: Enumeration
-description: Lian_Yu
+title: LianYu
+hide_title: true
+sidebar_label: Enumeration
+description: A Beginner level Security Challenge.
 keywords: [lian yu, lian_yu, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, ftp, privilege escalation]
 ---
 

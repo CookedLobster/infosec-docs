@@ -1,7 +1,10 @@
 ---
 sidebar_position: 2
 title: WebShell's - Binaries
+hide_title: true
 ---
+
+## Static Binaries
 
 - **Static Binaries:** <a class="button button--outline button--warning" href="https://repology.org/">REPOLOGY.org</a> <a class="button button--outline button--warning" href="https://ubuntu.pkgs.org/">PKGS.org</a> <a class="button button--outline button--info" href="https://github.com/andrew-d/static-binaries">Binaries GitHub</a>
 

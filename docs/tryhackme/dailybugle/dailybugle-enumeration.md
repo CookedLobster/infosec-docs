@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1
 title: Daily Bugle
+hide_title: true
 sidebar_label: Enumeration
-description: Daily Bugle TryHackMe
+description: Compromise a Joomla CMS account via SQLi, practise cracking Hashes and escalate your privileges by taking advantage of yum.
 keywords: [daily bugle, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, joomla, joomla exploit, john, CVE-2017-8917, privilege escalation]
 ---
 

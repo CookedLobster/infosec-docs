@@ -1,7 +1,9 @@
 ---
 sidebar_position: 1
-title: Enumeration
-description: Overpass Hosting
+title: Overpass Hosting
+hide_title: true
+sidebar_label: Enumeration
+description: You know them, you love them, your favourite group of broke computer science students have another business venture! Show them that they probably should hire someone for security...
 keywords: [overpass hosting, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, ftp, privilege escalation]
 ---
 

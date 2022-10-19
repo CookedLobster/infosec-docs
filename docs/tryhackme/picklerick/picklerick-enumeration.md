@@ -1,7 +1,9 @@
 ---
 sidebar_position: 1
-title: Enumeration
-description: Pickle Rick
+title: Pickle Rick
+hide_title: true
+sidebar_label: Enumeration
+description: A Rick and Morty CTF. Help turn Rick back into a human!
 keywords: [pickle rick, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]
 ---
 
