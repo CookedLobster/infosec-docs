@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: Alfred
-hide_title: true
 sidebar_label: Enumeration
 description: Exploit Jenkins to gain an initial shell, then escalate your privileges by exploiting Windows Authentication Tokens.
 keywords: [alfred, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, jenkins default credentials]

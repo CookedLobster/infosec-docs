@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: Kenobi
-hide_title: true
 sidebar_label: Enumeration
 description: Walkthrough on exploiting a Linux machine. Enumerate Samba for shares, manipulate a vulnerable version of ProFTPD and escalate your privileges with path variable manipulation.
 keywords: [kenobi, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, enum4linux, smbmap, smbclient, privilege escalation]

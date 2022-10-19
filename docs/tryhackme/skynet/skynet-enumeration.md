@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: Skynet
-hide_title: true
 sidebar_label: Enumeration
 description: A vulnerable Terminator themed Linux machine.
 keywords: [skynet, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, enum4linux, smbclient, privilege escalation, squirrelmail exploit]

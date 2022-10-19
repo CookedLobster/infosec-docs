@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: Simple CTF
-hide_title: true
 sidebar_label: Enumeration
 description: Beginner level CTF.
 keywords: [simple ctf, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation, cms made simple, CVE-2019-9053, EDB-ID 46635]

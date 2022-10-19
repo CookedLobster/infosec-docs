@@ -1,7 +1,6 @@
 ---
 sidebar_position: 2
 title: File Transfer
-hide_title: true
 description: Linux File Transfer 
 keywords: [file transfer, windows file transfer, pentesting, oscp, smb file transfer, powershell file transfer, certutil file transfer, ftp file transfer, tftp file transfer, vbscript file transfer, scp]
 ---

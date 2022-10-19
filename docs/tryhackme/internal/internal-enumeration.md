@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: Internal
-hide_title: true
 sidebar_label: Enumeration
 description: Penetration Testing Challenge.
 keywords: [internal, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, wpscan, xml-rpc, wordpress exploit, privilege escalation]

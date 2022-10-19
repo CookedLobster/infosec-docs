@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: Overpass
-hide_title: true
 sidebar_label: Enumeration
 description: What happens when some broke CompSci students make a password manager?
 keywords: [overpass, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]

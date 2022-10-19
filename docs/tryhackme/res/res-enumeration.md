@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: Res
-hide_title: true
 sidebar_label: Enumeration
 description: Hack into a vulnerable database server with an in-memory data-structure in this semi-guided challenge!
 keywords: [res, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, redis exploit, privilege escalation, php exploitation redis]

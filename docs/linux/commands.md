@@ -1,7 +1,6 @@
 ---
 sidebar_position: 3
 title: Commands
-hide_title: true
 ---
 
 ## FIND

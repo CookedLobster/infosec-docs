@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: Relevant
-hide_title: true
 sidebar_label: Enumeration
 description: Penetration Testing Challenge.
 keywords: [relevant, relevant tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, smbmap, smbclient]

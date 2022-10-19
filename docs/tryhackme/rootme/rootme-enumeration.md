@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: RootMe
-hide_title: true
 sidebar_label: Enumeration
 description: A CTF for Beginners, can you Root me?
 keywords: [rootme, root me, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, privilege escalation]

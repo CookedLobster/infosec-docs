@@ -154,7 +154,7 @@ const sidebars = {
         },
         {
           type: "category",
-          label: "Startup",
+          label: "StartUp",
           items: [
             "tryhackme/startup/startup-enumeration",
             "tryhackme/startup/startup-forensics",

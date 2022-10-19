@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: Ignite
-hide_title: true
 sidebar_label: Enumeration
 description: A new start-up has a few issues with their Web Server.
 keywords: [ignite, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, fuel cms 1.4, CVE-2018-16763, privilege escalation]

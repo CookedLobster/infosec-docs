@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: Source
-hide_title: true
 sidebar_label: Enumeration
 description: Exploit a recent vulnerability and hack Webmin, a Web-Based System Configuration Tool. 
 keywords: [source tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation]

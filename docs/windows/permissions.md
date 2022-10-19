@@ -1,10 +1,8 @@
 ---
 sidebar_position: 1
 title: Permissions
-hide_title: true
 ---
 
-## Permissions
 
 - <a class="button button--outline button--warning" href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls">ICACLS Permissions</a>
 

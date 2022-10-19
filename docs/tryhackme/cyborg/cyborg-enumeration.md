@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: Cyborg
-hide_title: true
 sidebar_label: Enumeration
 description: A box involving Encrypted archives, Source code analysis and more.
 keywords: [cyborg, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, borg, privilege escalation]

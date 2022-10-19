@@ -1,7 +1,6 @@
 ---
 sidebar_position: 3
 title: Tools
-hide_title: true
 description: Pentesting Tools Windows
 keywords: [accesschk, privesccheck, winpeass, winpeas, roguewinrm, printspoofer]
 ---

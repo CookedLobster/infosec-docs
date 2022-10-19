@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: Lazy Admin
-hide_title: true
 sidebar_label: Enumeration
 description: Easy Linux machine to practice your Skills.
 keywords: [lazy admin, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, sql backup, john, privilege escalation]

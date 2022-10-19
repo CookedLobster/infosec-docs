@@ -1,7 +1,6 @@
 ---
 sidebar_position: 2
 title: Discovery
-hide_title: true
 ---
 
 ## Robotx.TXT

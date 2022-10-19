@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: Blue
-hide_title: true
 sidebar_label: Enumeration
 description: Deploy & hack into a Windows machine, leveraging common misconfigurations issues.
 keywords: [blue, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, eternalblue, eternal blue, MS17-010]

@@ -1,12 +1,10 @@
 ---
 sidebar_position: 1
 title: Terminal Stabilisation
-hide_title: true
 description: Windows Shell Stabilisation
 keywords: [shell stabilisation windows, rlwrap, metasploit shell stabilisation]
 ---
 
-## Stabilisation
 
 - **In Windows we can use `rlwrap` before connecting to the Target Machine** 
 

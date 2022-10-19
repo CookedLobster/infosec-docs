@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: Game Zone
-hide_title: true
 sidebar_label: Enumeration
 description: Learn to Hack into this Machine. Understand how to use SQLMap, crack some passwords, reveal services using a reverse SSH Tunnel and escalate your privileges to root!
 keywords: [game zone, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation]

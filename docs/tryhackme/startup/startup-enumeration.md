@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: StartUp
-hide_title: true
 sidebar_label: Enumeration
 description: Abuse Traditional vulnerabilities via Untraditional means.
 keywords: [startup tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, ftp, privilege escalation]
