@@ -89,7 +89,7 @@ const config = {
             type: "docSidebar",
             position: "left",
             sidebarId: "linuxDocs",
-            label: "Boxes",
+            label: "Vulnerable Boxes",
           },
         ],
       },

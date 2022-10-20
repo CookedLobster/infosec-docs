@@ -45,11 +45,13 @@ nmap <IP> -sV -p 3306 --script mysql-audit,mysql-databases,mysql-dump-hashes,mys
 ```
 
 ```batch
-:: Metasplot
+:: Metasploit
 use auxiliary/scanner/mysql/mysql_version
+
+:: [NOTE] This may put the System In Lockdown
 use auxiliary/scanner/mysql/mysql_authbypass_hashdump
 
-:: This Modules Require Valid Credentials
+:: This Modules Require Valid Credentials [Username - Password]
 use auxiliary/scanner/mysql/mysql_hashdump
 use auxiliary/admin/mysql/mysql_enum
 use auxiliary/scanner/mysql/mysql_schemadump
@@ -67,6 +69,7 @@ use <DATABASE_NAME>;
 show TABLES;
 show columns from <TABLE_NAME>;
 
-:: Example of User Enumeration
+:: More Examples
+select * from user\G;
 select * from mysql.user where user='root';
 ```

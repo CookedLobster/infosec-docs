@@ -326,7 +326,11 @@ const sidebars = {
         {
           type: "category",
           label: "Terminal - Payloads",
-          items: ["linux/stabilisation", "linux/web-shell"],
+          items: [
+            "linux/stabilisation",
+            "linux/web-shell",
+            "linux/lin-file-transfer",
+          ],
         },
       ],
     },
@@ -377,7 +381,7 @@ const sidebars = {
         {
           type: "category",
           label: "Terminal - Payloads",
-          items: ["windows/shell-win", "windows/file-transfer"],
+          items: ["windows/shell-win", "windows/win-file-transfer"],
         },
         "windows/win-tools",
         "windows/harvesting",

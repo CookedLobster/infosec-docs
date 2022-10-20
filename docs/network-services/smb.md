@@ -3,7 +3,7 @@ title: SMB
 description: SMB Methodologies, Tools
 ---
 
-**SMB (Server Message Block Protocol)** is a **Client-Server** communication Protocol used for Sharing access to files, Printers, Serial Ports and other resources on a Network. 
+**SMB (Server Message Block Protocol)** is a **Client-Server** communication Protocol used for Sharing access to Files, Printers, Serial Ports and other resources on a Network. 
 
 
 ```batch
@@ -24,10 +24,10 @@ Once the Connection is Estabilished, clients can then send Commands to the Serve
 ## Enumeration
 
 ```batch
-:: Enumerating
+:: Simple Enumeratiion
 smbclient --no-pass -L //<IP>
 
-:: Simple Enumeration
+:: Extensive Enumeration
 :: -U -G [Users - Group Enumeration]
 enum4linux-ng -A <IP>
 enum4linux -a <IP>

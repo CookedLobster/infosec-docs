@@ -23,7 +23,7 @@ The Server checks if the user has Permission to Mount whatever directory has bee
 
 ```batch
 :: Show Mountable Folders
-showmount -e <IP>/
+showmount -e <IP>
 ```
 
 ```batch
@@ -31,13 +31,13 @@ showmount -e <IP>/
 nfs-ls nfs://IP/DIRECTORY
 
 :: Read Files without Mounting
-nfs-cat nfs://IP/DIRECTORY/.ssh/id_rsa
+nfs-cat nfs://IP/DIRECTORY/FILE_TO_READ
 ```
 
 ## Mounting
 
 ```batch
-:: Mount the NFS Share
+:: Mounting the NFS Share
 mkdir /mnt/MOUNT
 mount -t nfs IP:/DIRECTORY /mnt/MOUNT -o nolock	
 ```
@@ -57,4 +57,5 @@ mount -t nfs IP:/DIRECTORY /mnt/MOUNT -o nolock
 ```batch
 :: Dangerous Settings
 no_root_squash
+rw
 ```
