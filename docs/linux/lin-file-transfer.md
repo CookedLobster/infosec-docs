@@ -6,7 +6,7 @@ keywords: [file transfer, windows file transfer, pentesting, oscp, smb file tran
 ---
 
 
-## Python Server
+## HTTP Server
 
 ```batch
 :: Python[3]
@@ -14,6 +14,11 @@ python3 -m http.server <PORT>
 
 :: Python[2]
 python -m SimpleHTTPServer <PORT>
+```
+
+```batch
+:: Simple JavaScript HTTP Server
+http-server [path] [options]
 ```
 
 ## CURL - WGET
@@ -55,7 +60,7 @@ http -a "username:password" --download --verify=no "http://IP:PORT/FILE.sh"
 - **`pyftpdlib` Package Must Be Installed**
 
 ```batch
-:: Start The Server
+:: Start The FTP Server
 python3 -m pyftpdlib -p 21
 
 :: Access The Server
@@ -76,10 +81,18 @@ echo 'user $USER $PASSWORD' >> FTP.sh
 echo 'get FILE' >> FTP.sh
 echo 'bye' >> FTP.sh
 echo 'EOF' >> FTP.sh
+
+# Download the File
 chmod +x FTP.sh; ./FTP.sh
 ```
 
 ## SMB
+
+```powershell
+# Start the SMB Server
+# -smb2support [SMB-2]
+smbserver $SHARE_NAME $DIRECTORY   
+```
 
 ```batch
 :: Save Remote SMB File
