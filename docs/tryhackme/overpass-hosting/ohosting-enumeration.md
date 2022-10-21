@@ -2,14 +2,14 @@
 sidebar_position: 1
 title: Overpass HOSTING
 sidebar_label: Enumeration
-description: You know them, you love them, your favourite group of broke computer science students have another business venture! Show them that they probably should hire someone for security...
+description: You know them, you love them, your favorite group of broke computer science students have another business venture! Show them that they probably should hire someone for security...
 keywords: [overpass hosting, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, ftp, privilege escalation]
 ---
 
 
 :::note Box Description
 
-You know them, you love them, your favourite group of broke computer science students have another business venture! Show them that they probably should hire someone for security...
+You know them, you love them, your favorite group of broke computer science students have another business venture! Show them that they probably should hire someone for security...
 
 :::
 

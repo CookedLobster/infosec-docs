@@ -102,7 +102,7 @@ ftp> mget notice.txt important.jpg
 ```
 Whoever is leaving these damn Among Us memes in this share, it IS NOT FUNNY. 
 People downloading documents from our website will think we are a joke! 
-Now I dont know who it is, but Maya is looking pretty sus.
+Now I don't know who it is, but Maya is looking pretty sus.
 ```
 
 <br/>

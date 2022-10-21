@@ -2,14 +2,14 @@
 sidebar_position: 1
 title: HackPark
 sidebar_label: Enumeration
-description: Bruteforce a websites login with Hydra, identify and use a Public Exploit then escalate your privileges on this Windows machine!
+description: Brute-Force a websites login with Hydra, identify and use a Public Exploit then escalate your privileges on this Windows machine!
 keywords: [hackpark, hackpark tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, burpsuite, hydra, blogengine, CVE-2019-6714]
 ---
 
 
 :::note Box Description
 
-Bruteforce a websites login with `Hydra`, identify and use a Public Exploit then escalate your privileges on this Windows machine!
+Brute-Force a websites login with `Hydra`, identify and use a Public Exploit then escalate your privileges on this Windows machine!
 
 :::
 
@@ -57,7 +57,7 @@ Host script results:
 
 
 - **Landing Page:** <b style={{ color: 'SandyBrown' }}>[IP:80]</b>
-- From the Landing Page we can Click `Login` to get Redirected to `BlogEngie` Login Portal.
+- From the Landing Page we can Click `Login` to get Redirected to `BlogEngine` Login Portal.
 
 <br/>
 

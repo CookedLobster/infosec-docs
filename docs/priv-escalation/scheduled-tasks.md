@@ -4,7 +4,7 @@ title: Scheduled Tasks
 ---
 
 
-- Retriving the **Scheduled Tasks** on the System. If our Current User can **Modify or Overwrite** <b style={{ color: 'Brown' }}>[Task to Run]</b> Executable we can Control what gets Executed by the User.
+- Retrieving the **Scheduled Tasks** on the System. If our Current User can **Modify or Overwrite** <b style={{ color: 'Brown' }}>[Task to Run]</b> Executable we can Control what gets Executed by the User.
 - <b style={{ color: 'Brown' }}>[Task to Run]</b> Indicates what gets Executed by the <span style={{fontWeight: 'Bold'}}>Scheduled Task</span> 
 - <b style={{ color: 'Brown' }}>[Run as User]</b> Indicates the <span style={{fontWeight: 'Bold'}}>User</span> that will be used to Execute the Task.
 

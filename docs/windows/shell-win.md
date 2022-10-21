@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
 title: Terminal
-description: Windows Shell Stabilisation
-keywords: [shell stabilisation windows, rlwrap, metasploit shell stabilisation]
+description: Windows Shell Stabilization
+keywords: [shell stabilization windows, rlwrap, metasploit shell stabilization]
 ---
 
 

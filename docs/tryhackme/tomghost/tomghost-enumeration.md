@@ -3,7 +3,7 @@ sidebar_position: 1
 title: TomGhost
 sidebar_label: Enumeration
 description: Identify recent vulnerabilities to try exploit the system or read files that you should not have access to.
-keywords: [tomghost, tomghost tryhacme, tom ghost exploit, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, ghostcat]
+keywords: [tomghost, tomghost tryhackme, tom ghost exploit, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, ghostcat]
 ---
 
 

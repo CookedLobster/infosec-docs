@@ -15,8 +15,8 @@ title: IDOR
 
 <br/>
 
-- Chaning the **`Order Number`** will allow us to see another Customer Order.
-- Chaning the **`User ID`** will allow us to see another Customer Profile
+- Changing the **`Order Number`** will allow us to see another Customer Order.
+- Changing the **`User ID`** will allow us to see another Customer Profile
 
 ```log
 ┌────────────────────────────────────────────┐  ┌────────────────────────────────────────────────┐
@@ -40,7 +40,7 @@ Encoding changes binary data into an **ASCII** string commonly using the `(a-z  
 
 <br/>
 
-- `Decode - Tamper - Encode - Sumbit`
+- `Decode - Tamper - Encode - Submit`
 
 ```sql         
 ┌──────────────┐    ┌───────────┐    ┌──────────┐    ┌──────────────┐

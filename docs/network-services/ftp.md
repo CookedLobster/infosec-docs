@@ -52,5 +52,5 @@ wget -m ftp://anonymous:anonymous@10.10.27.233
 ## Brute-Force
 
 ```html
-hydra -l <user> -P <wordlist> <ip> ftp
+hydra -l <user> -P <WordList> <ip> ftp
 ```

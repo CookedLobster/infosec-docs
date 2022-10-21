@@ -4,7 +4,7 @@ title: LFI
 ---
 
 
-## Inclue
+## Include
 
 The PHP code uses a `GET` request via the URL parameter `file` to include the file of the Page.
 

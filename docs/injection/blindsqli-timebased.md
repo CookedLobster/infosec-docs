@@ -12,7 +12,7 @@ title: Blind SQLi - (Boolean - Time Based)
 ## SCENARIO
 
 -  **Website Response:**  
-	- This API Endpoint replicates a common feature found on many Signup Forms, which checks whether a username has already been registered to prompt the User to choose a different Username. Because the taken value is set to True, we can assume the Username Admin is already Registered.
+	- This API Endpoint replicates a common feature found on many Sign-Up Forms, which checks whether a username has already been registered to prompt the User to choose a different Username. Because the taken value is set to True, we can assume the Username Admin is already Registered.
 
 ```js
 ┌─────────────────────────────────────────────────────┐    ┌───────────┐

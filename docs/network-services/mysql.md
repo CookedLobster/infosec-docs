@@ -11,14 +11,14 @@ description: MySQL Methodologies, Tools
 3306/TCP
 ```
 
-#### How does MySQL work?
+### How does MySQL work?
 
-**MySQL**, as an **RDBMS**, is made up of the Server and Utility Programs that help in the administration of MySQL Databases. The Server handles all Database Instructions like **Creating - Dditing - Accessing Data.** It takes and Manages these requests and communicates using the MySQL Protocol. 
+**MySQL**, as an **RDBMS**, is made up of the Server and Utility Programs that help in the administration of MySQL Databases. The Server handles all Database Instructions like **Creating - Editing - Accessing Data.** It takes and Manages these requests and communicates using the MySQL Protocol. 
 
 - **`Database`**
-    - Persistent, Organised Collection of Structured Data.
+    - Persistent, Organized Collection of Structured Data.
 - **`RDBMS`**
-    - A Software or Service used to create and Manage Databases based on a Relational Model. The Data stored in the Dataset is Organised as Tables.
+    - A Software or Service used to create and Manage Databases based on a Relational Model. The Data stored in the Dataset is Organized as Tables.
 - **`SQL`**
     - **MYSQL** is just a Brand Name for one of the most popular RDBMS software Implementations.
 
@@ -31,7 +31,7 @@ description: MySQL Methodologies, Tools
 mysql -h <IP> -u <user> -p
 
 :: Single Line Login && Enumerate
-:: \G [Format The Ouput in a Readable Format]
+:: \G [Format The Output in a Readable Format]
 mysql -h <IP> -u <user> --password=<password> -e "SELECT * FROM mysql.user\G;"
 ```
 
@@ -48,7 +48,7 @@ nmap <IP> -sV -p 3306 --script mysql-audit,mysql-databases,mysql-dump-hashes,mys
 :: Metasploit
 use auxiliary/scanner/mysql/mysql_version
 
-:: [NOTE] This may put the System In Lockdown
+:: [NOTE] This may put the System In Lock-Down
 use auxiliary/scanner/mysql/mysql_authbypass_hashdump
 
 :: This Modules Require Valid Credentials [Username - Password]
@@ -60,7 +60,7 @@ use exploit/windows/mysql/mysql_start_up
 
 ## MySQL Commands
 
-- <a class="button button--outline button--info" href="https://gist.github.com/bradtraversy/c831baaad44343cc945e76c2e30927b3">MySQL Cheatsheet GitHub</a>
+- <a class="button button--outline button--info" href="https://gist.github.com/bradtraversy/c831baaad44343cc945e76c2e30927b3">MySQL CheatSheet GitHub</a>
 
 ```batch
 :: Basic Commands

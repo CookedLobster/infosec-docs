@@ -6,7 +6,7 @@ title: Insecure Direct Object Reference
 
 - **`Your Account`** Section gives us the ability to change our Information such as **Username - Email - Password.** **[We notice the Username & Email fields Pre-Filled in with our Information]**
 
-	- Refereshing the Page and going to the `Network Tab` in the `Browser Tools` we see a Call to an Endpoint.
+	- Refreshing the Page and going to the `Network Tab` in the `Browser Tools` we see a Call to an Endpoint.
 	- **Endpoint PATH:** `/api/v1/customer?id={user_id}`
 
 

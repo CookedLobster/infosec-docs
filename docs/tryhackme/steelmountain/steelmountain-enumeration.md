@@ -2,14 +2,14 @@
 sidebar_position: 1
 title: Steel Mountain
 sidebar_label: Enumeration
-description: Hack into a Mr. Robot themed Windows machine. Use Metasploit for Initial Access, utilise Powershell for Windows privilege escalation enumeration and learn a new technique to get Administrator access.
+description: Hack into a Mr. Robot themed Windows machine. Use Metasploit for Initial Access, utilize Powershell for Windows privilege escalation enumeration and learn a new technique to get Administrator access.
 keywords: [steel mountain, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, rejetto exploit]
 ---
 
 
 :::note Box Description
 
-Hack into a Mr. Robot themed Windows machine. Use `Metasploit` for Initial Access, utilise `Powershell` for Windows privilege escalation enumeration and learn a new technique to get Administrator access.
+Hack into a Mr. Robot themed Windows machine. Use `Metasploit` for Initial Access, utilize `Powershell` for Windows privilege escalation enumeration and learn a new technique to get Administrator access.
 
 :::
 

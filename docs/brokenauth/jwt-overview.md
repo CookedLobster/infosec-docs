@@ -50,7 +50,7 @@ KwIDAQAB
 
 ## JWT-CRACKER
 
-We can use `JWT-CRACKER` to bruteforce JWT <b style={{ color: 'Plum' }}>SECRET</b>. Alphabet and Max-Length are Optional.
+We can use `JWT-CRACKER` to Brute-Force JWT <b style={{ color: 'Plum' }}>SECRET</b>. Alphabet and Max-Length are Optional.
 
 ```bash
 attacker@machine:~$ jwt-cracker "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ[...].tgE1GJAUwr4I480BIc[...]" abcdefghijklmnopqrstuvwxyz 4

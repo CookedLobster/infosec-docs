@@ -36,7 +36,7 @@ Get-Scheduledtask -TaskName <TaskName>
 ```
 
 ```batch
-:: Retriving Detailed Information [Service]
+:: Retrieving Detailed Information [Service]
 schtasks /query /tn <ServiceName - TaskName> /fo list /v
 
 :: Start the Task

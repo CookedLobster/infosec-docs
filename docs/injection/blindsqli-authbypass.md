@@ -10,7 +10,7 @@ In `Blind SQLi` is when we get little to no **Feedback** to confirm whether our 
 
 **Login Forms** that are connected to a Database of Users are often developed in such a way that the web Application isn't interested in the content of the Username and Password but more whether the two make a matching pair in the Users Table. 
 
-The web application is asking the Database **"Do you Have the USERNAME `user` - PASSWOD `password` "**, and the database replies with either `(True/False)` and, depending on that answer, dictates whether the Web Application lets you proceed or not. 
+The web application is asking the Database **"Do you Have the USERNAME `user` - PASSWORD `password` "**, and the database replies with either `(True/False)` and, depending on that answer, dictates whether the Web Application lets you proceed or not. 
 
 <br/>
 <br/>

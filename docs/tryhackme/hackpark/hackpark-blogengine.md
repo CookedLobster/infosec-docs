@@ -49,7 +49,7 @@ __VIEWSTATE=R5udoO0ZPM2lxCztLZomfdn6ZP5j6MY3A3pH5JFIY0EUS8BhyKHXd7JTKJl8UEXmTi%2
 - `[1]` Setting: <span style={{fontWeight: 'Bold'}}>HOST - PORT</span> - Starting a Listener on the <span style={{fontWeight: 'Bold'}}>PORT</span>
 - `[2]` Uploading the **PAYLOAD** using the `BlogEngine File Manager`. This is done by Editing a Post and Clicking on the <span style={{fontWeight: 'Bold'}}>Icon</span> that Looks like a <span style={{fontWeight: 'Bold'}}>Folder.</span>
 - `[3]` The <span style={{fontWeight: 'Bold'}}>PAYLOAD</span> must be Named as <b style={{ color: 'DeepSkyBlue' }}>PostView.ascx</b> 
-- `[4]` The <span style={{fontWeight: 'Bold'}}>PAYLOAD</span> can be Executed by visiting the Following <span style={{fontWeight: 'Bold'}}>URL:</span> `http://HACKPARK/?theme=../../App_Data/files`
+- `[4]` The <span style={{fontWeight: 'Bold'}}>PAYLOAD</span> can be Executed by visiting the Following <span style={{fontWeight: 'Bold'}}>URL:</span> `http://IP:80/?theme=../../App_Data/files`
 
 
 ![HP](/img/vmwindows/h-hackparkupload.png)

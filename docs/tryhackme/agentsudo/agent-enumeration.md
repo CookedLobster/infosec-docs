@@ -31,7 +31,7 @@ PORT   STATE SERVICE VERSION
 |_  256 2d:00:5c:b9:fd:a8:c8:d8:80:e3:92:4f:8b:4f:18:e2 (ED25519)
 80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
 |_http-server-header: Apache/2.4.29 (Ubuntu)
-|_http-title: Annoucement
+|_http-title: Announcement
 ```
 
 <br/>

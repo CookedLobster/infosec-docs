@@ -306,14 +306,14 @@ const sidebars = {
   owaspDocs: [
     "introduction",
 
-    /** ------------- Linux (Priv Escalation - Stabilisation - etc.) ------------- **/
+    /** ------------- Linux (Priv Escalation - Stabilization - etc.) ------------- **/
     {
       type: "category",
       label: "Linux",
       link: {
         type: "generated-index",
         title: "Linux General",
-        description: "Generall Stuff About Linux.",
+        description: "General Stuff About Linux.",
         keywords: ["guides"],
         image: "/img/bitmap.png",
       },
@@ -327,22 +327,22 @@ const sidebars = {
           type: "category",
           label: "Terminal - Payloads",
           items: [
-            "linux/stabilisation",
-            "linux/web-shell",
+            "linux/stabilization",
             "linux/lin-file-transfer",
+            "linux/web-shell",
           ],
         },
       ],
     },
 
-    /** ------------- Windows (Priv Escalation - Stabilisation - etc.) ------------- **/
+    /** ------------- Windows (Priv Escalation - Stabilization - etc.) ------------- **/
     {
       type: "category",
       label: "Windows",
       link: {
         type: "generated-index",
         title: "Windows General",
-        description: "Generall Stuff About Windows.",
+        description: "General Stuff About Windows.",
         keywords: ["guides"],
         image: "/img/bitmap.png",
       },
@@ -584,10 +584,10 @@ const sidebars = {
     "ac-introduction",
     {
       type: "category",
-      label: "AC Breaching",
+      label: "Breaching",
       link: {
         type: "generated-index",
-        title: "AC Breaching",
+        title: "Breaching",
         description: "Active Directory [Breaching]",
         keywords: ["guides"],
         image: "/img/bitmap.png",
@@ -598,7 +598,6 @@ const sidebars = {
           label: "Authentication Relays",
           items: ["ac-breaching/auth-relays", "ac-breaching/intercepting-ntlm"],
         },
-        "ac-breaching/config-files",
         /*{
           
             type: 'category',

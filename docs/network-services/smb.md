@@ -16,7 +16,7 @@ description: SMB Methodologies, Tools
 
 The **SMB** protocol is known as a **Response-Request** Protocol, meaning that it transmits multiple messages between the Client and Server to establish a Connection. 
 
-Once the Connection is Estabilished, clients can then send Commands to the Server that allow them to access Shares, Open Files, Read and Write Files etc..
+Once the Connection is Established, clients can then send Commands to the Server that allow them to access Shares, Open Files, Read and Write Files etc..
 
 <br/>
 
@@ -24,7 +24,7 @@ Once the Connection is Estabilished, clients can then send Commands to the Serve
 ## Enumeration
 
 ```batch
-:: Simple Enumeratiion
+:: Simple Enumeration
 smbclient --no-pass -L //<IP>
 
 :: Extensive Enumeration
@@ -39,9 +39,6 @@ smbmap -H <IP>
 :: --loggedon-users [Enumerate Logged Users]
 crackmapexec smb <IP> -u "" -p "" --shares
 crackmapexec smb <IP> --pass-pol -u "" -p ""
-
-:: Namesserver Scanner
-nbtscan <IP>
 ```
 
 
@@ -69,5 +66,5 @@ smb://IP/SHARE/
 ## Brute-Force
 
 ```html
-hydra -l <user> -P <wordlist> <ip> smb
+hydra -l <user> -P <WordList> <ip> smb
 ```

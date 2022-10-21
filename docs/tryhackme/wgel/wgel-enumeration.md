@@ -95,7 +95,7 @@ ________________________________________________
 - **Found Username:** <b style={{ color: 'Chartreuse' }}>jessie</b>
 
 ```html
-<!-- Jessie don't forget to update the webiste -->
+<!-- Jessie don't forget to update the website -->
 ```
 
 <br/>

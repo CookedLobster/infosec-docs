@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
 title: Terminal
-description: Linux Shell Stabilisation
-keywords: [shell stabilisation, shell stabilisation linux, netcat shell stabilisation, netcat stabilisation]
+description: Linux Shell Stabilization
+keywords: [shell stabilization, shell stabilization linux, netcat shell stabilization, netcat stabilization]
 ---
 
 

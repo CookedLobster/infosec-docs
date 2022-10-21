@@ -11,8 +11,8 @@ title: SSRF
 
 
 - **SSRF Impact:**
-	- Access to `Unauthorised Areas`
-	- Access to `Customer/Organisational Data`
+	- Access to `Unauthorized Areas`
+	- Access to `Customer/Organizational Data`
 	- Ability to Scale to `Internal Networks`
 	- Reveal `Authentication Tokens/Credentials`
 
@@ -104,4 +104,4 @@ The Application Logic would Now **Allow** this Input and let an Attacker control
 
 Is an Endpoint on the Server where the Website visitor gets automatically redirected to another Website Address.
 
-The link `https://website.com/link?url=https://amazon.com`. This Endpoint was created to record the number of times visitors have clicked on this link for Advertising/Marketing purposes. **An Attacker could utilise the above feature to Redirect the Internal HTTP Request to a Domain of the Attacker Choice.**
+The link `https://website.com/link?url=https://amazon.com`. This Endpoint was created to record the number of times visitors have clicked on this link for Advertising/Marketing purposes. **An Attacker could utilize the above feature to Redirect the Internal HTTP Request to a Domain of the Attacker Choice.**

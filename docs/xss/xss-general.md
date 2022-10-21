@@ -4,7 +4,7 @@ title: Overview
 ---
 
 
-`Cross-Site Scripting` also known as XSS is a security vulnerability typically found in web applications. It’s a type of injection which can allow an attacker to execute malicious scripts and have it execute on a victim’s machine. A web application is vulnerable to XSS if it uses unsanitized user Input. 
+`Cross-Site Scripting` also known as XSS is a security vulnerability typically found in web applications. It’s a type of injection which can allow an attacker to execute malicious scripts and have it execute on a victim’s machine. A web application is vulnerable to XSS if it uses Unsanitized user Input. 
 
 
 ## Reflected XSS

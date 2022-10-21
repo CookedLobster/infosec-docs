@@ -3,7 +3,7 @@ sidebar_position: 2
 title: Discovery
 ---
 
-## Robotx.TXT
+## Robots.TXT
 
 The `robots.txt` is a Document that tells **Search Engines** which pages they are and aren't allowed to show on their Search Engine results or ban specific Search Engines from crawling the website altogether.
 
@@ -72,7 +72,7 @@ This file gives a list of every file the Website Owner wishes to be listed on a 
 
 ## HTTP Headers
 
-Headers can sometimes contain useful Information such as the **Webserver Software** and possibly the **Programming - Scripting Language** in use.
+Headers can sometimes contain useful Information such as the **WebServer Software** and possibly the **Programming - Scripting Language** in use.
 
 
 ```log

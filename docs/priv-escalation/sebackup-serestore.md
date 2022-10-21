@@ -50,7 +50,7 @@ attacker@machine:~$ smbserver $SHARE_NAME $DIRECTORY
 
 <br/>
 
-- Using <b style={{ color: 'Coral' }}>secretsdump.py</b> to Retrive the User Password Hashes.
+- Using <b style={{ color: 'Coral' }}>secretsdump.py</b> to Retrieve the User Password Hashes.
 
 ```log
 attacker@machine:~$ secretsdump.py -sam sam.hive -system system.hive LOCAL

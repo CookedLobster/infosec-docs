@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Diggin Tools
+title: Digging Tools
 ---
 
 
@@ -22,7 +22,7 @@ traceroute <target>
 ```
 
 ## WHOIS
-Query who a Domain Name is registered to. Informations such as E-Mails, Techinal Contacs, Admins, Numbers...
+Query who a Domain Name is registered to. Information's such as E-Mails, Technical Contacts, Admins, Numbers...
 
 ```bash
 whois <target>
@@ -32,7 +32,7 @@ whois <target>
 ## DIG - DOG - NSLOOKUP
 When we make a query to a Web Server first we will look for tame locally if they are not found. We are going to do a request know as `Recursive DNS Server`. Many ISP have their own recursive server, however if its not found the recursive server will pass the request to a **Root Name Server.**
 
-Tere are 13 root name DNS servers in the world. The root name servers keep track of the DNS servers in the next level down.
+There are 13 root name DNS servers in the world. The root name servers keep track of the DNS servers in the next level down.
 **Top-Level Domain** (These are lower level Servers.) servers are split up into extensions. If you were searching for **facebook.com** your request would be redirected to a **Top-Level Domain** Server that handled `.com` etc...
 
 <br/>

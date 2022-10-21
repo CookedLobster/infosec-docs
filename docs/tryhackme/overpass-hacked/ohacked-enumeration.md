@@ -2,14 +2,14 @@
 sidebar_position: 1
 title: Overpass HACKED
 sidebar_label: Enumeration
-description: Overpass has been hacked! Can you analyse the attacker's actions and hack back in?
+description: Overpass has been hacked! Can you analyze the attacker's actions and hack back in?
 keywords: [overpass hacked, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, privilege escalation, cooctus clan]
 ---
 
 
 :::note Box Description
 
-Overpass has been hacked! Can you analyse the attacker's actions and hack back in?
+Overpass has been hacked! Can you analyze the attacker's actions and hack back in?
 
 :::
 

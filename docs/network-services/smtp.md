@@ -3,7 +3,7 @@ title: SMTP
 description: SMTP Methodologies, Tools
 ---
 
-**`SMTP` (Simple Mail Transfer Protocol).** It is utilised to handle the sending of **E-Mails.** In order to support E-Mail Services, a Protocol pair is used, **SMTP - POP/IMAP.** Together they allow the user to Send Outgoing Mail and retrieve incoming Mail.
+**`SMTP` (Simple Mail Transfer Protocol).** It is utilized to handle the sending of **E-Mails.** In order to support E-Mail Services, a Protocol pair is used, **SMTP - POP/IMAP.** Together they allow the user to Send Outgoing Mail and retrieve incoming Mail.
 
 ```batch
 :: SMTP
@@ -77,5 +77,5 @@ EXPN <username>
 ## Brute-Force
 
 ```html
-hydra -P <wordlist> <ip> smtp 
+hydra -P <WordList> <ip> smtp 
 ```
