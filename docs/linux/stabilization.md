@@ -6,39 +6,38 @@ keywords: [shell stabilization, shell stabilization linux, netcat shell stabiliz
 ---
 
 
-- **Import using one of the Methods** 
-
-```bash
-python -c 'import pty; pty.spawn("/bin/bash")'
+```batch
+:: Import using one of the Methods
+:: Python[3]
 python3 -c 'import pty; pty.spawn("/bin/bash")'
+
+:: Python[2]
+python -c 'import pty; pty.spawn("/bin/bash")'
 ```
 
-- **Background the `SHELL`**
-
 ```batch
+:: Background the SHELL
 CTRL+Z
 ```
 
-- **Change the Terminal Mode**
-
-```bash
+```batch
+:: Change the Terminal Mode
 stty raw -echo; fg
 reset
 ```
 
-- **Set the Terminal Type**
 
-```bash
+```batch
+:: Set the Terminal Type
 xterm   
 ```
 
-<br/>
 
 ## Interface
 
-- **Set Terminal `[Size] - [User Colors]`**
 
 ```bash
+# Set Terminal [Type - Size - User Colors]
 export SHELL=bash; export TERM=xterm; stty rows 42 columns 220; export PS1="\e[1;35m\u@\h \W\$ \e[m "
 ```
 

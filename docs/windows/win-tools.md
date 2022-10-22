@@ -7,17 +7,18 @@ keywords: [accesschk, privesccheck, winpeass, winpeas, roguewinrm, printspoofer]
 
 ## AccessChk
 
-- **List Access of (Users - Groups) to Files - Directories - Registry Keys - Global Objects - Windows Services**
 
 ```batch
 :: Accepts The Eula Before Executing
 accesschk.exe /accepteula
+
+:: List Access of (Users - Groups) to Files - Directories - Registry Keys - Global Objects - Windows Services
 accesschk64.exe -qlc <ServiceName>
 ```
 
 ## PrivescCheck
 
-- **`PrivescCheck`** is a **PowerShell Script** that searches common Privilege Escalation on the target System.
+- **`PrivescCheck`** is a <b style={{ color: 'MediumTurquoise' }}>PowerShell</b> Script that searches Common Privilege Escalation on the Target System.
 
 ```powershell
 PS C:\> Set-ExecutionPolicy Bypass -Scope process -Force
@@ -27,7 +28,14 @@ PS C:\> Invoke-PrivescCheck
 
 ## RogueWinRM
 
-`RogueWinRM` is a **Local Privilege** Escalation Exploit that allows to Escalate from a **Service Account** with <b style={{ color: 'Brown' }}>[SeImpersonatePrivilege]</b> to Local <b style={{ color: 'Red' }}>SYSTEM</b> Account if **WinRM** Service is not Running. **[Default on `Windows 10` but Not on `Windows Server 2019`]**
+:::danger Only Possible if **`WinRM`** Service Is Not Running
+
+**Default on `Windows 10` but Not on `Windows Server 2019`**
+
+:::
+
+
+**Local Privilege** Escalation Exploit that allows to Escalate from a **Service Account** with <b style={{ color: 'Brown' }}>[SeImpersonatePrivilege]</b> to Local <b style={{ color: 'Red' }}>SYSTEM</b> Account.
 
 
 ```batch

