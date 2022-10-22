@@ -1,3 +1,0 @@
----
-title: Brute-Force
----

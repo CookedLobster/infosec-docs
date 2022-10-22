@@ -619,9 +619,22 @@ const sidebars = {
         {
           type: "category",
           label: "NTLM",
-          items: ["ac-breaching/ntlm-auth", "ac-breaching/ac-bruteforce"],
+          items: ["ac-breaching/ntlm-auth"],
         },
+        "ac-breaching/config-files",
       ],
+    },
+    {
+      type: "category",
+      label: "Enumeration",
+      link: {
+        type: "generated-index",
+        title: "Enumeration",
+        description: "Active Directory [Enumeration]",
+        keywords: ["guides"],
+        image: "/img/bitmap.png",
+      },
+      items: ["ac-enumeration/command-line", "ac-enumeration/powershell"],
     },
   ],
 };

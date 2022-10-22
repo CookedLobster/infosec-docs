@@ -79,12 +79,12 @@ const config = {
             sidebarId: "owaspDocs",
             label: "Docs",
           },
-          /*{
+          {
             type: 'docSidebar', 
             position: 'left',
             sidebarId: 'acDocs',     
             label: 'Active Directory',   
-          },*/
+          },
           {
             type: "docSidebar",
             position: "left",
