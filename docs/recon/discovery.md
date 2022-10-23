@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
-title: Discovery
+title: Content Discovery
+hide_title: true
 ---
 
 ## Robots.TXT

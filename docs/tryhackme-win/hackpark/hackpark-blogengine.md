@@ -59,7 +59,7 @@ __VIEWSTATE=R5udoO0ZPM2lxCztLZomfdn6ZP5j6MY3A3pH5JFIY0EUS8BhyKHXd7JTKJl8UEXmTi%2
 
 <br/>
 
-## Reverse Shell
+## NETCAT
 
 - **We can catch the Reverse Shell Using `netcat`** 
 
