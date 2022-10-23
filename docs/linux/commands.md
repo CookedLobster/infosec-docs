@@ -3,7 +3,7 @@ sidebar_position: 3
 title: Commands
 ---
 
-## FIND
+### FIND
 
 
 ```bash
@@ -14,7 +14,7 @@ find / -type f -perm -04000 -ls 2>/dev/null
 find / -writable 2>/dev/null | cut -d "/" -f 2 | sort -u
 ```
 
-## GREP
+### GREP
 
 ```bash
 # GREP Hardcoded Passwords
@@ -24,7 +24,7 @@ grep -irE '(password|pwd|pass)[[:space:]]*=[[:space:]]*[[:alpha:]]+' 2>/dev/null
 grep -roE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" 2>/dev/null
 ```
 
-## Capabilities
+### Capabilities
 
 
 ```batch

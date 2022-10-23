@@ -370,9 +370,9 @@ const sidebars = {
               label: "Services",
               items: [
                 "priv-escalation/insecure-permissions",
-                "priv-escalation/scheduled-tasks",
                 "priv-escalation/unquoted-service",
                 "priv-escalation/insecure-service",
+                "priv-escalation/scheduled-tasks",
                 "priv-escalation/alwaysinstallelevated",
               ],
             },

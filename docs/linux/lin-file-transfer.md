@@ -57,15 +57,14 @@ http -a "username:password" --download --verify=no "http://IP:PORT/FILE.sh"
 
 ## FTP
 
-- **`pyftpdlib` Package Must Be Installed**
-
 ```batch
+:: Requires [pyftpdlib] Package 
 :: Start The FTP Server
 python3 -m pyftpdlib -p 21
 
 :: Access The Server
 :: [USER: anonymous PASSWORD: anonymous]
-ftp -p 10.11.3.35 21
+ftp -p <IP> 21
 ```
 
 ```bash

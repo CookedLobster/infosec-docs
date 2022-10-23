@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
-title: Harvesting
+title: Credentials Harvesting
+hide_title: true
 description: Windows Password Harvesting
 keywords: [unattended windows installations, saved windows credentials, putty, iis credentials]
 ---

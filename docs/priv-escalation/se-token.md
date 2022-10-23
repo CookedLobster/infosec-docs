@@ -4,7 +4,6 @@ title: SeImpersonate - SeAssignPrimaryToken
 ---
 
 
-
 - These Privileges <b style={{ color: 'Brown' }}>[SeAssignPrimaryToken - SeImpersonate]</b> allow a Process to Impersonate other Users and act on their behalf.
 
 ```log
@@ -25,9 +24,10 @@ SeImpersonatePrivilege        Impersonate a client after authentication Enabled
 
 ---
 
-<div class="alert alert--danger" role="alert">EXPLOIT EXPLANATION</div>
+:::danger EXPLOIT EXPLANATION
 
-<br/>
+Only Possible if **`WinRM`** Service Is Not Running. **Default on `Windows 10` but Not on `Windows Server 2019`**.
+:::
 
 
 - `RogueWinRM` Exploit is possible because whenever a User **(Including Unprivileged Users)** starts the `BITS Service` **(Background Intelligent Transfer Service)** in Windows, it Automatically creates a Connection to `[PORT 5985]` using <b style={{ color: 'Red' }}>SYSTEM</b> Privileges.
@@ -40,6 +40,7 @@ SeImpersonatePrivilege        Impersonate a client after authentication Enabled
 
 ---
 
+<br/>
 <br/>
 
 - Upload the <b style={{ color: 'Coral' }}>RogueWinRM</b> Executable.

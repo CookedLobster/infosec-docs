@@ -11,7 +11,7 @@ description: MySQL Methodologies, Tools
 3306/TCP
 ```
 
-### How does MySQL work?
+### How MySQL Works?
 
 **MySQL**, as an **RDBMS**, is made up of the Server and Utility Programs that help in the administration of MySQL Databases. The Server handles all Database Instructions like **Creating - Editing - Accessing Data.** It takes and Manages these requests and communicates using the MySQL Protocol. 
 

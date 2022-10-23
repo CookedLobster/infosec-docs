@@ -3,7 +3,7 @@ sidebar_position: 2
 title: Commands
 ---
 
-## ICACLS
+### ICACLS
 
 
 ```batch
@@ -14,7 +14,7 @@ icacls <Directory>
 icacls <FileName> /grant Everyone:F
 ```
 
-## Services - Task Information - Installers
+### Services - Task Information
 
 ```batch
 :: Service Information
@@ -43,10 +43,16 @@ schtasks /query /tn <ServiceName - TaskName> /fo list /v
 schtasks /run /tn <ServiceName - TaskName>
 ```
 
+### FIND
+
 ```batch
 :: Search Files
 where /r C:\ <FileName>
-    
+```
+
+### Installers
+
+```batch
 :: Running [.msi] Installer
 msiexec /quiet /qn /i C:\Windows\Temp\Malicious.msi
 ```

