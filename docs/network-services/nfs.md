@@ -50,10 +50,6 @@ mount -t nfs IP:/DIRECTORY /mnt/MOUNT -o nolock
 /etc/lib/nfs/etab
 ```
 
-<br/>
-
-- **`[no_root_squash]` If turned Off, it can allow the creation of `SUID` Bit files, allowing a remote user `ROOT` access to the Connected System.**
-
 ```batch
 :: Dangerous Settings
 no_root_squash
@@ -62,10 +58,12 @@ rw
 
 ---
 
-## SUID
+## NO_ROOT_SQUASH
 
 
 :::danger Only Possible If **`no_root_squash`** is Enabled
+
+If **`no_root_squash`** is used, remote **Root** Users are able to change any file on the Shared File System.
 
 :::
 
