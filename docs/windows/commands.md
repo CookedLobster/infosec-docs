@@ -3,8 +3,20 @@ sidebar_position: 2
 title: Commands
 ---
 
-### ICACLS
+### Executing
 
+```batch
+:: Detect Terminal Type
+(dir 2>&1 *`|echo CMD);&
+
+:: Execute [PSH] Commands from [CMD]
+powershell -c "<Command>"
+
+:: Execute [CMD] Commands from [PSH]
+cmd /c "<Command>"
+```
+
+### Permissions
 
 ```batch
 :: List Permissions
@@ -12,6 +24,9 @@ icacls <Directory>
 
 :: Grant Permissions
 icacls <FileName> /grant Everyone:F
+
+:: Take File/Folder Ownership
+takeown /f <FileName>
 ```
 
 ### Services - Task Information
@@ -19,9 +34,14 @@ icacls <FileName> /grant Everyone:F
 ```batch
 :: Service Information
 sc qc <ServiceName>
+```
 
+```batch
 :: Show Tasks
 tasklist /v
+
+:: Kill Tasks
+taskkill /F /im RevGoTwoSame.exe
 ```
 
 ```powershell
@@ -43,12 +63,21 @@ schtasks /query /tn <ServiceName - TaskName> /fo list /v
 schtasks /run /tn <ServiceName - TaskName>
 ```
 
-### FIND
+### FIND - DELETE
 
 ```batch
 :: Search Files
 where /r C:\ <FileName>
+
+:: Force Delete Files [CMD]
+del /f <FileName>
 ```
+
+```powershell
+# Force Delete Files [PSH]
+Remove-item –force <FileName>
+```
+
 
 ### Installers
 

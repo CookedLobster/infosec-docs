@@ -91,7 +91,7 @@ Host script results:
 ## SMBCLIENT
 
 - **We can Login as `Anonymous`**
-- **The `log.txt` File States that the User** <b style={{ color: 'LightGreen' }}>Kenobi:</b> <span style={{fontWeight: 'Bold'}}>has an `SSH` Configuration.</span>
+- **The `log.txt` File States that the User** <b style={{ color: 'LightGreen' }}>Kenobi</b> <span style={{fontWeight: 'Bold'}}>has an `SSH` Configuration.</span>
 - There are Details about `ProFTPD` Configuration.
 
 ```log

