@@ -329,9 +329,9 @@ const sidebars = {
           items: [
             "linux/stabilization",
             "linux/lin-file-transfer",
-            "linux/web-shell",
           ],
         },
+        "linux/web-shell",
       ],
     },
 
