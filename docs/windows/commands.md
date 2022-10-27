@@ -41,7 +41,7 @@ sc qc <ServiceName>
 tasklist /v
 
 :: Kill Tasks
-taskkill /F /im RevGoTwoSame.exe
+taskkill /F /im <TaskName>
 ```
 
 ```powershell

@@ -5,6 +5,11 @@ description: Linux Shell Stabilization
 keywords: [shell stabilization, shell stabilization linux, netcat shell stabilization, netcat stabilization]
 ---
 
+```batch
+:: In Linux we can use rlwrap before Connecting to the Target Machine
+rlwrap nc -nvlp <PORT>
+```
+
 
 ```batch
 :: Import using one of the Methods
