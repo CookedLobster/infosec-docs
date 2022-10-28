@@ -54,8 +54,6 @@ const config = {
         appId: "GY56D1Z7YZ",
         apiKey: "2e6e95d3603dd2b44504e0027ff207ba",
         indexName: "infosec-pages",
-        contextualSearch: true,
-        placeholder: "Search ...",
       },
       docs: {
         sidebar: {

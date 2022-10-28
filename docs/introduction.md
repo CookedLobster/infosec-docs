@@ -32,7 +32,7 @@ keywords: [tryhackme, exploitation guides, exploiting, enumeration, hackthebox, 
 :::
 
 
-:::info [Web Vulnerabilities](https://infosec-docs.pages.dev/tryhackme-introduction)
+:::info [Web Vulnerabilities](https://infosec-docs.pages.dev/category/web-vulnerabilities)
 
 
 - <b style={{ color: 'MediumTurquoise' }}>Injection - Broken Authentication - XML External Entity - XSS - Upload Vulnerabilities</b>
@@ -43,6 +43,6 @@ keywords: [tryhackme, exploitation guides, exploiting, enumeration, hackthebox, 
 
 <br/>
 
-:::note [Vulnerable Boxes](https://infosec-docs.pages.dev/linux_introduction)
+:::note [Vulnerable Boxes](https://infosec-docs.pages.dev/tryhackme-introduction)
 
 :::
