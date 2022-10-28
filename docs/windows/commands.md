@@ -3,12 +3,19 @@ sidebar_position: 2
 title: Commands
 ---
 
-### Executing
+### Terminal
 
 ```batch
 :: Detect Terminal Type
 (dir 2>&1 *`|echo CMD);&
 
+:: Print current Directory
+echo %cd%
+```
+
+### Executing
+
+```batch
 :: Execute [PSH] Commands from [CMD]
 powershell -c "<Command>"
 

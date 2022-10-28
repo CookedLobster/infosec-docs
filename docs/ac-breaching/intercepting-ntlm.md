@@ -14,7 +14,6 @@ Normal Network authentication attempts Would **Fail**, meaning **Users** and **S
 
 ---
 
-<br/>
 
 ## Responder
 

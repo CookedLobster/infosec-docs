@@ -51,9 +51,9 @@ const config = {
       },
 
       algolia: {
-        appId: "4TU62FN1Z3",
-        apiKey: "7bb751ebb1bf0b407dc8e169c2422850",
-        indexName: "dev_DocsPersonal",
+        appId: "GY56D1Z7YZ",
+        apiKey: "2e6e95d3603dd2b44504e0027ff207ba",
+        indexName: "infosec-pages",
         contextualSearch: true,
         placeholder: "Search ...",
       },

