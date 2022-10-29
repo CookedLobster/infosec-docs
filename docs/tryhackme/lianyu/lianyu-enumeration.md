@@ -203,6 +203,4 @@ ftp> mget .other_user Leave_me_alone.png Queen's_Gambit.png aa.jpg
 Slade Wilson was 16 years old when he enlisted in the United States Army, having lied about his age. 
 
 [...]
-
-[...]
 ```

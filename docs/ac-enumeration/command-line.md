@@ -24,7 +24,7 @@ title: Command Line [CMD]
 net user /domain
 
 :: Show [User] Detailed Information 
-net user delaila.gomez /domain
+net user delilah.gomez /domain
 ```
 
 ### Groups

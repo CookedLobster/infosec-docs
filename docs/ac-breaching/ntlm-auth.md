@@ -21,8 +21,6 @@ All Authentication material is forwarded to a <b style={{ color: 'Coral' }}>Doma
 
 **The Application is Authenticating on behalf of the User and not Authenticating the User directly on the Application itself.** This prevents the Application from storing <b style={{ color: 'DeepSkyBlue' }}>Active Directory</b> credentials, which should only be stored on a **Domain Controller**.
 
-<br/>
-
 ## Brute-Force
 
 :::danger The Brute-Force is possible only if we recovered valid Credentials during our Enumeration. 

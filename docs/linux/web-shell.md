@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: WebShell's - Binaries
+title: Shell's - Binaries
 ---
 
 

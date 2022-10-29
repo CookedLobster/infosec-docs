@@ -25,10 +25,10 @@ title: Powershell [PSH]
 # [Identity - Account Name]
 # [Server - Domain Controller]
 # [Properties - Information Associated with the Account]
-Get-ADUser -Identity delaila.gomez -Server za.adobe.com -Properties *
+Get-ADUser -Identity delilah.gomez -Server za.adobe.com -Properties *
 
 # Filter Information
-Get-ADUser -Filter 'Name -like "*delaila"' -Server za.adobe.com | Format-Table Name,SamAccountName -A
+Get-ADUser -Filter 'Name -like "*delilah"' -Server za.adobe.com | Format-Table Name,SamAccountName -A
 ```
 
 ### Groups

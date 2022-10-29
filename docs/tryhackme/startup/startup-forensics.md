@@ -6,7 +6,7 @@ description: Abuse Traditional vulnerabilities via Untraditional means.
 keywords: [startup tryhackme, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, ftp, privilege escalation, suspicious pcap tryhackme]
 ---
 
-## PCAP Analysis
+## PCAP
 
 - **We can catch the Reverse Shell Using `netcat`** 
 
@@ -37,7 +37,7 @@ Serving HTTP on 0.0.0.0 port 8888 ...
 
 <br/>
 
-## PCAP Analysis
+### Analysis
 
 - During the Enumeration we find **User - Password:** <b style={{ color: 'Chartreuse' }}>lennie</b><b style={{ color: 'Dark' }}>:</b><b style={{ color: 'Coral' }}>c4ntg3t3n0ughsp1c3</b>
 

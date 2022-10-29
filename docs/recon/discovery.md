@@ -4,7 +4,7 @@ title: Content Discovery
 hide_title: true
 ---
 
-## Robots.TXT
+## ROBOTS
 
 The `robots.txt` is a Document that tells **Search Engines** which pages they are and aren't allowed to show on their Search Engine results or ban specific Search Engines from crawling the website altogether.
 
@@ -15,7 +15,6 @@ Allow: /
 Disallow: /staff-portal
 ``` 
 
-<br/>
 
 ## Favicon
 
@@ -44,9 +43,8 @@ The `Favicon` is a small **Icon** displayed in the **Browser's Address Bar** or 
 └──────┘    └────────────────────────────────────────┘    └────────┘
 ```
 
-<br/>
 
-## Sitemap.XML
+## SITEMAP
 
 This file gives a list of every file the Website Owner wishes to be listed on a Search Engine.
 
@@ -69,7 +67,6 @@ This file gives a list of every file the Website Owner wishes to be listed on a 
 </urlset>
 ```
 
-<br/>
 
 ## HTTP Headers
 
@@ -88,7 +85,6 @@ Transfer-Encoding: chunked
 Connection: keep-alive
 ```
 
-<br/>
 
 ## Framework Stack
 
@@ -101,7 +97,6 @@ Page Generated in 0.04109 Seconds using the Custom Framework v1.2 ( https://webs
 -->
 ```  
 
-<br/>
 
 ## URL
 
