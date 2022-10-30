@@ -1,5 +1,5 @@
 ---
-title: Pass-The-Hash
+title: Pass The Hash
 ---
 
 :::danger Required Privileges: `Administrators`

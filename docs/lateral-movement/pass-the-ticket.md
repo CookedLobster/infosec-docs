@@ -1,5 +1,5 @@
 ---
-title: Pass-The-Ticket
+title: Pass The Ticket
 ---
 
 :::danger Required Privileges: `Administrators`

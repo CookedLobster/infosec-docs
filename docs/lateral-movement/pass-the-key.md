@@ -1,5 +1,5 @@
 ---
-title: Pass-The-Key
+title: Pass The Key
 ---
 
 When a User Requests a **TGT**, they send a Timestamp Encrypted with an Encryption Key derived from their Password. 

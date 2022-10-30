@@ -35,11 +35,6 @@ const config = {
       }),
     ],
   ],
-  
-  markdown: {
-    mermaid: true,
-  },
-  themes: ['@docusaurus/theme-mermaid'],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -83,10 +78,10 @@ const config = {
             label: "Docs",
           },
           {
-            type: 'docSidebar', 
-            position: 'left',
-            sidebarId: 'acDocs',     
-            label: 'Active Directory',   
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "acDocs",
+            label: "Active Directory",
           },
           {
             type: "docSidebar",
@@ -111,6 +106,5 @@ const config = {
       },
     }),
 };
-
 
 module.exports = config;

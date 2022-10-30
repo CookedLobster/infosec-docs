@@ -14,10 +14,10 @@ title: WMI
 
 ```batch
 :: Remote Procedure Call
-135/TCP, 49152-65535/TCP (DCE/RPC)
+135/TCP 49152-65535/TCP (DCE/RPC)
 
-:: WinRM 2.0
-5985/TCP (WinRM HTTP) or 5986/TCP (WinRM HTTPS)
+:: WinRM 2.0 [HTTP]     WinRM 2.0 [HTTPS]
+5985/TCP                5986/TCP
 ```
 
 **`MSI`** is a file format used for Installers. If we can copy an **MSI Package** to the Target System, we can then use **WMI** to attempt to install it for us. Once the **MSI** file is in the Target System, we can attempt to Install it by invoking the **`Win32_Product`** class through WMI.

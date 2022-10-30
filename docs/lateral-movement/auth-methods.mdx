@@ -1,0 +1,105 @@
+---
+title: Authentication Methods
+hide_title: true
+---
+
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## Kerberos
+
+**`Kerberos Authentication`** is the default **Authentication Protocol** for any recent Version of Windows. Users to Log into a Service using Kerberos will be assigned **Tickets.** **Tickets** act as a proof of a Previous Authentication. 
+
+Users with **Tickets** can be present them to a Service to Demonstrate they have already Authenticated into the Network before and therefore enabled to use it.
+
+
+```batch
+:: Kerberos
+88/TCP
+```
+
+### How to Authenticate with Kerberos?
+
+
+
+<Tabs>
+  <TabItem value="one" label="Server Authentication"> 
+    <div style={{color: 'white'}}>
+
+```
+  ┌───────────────────┐
+  | Domain Controller |
+  └───────────────────┘
+            |
+            |
+            |
+  ┌───────────────────┐        ┌───────────────────┐ 
+  |      Client       | ─────  |      Server       |
+  └───────────────────┘        └───────────────────┘
+```
+
+<br/>
+
+```batch
+:: [1] Client Requests an Authentication Ticket (TGT) from the Key Distribution Center (KDC)
+:: [2] The KDC Verifies the Credentials and Sends back an Encrypted TGT and Session Key
+:: [3] The TGT is Encrypted using the Ticket Granting Service (TGS) Secret Key
+:: [4] The Client stores the TGT and when it expires the Local Session Manager will request another TGT
+```
+
+</div>
+  </TabItem>
+  <TabItem value="two" label="Client Request">
+    <div style={{color: 'red'}}>
+
+```
+  ┌───────────────────┐
+  | Domain Controller |
+  └───────────────────┘
+            |
+            |
+            |
+  ┌───────────────────┐        ┌───────────────────┐ 
+  |      Client       | ─────  |      Server       |
+  └───────────────────┘        └───────────────────┘
+```
+
+<br/>
+
+```batch
+:: [1] The Client sends the current TGT to the TGS with the Service Principal Name (SPN) of the Resource the Client wants to access
+:: [2] The KDC Verifies the TGT of the User and that the User has access to the Service
+:: [3] TGS sends a Valid Session Key for the Service to the Client
+:: [4] Client forwards the Session key to the Service to prove the User has access, and the Service Grants Access.
+```
+
+</div>
+  </TabItem>
+</Tabs>
+
+
+<br/>
+
+## NetNTLM
+
+:::caution The Described Process applies when using a `Domain Account`
+
+If a **Local Account** is used, the Server can verify the Response to the **Challenge** itself without Requiring Interaction with the Domain Controller since it has the Password Hash stored locally on its **SAM**.
+
+:::
+
+<br/>
+
+**NetNTLM** works using a **`Challenge-Response`** Mechanism.
+
+
+```batch
+:: [1] The Client Sends an Authentication Request to the Server they want to Access
+:: [2] The Server generates a Random Number and sends it as a Challenge to the Client
+:: [3] The Client combines their NTLM Password Hash with the Challenge to Generate a Response to the Challenge and sends it back to the Server for Verification
+:: [4] The Server forwards the Challenge and the response to the Domain Controller for Verification
+:: [5] The Domain Controller uses the Challenge to recalculate the Response and compares it to the Original Response sent by the Client. 
+:: [5.1] If they both match, the Client is Authenticated. Otherwise, access is Denied. The Authentication result is sent back to the Server
+:: [6] The Server forwards the Authentication result to the Client
+```

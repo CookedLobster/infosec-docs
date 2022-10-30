@@ -647,7 +647,7 @@ const sidebars = {
           type: "category",
           label: "Authentication",
           items: [
-            /*"lateral-movement/kerberos-auth",*/
+            "lateral-movement/auth-methods",
             "lateral-movement/pass-the-hash",
             "lateral-movement/pass-the-ticket",
             "lateral-movement/pass-the-key",
