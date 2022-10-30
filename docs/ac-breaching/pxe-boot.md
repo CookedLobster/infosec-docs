@@ -13,7 +13,8 @@ title: PXE Boot
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-<br/>
+
+### Reading The Image
 
 
 - Using **`TFTP`** to downloading the **BCD** File to Read the Configuration of the MDT Server.
@@ -43,7 +44,9 @@ PS C:\> Get-WimFile -bcdFile $BCDFile
 ```
 
 <br/>
-<br/>
+
+
+### Recovering Credentials
 
 - **Windows Imaging Format (WIM)** are Bootable Images. Now that we have the location of the **PXE Boot Image**, we can use `TFTP` to Download this Image.
 

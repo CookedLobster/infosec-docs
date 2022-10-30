@@ -326,10 +326,7 @@ const sidebars = {
         {
           type: "category",
           label: "Terminal - Payloads",
-          items: [
-            "linux/stabilization",
-            "linux/lin-file-transfer",
-          ],
+          items: ["linux/stabilization", "linux/lin-file-transfer"],
         },
         "linux/web-shell",
       ],
@@ -635,6 +632,32 @@ const sidebars = {
         image: "/img/bitmap.png",
       },
       items: ["ac-enumeration/command-line", "ac-enumeration/powershell"],
+    },
+    {
+      type: "category",
+      label: "Lateral Movement",
+      link: {
+        type: "generated-index",
+        title: "Lateral Movement",
+        keywords: ["guides"],
+        image: "/img/bitmap.png",
+      },
+      items: [
+        {
+          type: "category",
+          label: "Authentication",
+          items: [
+            /*"lateral-movement/kerberos-auth",*/
+            "lateral-movement/pass-the-hash",
+            "lateral-movement/pass-the-ticket",
+            "lateral-movement/pass-the-key",
+          ],
+        },
+        "lateral-movement/remote-process",
+        "lateral-movement/wmi",
+        "lateral-movement/rdp-hijacking",
+        "lateral-movement/port-forwarding",
+      ],
     },
   ],
 };

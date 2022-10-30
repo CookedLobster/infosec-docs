@@ -61,7 +61,7 @@ responder -I <interface>
 
 <br/>
 
-## JOHN - HASHCAT
+## Brute-Forcing
 
 - **Either option can be used to Brute-Force the `HASH`**
 

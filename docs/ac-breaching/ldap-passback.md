@@ -32,7 +32,7 @@ There we can alter the **LDAP** Configuration, such as the **IP - Hostname** of 
 <br/>
 
 
-### Rogue LDAP Server
+## Rogue LDAP Server
 
 - The **`SupportedCapabilities`** Response Indicates a Problem. Before the Printer sends over the Credentials, it is trying to negotiate the **LDAP Authentication** method Details. It will use this negotiation to select the most Secure Authentication method that both the Printer and the **LDAP** Server Support. 
 - We need to create a **`Rogue LDAP Server`** and Configure it to send Credentials in **Plain-Text.**
