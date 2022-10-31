@@ -55,7 +55,6 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 ## FFUF
 
 - **Default `Apache2` Page:** <b style={{ color: 'SandyBrown' }}>[IP:80]</b> 
-- **`robots.txt` is Exposed:**  <b style={{ color: 'SandyBrown' }}>[IP:80/robots.txt]</b>
 - **Message [Successful Installation of `CMS Made Simple`]:** <b style={{ color: 'SandyBrown' }}>[IP:80/simple]</b>
 
 ```log

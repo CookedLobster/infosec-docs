@@ -81,6 +81,36 @@ files                   [Status: 301, Size: 310, Words: 20, Lines: 10, Duration:
 ```
 
 
+<br/>
+
+---
+## Content Discovery
+
+
+- **Hidden Comment:** <b style={{ color: 'SandyBrown' }}>[IP:80]</b>
+
+```html
+<!--when are we gonna update this??-->
+```
+
+
+- **`FTP` Upload Location:** <b style={{ color: 'SandyBrown' }}>[IP:80/files]</b>
+
+```
+   [ICO]          Name        Last modified   Size Description
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[PARENTDIR] Parent Directory                     -  
+[DIR]       ftp/             2020-11-12 04:53    -  
+[IMG]       important.jpg    2020-11-12 04:02 246K  
+[TXT]       notice.txt       2020-11-12 04:53  208  
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+---
+
+<br/>
+
+
 ## FTP
 
 - **We can Login as `Anonymous`**
@@ -128,31 +158,8 @@ ftp> put php-reverse-shell.phtml
 226 Transfer complete.
 ```
 
-
 <br/>
 
----
-## Content Discovery
-
-
-- **Hidden Comment:** <b style={{ color: 'SandyBrown' }}>[IP:80]</b>
-
-```html
-<!--when are we gonna update this??-->
-```
-
-
-- **`FTP` Upload Location:** <b style={{ color: 'SandyBrown' }}>[IP:80/files]</b>
-
-```
-   [ICO]          Name        Last modified   Size Description
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[PARENTDIR] Parent Directory                     -  
-[DIR]       ftp/             2020-11-12 04:53    -  
-[IMG]       important.jpg    2020-11-12 04:02 246K  
-[TXT]       notice.txt       2020-11-12 04:53  208  
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-```
 
 - <b style={{ color: 'SandyBrown' }}>[IP:80/files/ftp]</b>
 - Location of the Uploaded **Reverse Shell** through `FTP`
@@ -164,5 +171,3 @@ ftp> put php-reverse-shell.phtml
 [ ]         php-reverse-shell.phtml 2022-10-07 08:36 5.4K  
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
-
----

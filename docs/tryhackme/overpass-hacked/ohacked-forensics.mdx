@@ -86,7 +86,8 @@ bee:$6$.SqHrp6z$B4rWPi0Hkj0gbQMFujz1KHVs9VrSFu7AU9CxWrZV7GzH05tYPL1xRzUJlFHbyp0K
 muirland:$6$SWybS8o2$9diveQinxy8PJQnGQQWbTNKeb2AiSp.i8KznuAjYbqI3q04Rf5hjHPer3weiC.2MrOj2o1Sw/fd2cu0kC6dUP.:18464:0:99999:7:::
 ```
 
-<br/>
+
+### Attacker Persistence
 
 - The Attacker Established Persistence Using: <b style={{ color: 'PowderBlue' }}>[GO SSH Backdoor]</b>
 - <a class="button button--outline button--info" href="https://github.com/NinjaJc01/ssh-backdoor">GO SSH Backdoor GitHub</a>
@@ -124,25 +125,21 @@ SSH - 2020/07/21 20:36:56 Started SSH backdoor on 0.0.0.0:2222
 ```
 
 
-## SHADOW FILE 
+## Brute-Forcing
 
-- **We were able to Crack `4` Passwords:** 
-	- <b style={{ color: 'Chartreuse' }}>bee</b><b style={{ color: 'Dark' }}>:</b><b style={{ color: 'Coral' }}>secret12</b>
-	- <b style={{ color: 'Chartreuse' }}>szymex</b><b style={{ color: 'Dark' }}>:</b><b style={{ color: 'Coral' }}>abcd123</b>
-	- <b style={{ color: 'Chartreuse' }}>muirland</b><b style={{ color: 'Dark' }}>:</b><b style={{ color: 'Coral' }}>1qaz2wsx</b>
-	- <b style={{ color: 'Chartreuse' }}>paradox</b><b style={{ color: 'Dark' }}>:</b><b style={{ color: 'Coral' }}>secuirty3</b> 
+- **We were able to Crack `4` Passwords** 
 
-```log
-Loaded 4 password hashes with 4 different salts (sha512crypt, crypt(3) $6$ [SHA512 128/128 AVX 2x])
+```batch
 1qaz2wsx         (muirland)
 abcd123          (szymex)
 secret12         (bee)
-secuirty3	     (paradox)
+secuirty3        (paradox)
 ```
 
 
 
-```bash
+```batch
+:: Hashes
 paradox:$6$oRXQu43X$WaAj3Z/4sEPV1mJdHsyJkIZm1rjjnNxrY5c8GElJIjG7u36xSgMGwKA2woDIFudtyqY37YCyukiHJPhi4IU7H0:18464:0:99999:7:::
 szymex:$6$B.EnuXiO$f/u00HosZIO3UQCEJplazoQtH8WJjSX/ooBjwmYfEOTcqCAlMjeFIgYWqR5Aj2vsfRyf6x1wXxKitcPUjcXlX/:18464:0:99999:7:::
 bee:$6$.SqHrp6z$B4rWPi0Hkj0gbQMFujz1KHVs9VrSFu7AU9CxWrZV7GzH05tYPL1xRzUJlFHbyp0K9TAeY1M6niFseB9VLBWSo0:18464:0:99999:7:::

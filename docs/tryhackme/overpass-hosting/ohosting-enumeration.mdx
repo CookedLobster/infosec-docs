@@ -7,6 +7,10 @@ keywords: [overpass hosting, tryhackme, ctf, pentesting, guide, docs, tutorial, 
 ---
 
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
 :::note Box Description
 
 You know them, you love them, your favorite group of broke computer science students have another business venture! Show them that they probably should hire someone for security...
@@ -85,25 +89,44 @@ backups                 [Status: 301, Size: 237, Words: 14, Lines: 8, Duration: 
 
 ## Backup
 
-Inside the **Backup.zip File** we have `priv.key` - `CustomerDetails.xlsx.gpg`
+Inside the **Backup.zip File** we have `priv.key` - `CustomerDetails.xlsx.gpg`. We Import the `priv.key` && Decrypt `CustomerDetails.xlsx.gpg`
 
+<Tabs>
+  <TabItem value="import" label="IMPORT"> 
+    <div style={{color: 'red'}}>
 
-
-- We Import the `priv.key` && Decrypt  `CustomerDetails.xlsx.gpg`
+```batch
+gpg --import priv.key
+```
 
 ```log
-gpg --import priv.key        
 gpg: key C9AE71AB3180BC08: public key "Paradox <paradox@overpass.thm>" imported
 gpg: key C9AE71AB3180BC08: secret key imported
 gpg: Total number processed: 1
 gpg:               imported: 1
 gpg:       secret keys read: 1
 gpg:   secret keys imported: 1
+```
 
+</div>
+  </TabItem>
+  <TabItem value="decrypt" label="DECRYPT">
+    <div style={{color: 'red'}}>
+
+```batch
 gpg --decrypt CustomerDetails.xlsx.gpg 
+```
+
+```log
 gpg: encrypted with 2048-bit RSA key, ID 9E86A1C63FB96335, created 2020-11-08
       "Paradox <paradox@overpass.thm>"
 ```
+
+</div>
+  </TabItem>
+</Tabs>
+
+<br/>
 
 After Decrypting [`CustomerDetails.xlsx.gpg`] we have a **Datasheet** of `Customer Name - Username - Passwords - Credit Card Number - CVC`. The only Useful Password is from the **User:** <b style={{ color: 'Chartreuse' }}>paradox</b>
 

@@ -24,6 +24,9 @@ keywords: [internal, tryhackme, ctf, pentesting, guide, docs, tutorial, enumerat
 
 <br/>
 
+
+### PAYLOAD
+
 - <span style={{fontWeight: 'Bold'}}>We can Execute</span> <b style={{ color: 'DarkGrey' }}>Groovy Scripts</b> <span style={{fontWeight: 'Bold'}}>at this Location:</span> <b style={{ color: 'SandyBrown' }}>[LOCAL:8080/script]</b>
 
 ![IA](/img/vmlinux/i-scriptconsole.png)
@@ -50,7 +53,8 @@ println "out> $sout err> $serr"
 ```
 
 <br/>
-<br/>
+
+### Privilege Escalation
 
 - **We can catch the Reverse Shell Using `netcat`**
 - **File: `/opt/note.txt`** 

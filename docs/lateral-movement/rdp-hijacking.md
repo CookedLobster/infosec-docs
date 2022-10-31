@@ -16,12 +16,11 @@ When an **`Administrator`** uses <b>Remote Desktop</b> to connect to a machine a
 3389/TCP
 ```
 
-
-If we have **Administrator-Level** Access, we can get **SYSTEM** by any method of our preference.
-
 <br/>
 
 ### Hijacking the Session
+
+If we have **Administrator-Level** Access, we can get **SYSTEM** by any method of our preference.
 
 ```batch
 :: Connect via RDP

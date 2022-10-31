@@ -62,7 +62,7 @@ Host script results:
 
 ## FFUF
 
-- **Upload Folder:** <b style={{ color: 'SandyBrown' }}>[IP:3333/internal]</b>
+- **File Upload Portal:** <b style={{ color: 'SandyBrown' }}>[IP:3333/internal]</b>
 
 ```log
         /'___\  /'___\           /'___\       

