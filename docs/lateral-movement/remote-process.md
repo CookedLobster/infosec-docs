@@ -2,7 +2,7 @@
 title: Spawning Processes Remotely
 ---
 
-:::danger Required Group Memberships: `Administrators`
+:::danger Required Privileges: `Administrators`
 
 :::
 
@@ -13,7 +13,7 @@ title: Spawning Processes Remotely
 
 ```batch
 :: Remote Procedure Call
-135/TCP, 49152-65535/TCP (DCE/RPC)
+135/TCP  49152-65535/TCP (DCE/RPC)
 
 :: [NETBIOS] RPC over SMB Named Pipes
 139/TCP 

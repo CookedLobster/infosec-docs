@@ -40,7 +40,9 @@ sekurlsa::msv
 ```
 <br/>
 
-We can then use the **`Extracted Hashes`** to perform a **Pass-the-Hash** Attack by using **`mimikatz`** to Inject an Access Token for the Victim User on a **Reverse Shell or any other Command.**
+### Using The Hashes
+
+We can use the **`Extracted Hashes`** to perform a **Pass-the-Hash** Attack by using **`mimikatz`** to Inject an Access Token for the Victim User on a **Reverse Shell or any other Command.**
 
 ```batch
 :: Reverts the Previous Token

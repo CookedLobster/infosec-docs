@@ -2,7 +2,7 @@
 title: WMI
 ---
 
-:::danger Required Group Memberships: `Administrators`
+:::danger Required Privileges: `Administrators`
 
 :::
 

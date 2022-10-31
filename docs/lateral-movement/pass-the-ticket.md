@@ -4,9 +4,9 @@ title: Pass The Ticket
 
 :::danger Required Privileges: `Administrators`
 
-Extracting `Ticket Granting Services` will require us to have **Administrator's Credentials**.
+- **`Extracting`** Ticket Granting Services will require us to have **Administrator's Credentials**.
 
-Injecting Tickets in our own Session doesn't require Administrator Privileges.
+- **`Injecting`** Tickets in our own Session doesn't require Administrator Privileges.
 
 :::
 
@@ -47,11 +47,6 @@ klist
 ### Deeper Explanation
 
 Once the **Tickets** are **Extracted** they are going to be Available in the same Folder as **`mimikatz`.**
-
-```batch
-:: Ticket        
-[0;97d82]-2-0-40e10000-t2_felicia.dean@krbtgt-DOMAIN.COM.kirbi
-```
 
 
 ```log

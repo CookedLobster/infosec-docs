@@ -16,7 +16,7 @@ sekurlsa::ekeys
 
 <br/>
 
-### Format
+### Hash Format
 
 Depending on the **Available `Keys`**, we can run the following Commands on **`mimikatz`**.
 
@@ -24,7 +24,7 @@ Depending on the **Available `Keys`**, we can run the following Commands on **`m
 
 :::caution RC4 [Overpass-the-Hash]
 
-When using `RC4` the Key will be Equal to the **NTLM Hash** of a **User**. 
+- When using **`RC4`** the Key will be Equal to the **`NTLM Hash`** of a **User**. 
 
 This means that if we could extract the **NTLM Hash**, we can use it to request a **TGT** as long as **RC4** is one of the Enabled Protocols.
 
