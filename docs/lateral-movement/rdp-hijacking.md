@@ -28,6 +28,8 @@ xfreerdp /v:TARGET /u:USERNAME /p:PASSWORD
 
 :: Upload - Run [PsExec64]
 PsExec64.exe -accepteula
+
+:: Interactive Mode [-i] 
 PsExec64.exe -s cmd.exe
 ```
 

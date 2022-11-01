@@ -65,7 +65,7 @@ certutil -urlcache -split -f "http://127.0.0.1:7000/test.md"
 Since we are Opening a new Port on **PC-1**, we might need to add a **Firewall Rule** to Allow for Incoming Connections.
 
 ```batch
-netsh advfirewall firewall add rule name="Open Port 80" dir=in action=allow protocol=TCP localport=80
+netsh advfirewall firewall add rule name="Open Port PORT" dir=in action=allow protocol=TCP localport=PORT
 ```
 
 <br/>
@@ -102,7 +102,7 @@ chisel server --reverse --port 8000
 
 </div>
   </TabItem>
-  <TabItem value="chisel_two" label="Victim">
+  <TabItem value="chisel_two" label="Target">
     <div style={{color: 'red'}}>
 
 ```batch

@@ -37,6 +37,12 @@ net group /domain
 net group "Tier 1 Admins" /domain
 ```
 
+```batch
+:: List Local Groups
+net localgroup
+net localgroup "Group Name"
+```
+
 ### Password Policy
 
 ```batch
