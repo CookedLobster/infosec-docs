@@ -39,7 +39,7 @@ PORT    STATE  SERVICE  VERSION
 
 
 - <b><b style={{ color: 'PowderBlue' }}>WordPress</b> User Blog:</b> <b style={{ color: 'SandyBrown' }}>[IP:80/0]</b> 
-- <b><b style={{ color: 'PowderBlue' }}>WordPress</b> Login Form:</b> <b style={{ color: 'SandyBrown' }}>[IP:80/wp-content]</b> 
+- <b><b style={{ color: 'PowderBlue' }}>WordPress</b> Login Portal:</b> <b style={{ color: 'SandyBrown' }}>[IP:80/wp-content]</b> 
 - The File `Robots.txt` is Exposed: <b style={{ color: 'SandyBrown' }}>[IP:80/robots]</b> 
 
 ```log
