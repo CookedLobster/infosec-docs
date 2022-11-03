@@ -185,6 +185,14 @@ const sidebars = {
             "tryhackme/wgel/wgel-exploitation",
           ],
         },
+        {
+          type: "category",
+          label: "MrRobot",
+          items: [
+            "tryhackme/mr-robot/mr-robot-enumeration",
+            "tryhackme/mr-robot/mr-robot-exploitation",
+          ],
+        },
       ],
     },
 

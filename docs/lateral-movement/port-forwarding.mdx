@@ -59,14 +59,18 @@ certutil -urlcache -split -f "http://127.0.0.1:7000/test.md"
 
 :::danger Requires Administrative Privileges
 
-:::
-
-
 Since we are Opening a new Port on **PC-1**, we might need to add a **Firewall Rule** to Allow for Incoming Connections.
+
+- This is Common for **PORT - 80, 443 ...**
 
 ```batch
 netsh advfirewall firewall add rule name="Open Port PORT" dir=in action=allow protocol=TCP localport=PORT
 ```
+
+:::
+
+
+
 
 <br/>
 

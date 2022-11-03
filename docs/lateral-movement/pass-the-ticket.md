@@ -4,9 +4,9 @@ title: Pass The Ticket
 
 :::danger Required Privileges: `Administrators`
 
-- **`Extracting`** Ticket Granting Services will require us to have **Administrator's Credentials**.
+- **`Extracting`** Ticket Granting Services **Will Require** us to have **Administrator's Credentials**.
 
-- **`Injecting`** Tickets in our own Session doesn't require Administrator Privileges.
+- **`Injecting`** Tickets in our own Session **Doesn't Require** Administrator Privileges.
 
 :::
 

@@ -101,20 +101,13 @@ MACHINE_IP internal.thm
 ## WPScan
 
 - <b style={{ color: 'PowderBlue' }}>WordPress</b> <span style={{fontWeight: 'Bold'}}>Version:</span> <b style={{ color: 'Plum' }}>5.4.2</b>
-- **`XML-RPC` Enabled**
+- **`XML-RPC` Enabled:** `An Attacker can abuse this Interface to Brute-Force Authentication`
+- **Theme:** `twentyseventeen`
 
-```log
+```log {4,14,19}
 [+] URL: http://internal.thm/blog/ [10.10.90.155]
 [+] Started: Fri Oct  7 08:00:25 2022
 
-Interesting Finding(s):
-
-[+] Headers
- | Interesting Entry: Server: Apache/2.4.29 (Ubuntu)
- | Found By: Headers (Passive Detection)
- | Confidence: 100%
-
-// highlight-next-line
 [+] XML-RPC seems to be enabled: http://internal.thm/blog/xmlrpc.php
  | Found By: Direct Access (Aggressive Detection)
  | Confidence: 100%
@@ -151,42 +144,22 @@ Interesting Finding(s):
 
 <br/>
 
-- **Brute-Forcing Username**
-- **Found Username:** <b style={{ color: 'Chartreuse' }}>admin</b>
+- **Brute-Forcing `Username - Password`:** <b style={{ color: 'Chartreuse' }}>admin</b><b style={{ color: 'Grey' }}>:</b><b style={{ color: 'Coral' }}>my2boys</b>
 
-```log
-[i] User(s) Identified:
 
-// highlight-next-line
+```log {1}
 [+] admin
  | Found By: Author Posts - Author Pattern (Passive Detection)
- | Confirmed By:
- |  Rss Generator (Passive Detection)
- |  Wp Json Api (Aggressive Detection)
- |   - http://internal.thm/blog/index.php/wp-json/wp/v2/users/?per_page=100&page=1
- |  Author Id Brute Forcing - Author Pattern (Aggressive Detection)
- |  Login Error Messages (Aggressive Detection)
 ```
-
-<br/>
-
-- **Brute-Forcing Password**
-- **Found Password:** <b style={{ color: 'Coral' }}>my2boys</b>
-
-```log
+```log {2}
 [+] Performing password attack on Xmlrpc against 1 user/s
-// highlight-next-line
 [SUCCESS] - admin / my2boys
-
-[!] Valid Combinations Found:
-// highlight-next-line
- | Username: admin, Password: my2boys
 ```
 
 <br/>
 
 ---
-## Content Discovery
+## WordPress Exploitation
 
 - **Using** <b style={{ color: 'PowderBlue' }}>WordPress</b> <span style={{fontWeight: 'Bold'}}>Credentials to Login:</span> <b style={{ color: 'Chartreuse' }}>admin</b><b style={{ color: 'Grey' }}>:</b><b style={{ color: 'Coral' }}>my2boys</b>
 
@@ -194,7 +167,7 @@ Interesting Finding(s):
 ![IA](/img/vmlinux/i-dashboard.png)
 
 
-- **Replacing `404.php` with a Reverse PHP Shell**
+- **Replacing `404.php` with a ** <b style={{ color: 'Plum' }}>Reverse PHP Shell</b>
 - `WordPress -> Appearance -> Theme Editor -> 404 Template (404.php)` 
 - **Reverse Shell Execution Location:** `http://IP/blog/wp-content/themes/twentyseventeen/404.php`
 
