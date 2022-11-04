@@ -17,17 +17,29 @@ find / -writable 2>/dev/null | cut -d "/" -f 2 | sort -u
 ### GREP
 
 ```bash
-# GREP Hardcoded Passwords
-grep -irE '(password|pwd|pass)[[:space:]]*=[[:space:]]*[[:alpha:]]+' 2>/dev/null
+# Search Hardcoded Passwords
+grep -iorE '(password|pwd|pass)[[:space:]]*=[[:space:]]*[[:alpha:]]+' 2>/dev/null
 
-# GREP IP Addresses
+# Search IP Addresses
 grep -roE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" 2>/dev/null
 ```
 
 ### Capabilities
 
 
-```batch
-:: Search for Capabilities
+```bash
+# Search for Capabilities
 getcap -r / 2>/dev/null
+```
+
+### Network
+
+
+```bash
+# Show Active Connections
+(netstat -punta || ss -nltpu || netstat -anv) | grep -i LISTEN
+
+# Similar Tools
+lsof -i -n
+rpcinfo -p
 ```

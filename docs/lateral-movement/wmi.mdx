@@ -38,7 +38,7 @@ $credential = New-Object System.Management.Automation.PSCredential $username, $s
 
 <br/>
 
-We can establish a **WMI Session** using one of the **Protocols `DCOM - WSMan`**.
+We can establish a **WMI Session** using one of the **Protocols `DCOM - WSMAN`**.
 
 
 <Tabs>
@@ -54,13 +54,13 @@ $Session = New-Cimsession -ComputerName TARGET -Credential $credential -SessionO
 
 </p>
   </TabItem>
-  <TabItem value="two" label="WSMan">
+  <TabItem value="two" label="WSMAN">
     <p>
 
-**`WSMan:`** **WinRM** will be used for connecting to **WMI**. This protocol uses ports **5985/TCP (WinRM HTTP)** or **5986/TCP (WinRM HTTPS)**
+**`WSMAN:`** **WinRM** will be used for connecting to **WMI**. This protocol uses ports **5985/TCP (WinRM HTTP)** or **5986/TCP (WinRM HTTPS)**
 
 ```powershell
-$Opt = New-CimSessionOption -Protocol WSMan
+$Opt = New-CimSessionOption -Protocol WSMAN
 $Session = New-Cimsession -ComputerName TARGET -Credential $credential -SessionOption $Opt -ErrorAction Stop
 ```
 

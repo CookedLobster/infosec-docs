@@ -410,6 +410,7 @@ const sidebars = {
         "network-services/smb",
         "network-services/smtp",
         "network-services/mysql",
+        "network-services/redis",
       ],
     },
 

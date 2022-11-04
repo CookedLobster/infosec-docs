@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 title: Commands
+sidebar_class_name: Windows Commands
 ---
 
 ### Terminal
@@ -11,6 +12,9 @@ title: Commands
 
 :: Print current Directory
 echo %cd%
+
+:: Formatting Output
+ft -auto
 ```
 
 ### Executing
@@ -60,6 +64,7 @@ Get-Service | Where-Object -Property Status -eq Running
 
 # Task Information
 Get-Scheduledtask -TaskName <TaskName>
+Get-ScheduledJob
 ```
 
 ```batch
@@ -73,7 +78,10 @@ schtasks /run /tn <ServiceName - TaskName>
 ### FIND - DELETE
 
 ```batch
-:: Search Files
+:: Search Files [Current Folder/Subfolder]
+dir /s <FileName>
+
+:: Search Files [C:\ Drive]
 where /r C:\ <FileName>
 
 :: Force Delete Files [CMD]
@@ -81,6 +89,9 @@ del /f <FileName>
 ```
 
 ```powershell
+# Recursive Search
+Get-ChildItem -Path C:\ -Include "File.txt" -File -Recurse -ErrorAction SilentlyContinue
+
 # Force Delete Files [PSH]
 Remove-item –force <FileName>
 ```
@@ -91,4 +102,14 @@ Remove-item –force <FileName>
 ```batch
 :: Running [.msi] Installer
 msiexec /quiet /qn /i C:\Windows\Temp\Malicious.msi
+```
+
+### Script Execution
+
+```powershell
+# Set Execution Policy
+Set-ExecutionPolicy Bypass -Scope process -Force
+
+# List Execution Policy Rules
+Get-ExecutionPolicy -List | Format-Table -AutoSize
 ```

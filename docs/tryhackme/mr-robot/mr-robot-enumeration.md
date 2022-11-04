@@ -2,14 +2,14 @@
 sidebar_position: 1
 title: MrRobot
 sidebar_label: Enumeration
-description: Can you root this Mr. Robot styled machine? This is a virtual machine meant for beginners/intermediate users. There are 3 hidden keys located on the machine, can you find them?
+description: Can you root this Mr. Robot styled machine?
 keywords: [mrrobot, mr robot, tryhackme, ctf, pentesting, guide, docs, tutorial, enumeration, exploitation, nmap, ffuf, ftp, privilege escalation]
 ---
 
 
 :::note Box Description
 
-Can you root this Mr. Robot styled machine? This is a virtual machine meant for beginners/intermediate users. There are 3 hidden keys located on the machine, can you find them?
+Can you root this Mr. Robot styled machine?
 
 :::
 
