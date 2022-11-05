@@ -35,6 +35,7 @@ pwd
 
 # Format Output
 Format-Table -auto
+Format-List
 ```
 
 </p>
@@ -92,20 +93,20 @@ Get-Acl <FileName> | Format-List
     <p>
 
 ```batch
-:: List Services
+:: List Services [Filter]
 sc queryex type=service state=all
 
 :: Find Services
-sc queryex type=service state=all | find /i "ServiceName"
+sc queryex type=service state=all | find /i <ServiceName>
 
 :: Service Information
-sc qc WpnService
+sc qc <ServiceName>
 ```
 
 ```batch
 :: Start - Stop Service
-sc start "ServiceName"
-sc stop "ServiceName"
+sc start <ServiceName>
+sc stop  <ServiceName>
 ```
 
 </p>
@@ -174,10 +175,10 @@ schtasks /end /tn <TaskName>
     <p>
 
 ```powershell
-# Detect Terminal Type [Desktop - PWSH]
+# Show Task Info
 Get-Scheduledtask -TaskName "TaskName" | Format-List *
 
-# List Jobs on the Local Computer
+# List Jobs
 Get-ScheduledJob
 ```
 
@@ -209,7 +210,7 @@ del /f <FileName>
 
 ```powershell
 # Search Files Recursively 
-Get-ChildItem -Path C:\ -Include "file.txt" -File -Recurse -ErrorAction SilentlyContinue
+Get-ChildItem -Path C:\ -Include "<FileName>" -File -Recurse -ErrorAction SilentlyContinue
 
 # Delete Files
 Remove-Item –force file.txt
@@ -219,6 +220,43 @@ Remove-Item –force file.txt
   </TabItem>
 </Tabs>
 
+### Network
+
+
+<Tabs>
+  <TabItem value="one_net" label="CMD"> 
+    <p>
+
+```batch
+:: List [Active - Listening] Ports
+netstat -a
+
+:: List Listening [Windows Processes] [Requires Elevated Prompt]
+netstat -anb
+```
+
+</p>
+  </TabItem>
+  <TabItem value="two_net" label="PSH">
+    <p>
+
+```powershell
+# List [Active - Listening] Ports
+Get-NetTCPConnection
+
+# Detailed Information
+Get-NetTCPConnection | Select-Object -Property *
+
+# Filter [Listen - Established]
+Get-NetTCPConnection -State Listen
+
+# Filter by Port
+Get-NetTCPConnection -RemotePort 443
+```
+
+</p>
+  </TabItem>
+</Tabs>
 
 ### Script Execution
 
