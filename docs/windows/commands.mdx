@@ -1,0 +1,239 @@
+---
+sidebar_position: 2
+title: Commands
+sidebar_class_name: Windows Commands
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+### Terminal
+
+<Tabs>
+  <TabItem value="one_t" label="CMD"> 
+    <p>
+
+```batch
+:: Detect Terminal Type [CMD]
+(dir 2>&1 *`|echo CMD);&
+
+:: Print current Directory
+echo %cd%
+```
+
+</p>
+  </TabItem>
+  <TabItem value="two_t" label="PSH">
+    <p>
+
+```powershell
+# Detect Terminal Type [Desktop - PWSH]
+(dir 2>&1 *`|echo CMD);&<# rem #>echo ($PSVersionTable).PSEdition
+
+# Print current Directory
+pwd
+
+# Format Output
+Format-Table -auto
+```
+
+</p>
+  </TabItem>
+</Tabs>
+
+
+### Executing
+
+```batch
+:: Execute [PSH] Commands from [CMD]
+powershell -c "<Command>"
+
+:: Execute [CMD] Commands from [PSH]
+cmd /c "<Command>"
+```
+
+### Permissions
+
+<Tabs>
+  <TabItem value="one_p" label="CMD"> 
+    <p>
+
+```batch
+:: List Permissions
+icacls <FileName>             
+
+:: Grant Permissions
+icacls <FileName> /grant Everyone:F
+
+:: Take File/Folder Ownership
+takeown /f <FileName>
+```
+
+</p>
+  </TabItem>
+  <TabItem value="two_p" label="PSH">
+    <p>
+
+```powershell
+# List Permissions
+Get-Acl <FileName> | Format-List
+(Get-Acl <FileName>).Access
+```
+
+</p>
+  </TabItem>
+</Tabs>
+
+
+### Services
+
+<Tabs>
+  <TabItem value="one_s" label="CMD"> 
+    <p>
+
+```batch
+:: List Services
+sc queryex type=service state=all
+
+:: Find Services
+sc queryex type=service state=all | find /i "ServiceName"
+
+:: Service Information
+sc qc WpnService
+```
+
+```batch
+:: Start - Stop Service
+sc start "ServiceName"
+sc stop "ServiceName"
+```
+
+</p>
+  </TabItem>
+  <TabItem value="two_s" label="PSH">
+    <p>
+
+```powershell
+# List Services
+Get-Service
+
+# Filter Service Status: Running - Stopped etc..
+Get-Service | Where-Object -Property Status -eq Running
+
+# Service Information
+Get-CimInstance Win32_Service -Filter "name = 'ServiceName'" | Format-List *
+Get-WmiObject win32_service | ?{$_.Name -like '*ServiceName*'} | Format-List *
+```
+
+```powershell
+# Start - Stop Service
+Start-Service -Name "ServiceName"
+Stop-Service -Name "ServiceName" -Force
+```
+
+</p>
+  </TabItem>
+</Tabs>
+
+### Tasks
+
+<Tabs>
+  <TabItem value="one_ts" label="CMD"> 
+    <p>
+
+```batch
+:: Show Tasks
+tasklist /v
+
+:: Kill Tasks
+taskkill /F /im <TaskName>
+```
+
+```batch
+:: Show Tasks Detailed Info
+schtasks /query /fo LIST /v
+
+:: Show Specific Task Info
+schtasks /query /tn "TaskName" /fo list /v
+```
+
+```batch
+:: Enable - Disable
+schtasks /Change /TN "TaskName" /Enable
+
+:: Run
+schtasks /run /tn <TaskName>
+
+:: End
+schtasks /end /tn <TaskName>
+```
+
+</p>
+  </TabItem>
+  <TabItem value="two_ts" label="PSH">
+    <p>
+
+```powershell
+# Detect Terminal Type [Desktop - PWSH]
+Get-Scheduledtask -TaskName "TaskName" | Format-List *
+
+# List Jobs on the Local Computer
+Get-ScheduledJob
+```
+
+</p>
+  </TabItem>
+</Tabs>
+
+### Search - Delete
+
+<Tabs>
+  <TabItem value="one_sd" label="CMD"> 
+    <p>
+
+```batch
+:: Search Files [Current Folder/Subfolder]
+dir /s <FileName>
+
+:: Search Files [C:\ Drive]
+where /r C:\ <FileName>
+
+:: Force Delete Files [CMD]
+del /f <FileName>
+```
+
+</p>
+  </TabItem>
+  <TabItem value="two_sd" label="PSH">
+    <p>
+
+```powershell
+# Search Files Recursively 
+Get-ChildItem -Path C:\ -Include "file.txt" -File -Recurse -ErrorAction SilentlyContinue
+
+# Delete Files
+Remove-Item –force file.txt
+```
+
+</p>
+  </TabItem>
+</Tabs>
+
+
+### Script Execution
+
+
+```powershell
+# Set Execution Policy
+Set-ExecutionPolicy Bypass -Scope process -Force
+
+# List Execution Policy Rules
+Get-ExecutionPolicy -List | Format-Table -AutoSize
+```
+
+### Installers
+
+```batch
+:: Running [.msi] Installer
+msiexec /quiet /qn /i C:\Windows\Temp\Malicious.msi
+```
