@@ -6,6 +6,10 @@ keywords: [file transfer, windows file transfer, pentesting, oscp, smb file tran
 ---
 
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
 ## HTTP Server
 
 ```batch
@@ -23,6 +27,10 @@ http-server [path] [options]
 
 ## CURL - WGET
 
+<Tabs>
+  <TabItem value="one" label="CURL"> 
+    <p>
+
 ```batch
 :: Save Remote File
 curl -O "http://IP:PORT/FILE.sh"
@@ -34,6 +42,11 @@ curl -k -O -u "username:password" "http://IP:PORT/FILE.sh"
 curl -O "ftp://anonymous:anonymous@IP:PORT/FILE.sh"	
 ```
 
+</p>
+  </TabItem>
+  <TabItem value="two" label="WGET">
+    <p>
+
 ```batch
 :: Save Remote File
 wget -O <OUTPUT> "http://IP:PORT/FILE.sh"
@@ -44,6 +57,11 @@ wget --no-check-certificate --user "username" --password "password" "http://IP:P
 :: FTP Download
 wget -r "ftp://anonymous:anonymous@IP:PORT/FILE.sh"
 ```
+
+</p>
+  </TabItem>
+</Tabs>
+
 
 ## HTTP
 
@@ -57,15 +75,32 @@ http -a "username:password" --download --verify=no "http://IP:PORT/FILE.sh"
 
 ## FTP
 
+<Tabs>
+  <TabItem value="one_ftp" label="Server"> 
+    <p>
+
 ```batch
 :: Requires [pyftpdlib] Package 
 :: Start The FTP Server
 python3 -m pyftpdlib -p 21
+```
 
+</p>
+  </TabItem>
+  <TabItem value="two_ftp" label="Interactive">
+    <p>
+
+```batch
+:: Interactive SHELL
 :: Access The Server
 :: [USER: anonymous PASSWORD: anonymous]
 ftp -p <IP> 21
 ```
+
+</p>
+  </TabItem>
+    <TabItem value="three_ftp" label="Non Interactive">
+    <p>
 
 ```bash
 # Non Interactive SHELL
@@ -85,13 +120,27 @@ echo 'EOF' >> FTP.sh
 chmod +x FTP.sh; ./FTP.sh
 ```
 
+</p>
+  </TabItem>
+</Tabs>
+
+
 ## SMB
 
-```powershell
-# Start the SMB Server
-# -smb2support [SMB-2]
-smbserver $SHARE_NAME $DIRECTORY   
+<Tabs>
+  <TabItem value="chisel_one" label="Server"> 
+    <p>
+
+```batch
+:: Transfer Files To\From Linux with SMB
+:: -smb2support [SMB-2]
+smbserver <SHARE_NAME> <DIRECTORY>
 ```
+
+</p>
+  </TabItem>
+  <TabItem value="chisel_two" label="Target">
+    <p>
 
 ```batch
 :: Save Remote SMB File
@@ -101,10 +150,19 @@ smbget "smb://IP/SHARE/FILE.sh"
 smbget "smb://IP/SHARE/FILE.sh" --user "username%password"
 ```
 
+</p>
+  </TabItem>
+</Tabs>
+
+
 ## SCP
 
 ```batch
-scp -P 22 "C:\FILE.sh" machine@IP:/home/machine/OUTPUT.sh
+:: Copy Local File to a Remote System
+scp -P 22 "/home/user/FILE.sh" machine@IP:/home/machine/OUTPUT.sh
+
+:: Copy Remote File to a Local System
+scp -P 22 machine@IP:/home/machine/FILE.sh "/home/user/OUTPUT.sh"
 ```
 
 ## NETCAT

