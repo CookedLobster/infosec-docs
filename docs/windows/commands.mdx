@@ -128,9 +128,10 @@ Get-WmiObject win32_service | ?{$_.Name -like '*ServiceName*'} | Format-List *
 ```
 
 ```powershell
-# Start - Stop Service
+# Start - Stop - Remove
 Start-Service -Name "ServiceName"
 Stop-Service -Name "ServiceName" -Force
+Remove-Service -Name "ServiceName"
 ```
 
 </p>
@@ -274,5 +275,5 @@ Get-ExecutionPolicy -List | Format-Table -AutoSize
 
 ```batch
 :: Running [.msi] Installer
-msiexec /quiet /qn /i C:\Windows\Temp\Malicious.msi
+msiexec /quiet /qn /i C:\Windows\Temp\Installer.msi
 ```

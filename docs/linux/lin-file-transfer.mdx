@@ -158,10 +158,10 @@ smbget "smb://IP/SHARE/FILE.sh" --user "username%password"
 ## SCP
 
 ```batch
-:: Copy Local File to a Remote System
+:: Copy [Local File] to a Remote System
 scp -P 22 "/home/user/FILE.sh" machine@IP:/home/machine/OUTPUT.sh
 
-:: Copy Remote File to a Local System
+:: Copy [Remote File] to a Local System
 scp -P 22 machine@IP:/home/machine/FILE.sh "/home/user/OUTPUT.sh"
 ```
 

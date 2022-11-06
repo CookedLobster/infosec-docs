@@ -6,11 +6,7 @@ title: PXE Boot
 - `BCD` Files. These files store the Information relevant to **PXE Boots** for different types of Architecture.
 
 ```log
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[...]
-10/18/2022  3:39 PM        12288 x64{1D0136D6-B1AD-4356-B50E-D56AC9AF19D9}.bcd
-[...]
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+x64{1D0136D6-B1AD-4356-B50E-D56AC9AF19D9}.bcd
 ```
 
 <br/>

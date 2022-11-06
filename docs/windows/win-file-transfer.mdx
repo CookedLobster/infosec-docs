@@ -228,10 +228,10 @@ wget "http://IP:PORT/FILE.exe" -O OUTPUT.exe
 ## SCP
 
 ```batch
-:: Copy Local File to a Remote System
+:: Copy [Local File] to a Remote System
 scp -P 22 "C:\FILE.exe" machine@IP:/home/machine/OUTPUT.exe
 
-:: Copy Remote File to a Local System
+:: Copy [Remote File] to a Local System
 scp -P 22 machine@IP:C:\FILE.sh "/home/user/OUTPUT.sh"
 ```
 
