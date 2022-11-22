@@ -31,6 +31,8 @@ return render_template_string(template)
 
 :::info This Section Applies to `Jinja2`
 
+For automated exploitation use the Tool **`TPLMAP`.**
+
 :::
 
 <br/>
@@ -71,38 +73,3 @@ return render_template_string(template)
 </body>
 </html>
 ``` 
-
-<br/>
-
-## Automatic Exploitation `TPLMAP`
-
-`TPLMAP` assists the exploitation of Code Injection and Server-Side Template Injection Vulnerabilities with a number of Sandbox Escape Techniques to get access to the Underlying OS.
-
-
-
-```log
-[+] Testing if GET parameter 'name' is injectable
-[+] Smarty plugin is testing rendering with tag '{*}'
-[+] Smarty plugin is testing blind injection
-[+] Mako plugin is testing rendering with tag '${*}'
-...
-[+] Jinja2 plugin is testing rendering with tag '{{*}}'
-[+] Jinja2 plugin has confirmed injection with tag '{{*}}'
-[+] Tplmap identified the following injection point:
-
-GET parameter: name
-Engine: Jinja2
-Injection: {{*}}
-Context: text
-OS: linux
-Technique: render
-Capabilities:
-
-Shell command execution: ok
-Bind and reverse shell: ok
-File write: ok
-File read: ok
-Code evaluation: ok, python code
-
-uid=0(root) gid=0(root) groups=0(root)
-```

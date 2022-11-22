@@ -73,7 +73,7 @@ If **`no_root_squash`** is used, remote **Root** Users are able to change any fi
 ```batch
 :: Build 
 :: This is going to Generate a Binary Named [setuid]
-go build ./setuid.go
+go build setuid.go
 
 :: Copy the Binary to the NFS Share and Set the Permissions
 cp setuid /NFS/SHARE

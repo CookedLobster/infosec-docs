@@ -31,7 +31,7 @@ html[data-theme='dark'] {
 }
 
 [data-theme='dark'] body::-webkit-scrollbar-track {
-  background: #444444;
+  background: #1b1b1d;
 }
 
 [data-theme='dark'] body::-webkit-scrollbar-thumb {
@@ -49,7 +49,7 @@ html[data-theme='dark'] {
 }
 
 [data-theme='light'] body::-webkit-scrollbar-track {
-  background: #f0f0f1;
+  background: #ffffff;
 }
 
 [data-theme='light'] body::-webkit-scrollbar-thumb {

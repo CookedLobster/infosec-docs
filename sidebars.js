@@ -564,7 +564,7 @@ const sidebars = {
         {
           type: "category",
           label: "Content Discovery",
-          items: ["recon/discovery", "recon/osint"],
+          items: ["recon/discovery", "recon/dorking", "recon/osint"],
         },
       ],
     },

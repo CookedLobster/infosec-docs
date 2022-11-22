@@ -6,6 +6,13 @@ title: Pass The Ticket
 
 - **`Extracting`** Ticket Granting Services **Will Require** us to have **Administrator's Credentials**.
 
+
+:::
+
+
+
+:::caution Required Privileges: `Standard`
+
 - **`Injecting`** Tickets in our own Session **Doesn't Require** Administrator Privileges.
 
 :::

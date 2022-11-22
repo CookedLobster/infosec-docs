@@ -8,6 +8,9 @@ import TabItem from '@theme/TabItem';
 
 :::danger Required Privileges: `Administrators`
 
+:::
+
+
 ```batch
 :: Remote Procedure Call
 135/TCP 49152-65535/TCP (DCE/RPC)
@@ -16,7 +19,6 @@ import TabItem from '@theme/TabItem';
 5985/TCP                5986/TCP
 ```
 
-:::
 
 **`Windows Management Instrumentation` (WMI)** is Windows implementation of **Web-Based Enterprise Management (WBEM)**, an enterprise standard for accessing management Information across devices. **WMI** allows Administrators to perform Standard Management Tasks that Attackers can abuse to perform Lateral Movement.
 
@@ -57,7 +59,7 @@ $Session = New-Cimsession -ComputerName TARGET -Credential $credential -SessionO
   <TabItem value="two" label="WSMAN">
     <p>
 
-**`WSMAN:`** **WinRM** will be used for connecting to **WMI**. This protocol uses ports **5985/TCP (WinRM HTTP)** or **5986/TCP (WinRM HTTPS)**
+**`WSMAN:`** **WinRM** will be used for connecting to **WMI**. This protocol uses ports **`5985/TCP` (WinRM HTTP)** or **`5986/TCP` (WinRM HTTPS)**
 
 ```powershell
 $Opt = New-CimSessionOption -Protocol WSMAN

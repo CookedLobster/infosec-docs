@@ -64,5 +64,5 @@ PS C:\> Get-FindCredentials -WimFile pxeboot.wim
 >>>> >>>> DeployRoot = \\THMMDT\MTDBuildLab$ 
 >>>> >>>> UserID = svcMDT
 >>>> >>>> UserDomain = ZA
->>>> >>>> UserPassword = PXEBootSecure1@
+>>>> >>>> UserPassword = Password
 ```
