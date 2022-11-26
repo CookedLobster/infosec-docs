@@ -4,7 +4,7 @@ title: Pass The Ticket
 
 :::danger Required Privileges: `Administrators`
 
-- **`Extracting`** Ticket Granting Services **Will Require** us to have **Administrator's Credentials**.
+- **`Extracting`** Ticket Granting Services **Will Require** us to have Administrator's Credentials.
 
 
 :::

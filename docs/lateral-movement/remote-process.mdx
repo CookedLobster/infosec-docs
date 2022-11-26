@@ -91,13 +91,15 @@ schtasks /s TARGET /TN "TASK_NAME" /DELETE /F
 
 :::caution Required Group Memberships: `Remote Management Users`
 
+:::
+
+
 ```batch
 :: Windows Remote Management
 Ports: 5985/TCP (HTTP)  5986/TCP (HTTPS)
 ```
 
-:::
-
+<br/>
 
 **`Windows Remote Management` (WinRM)** is a Web-Based Protocol used to send Powershell Commands to Windows Hosts remotely. Most Windows Server Installations will have WinRM enabled by Default.
 
@@ -145,17 +147,17 @@ Invoke-Command -Computername TARGET -Credential $credential -ScriptBlock {whoami
 
 :::danger Required Privileges: `Administrators`
 
+:::
+
+
 ```batch
 :: SMB
 445/TCP
 ```
 
-:::
+<br/>
 
 Allows an **Administrator** User to run Commands Remotely on any PC where he has Access. 
-
-
-<br/>
 
 
 ```batch
