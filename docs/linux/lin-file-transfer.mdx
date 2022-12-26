@@ -148,6 +148,9 @@ smbget "smb://IP/SHARE/FILE.sh"
 
 :: SMB Authentication
 smbget "smb://IP/SHARE/FILE.sh" --user "username%password"
+
+:: Authenticate & Upload
+echo "put /FILE/PATH" | smbserver //SERVER/SHARE_NAME -U "username"
 ```
 
 </p>

@@ -15,7 +15,7 @@ title: Microsoft Deployment Toolkit
 
 ## PXE Boot
 
-Large Organizations use **`PXE Boot`** to allow new Devices that are connected to the Network to load and Install the OS directly over a Network Connection. <b style={{ color: 'SandyBrown' }}>MDT</b> can be used to **Create - Manage - Host** `PXE Boot Images`. PXE Boot is usually integrated with DHCP, which means that if DHCP assigns an IP lease, the host is allowed to request the PXE Boot Image and start the Network OS Installation Process.
+Large Organizations use **`PXE Boot`** to allow new Devices that are connected to the Network to load and Install the OS directly over a Network Connection. <b style={{ color: 'Plum' }}>MDT</b> can be used to **Create - Manage - Host** `PXE Boot Images`. PXE Boot is usually integrated with DHCP, which means that if DHCP assigns an IP lease, the host is allowed to request the PXE Boot Image and start the Network OS Installation Process.
 
 
 <br/>

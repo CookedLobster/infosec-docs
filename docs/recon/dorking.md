@@ -13,12 +13,12 @@ When **Advanced Operators** are not provided in a query, Google will locate your
 
 
 ```batch
-:: Limit Searches to the Website. Many Websites often have bad Searching Capabilities or provide Google different Information.
+:: Limit Searches to the Website. Many Websites often have bad Searching Capabilities or provide Google different Information
 site:x
 ```
 
 ```batch
-:: Require a String or Phrase to be in the URL.
+:: Require a String or Phrase to be in the URL
 inurl:x
 
 :: Find Strings in the Title of a Page
@@ -29,7 +29,7 @@ inanchor:x
 ```
 
 ```batch
-:: Search for the Extensions of files.
+:: Search for the Extensions of files
 ext:x
 filetype:x
 ```

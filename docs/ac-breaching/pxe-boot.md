@@ -5,7 +5,8 @@ title: PXE Boot
 - Requesting <b style={{ color: 'MediumTurquoise' }}>PXE</b> Boot Configure Details from <b>DHCP</b>
 - `BCD` Files. These files store the Information relevant to **PXE Boots** for different types of Architecture.
 
-```log
+```batch
+:: This File is usually Requested through DHCP
 x64{1D0136D6-B1AD-4356-B50E-D56AC9AF19D9}.bcd
 ```
 
